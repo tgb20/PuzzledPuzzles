@@ -1,7 +1,9 @@
 $(function () {
 
+    const numToLet = ['A', 'D', 'E', 'F', 'H', 'K', 'P', 'R', 'T', 'Z'];
+
     const comboArray = [0, 0, 0, 0, 0];
-    const combination = [8, 7, 5, 9, 0];
+    const combination = ["P", "E", "R", "T", "H"];
 
     const gridIncrement = $(".lock-dial ul").css('line-height').replace('px', '') / 2;
     const numNums = $(".lock-dial:eq(0) ul li").length;
@@ -17,14 +19,14 @@ $(function () {
             const dragDir = $(this).css('top').replace('px', '') < initTop ? "up" : "down";
 
             if (dragDir == "up") {
-                const curNum = parseInt($(this).find('li:last-child').text()) + 1;
+                const curNum = parseInt($(this).find('li:last-child').attr('class')) + 1;
                 if (curNum < 10) {
-                    $(this).append('<li>' + curNum + '</li>');
+                    $(this).append('<li class="' + curNum + '">' + numToLet[curNum] + '</li>');
                 } else {
-                    $(this).append('<li>0</li>');
+                    $(this).append('<li class="0">A</li>');
                 };
             } else {
-                const curNum = parseInt($(this).find('li:first-child').text()) - 1;
+                const curNum = parseInt($(this).find('li:first-child').attr('class')) - 1;
                 const thisTop = parseInt($(this).css('margin-top').replace('px', ''));
 
                 $(this).css({
@@ -32,9 +34,9 @@ $(function () {
                 });
 
                 if (curNum > -1) {
-                    $(this).prepend('<li>' + curNum + '</li>');
+                    $(this).prepend('<li class="' + curNum + '">' + numToLet[curNum] + '</li>');
                 } else {
-                    $(this).prepend('<li>9</li>');
+                    $(this).prepend('<li class="9">Z</li>');
                 };
             };
         },
@@ -58,7 +60,7 @@ $(function () {
                 comboArray[i] = $(".lock-dial ul:eq(" + i + ")").attr("data-combo-num");
             }
 
-
+            console.log(comboArray);
             if (comboArray == "" + combination) {
                 $('.lock-dial ul').draggable('disable');
                 $('#lock-wrapper').addClass("unlocked");
