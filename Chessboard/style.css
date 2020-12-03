@@ -1,0 +1,17 @@
+#chessboard {
+    background-image: url("chessboard-fancy.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+}
+
+#overlay {
+    background-image: url("chessboard-overlay.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 600px;
+    height: 600px;
+    transform: rotate(180deg);
+    display: none;
+}
