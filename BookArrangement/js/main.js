@@ -32,6 +32,7 @@ window.onload = (() => {
 
         if (arraysEqual(bookImages, correctOrder)) {
             document.getElementById('solvedtext').style.display = 'block';
+            document.getElementById('books').style.display = 'none';
         } else {
             document.getElementById('solvedtext').style.display = 'none';
         }
