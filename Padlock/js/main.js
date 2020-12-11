@@ -60,7 +60,6 @@ $(function () {
                 comboArray[i] = $(".lock-dial ul:eq(" + i + ")").attr("data-combo-num");
             }
 
-            console.log(comboArray);
             if (comboArray == "" + combination) {
                 $('.lock-dial ul').draggable('disable');
                 $('#lock-wrapper').addClass("unlocked");
@@ -71,7 +70,10 @@ $(function () {
                             marginTop: 150
                         }, function () {
                             $this.fadeOut(function () {
-                                $('.welcome-message').fadeIn();
+                                $('.welcome-message').fadeIn(() => {
+                                    $('#lock-plate').hide();
+                                    $('#revealedimage').show();
+                                });
                             });
                         });
                     });
