@@ -7,11 +7,11 @@ function setup() {
 function draw() {
     if (mouseIsPressed) {
         erase();
-        ellipse(mouseX, mouseY, 80, 80);
+        ellipse(mouseX, mouseY, 40, 40);
         noErase();
     }
 
-    if(mouseX > 0 && mouseX < 400 && mouseY > 0 && mouseX < 400) {
+    if(mouseX > 0 && mouseX < 100 && mouseY > 0 && mouseX < 100) {
         cursor('cell');
     }
 
