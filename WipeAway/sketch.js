@@ -1,5 +1,5 @@
 function setup() {
-    let render = createCanvas(400, 400);
+    let render = createCanvas(100, 100);
     render.parent("canvas");
     background(184, 235, 200);
 }
