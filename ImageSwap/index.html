@@ -3,11 +3,138 @@
 
 <head>
   <title>Image Swap</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+  <style>
+    .letter {
+      font-family: 'Langar', cursive;
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 50px;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
-  <img onclick="switchImages()" id="image" style="width: 480px; height: 640px; margin: auto; display: block; object-fit: contain" src="images/click-change_1.png" alt="Image 1">
+  <div style="width: 480px; height: 640px; margin: auto; display: block; object-fit: contain; position: relative;">
+    <div hidden id="puzzle">
+      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 100px; margin-top: 60px;"
+        type="text" id="letter1Word1" maxlength="1">
+      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 145px; margin-top: 60px;"
+        type="text" id="letter2Word1" maxlength="1">
+      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 192px; margin-top: 60px;"
+        type="text" id="letter3Word1" maxlength="1">
+      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 238px; margin-top: 60px;"
+        type="text" id="letter4Word1" maxlength="1">
+      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 285px; margin-top: 60px;"
+        type="text" id="letter5Word1" maxlength="1">
+      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 55px; margin-top: 145px;"
+        type="text" id="letter1Word2" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 100px; margin-top: 145px;" type="text"
+        id="letter2Word2" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 145px; margin-top: 145px;" type="text"
+        id="letter3Word2" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 192px; margin-top: 145px;" type="text"
+        id="letter4Word2" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 238px; margin-top: 145px;" type="text"
+        id="letter5Word2" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 285px; margin-top: 145px;" type="text"
+        id="letter6Word2" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 335px; margin-top: 145px;" type="text"
+        id="letter6Word2" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 145px; margin-top: 235px;" type="text"
+        id="letter1Word3" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 192px; margin-top: 235px;" type="text"
+        id="letter2Word3" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 238px; margin-top: 235px;" type="text"
+        id="letter3Word3" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 285px; margin-top: 235px;" type="text"
+        id="letter4Word3" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 335px; margin-top: 235px;" type="text"
+        id="letter5Word3" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 145px; margin-top: 320px;" type="text"
+        id="letter1Word4" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 192px; margin-top: 320px;" type="text"
+        id="letter2Word4" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 238px; margin-top: 320px;" type="text"
+        id="letter3Word4" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 285px; margin-top: 320px;" type="text"
+        id="letter4Word4" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 335px; margin-top: 320px;" type="text"
+        id="letter5Word4" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 380px; margin-top: 320px;" type="text"
+        id="letter6Word4" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 100px; margin-top: 405px;" type="text"
+        id="letter1Word5" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 145px; margin-top: 405px;" type="text"
+        id="letter2Word5" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 192px; margin-top: 405px;" type="text"
+        id="letter3Word5" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 238px; margin-top: 405px;" type="text"
+        id="letter4Word5" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 285px; margin-top: 405px;" type="text"
+        id="letter5Word5" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 335px; margin-top: 405px;" type="text"
+        id="letter6Word5" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 380px; margin-top: 405px;" type="text"
+        id="letter7Word5" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 100px; margin-top: 490px;" type="text"
+        id="letter1Word6" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 145px; margin-top: 490px;" type="text"
+        id="letter2Word6" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 192px; margin-top: 490px;" type="text"
+        id="letter3Word6" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 238px; margin-top: 490px;" type="text"
+        id="letter4Word6" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 285px; margin-top: 490px;" type="text"
+        id="letter5Word6" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 335px; margin-top: 490px;" type="text"
+        id="letter6Word6" maxlength="1">
+      <input class="letter"
+        style="width: 35px; height: 75px; position: absolute; margin-left: 380px; margin-top: 490px;" type="text"
+        id="letter7Word6" maxlength="1">
+    </div>
+    <img onclick="switchImages()" id="image" style="width: 480px; height: 640px;" src="images/click-change_1.png"
+      alt="Image 1">
+    <div hidden id="video">
+      <iframe src="https://player.vimeo.com/video/483230521" width="480" height="640" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+  </div>
 </body>
 
 </html>
