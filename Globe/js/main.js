@@ -8,7 +8,7 @@ window.onload = (() => {
     camera.lookAt(0, 0, 0);
 
     const controls = new THREE.OrbitControls(camera);
-    controls.minDistance = 1.5;
+    controls.minDistance = 1.2;
     controls.maxDistance = 10;
 
     const geometry = new THREE.SphereGeometry(1, 50, 50);
