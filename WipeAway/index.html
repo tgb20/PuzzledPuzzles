@@ -4,12 +4,31 @@
 <head>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
+<style>
+div.blue {
+  position: relative;
+  left: 30px;
+  border: 3px solid #6495ED;
+}
+
+ h1   {color: darkblue;}
+
+div.red {
+  position: relative;
+  left: 80px;
+  top: 70px;
+  border: 0px solid #FF0000;
+
+
+}
+
+</style>
 </head>
 
 <body>
-    <div style="background-image: url('images/demon-mirror.jpg'); "background: transparent; position: absolute; width: 100px; height: 200px; display: flex; justify-content: center; align-items: center;">
-        <h3>DEMON</h3>
+    <div class="blue" style="background-image: url('images/demon-mirror.jpg'); position: absolute; width: 500px; height: 680px; display: flex; justify-content: center; align-items: center;">
+        <h1>DEMON</h1>
     </div>
-    <div style="position: absolute; width: 100px; height: 300px;" id="canvas"></div>
+    <div class="red" style="position: relative; width: 400px; height: 500px;" id="canvas"></div>
 </body>
 </html>
