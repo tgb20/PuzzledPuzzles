@@ -1,9 +1,9 @@
 $(function () {
 
-    const numToLet = ['A', 'D', 'E', 'F', 'H', 'K', 'P', 'R', 'T', 'Z'];
+    const numToLet = ['A', 'B', 'E', 'F', 'H', 'O', 'P', 'R', 'T', 'Z'];
 
-    const comboArray = [0, 0, 0, 0, 0];
-    const combination = ["P", "E", "R", "T", "H"];
+    const comboArray = [0, 0, 0, 0, 0, 0];
+    const combination = ["H", "O", "B", "A", "R", "T"];
 
     const gridIncrement = $(".lock-dial ul").css('line-height').replace('px', '') / 2;
     const numNums = $(".lock-dial:eq(0) ul li").length;
