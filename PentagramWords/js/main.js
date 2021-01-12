@@ -2,11 +2,11 @@ function switchImages() {
     $('#image').attr('src', 'images/pentagram.jpg');
     $('#puzzle').show();
 }
-//change this two five bracketed areas
-// first word: Spirits of our world and the next
-// second word: lend us your sight to
-// third word: too long we've been trapped in the night
-// fourth word:
+ 
+// first word: Spirits of our world and the next  = world
+// second word: give us the power to conjure your might  = conjure
+// third word: too long they've been trapped in the night  = 
+// fourth word: allow us to end our suffering tonight
 // fifth word:
 let words = [['', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', ''], ['', '', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', '', '', '']]
 
