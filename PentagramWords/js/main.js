@@ -4,10 +4,11 @@ function switchImages() {
 }
  
 // first word: Spirits of our world and the next  = world
-// second word: give us the power to conjure your might  = conjure
-// third word: too long they've been trapped in the night  = 
-// fourth word: allow us to end our suffering tonight
-// fifth word:
+// second word: lend us your sight = sight 
+// third word: give us the power to conjure our might  = conjure
+// fourth word: too long they've been trapped in the night  = trapped
+// fifth word: allow us to end our suffering tonight = suffering
+
 let words = [['', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', ''], ['', '', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', '', '', '']]
 
 $(() => {
@@ -20,7 +21,7 @@ $(() => {
         words[word-1][letter-1] = $(this).val().toLowerCase();
         let solution = words[0][2] + words[1][3] + words[2][1] + words[3][1] + words[4][2] + words[5][2];
         // six letters. 
-        if(solution === 'aperta') {
+        if(solution === 'butter') {
             console.log('Solved!');
             $('#image').hide();
             $('#puzzle').hide();
@@ -36,7 +37,7 @@ $(() => {
         words[word-1][letter-1] = $(this).val().toLowerCase();
         let solution = words[0][2] + words[1][3] + words[2][1] + words[3][1] + words[4][2] + words[5][2];
         
-        if(solution === 'aperta') {
+        if(solution === 'butter') {
             console.log('Solved!');
             $('#image').hide();
             $('#puzzle').hide();
