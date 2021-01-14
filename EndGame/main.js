@@ -38,12 +38,12 @@ $(() => {
                 $('#candle3').attr("src","assets/candle.jpg");
 
                 // Replace temp.gif with the actual gif
-                $('body').css('background-image', 'url("assets/temp.gif")');
+                $('body').css('background-image', 'url("assets/successvid.gif")');
 
                 setInterval(() => {
                     // Where do you want the player to end up
-                    window.location.href = 'https://www.puzzledescapegames.com/'
-                }, 5 * 1000); // 5 is the number of seconds before redirecting
+                    window.location.href = 'https://www.theprofessoroftheoccult.com/ending'
+                }, 6 * 1000); // 5 is the number of seconds before redirecting
 
             }
 
