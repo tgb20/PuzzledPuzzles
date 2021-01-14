@@ -6,24 +6,39 @@
     <script src="https://unpkg.com/anycontrol/dist/index.umd.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="main.js"></script>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 
-<body>
-    <h3>Must be using Google Chrome</h3>
-    <audio id="audio">
-        <source src="assets/allsounds.ogg" type="audio/ogg">
-        Your browser does not support the audio element.
-    </audio>
-    <button id="startButton">Start Ritual</button>
-    <div hidden id="ritual">
-        <h2>Speak the chant</h2>
-        <h1 hidden id="world">WORLD</h1>
-        <h1 hidden id="sight">SIGHT</h1>
-        <h1 hidden id="conjure">CONJURE</h1>
-        <h1 hidden id="trapped">TRAPPED</h1>
-        <h1 hidden id="tonight">TONIGHT</h1>
-        <img hidden id="gif"
-            src="https://media1.tenor.com/images/a598fa71a6bb1e437cfb3e96cf90d8a0/tenor.gif?itemid=13161196" alt="">
+<body
+    style="background-color: black; height: 100%; background-repeat: no-repeat; background-attachment: fixed; background-position: center; ">
+    <h3 hidden id="chromeMessage" style="color: white;">Must be using Google Chrome</h3>
+
+    <div class="center" id="scene">
+        <audio id="allAudio">
+            <source src="assets/allsounds.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <audio id="successAudio">
+            <source src="assets/success.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="preZone">
+            <button id="startButton">Start Ritual</button>
+            <h2 style="color: white;">Speak loud and clear and pause after each chant</h2>
+        </div>
+        <div hidden id="ritual">
+            <h1 style="color: white;" id="chantCounter">Chants Heard: 0</h1>
+            <h2 style="color: white;">Speak the chant</h2>
+            <img hidden id="gif"
+                src="https://media1.tenor.com/images/a598fa71a6bb1e437cfb3e96cf90d8a0/tenor.gif?itemid=13161196" alt="">
+        </div>
     </div>
 </body>
 
