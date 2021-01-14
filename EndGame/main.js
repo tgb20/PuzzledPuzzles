@@ -26,12 +26,25 @@ $(() => {
             
             if(chantsHeard == 1) {
                 $('#allAudio').trigger('play');
+                $('#candle1').attr("src","assets/candle.jpg");
+            }
+
+            if(chantsHeard == 2) {
+                $('#candle2').attr("src","assets/candle.jpg");
             }
 
             if(chantsHeard == 3) {
                 $('#allAudio').trigger('pause');
-                window.location.href = 'https://www.puzzledescapegames.com/'
-                $('body').css('background-image', 'none');
+                $('#candle3').attr("src","assets/candle.jpg");
+
+                // Replace temp.gif with the actual gif
+                $('body').css('background-image', 'url("assets/temp.gif")');
+
+                setInterval(() => {
+                    // Where do you want the player to end up
+                    window.location.href = 'https://www.puzzledescapegames.com/'
+                }, 5 * 1000); // 5 is the number of seconds before redirecting
+
             }
 
             $('#chantCounter').text(`Chants Heard: ${chantsHeard}`);
@@ -44,7 +57,7 @@ $(() => {
         $('#preZone').hide();
         $('#ritual').show();
         const ctrl = new anycontrol();
-        $('body').css('background-image', 'url("assets/h264.gif")');
+        $('body').css('background-image', 'url("assets/demonback.gif")');
 
         ctrl.addCommand("power", function () {
             powerFound = true;
