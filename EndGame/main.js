@@ -1,7 +1,7 @@
 $(() => {
-    let worldFound = false;
+    let powerFound = false;
     let trappedFound = false;
-    let tonightFound = false;
+    let sufferingFound = false;
 
     let chantsHeard = 0;
 
@@ -11,17 +11,18 @@ $(() => {
         $('#scene').hide();
     }
 
-    // Spirits of our WORLD and the next, lend us your SIGHT, 
-    // give us the power to CONJURE our might, 
-    // too long have they been trapped in the LIGHT, 
-    // allow us to end their suffering TONIGHT.
+    // spirits of our world and the next, 
+    // lend us the POWER of your sight,
+    // too long have we been TRAPPED in the night
+    // allow us to conjure your might
+    // and end our SUFFERING tonight
 
     const checkWords = (() => {
-        if (worldFound && trappedFound && tonightFound) {
+        if (powerFound && trappedFound && sufferingFound) {
             chantsHeard++;
-            worldFound = false;
+            powerFound = false;
             trappedFound = false;
-            tonightFound = false;
+            sufferingFound = false;
             
             if(chantsHeard == 1) {
                 $('#allAudio').trigger('play');
@@ -29,7 +30,7 @@ $(() => {
 
             if(chantsHeard == 3) {
                 $('#allAudio').trigger('pause');
-                $('#successAudio').trigger('play');
+                window.location.href = 'https://www.puzzledescapegames.com/'
                 $('body').css('background-image', 'none');
             }
 
@@ -45,8 +46,8 @@ $(() => {
         const ctrl = new anycontrol();
         $('body').css('background-image', 'url("assets/h264.gif")');
 
-        ctrl.addCommand("world", function () {
-            worldFound = true;
+        ctrl.addCommand("power", function () {
+            powerFound = true;
             checkWords();
         });
 
@@ -55,8 +56,8 @@ $(() => {
             checkWords();
         });
 
-        ctrl.addCommand("tonight", function () {
-            tonightFound = true;
+        ctrl.addCommand("suffering", function () {
+            sufferingFound = true;
             checkWords();
         });
 
