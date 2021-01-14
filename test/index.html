@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>TEST</title>
+    <script src="https://unpkg.com/anycontrol/dist/index.umd.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+    <style>
+        .center {
+            margin: auto;
+            width: 50%;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h3 hidden id="chromeMessage" style="color: white;">Must be using Google Chrome</h3>
+<script>
+   //document.getElementById("allAudio").trigger('play');
+   $('#allAudio').trigger('play');
+
+</script>
+    <div class="center" id="scene">
+        <audio id="allAudio">
+            <source src="assets/allsounds.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+        <div id="preZone">
+            <button id="startButton">Start Ritual</button>
+            
+        </div>
+        
+    </div>
+</body>
+
+</html>
