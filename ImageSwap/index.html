@@ -16,6 +16,13 @@
       font-size: 50px;
       text-align: center;
     }
+
+    h3 {font-family: 'Langar', cursive;
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 50px;
+      text-align: center;}
   </style>
 </head>
 
@@ -131,10 +138,19 @@
     <img onclick="switchImages()" id="image" style="width: 480px; height: 640px;" src="images/click-change_1.png"
       alt="Image 1">
     <div hidden id="video">
-      <iframe src="https://player.vimeo.com/video/483230521" width="480" height="640" frameborder="0"
-        allow="autoplay; fullscreen" allowfullscreen></iframe>
+      
+      <video width="600" height="600" controls autoplay muted>
+  <source src="images/bookshelf.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+Your browser does not support the video tag.
+</video>
+<a href="https://www.theprofessoroftheoccult.com/thesecretstudy"><h3>Enter if you dare</h3>
+  </a>
     </div>
   </div>
 </body>
 
 </html>
+
+<!--<iframe src="https://player.vimeo.com/video/483230521" width="480" height="640" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>-->
