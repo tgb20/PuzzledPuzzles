@@ -37,6 +37,8 @@ $(() => {
                 $('#allAudio').trigger('pause');
                 $('#candle3').attr("src","assets/candle.jpg");
 
+                $('#successsound').trigger('play');
+
                 // Replace temp.gif with the actual gif
                 $('body').css('background-image', 'url("assets/successvid.gif")');
 
