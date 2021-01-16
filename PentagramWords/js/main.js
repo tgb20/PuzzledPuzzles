@@ -42,6 +42,13 @@ $(() => {
             //$('#image').hide();
             $('#puzzle').hide();
             $('#video').show();
+            window.open("https://puzzled.tgb.gg/EndGame/");
         }
     });
 });
+
+var iframe = $("#iframe"); 
+var newWindow = window.open(iframe.attr(src), 'Dynamic Popup', 'height=' + iframe.height() + ', width=' + iframe.width() + 'scrollbars=auto, resizable=no, location=no, status=no');
+newWindow.document.write(iframe[0].outerHTML);
+newWindow.document.close();
+iframe[0].outerHTML = '';
