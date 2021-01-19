@@ -1,6 +1,7 @@
 #books
 {
     display: flex;
+
 }
 
 #solvedtext 
@@ -23,10 +24,25 @@
 
 .draggable
 {
-  background:  #AAA;
+  background:  rgba(0,0,0,0.0);
   cursor:      move;
   font-weight: bold;
   list-style:  none;
-  margin:      4px;
-  padding:     8px;
+  margin:      5px;
+  padding:     40px;
+
+}
+
+.spaced
+{
+border-style: dotted;
+padding: 10px;  
+
+}
+
+.outside
+{
+border-style: solid;
+padding: 10px;  
+
 }
