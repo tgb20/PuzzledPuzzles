@@ -1,0 +1,32 @@
+#books
+{
+    display: flex;
+}
+
+#solvedtext 
+{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: green;
+    display: none;
+}
+
+.dropzone
+{
+  flex: 1;
+}
+
+.bookimg 
+{
+    width: 100%;
+}
+
+.draggable
+{
+  background:  #AAA;
+  cursor:      move;
+  font-weight: bold;
+  list-style:  none;
+  margin:      4px;
+  padding:     8px;
+}
