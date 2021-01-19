@@ -35,7 +35,13 @@ $(() => {
             console.log('Solved!');
             $('#image').hide();
             $('#puzzle').hide();
+            $('#apertasuccess').trigger('play');
             $('#video').show();
+            setInterval(() => {
+                    // Where do you want the player to be sent to
+                    window.location.href = 'https://seekbeak.com/v/NkjxBONe1lQ'
+                }, 7 * 1000); // 5 is the number of seconds before redirecting
+            //window.open("https://seekbeak.com/v/NkjxBONe1lQ");
         }
 
         if (this.value.length == this.maxLength) {

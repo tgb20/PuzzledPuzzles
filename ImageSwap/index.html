@@ -28,6 +28,7 @@
 
 <body style="background-color: black;">
   <div style="width: 480px; height: 640px; margin: auto; display: block; object-fit: contain; position: relative;">
+    
     <div hidden id="puzzle">
       <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 100px; margin-top: 60px;"
         type="text" id="letter1Word1" maxlength="1">
@@ -137,16 +138,26 @@
     </div>
     <img onclick="switchImages()" id="image" style="width: 480px; height: 640px;" src="images/click-change_1.png"
       alt="Image 1">
+    
+      <audio id="apertasuccess"
+            <source src="images/apertasuccess.ogg" type="audio/ogg">
+            Your browser does not support the audio element.
+        </audio>
+
     <div hidden id="video">
-      
-      <video width="600" height="600" controls autoplay muted>
-  <source src="images/bookshelf.mp4" type="video/mp4">
-  <source src="movie.ogg" type="video/ogg">
-Your browser does not support the video tag.
-</video>
-<a href="https://seekbeak.com/v/NkjxBONe1lQ" target="_blank"><h3>Enter if you dare</h3>
-  </a>
+        
+        <video width="600" height="600" controls autoplay muted>
+          <source src="images/bookshelf.mp4" type="video/mp4">
+          <source src="movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+          </video>
+
+          <a href="https://seekbeak.com/v/NkjxBONe1lQ" target="_blank"><h3>Enter if you dare</h3>
+          </a>
     </div>
+
+    
+  
   </div>
 </body>
 

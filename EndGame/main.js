@@ -39,7 +39,7 @@ $(() => {
 
                 $('#successsound').trigger('play');
 
-                // Replace temp.gif with the actual gif
+                // demon puking gif
                 $('body').css('background-image', 'url("assets/successvid.gif")');
 
                 setInterval(() => {
