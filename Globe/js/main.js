@@ -1,4 +1,4 @@
-let scene, camera, renderer;
+xlet scene, camera, renderer;
 
 window.onload = (() => {
     scene = new THREE.Scene();
@@ -13,7 +13,7 @@ window.onload = (() => {
 
     const geometry = new THREE.SphereGeometry(1, 50, 50);
     const textureLoader = new THREE.TextureLoader();
-    const earthTexture = textureLoader.load('images/globemap.png');
+    const earthTexture = textureLoader.load('images/globemap.jpg');
     const earthBump = textureLoader.load('images/earthbump.jpg');
     const earthSpec = textureLoader.load('images/earthspec.png');
     const material = new THREE.MeshPhongMaterial({
