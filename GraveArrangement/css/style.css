@@ -1,6 +1,8 @@
 #books
 {
-    display: flex;
+    /*flex-direction: column-reverse;*/
+    /*display: flex;*/
+    /*flex-direction: column-reverse;*/
 
 }
 
@@ -19,6 +21,7 @@
 
 .bookimg 
 {
+
     width: 100%;
 }
 
@@ -28,21 +31,44 @@
   cursor:      move;
   font-weight: bold;
   list-style:  none;
-  margin:      5px;
-  padding:     40px;
+  margin:      5%;
+  padding-top:     5%;
+  padding-left:     5%;
+  padding-right:     5%;
 
 }
 
 .spaced
 {
 border-style: dotted;
-padding: 10px;  
+margin: 5px;
+padding-top: 10%;
+padding-left: 3%;
+padding-right: 3%;
+background-image: url("../images/GRAVEREAL.png");
+height: 120%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
 
 }
+
+
+.blankarea
+{
+
+border-style: dotted;
+padding: 10px; 
+border-color: red; 
+
+}
+
 
 .outside
 {
 border-style: solid;
 padding: 10px;  
+border-color: green;
 
 }

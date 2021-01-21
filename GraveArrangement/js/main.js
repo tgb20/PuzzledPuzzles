@@ -1,6 +1,6 @@
 window.onload = (() => {
-
-    let correctOrder = ['ANTHROPOLOGY', 'HERBOLOGY', 'PSYCHOLOGY', 'THEOLOGY', 'BEER', 'CHAMPAGNE', 'CHICKEN', 'COGNAC', 'ELK', 'FISH', 'RABBIT',  'VODKA'];
+    let correctOrder = ['ANTHROPOLOGY', 'HERBOLOGY', 'PSYCHOLOGY', 'THEOLOGY', 'CHICKEN', 'ELK', 'FISH', 'RABBIT', 'BEER', 'CHAMPAGNE', 'VODKA', 'COGNAC', 'GOETHE', 'KAFKA', 'NIETZSCHE', 'TOLSTOY', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK'];
+    //let correctOrder = ['ANTHROPOLOGY', 'VODKA'];
 
     let dropzones = document.querySelectorAll('.dropzone');
 
