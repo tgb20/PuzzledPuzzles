@@ -135,16 +135,16 @@ p1 {
   font-weight: bold;
   list-style:  none;
   margin:      5%;
-  padding-top:     5%;
-  padding-left:     5%;
-  padding-right:     5%;
+  padding-top:     2%;
+  padding-left:     2%;
+  padding-right:     2%;
 
 }
 
 .spaced
 {
-border-style: dotted;
-border-color: red; 
+border-style: solid;
+border-color: pink; 
 margin: 5px;
 padding-top: 10%;
 padding-left: 3%;
@@ -164,7 +164,17 @@ position: relative;
 
 border-style: dotted;
 padding: 10px; 
-border-color: yellow; 
+border-color: red; 
+margin: 5px;
+padding-top: 1%;
+padding-left: 3%;
+padding-right: 3%;
+background-image: url("");
+height: 120%;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+position: relative;
 
 }
 
