@@ -1,4 +1,13 @@
-body{width: auto;}
+#bodie {
+background-image: url('../images/BG.png');
+
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+background-color: grey;
+
+}
 
     
 
@@ -35,9 +44,20 @@ body{width: auto;}
 }
 
 
+.right {
+    border-style: double;
+    border-color: red;
+    border-width: 3px;
 
+}
 
-/* Container holding the image and the text */
+.left {
+    border-style: double;
+    border-color: blue;
+    border-width: 3px;
+}
+
+/* Container holding the image and the text   rules   */
 .container {
   text-align: center;
   color: black;
@@ -45,14 +65,28 @@ body{width: auto;}
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
+  transition: 0.3s;
+
+      
+
   
 }
 
-/* Centered text font-size: 2.2vh;s*/
+
+.container:hover
+{transform: scale(1.2);
+  cursor: w-resize;
+  
+
+
+}
+
+/* Centered text font-size: 2.2vh;s    THE RULES */
 .centered {
   position: absolute;
-  font-size: 1.3vw; 
-
+  font-size: 1.0vw; 
+  font-weight: bolder;
+  color: grey;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -100,14 +134,123 @@ p1 {
 
 
 
-
+/*ID THAT JAVASCRIPT USES. ALSO THE DIV ABOVE GRAVES AND POTENTIALLY BLANKS*/
 #books
 {
     /*flex-direction: column-reverse;*/
-    /*display: flex;*/
+    
     /*flex-direction: column-reverse;*/
+    border-style: solid;
+    border-color: black;
+    border-width: 3px;
+    display: flex;
+}
+
+
+.rightside
+{
+border-style: dotted;
+border-color: blue; 
+display: inline;
+
+
 
 }
+
+
+.rulez
+{
+border-style: dotted;
+border-color: orange; 
+display: block;
+min-height: 40%;
+
+
+
+}
+
+
+/*DIV FOR ALL FOUR GRAVES*/
+.graves
+{
+/*
+border-style: solid;
+border-color: yellow; 
+*/
+display: flex;
+min-height: 40%
+max-height: 40%;
+}
+
+
+/*DIV FOR EACH INDIVIDUAL GRAVE*/
+.spaced
+{
+border-style: solid;
+border-color: pink; 
+
+padding-top: 18%;
+padding-left: 2%;
+padding-right: 2%;
+padding-bottom: 2%;
+
+margin-bottom: 0%;
+background-image: url("../images/GRAVEREAL.png"); /**/
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+max-width: 25%;
+/*
+
+*/
+
+
+
+}
+
+
+/*DIV FOR ALL BLANK SPOTS*/
+.blankarea {
+border-style: dotted;
+ 
+border-color: red; 
+
+padding-top: 1%;
+padding-left: 1%;
+padding-right: 1%;
+
+/*
+background-image: url("");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+*/
+
+}
+
+
+
+.draggable
+{
+  background:  rgba(0,0,0,0.0);
+  cursor:      move;
+  font-weight: bold;
+  list-style:  none;
+  padding-top:     3%;
+  padding-left:     3%;
+  padding-right:     3%;
+  border-style: double dashed;
+  border-color: blue;
+  box-shadow: 0.5em 0.5em rgba(0,0,0,0.2);
+  z-index: 100;
+  display: flex;
+
+}
+
+
+
+
+
 
 #solvedtext 
 {
@@ -117,80 +260,34 @@ p1 {
     display: none;
 }
 
+/*  STARTING AREA FOR TABS  */
 .dropzone
 {
-  flex: 1;
+  min-height: 1%;
+  flex: 0;
+  border-style: double dashed;
+  border-color: white;
 }
+
 
 .bookimg 
 {
-
     width: 100%;
+    margin: 0px;
 }
 
-.draggable
+
+.notbookimg 
 {
-  background:  rgba(0,0,0,0.0);
-  cursor:      move;
-  font-weight: bold;
-  list-style:  none;
-  margin:      5%;
-  padding-top:     2%;
-  padding-left:     2%;
-  padding-right:     2%;
-
+    width: 100%;
+    margin: 0px;
 }
 
-.spaced
+.notbookimg:hover 
 {
-border-style: solid;
-border-color: pink; 
-margin: 5px;
-padding-top: 10%;
-padding-left: 3%;
-padding-right: 3%;
-background-image: url("../images/GRAVEREAL.png");
-height: 120%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-
+    
+  
 }
-
-
-.blankarea
-{
-
-border-style: dotted;
-padding: 10px; 
-border-color: red; 
-margin: 5px;
-padding-top: 1%;
-padding-left: 3%;
-padding-right: 3%;
-background-image: url("");
-height: 120%;
-background-position: center;
-background-repeat: no-repeat;
-background-size: cover;
-position: relative;
-
-}
-
-
-.outside
-{
-border-style: solid;
-padding: 10px;  
-border-color: green;
-
-}
-
-
-
-
-
 
 
 
