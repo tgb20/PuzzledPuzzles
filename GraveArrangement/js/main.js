@@ -1,7 +1,7 @@
 window.onload = (() => {
     //let correctOrder = ['BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'ANTHROPOLOGY', 'HERBOLOGY', 'PSYCHOLOGY', 'THEOLOGY', 'CHICKEN', 'ELK', 'FISH', 'RABBIT', 'BEER', 'CHAMPAGNE', 'VODKA', 'COGNAC', 'GOETHE', 'KAFKA', 'NIETZSCHE', 'TOLSTOY'];
-    let correctOrder = ['ANTHROPOLOGY', 'BEER', 'CHAMPAGNE', 'CHICKEN',     'COGNAC', 'ELK', 'FISH', 'GOETHE',       'HERBOLOGY', 'KAFKA', 'NIETZSCHE',  'PSYCHOLOGY',     'RABBIT', 'THEOLOGY', 'VODKA', 'TOLSTOY',    'BLANK', 'BLANK', 'BLANK', 'BLANK',      'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',];
-        //let correctOrder = ['THEOLOGY', 'RABBIT', 'VODKA', 'TOLSTOY',     'PSYCHOLOGY', 'ELK', 'CHAMPAGNE', 'GOETHE',       'ANTHROPOLOGY', 'CHICKEN', 'BEER',  'KAFKA',     'HERBOLOGY', 'FISH', 'COGNAC','NIETZSCHE',    'BLANK', 'BLANK', 'BLANK', 'BLANK',      'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',];
+    //let correctOrder = ['ANTHROPOLOGY', 'BEER', 'CHAMPAGNE', 'CHICKEN',     'COGNAC', 'ELK', 'FISH', 'GOETHE',       'HERBOLOGY', 'KAFKA', 'NIETZSCHE',  'PSYCHOLOGY',     'RABBIT', 'THEOLOGY', 'VODKA', 'TOLSTOY',    'BLANK', 'BLANK', 'BLANK', 'BLANK',      'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',];
+        let correctOrder = ['BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',    'THEOLOGY', 'RABBIT', 'VODKA', 'TOLSTOY',     'PSYCHOLOGY', 'ELK', 'CHAMPAGNE', 'GOETHE',       'ANTHROPOLOGY', 'CHICKEN', 'BEER',  'KAFKA',     'HERBOLOGY', 'FISH', 'COGNAC','NIETZSCHE'];
 
 
     let dropzones = document.querySelectorAll('.dropzone');
