@@ -1,4 +1,4 @@
-xlet scene, camera, renderer;
+let scene, camera, renderer;
 
 window.onload = (() => {
     scene = new THREE.Scene();
