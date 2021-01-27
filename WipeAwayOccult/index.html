@@ -2,13 +2,20 @@
 <html>
 
 <head>
+  <title>Mirror</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
     <script src="sketch.js"></script>
 <style>
+
+ body 
+  {background-color: black; border-style: solid; border-width: 0px; border-color: green; height: auto; width: auto;
+  }
+
+
 div.blue {
   position: relative;
   left: 0px;
-  border: 0px solid #6495ED;
+  border: 2px solid #6495ED;
 }
 
  h1   {color: darkblue;}
@@ -17,18 +24,26 @@ div.red {
   position: relative;
   left: 40px;
   top: 70px;
-  border: 0px solid #FF0000;
-
-
+  border: 3px dotted #FF0000;
+  position: absolute;
+  width: 420px;
+  height: 580px;
+  /*
+  width: 520px; 
+  height: 500px
+  */
 }
+  
+ 
+
 
 </style>
 </head>
 
-<body style="background-color: black;">
-    <div class="blue" style="background-image: url('images/demon-mirror.jpg'); position: absolute; width: 500px; height: 680px; display: flex; justify-content: center; align-items: center;">
+<body>
+    <div class="blue" style="background-image: url('images/demon-mirror.jpg'); width: 500px; height: 680px; display: flex; justify-content: center; align-items: center;">
         
     </div>
-    <div class="red" style="position: absolute; width: 520px; height: 500px;" id="canvas"></div>
+    <div class="red" style="position: absolute; ;" id="canvas"></div>
 </body>
 </html>
