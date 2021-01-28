@@ -63,7 +63,7 @@ $(() => {
            
 
             // change this
-            $('body').css('background-image', 'url("images/temp.gif")');
+            $('body').css('image', 'url("images/temp.gif")');
 
                 setInterval(() => {
                     // Where do you want the player to end up
