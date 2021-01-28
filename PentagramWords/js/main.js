@@ -9,9 +9,25 @@ function switchImages() {
 // fourth word: too long we've been  = trapped
 // fifth word: allow us to end our suffering tonight = suffering
 
-let words = [['', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', ''], ['', '', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', '', '', '', '', '']]
+let words = [['', '', '', '', ''], ['', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', '', '', '', '', '']]
 
 $(() => {
+
+    let storage = window.localStorage;
+
+    if(storage.getItem("pentagramletters") !== null) {
+        words = JSON.parse(storage.getItem('pentagramletters'));
+    }
+
+    let letters = $("input[type='text']").toArray();
+
+    let iter = 0;
+    words.forEach((word) => {
+        word.forEach((letter) => {
+            letters[iter].value = letter;
+            iter++;
+        });
+    });
 
     $("input[type='text']").each(function () {
         let changedID = $(this).attr('id');
@@ -55,11 +71,17 @@ $(() => {
                 }, 3 * 1000); // 5 is the number of seconds before redirecting
             //window.open("https://puzzled.tgb.gg/EndGame/");
         }
+        console.log(words);
+        storage.setItem('pentagramletters', JSON.stringify(words));
+
+        if (this.value.length == this.maxLength) {
+            $(this).next('.letter').focus();
+        }
     });
 });
 
-var iframe = $("#iframe"); 
-var newWindow = window.open(iframe.attr(src), 'Dynamic Popup', 'height=' + iframe.height() + ', width=' + iframe.width() + 'scrollbars=auto, resizable=no, location=no, status=no');
-newWindow.document.write(iframe[0].outerHTML);
-newWindow.document.close();
-iframe[0].outerHTML = '';
+// var iframe = $("#iframe"); 
+// var newWindow = window.open(iframe.attr(src), 'Dynamic Popup', 'height=' + iframe.height() + ', width=' + iframe.width() + 'scrollbars=auto, resizable=no, location=no, status=no');
+// newWindow.document.write(iframe[0].outerHTML);
+// newWindow.document.close();
+// iframe[0].outerHTML = '';

@@ -7,6 +7,23 @@ let words = [['', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', ''
 
 $(() => {
 
+    let storage = window.localStorage;
+
+    if(storage.getItem("paintingletters") !== null) {
+        words = JSON.parse(storage.getItem('paintingletters'));
+    }
+
+    let letters = $("input[type='text']").toArray();
+
+    let iter = 0;
+    words.forEach((word) => {
+        word.forEach((letter) => {
+            letters[iter].value = letter;
+            iter++;
+        });
+    });
+
+
     $("input[type='text']").each(function () {
         let changedID = $(this).attr('id');
 
@@ -48,5 +65,6 @@ $(() => {
             $(this).next('.letter').focus();
         }
 
+        storage.setItem('paintingletters', JSON.stringify(words));
     });
 });
