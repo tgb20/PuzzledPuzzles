@@ -1,17 +1,24 @@
+#addoverlay {background-color: white; border: solid 4px grey; margin-top: 2px;
+font-weight: bold; font-size: 18px; padding: 5px;
+}
+
+#addoverlay:hover {background-color: #e5e5ff; transition-delay: 0.3s}
+
 #chessboard {
     background-image: url("images/chessboard-fancy.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 600px;
-    height: 600px;
+    width: 45em;
+    height: 45em;
+
 }
 
 #overlay {
     background-image: url("images/chessboard-overlay.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 600px;
-    height: 600px;
+    width: 45em;
+    height: 45em;
     transform: rotate(180deg);
     
 }

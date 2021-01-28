@@ -8,31 +8,52 @@
 <style>
 
  body 
-  {background-color: black; border-style: solid; border-width: 0px; border-color: green; height: auto; width: auto;
+  {background-color: black; border-style: solid; border-width: 0px; border-color: green; 
     overflow-x: hidden;
-    overflow-y: hidden;
-  }
+    overflow-y: visible;
+       width: 100%;
+       max-width: 463px;
+       height: 100%;
+       max-height: 630px;
+       margin-left: auto;
+       margin-right: auto;
+       padding-left: 0px;
+       padding-right: 0px;
+       
+       align-items: center;
+       justify-content: center;
+
+}
+  
 
 
 div.blue {
-  position: relative;
+  display: flex;
   left: 0px;
-  border: none 0px #6495ED;
+  border: double 0px #6495ED;
+  height: 630px;
+  width: 463px;
+  background-image: url('images/demon-mirror.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  justify-content: center;
+  align-items: center;
+
 }
 
  h1   {color: darkblue;}
 
 div.red {
   position: relative;
-  left: 40px;
-  top: 70px;
-  border: none 0px #FF0000;
-  position: absolute;
-  width: 420px;
-  height: 580px;
+  
+  border: dotted 0px #FF0000;
+  
+  width: 403px;
+  height: 556px;
   /*
-  width: 520px; 
-  height: 500px
+  width: 420px; 
+  height: 580px
   */
 }
   
@@ -43,9 +64,11 @@ div.red {
 </head>
 
 <body>
-    <div class="blue" style="background-image: url('images/demon-mirror.jpg'); width: 500px; height: 680px; display: flex; justify-content: center; align-items: center;">
-        
+    <div class="blue">
+    
+        <div class="red"; id="canvas"></div>
+    
     </div>
-    <div class="red" style="position: absolute; ;" id="canvas"></div>
+    
 </body>
 </html>
