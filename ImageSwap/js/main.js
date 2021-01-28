@@ -32,7 +32,7 @@ $(() => {
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][2] + words[1][3] + words[2][1] + words[3][1] + words[4][2] + words[5][2];
 
-        if (solution === 'apertn') {
+        if (solution === 'aperta') {
             console.log('Solved!');
             $('#image').hide();
             $('#puzzle').hide();
@@ -48,7 +48,7 @@ $(() => {
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][2] + words[1][3] + words[2][1] + words[3][1] + words[4][2] + words[5][2];
 
-        if (solution === 'apertn') {
+        if (solution === 'aperta') {
             console.log('Solved!');
             $('#image').hide();
             $('#puzzle').hide();
