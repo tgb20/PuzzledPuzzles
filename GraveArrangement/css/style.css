@@ -12,48 +12,6 @@ background-color: grey;
 
 
 
-/* Container holding the image and the text   rules   */
-.container {
-  text-align: center;
-  color: black;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  transition: 0.3s;
-}
-
-
-.container:hover
-{transform: scale(1.2);
-  cursor: w-resize;
-}
-
-
-/*DIV FOR RULEZ*/
-.rulez
-{
-/*border-style: dotted;
-border-color: orange; */
-display: block;
-min-height: 40%;
-}
-
-
-
-/* Centered text font-size: 2.2vh;s    THE RULES */
-.centered {
-  position: absolute;
-  font-size: 1.0vw; 
-  font-weight: bolder;
-  color: silver;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-
-
 p1 {
     font-size: 100px;
     color:#c3a343;
@@ -87,6 +45,67 @@ p1 {
   -webkit-background-clip: text;
     -moz-background-clip: text;
 }
+
+
+
+
+/* Container holding the image and the text   rules   */
+.container {
+  text-align: center;
+  color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: 0.3s;
+}
+
+
+.container:hover
+{transform: scale(1.0);
+  cursor: w-resize;
+}
+
+
+/*DIV FOR RULEZ*/
+.rulez
+{
+/*border-style: dotted;
+border-color: orange; */
+display: block;
+min-height: 40%;
+}
+
+
+
+/* Centered text font-size: 2.2vh;s    THE RULES */
+.centered {
+  position: absolute;
+  font-size: 1.5vw; 
+  font-family: Metrophobic;
+  font-weight: lighter;
+  color: #dedbd9;
+  top: 0%;
+  min-width: 100%;
+  background: -o-linear-gradient(transparent, transparent);
+    color: transparent;
+    text-shadow: rgba(245,245,245,0.7) 3px 5px 1px;
+  border-style: solid;
+  border-color: yellow;
+  border-width: 0px;
+  transition: 0.3s;
+
+}
+
+
+.centered:hover
+{transform: scale(1.4);
+  cursor: w-resize;
+}
+
+
+
+
 
 
 
