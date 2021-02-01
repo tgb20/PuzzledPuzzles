@@ -1,6 +1,7 @@
 window.onload = (() => {
 
-    let correctOrder = ['CHANTS', 'ELEMENTS', 'GATES', 'HERBS', 'RITUALS', 'SPIRITS', 'SYMBOLS', 'WITCH'];
+    //let correctOrder = ['CHANTS', 'ELEMENTS', 'GATES', 'HERBS', 'RITUALS', 'SPIRITS', 'SYMBOLS', 'WITCH'];
+    let correctOrder = ['HERBS', 'RITUALS', 'WITCH', 'GATES', 'SPIRITS', 'CHANTS', 'ELEMENTS', 'SYMBOLS'];
 
     let dropzones = document.querySelectorAll('.dropzone');
 
@@ -32,10 +33,20 @@ window.onload = (() => {
 
         if (arraysEqual(bookImages, correctOrder)) {
             document.getElementById('solvedtext').style.display = 'block';
-            document.getElementById('pentashelf').style.display = 'inline-block';
+            document.getElementById('pentashelf').style.display = 'block';
             document.getElementById('books').style.display = 'none';
+            //document.getElementById('pentasound').trigger.play = 'true';
+            //$('#books').hide();
+            $('#pentasoundsolved').trigger('play');
+            //$('#video').show();
+            setInterval(() => {
+                    // Where do you want the player to be sent to
+                    //window.location.href = 'https://seekbeak.com/v/NkjxBONe1lQ'
+                    window.open("https://seekbeak.com/v/60qZ0Zn8zrB", '_blank');
+                    
+                }, 4 * 1000);
         } else {
-            document.getElementById('solvedtext').style.display = 'none';
+            document.getElementById('solvedtext').style.display = 'block';
         }
 
     }, 250);

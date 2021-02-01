@@ -7,32 +7,59 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="main.js"></script>
     <style>
-        .center {
-            margin: auto;
-            width: 50%;
-            padding: 10px;
-            text-align: center;
-        }
+        
     </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body
-    style="background-color: black; height: 100%; background-repeat: no-repeat; background-attachment: fixed; background-position: center; ">
+<body class="thebod">
     <h3 hidden id="chromeMessage" style="color: white;">Must be using Google Chrome</h3>
 
-    <div class="center" id="scene">
-        <audio id="allAudio">
-            <source src="assets/allsounds.ogg" type="audio/ogg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio id="successsound">
-            <source src="assets/successaudioralph.ogg" type="audio/ogg">
-            Your browser does not support the audio element.
-        </audio>
-        <div id="preZone">
-            <button id="startButton">Start Ritual</button>
-            <h2 style="color: white;">Speak loud and clear and pause after each chant</h2>
+
+
+<div id="top">
+        
+
+        <!--LEFT SIDE-->
+        <div id="leftside">
+            <h2 class="h2chantwords">
+                Spirits of our World,<br> 
+                and the next<br><br>
+                Lend us the Power<br> of your sight<br><br>
+                Too long have we been<br> Trapped in the night<br><br>
+                Allow us to Conjure your might<br><br>
+                And end our suffering tonight<br>
+            </h2>
         </div>
+
+
+        <!--CENTER DIV-->
+        <div class="center" id="scene">
+            <audio id="allAudio">
+                <source src="assets/allsounds.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+            <audio id="successsound">
+                <source src="assets/successaudioralph.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+            
+
+            <div id="preZone">
+                <button id="startButton">Start Ritual</button>
+                <h2 style="color: white;">Speak loud and clear<br> and pause after each chant</h2>
+            </div>
+
+
+
+        </div>
+        <!-- CENTER DIV ENDS -->
+
+
+        <!--RIGHT SIDE-->
+         <div id="rightside">
+        bla blbla
+
         <div hidden id="ritual">
             <img id="candle1" style="height: 100px;" src="assets/greycandle.jpg" alt="">
             <img id="candle2" style="height: 100px;" src="assets/greycandle.jpg" alt="">
@@ -41,7 +68,28 @@
             <img hidden id="gif"
                 src="https://media1.tenor.com/images/a598fa71a6bb1e437cfb3e96cf90d8a0/tenor.gif?itemid=13161196" alt="">
         </div>
-    </div>
+
+        </div>
+
+</div> <!--Top Ends-->
+
+
+ 
+<!--BOTTOM BEGINS Ends-->
+<div id="bottom">
+        
+        <h3 style="color: white; font-family: Arial;">
+            Demons in the digital realm are best conjured with a headset<br>
+            If you mistakenly pressed "block" for microphone, the demon will win and you will be banished. <br>Restart the browser.
+
+
+        </h3>
+        
+</div>
+
+
+
+
 </body>
 
 </html>

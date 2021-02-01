@@ -56,7 +56,7 @@ $(() => {
         if(solution === 'wptcsg') {
             console.log('Solved!');
             //$('#image').hide();
-            $('#puzzle').hide();
+            $('#puzzle').show();
              //make sure the file is correct in index
             $('#pentasuccess').trigger('play');
             $('#video').show();
@@ -67,7 +67,7 @@ $(() => {
 
                 setInterval(() => {
                     // Where do you want the player to end up
-                    window.location.href = 'https://puzzled.tgb.gg/EndGame/'
+                    window.open("https://puzzled.tgb.gg/EndGame/", '_blank');
                 }, 3 * 1000); // 5 is the number of seconds before redirecting
             //window.open("https://puzzled.tgb.gg/EndGame/");
         }

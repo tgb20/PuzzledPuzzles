@@ -8,8 +8,30 @@
     font-size: xx-large;
     font-weight: bolder;
     color: green;
-    display: none;
+    
 }
+
+.divholdingimgsettings {
+    text-align:center;
+        border-style: dashed; 
+        border-width: 1px; 
+        border-color: yellow; 
+        align-items: center;
+        justify-content: center;"
+        float: right;
+}
+
+.imgsettings {
+        text-align:center;
+        border-style: dashed; 
+        border-width: 1px; 
+        border-color: red;
+        width: 100%;
+        height: auto; 
+        align-items: center;
+        justify-content: center;"
+        }
+
 
 .dropzone
 {
