@@ -1,6 +1,7 @@
 $(function () {
 
-    const numToLet = ['A', 'B', 'E', 'F', 'H', 'O', 'P', 'R', 'T', 'Z'];
+    const numToLet = ['A', 'B', 'E', 'F', 'H', 'M', 'O', 'R', 'T', 'Z'];
+
 
     const comboArray = [0, 0, 0, 0, 0, 0];
     const combination = ["H", "O", "B", "A", "R", "T"];
@@ -70,9 +71,11 @@ $(function () {
                             marginTop: 150
                         }, function () {
                             $this.fadeOut(function () {
-                                $('.welcome-message').fadeIn(() => {
-                                    $('#lock-plate').hide();
-                                    $('#revealedimage').show();
+                                    $('.welcome-message').fadeIn(() => {
+                                        $('#lock-plate').hide();
+                                        $('#revealedimage').show();
+                                        
+
                                 });
                             });
                         });

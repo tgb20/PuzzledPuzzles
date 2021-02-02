@@ -1,6 +1,6 @@
 window.onload = (() => {
-    //let correctOrder = ['ANTHROPOLOGY', 'HERBOLOGY', 'PSYCHOLOGY', 'THEOLOGY', 'CHICKEN', 'ELK', 'FISH', 'RABBIT', 'BEER', 'CHAMPAGNE', 'VODKA', 'COGNAC', 'GOETHE', 'KAFKA', 'NIETZSCHE', 'TOLSTOY', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK'];
-    let correctOrder = ['ANTHROPOLOGY', 'BEER', 'CHAMPAGNE', 'CHICKEN',     'COGNAC', 'ELK', 'FISH', 'GOETHE',       'HERBOLOGY', 'KAFKA', 'NIETZSCHE',  'PSYCHOLOGY',     'RABBIT', 'THEOLOGY', 'VODKA', 'TOLSTOY',     'BLANK', 'BLANK', 'BLANK', 'BLANK',      'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK'];
+    let correctOrder = ['ANTHROPOLOGY', 'HERBOLOGY', 'PSYCHOLOGY', 'THEOLOGY', 'CHICKEN', 'ELK', 'FISH', 'RABBIT', 'BEER', 'CHAMPAGNE', 'VODKA', 'COGNAC', 'GOETHE', 'KAFKA', 'NIETZSCHE', 'TOLSTOY', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK'];
+    //let correctOrder = ['ANTHROPOLOGY', 'BEER', 'CHAMPAGNE', 'CHICKEN',     'COGNAC', 'ELK', 'FISH', 'GOETHE',       'HERBOLOGY', 'KAFKA', 'NIETZSCHE',  'PSYCHOLOGY',     'RABBIT', 'THEOLOGY', 'VODKA', 'TOLSTOY',     'BLANK', 'BLANK', 'BLANK', 'BLANK',      'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK'];
         //let correctOrder = ['BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',    'THEOLOGY', 'RABBIT', 'VODKA', 'TOLSTOY',     'PSYCHOLOGY', 'ELK', 'CHAMPAGNE', 'GOETHE',       'ANTHROPOLOGY', 'CHICKEN', 'BEER',  'KAFKA',     'HERBOLOGY', 'FISH', 'COGNAC','NIETZSCHE'];
 
 
@@ -33,10 +33,18 @@ window.onload = (() => {
         });
 
         if (arraysEqual(bookImages, correctOrder)) {
-            document.getElementById('solvedtext').style.display = 'block';
+            //document.getElementById('solvedtext').style.display = 'block';
             document.getElementById('books').style.display = 'none';
+            document.getElementById('video').style.display = 'block';
+            setInterval(() => {
+                    document.getElementById('video').style.display = 'none';
+                    //$('#solvedtext').show();
+                    document.getElementById('solvedtext').style.display = 'block';
+                }, 6 * 1000);
+            //$('#video').show();
         } else {
             document.getElementById('solvedtext').style.display = 'none';
+            document.getElementById('video').style.display = 'none';
         }
 
     }, 250);

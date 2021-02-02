@@ -10,7 +10,18 @@ background-color: grey;
 
 }
 
+.headingstyle {justify-content: center;
+  padding-top: 10%;
+  color: #000000;
+  font-size: 2vw;
+  font-family: Futura;
+  background-color: #666666;
+  text-shadow: 1px 4px 4px #555;
+  text-align: center;
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
 
+}
 
 p1 {
     font-size: 100px;
