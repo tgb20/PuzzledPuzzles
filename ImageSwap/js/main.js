@@ -9,6 +9,7 @@ $(() => {
 
     let storage = window.localStorage;
 
+
     if(storage.getItem("paintingletters") !== null) {
         words = JSON.parse(storage.getItem('paintingletters'));
     }
@@ -37,6 +38,7 @@ $(() => {
             $('#image').hide();
             $('#puzzle').hide();
             $('#video').show();
+             //$('#video1').show();
         }
     });
 
@@ -54,13 +56,25 @@ $(() => {
             $('#puzzle').hide();
             $('#apertasuccess').trigger('play');
             $('#video').show();
+            
             setInterval(() => {
                     // Where do you want the player to be sent to
                     //window.location.href = 'https://seekbeak.com/v/NkjxBONe1lQ'
                     window.open("https://seekbeak.com/v/NkjxBONe1lQ", '_blank');
                     $('#linking').show();
+                    $('#video').show();
+                    $('#video1').hide();
+
                 }, 7 * 1000); // 5 is the number of seconds before redirecting
             //window.open("https://seekbeak.com/v/NkjxBONe1lQ");
+           storage.clear();
+
+           if (solution === 'aperta'){
+                storage.clear();
+                window.localStorage.clear();
+                //solution.clear()
+           }
+
         }
 
         if (this.value.length == this.maxLength) {
