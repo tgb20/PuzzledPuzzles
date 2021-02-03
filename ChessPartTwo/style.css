@@ -1,3 +1,18 @@
+body{
+    background-color: black;
+    width: 42em;
+    height: 100vh;
+    border: 0px solid red;
+    margin-left: auto;
+    margin-right: auto;
+       
+        
+        overflow-x: none;
+        overflow-y: scroll;
+}
+
+
+
 #addoverlay {background-color: white; border: solid 4px grey; margin-top: 2px;
 font-weight: bold; font-size: 18px; padding: 5px;
 }
@@ -8,8 +23,8 @@ font-weight: bold; font-size: 18px; padding: 5px;
     background-image: url("images/chessboard-fancy.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 45em;
-    height: 45em;
+    width: 42em;
+    height: 42em;
 
 }
 
@@ -17,8 +32,8 @@ font-weight: bold; font-size: 18px; padding: 5px;
     background-image: url("images/chessboard-overlay.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 45em;
-    height: 45em;
+    width: 42em;
+    height: 42em;
     transform: rotate(180deg);
     
 }

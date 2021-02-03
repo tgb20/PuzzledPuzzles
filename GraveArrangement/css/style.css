@@ -1,16 +1,18 @@
-#bodie {
+body {
 
 background-image: url('../images/BG.png');
-
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-
 background-color: grey;
+height: 100vh;
+width: 140vh;
+border: dashed red 1px;
 
 }
 
-.headingstyle {justify-content: center;
+.headingstyle {
+  justify-content: center;
   padding-top: 10%;
   color: #000000;
   font-size: 2vw;
@@ -68,7 +70,7 @@ p1 {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  transition: 0.3s;
+  transition: 0.3s; 
 }
 
 
@@ -81,10 +83,10 @@ p1 {
 /*DIV FOR RULEZ*/
 .rulez
 {
-/*border-style: dotted;
-border-color: orange; */
+border: solid orange 0px;
 display: block;
-min-height: 40%;
+min-height: 55vh;
+max-height: 70vh;
 }
 
 
@@ -92,9 +94,10 @@ min-height: 40%;
 /* Centered text font-size: 2.2vh;s    THE RULES */
 .centered {
   position: absolute;
-  font-size: 1.5vw; 
+  font-size: 2.6vh; 
   font-family: Metrophobic;
   font-weight: lighter;
+  /*text-transform: uppercase;*/
   color: #dedbd9;
   top: 0%;
   min-width: 100%;
@@ -105,12 +108,14 @@ min-height: 40%;
   border-color: yellow;
   border-width: 0px;
   transition: 0.3s;
+ 
+
 
 }
 
 
 .centered:hover
-{transform: scale(1.4);
+{transform: scale(1.17);
   cursor: w-resize;
 }
 
@@ -125,8 +130,8 @@ min-height: 40%;
 #books
 {
   /*border-style: solid;
-  border-color: black;*/
-  border-width: 3px;
+  border-color: black;
+  border-width: 3px;*/
   display: flex;
 }
 
@@ -142,11 +147,11 @@ display: inline;
 /*DIV FOR ALL FOUR GRAVES*/
 .graves
 {
-/*border-style: solid;
-border-color: yellow; */
+border: dashed yellow 1px;
 display: flex;
-min-height: 40%
-max-height: 40%;
+min-height: 40vh;
+max-height: 45vh;
+justify-content: center;
 }
 
 
@@ -162,7 +167,7 @@ background-image: url("../images/GRAVEREAL.png"); /**/
 background-size: contain;
 background-position: center;
 background-repeat: no-repeat;
-max-width: 25%;
+max-width: 20%;
 
 }
 
@@ -171,9 +176,11 @@ max-width: 25%;
 .blankarea {
 /*border-style: dotted;
 border-color: red; */
-padding-top: 1%;
+padding-top: 0%;
 padding-left: 1%;
 padding-right: 1%;
+height: 100vh;
+border: blue dashed;
 /*
 background-image: url("");
 background-position: center;
@@ -223,15 +230,20 @@ background-size: cover;
 
 .bookimg 
 {
-    width: 100%;
+    width: auto;
     margin: 0px;
+    height: 5.7vh;
+
 }
 
 
 .notbookimg 
 {
     width: 100%;
-    margin: 0px;
+    
+    height: 3.6vh;
+    
+    
 }
 
 .notbookimg:hover 
