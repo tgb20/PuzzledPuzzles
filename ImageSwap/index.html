@@ -30,6 +30,10 @@
   color: white;
 }
 
+/*video { object-fit: 100%; }*/
+
+
+
 /* Centered text */
 .centered {
   position: absolute;
@@ -41,6 +45,7 @@
 </head>
 
 <body style="background-color: black;">
+
 
 
   <div style="width: 480px; height: 640px; margin: auto; display: block; object-fit: contain; position: relative;">
@@ -154,30 +159,32 @@
     </div>
     <img onclick="switchImages()" id="image" style="width: 480px; height: 640px;" src="images/click-change_1.png"
       alt="Image 1">
-    
+   
       <audio id="apertasuccess"
             <source src="images/apertasuccess.ogg" type="audio/ogg">
             Your browser does not support the audio element.
         </audio>
 
-    <div hidden id="video" class="container" style="padding-top: 15%;">
+    <div hidden id="video" class="container" style="height: 640px;">
         
-        <video width="600" height="600" controls autoplay muted>
-          <source src="images/bookshelf.mp4" type="video/mp4">
-          <source src="movie.ogg" type="video/ogg">
+        <video width="480" height="640px" autoplay muted style="border-style: dashed; border-color: yellow; border-width: 0px;">
+          <source src="images/bookshelfsized.mp4" type="video/mp4">
+          
           Your browser does not support the video tag.
           </video>
-          <div hidden id="linking" class="centered" style="border-style: solid; border-color: red;">
+          <div hidden id="linking" class="centered">
           <a href="https://seekbeak.com/v/NkjxBONe1lQ" target="_blank"><h3>Enter if you dare</h3>
           </a>
           </div>
     </div>
 
-      <div hidden id="video1" class="container" 
-            style="background-image: url(images/click-change_2.png); 
-            width: 480px; height: 640px; background-position: center;
+      <div hidden id="solvedchalkboard" class="container" 
+            style="background-image: url(images/chalkboard-solved.png); 
+            width: 100%; height: 100%; 
+            background-position: center;
             background-repeat: no-repeat;
-            background-size: cover;">
+            background-size: cover;
+            padding-top: 0px;">
           
         
           <div id="linkimg" style="padding-top: 50%;">

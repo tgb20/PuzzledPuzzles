@@ -1,3 +1,6 @@
+
+
+
 $(() => {
 
     let storage = window.localStorage;
@@ -12,8 +15,8 @@ $(() => {
     });
 });
 
-
 /*OG CODE
+
 $(() => {
 
     let storage = window.localStorage;

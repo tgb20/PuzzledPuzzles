@@ -1,7 +1,7 @@
 window.onload = (() => {
 
-    //let correctOrder = ['CHANTS', 'ELEMENTS', 'GATES', 'HERBS', 'RITUALS', 'SPIRITS', 'SYMBOLS', 'WITCH'];
-    let correctOrder = ['HERBS', 'RITUALS', 'WITCH', 'GATES', 'SPIRITS', 'CHANTS', 'ELEMENTS', 'SYMBOLS'];
+    let correctOrder = ['CHANTS', 'ELEMENTS', 'GATES', 'HERBS', 'RITUALS', 'SPIRITS', 'SYMBOLS', 'WITCH'];
+    //let correctOrder = ['HERBS', 'RITUALS', 'WITCH', 'GATES', 'SPIRITS', 'CHANTS', 'ELEMENTS', 'SYMBOLS'];
 
     let dropzones = document.querySelectorAll('.dropzone');
 
