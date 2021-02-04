@@ -1,30 +1,57 @@
 body{
     background-color: black;
-    width: 42em;
+    width: 100vh;
     height: 100vh;
     border: 0px solid red;
     margin-left: auto;
     margin-right: auto;
-       
-        
         overflow-x: none;
-        overflow-y: scroll;
+        overflow-y: none;
 }
 
 
 
-#addoverlay {background-color: white; border: solid 4px grey; margin-top: 2px;
-font-weight: bold; font-size: 18px; padding: 5px;
+.divstyling {
+    
+    border: solid 0px red; 
+    position: absolute;
+    vertical-align: center;
+    text-align: center;
+    justify-content: center;
+    width: 100vh;
+  
+     
 }
 
-#addoverlay:hover {background-color: #e5e5ff; transition-delay: 0.3s}
+/*BUTTON DIV*/
+#addoverlay {
+    background-color: rgba(255,255,255,0.9); 
+    border: solid 2px rgba(0,0,0,0.6);
+    margin-top: 1vh;
+    font-weight: bold; font-size: 14px; padding: 5px;
+    z-index: 100;
+    vertical-align: center;
+    text-align: center;
+    justify-content: center;
+   
+}
+
+
+#addoverlay:hover {
+    background-color: rgba(255,255,255,0.6); 
+    border: solid 2px rgba(255,255,255,0.9);
+    transition-delay: 0.1s
+
+}
 
 #chessboard {
     background-image: url("images/chessboard-fancy.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 42em;
-    height: 42em;
+    width: 100vh;
+    height: 100vh;
+    z-index: 1;
+    border: solid green 0px;
 
 }
 
@@ -32,8 +59,9 @@ font-weight: bold; font-size: 18px; padding: 5px;
     background-image: url("images/chessboard-overlay.png");
     background-repeat: no-repeat;
     background-size: cover;
-    width: 42em;
-    height: 42em;
+    width: 100vh;
+    height: 100vh;
     transform: rotate(180deg);
+    border: dashed pink 1px;
     
 }
