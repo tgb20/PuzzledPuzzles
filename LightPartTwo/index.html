@@ -5,32 +5,106 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="./script.js"></script>
         <style>
-            h3 {color: white; font-size: 30px; padding-left: 10%; padding-right: 10%; padding-top: 10%;}
 
-            .adjusting {
-                        width: 500px; 
-                        height: 500px; 
+            body       {
+                        background-image: url('images/locked-drawer.jpg');
+                        background-color: black;
                         background-position: center;
                         background-repeat: no-repeat;
-                        background-size: cover;
-                        margin-top: 0px;
-                        border-style: solid;
-                        border-color: black;
-                        
+                        background-size: cover; 
+                        border: double red 0px; 
+                        width: 100vw;
+                        height: 100vh;
+                        overflow-x: none; 
+                        overflow-y: none; 
+                        justify-content: center;
+                        text-align: center;
+                        align-items: center;
+                        align-content: center;
+                        vertical-align: center;
+                        margin-left: 0;
+                        margin-right: 0;
+                        margin-top: 0;
+                        margin-bottom: 0;
+                        padding-bottom: 0;
+                        display: relative;
+                       }
 
-            }
+
+            h3          {
+                        color: white; 
+                        font-size: 30px; 
+                        padding-left: 10%; 
+                        padding-right: 10%; 
+                        padding-top: 10%;
+                        }
+
+
+            .adjusting {
+                        align-content: center;
+                        -webkit-box-align: center;
+                        align-items: center;
+                        display: -webkit-box;
+                        position: absolute;
+                        height: 100vh;
+                        width: 77vh;
+                        -webkit-box-pack: center;
+                        justify-content: center;
+                        vertical-align: center;
+                        left: 11.5%;
+                        /*top: 50%;
+                        margin-top: -30vh;
+                        */
+                        border: dashed green 0px;
+                        transition: 1s;
+                      
+                        }
+
+            .adjusting:hover {transform: scaleX(1.4) scaleY(1.3);
+                            padding-top: 10vh;
+                       
+
+                        }
+
+
+            .divstylin  {
+                        border: dashed orange 0px;
+                        text-align: center;
+                        justify-content: center;
+
+
+                        }
+
+            h2          {
+                        position: absolute;
+                        top: 30%;
+                        border: solid black 1px;
+                        z-index: 50;
+                        color: white;
+                        font-size: 3vh; 
+                        text-align: center;
+                        background-color: rgba(0,0,0,0.6);
+                        height: 5vh;
+                        width: 60%;
+                        justify-content: center;
+                        padding-top: 1vh;
+                        padding-bottom: 0.5vh;
+                        left: 20%;
+                        right: 20%;
+                        }
         </style>
     </head>
-    <body style="border-style: dashed; width: 500px; height: auto; background-color: black; overflow-x: none; overflow-y: scroll; justify-content: center; text-align: center;">
+    <body>
         <div style="width: 500px; height: 500px;">
             <div id="locked" class="adjusting" style="background-image: url('images/locked-drawer.jpg');">
                 
                 <h3>It seems locked by some sort of hidden mechanism, or perhaps the demons are playing tricks on you.</h3>
             </div>
-            <div hidden id="letter">
-                <h2 style="color: white;">Hey its unlocked now! And there's this letter. <h2>
-                <img src="images/letter.jpg" alt="Image 1" style="width: 500px;">
+            <div id="letter" class="divstylin">
+                <h2 id="foundit">Hey its unlocked now! And there's this letter. </h2>
+                <img src="images/letter.jpg" alt="Image 1" class="adjusting">
             </div>
         </div>
     </body>
 </html>
+
