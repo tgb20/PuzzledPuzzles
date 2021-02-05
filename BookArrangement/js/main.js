@@ -35,16 +35,17 @@ window.onload = (() => {
             document.getElementById('solvedtext').style.display = 'block';
             document.getElementById('pentashelf').style.display = 'block';
             document.getElementById('books').style.display = 'none';
-            //document.getElementById('pentasound').trigger.play = 'true';
-            //$('#books').hide();
-            $('#pentasoundsolved').trigger('play');
-            //$('#video').show();
             setInterval(() => {
-                    // Where do you want the player to be sent to
+                    document.getElementById('linking').style.display = 'block';
+                    
+
+                    //$('#pentasoundsolved').trigger('play');
+                    
                     //window.location.href = 'https://seekbeak.com/v/NkjxBONe1lQ'
                     window.open("https://seekbeak.com/v/60qZ0Zn8zrB", '_blank');
                     
-                }, 4 * 1000);
+                    
+                }, 2 * 1000);
         } else {
             document.getElementById('solvedtext').style.display = 'block';
         }

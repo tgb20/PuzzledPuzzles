@@ -1,6 +1,47 @@
+body{ background-image: url('../images/BOOKBG.jpg');
+       width: 100vh;
+       height: 82.5vh;
+       
+       margin-left: auto;
+       margin-right: auto;
+       padding-left: 0px;
+       padding-right: 0px;
+        border: solid blue 0px;
+
+       
+       align-items: center;
+       justify-content: center;"
+    }
+
+  h3 {font-family: 'Langar', cursive;
+      background-color: transparent;
+      border: none;
+      color: white;
+      font-size: 50px;
+      text-align: center;}
+
+      .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+
 #books
 {
     display: flex;
+    padding-top: 15%;
 }
 
 #solvedtext 
@@ -14,7 +55,7 @@
 .divholdingimgsettings {
     text-align:center;
         border-style: dashed; 
-        border-width: 1px; 
+        border-width: 0px; 
         border-color: yellow; 
         align-items: center;
         justify-content: center;"
@@ -24,10 +65,10 @@
 .imgsettings {
         text-align:center;
         border-style: dashed; 
-        border-width: 1px; 
+        border-width: 0px; 
         border-color: red;
-        width: 100%;
-        height: auto; 
+        width: 100vh;
+       height: 82.5vh;
         align-items: center;
         justify-content: center;"
         }
