@@ -7,6 +7,7 @@
   <script src="js/main.js"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
   <style>
     .letter {
       font-family: 'Langar', cursive;
@@ -16,9 +17,8 @@
       font-size: 50px;
       text-align: center;
     }
-    body {border-style: dotted;
-          border-color: green;
-
+    body {
+      border: solid green 0px;
     }
 
 
@@ -26,17 +26,18 @@
 </head>
 
 <body style="margin: 0px;">
-  <div style="width: 784px; height: 540px; border: solid 7px pink; display: block; object-fit: contain; position: relative;">
-    <div hidden id="puzzle">
-      
+    <div style="width: 784px; height: 540px; border: solid 0px pink; display: block; object-fit: contain; position: relative;">
+        <div hidden id="puzzle">
+          
+        </div>
+        <img onclick="switchImages()" id="image" style="width: 784px; height: 540px;" src="images/click-change_1.png"
+          alt="Image 1">
+        
+        <div hidden id="video">
+          <iframe src="https://player.vimeo.com/video/483230521" width="480" height="640" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
     </div>
-    <img onclick="switchImages()" id="image" style="width: 784px; height: 540px;" src="images/click-change_1.png"
-      alt="Image 1">
-    <div hidden id="video">
-      <iframe src="https://player.vimeo.com/video/483230521" width="480" height="640" frameborder="0"
-        allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-  </div>
 </body>
 
 </html>

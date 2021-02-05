@@ -14,7 +14,7 @@
 		}
 		.zoom-area
 		{
-			width: 700px;
+			width: 80vw;
 			margin: 50px auto;
 			position: relative;
 			cursor: none
@@ -22,10 +22,11 @@
 		/* for create magnify glass */
 		.large
 		{
-			width: 300px;
-			height: 300px;
+			width: 25vh;
+			height: 25vh;
 			position: absolute;
 			border-radius: 100%;
+			border: solid red 0px;
 		
 			/* for box shadow for glass effect */
 			box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.85), 
@@ -38,6 +39,7 @@
 		.small
 		{
 			display: block;
+			border: solid blue 0px;
 		}
 
 
