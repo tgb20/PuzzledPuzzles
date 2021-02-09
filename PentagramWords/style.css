@@ -1,0 +1,90 @@
+body {margin: 0px;
+background-color: black;
+border: 0px solid red;
+overflow-x: none;
+        overflow-y: none;
+ 
+ /*
+width: 100vw;
+height: 100vh;
+justify-content: center;
+
+align-items: center;
+align-content: center;
+vertical-align: center;
+*/
+    
+          
+
+
+}
+
+#puzzle {   background-image: url('images/pentagram.jpg'); 
+            width: 1000px; 
+            height: 1000px; 
+            margin: auto; 
+            display: block; 
+            object-fit: contain; 
+            position: relative; 
+            border-style: solid; 
+            border-color: red;
+            z-index: 50;
+        }
+
+
+    
+#completed { 
+            position: relative; 
+            background-image: url('images/pentagram-solved.jpg'); 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+            width: 1000px; 
+            height: 1000px; 
+            margin: auto; 
+            display: block; 
+            object-fit: contain;  
+            border: dashed blue 3px;
+            z-index: 0;
+            }
+
+
+
+h3          {
+            font-family: 'Langar', cursive;
+            background-color: transparent;
+            border: none;
+            color: darkred;
+            font-size: 50px;
+            padding-top: 30%;
+            text-align: center;}
+
+
+/*
+      .container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+*/
+
+
+
+.letter {
+      font-family: 'Langar', cursive;
+      background-color: transparent;
+      border: 0px solid blue;
+      border-bottom: 3px solid rgba(250, 99, 71, 0.7);
+      color: white;
+      font-size: 50px;
+      text-align: center;
+    }

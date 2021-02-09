@@ -1,7 +1,4 @@
-function switchImages() {
-    $('#image').attr('src', 'images/pentagram.jpg');
-    $('#puzzle').show();
-}
+
  
 // first word: Spirits of our world and the next  = world
 // second word: lend us your sight = sight 
@@ -10,8 +7,12 @@ function switchImages() {
 // fifth word: allow us to end our suffering tonight = suffering
 
 let words = [['', '', '', '', ''], ['', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', '', '', '', '', '']]
+//var solvedpenta = 0;
 
 $(() => {
+
+    $('#completed').hide();
+
 
     let storage = window.localStorage;
 
@@ -41,7 +42,7 @@ $(() => {
             console.log('Solved!');
             //$('#image').hide();
             $('#puzzle').hide();
-            $('#video').show();
+            $('#completed').show();
         }
     });
 
@@ -56,10 +57,10 @@ $(() => {
         if(solution === 'wptcsg') {
             console.log('Solved!');
             //$('#image').hide();
-            $('#puzzle').show();
+            $('#puzzle').hide();
              //make sure the file is correct in index
             $('#pentasuccess').trigger('play');
-            $('#video').show();
+            
            
 
             // change this
@@ -68,6 +69,8 @@ $(() => {
                 setInterval(() => {
                     // Where do you want the player to end up
                     window.open("https://puzzled.tgb.gg/EndGame/", '_blank');
+                    $('#completed').show();
+                    
                 }, 3 * 1000); // 5 is the number of seconds before redirecting
             //window.open("https://puzzled.tgb.gg/EndGame/");
         }

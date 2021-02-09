@@ -5,30 +5,18 @@
   <title>Pentagram Words</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/main.js"></script>
+  <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
   <style>
-    .letter {
-      font-family: 'Langar', cursive;
-      background-color: transparent;
-      border: 0px solid blue;
-      border-bottom: 3px solid rgba(250, 99, 71, 0.7);
-      color: white;
-      font-size: 50px;
-      text-align: center;
-
-
-    }
-
-body {margin: 0px;}
-
     
+
   </style>
 </head>
 
 <body>
   
-  <div hidden id="puzzle" style="background-image: url('images/pentagram.jpg'); width: 1000px; height: 1000px; margin: auto; display: block; object-fit: contain; position: relative; border-style: solid; border-color: red;">
+  <div id="puzzle">
     
     	
 
@@ -56,12 +44,7 @@ body {margin: 0px;}
         id="letter4Word2" maxlength="1">
       <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 815px; margin-top: 240px;" type="text"
         id="letter5Word2" maxlength="1">
-      <!--
-      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 335px; margin-top: 445px;" type="text"
-        id="letter6Word2" maxlength="1">
-      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 380px; margin-top: 445px;" type="text"
-        id="letter6Word2" maxlength="1">
-      -->
+    
       	<!--ROW 3    TRAPPED  -->
       <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 30px; margin-top: 535px;" type="text"
         id="letter1Word3" maxlength="1">
@@ -114,27 +97,19 @@ body {margin: 0px;}
       <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 660px; margin-top: 810px;" type="text"
         id="letter9Word5" maxlength="1">
       
-		<!--ROW 6
-      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 100px; margin-top: 790px;" type="text"
-        id="letter1Word6" maxlength="1">
-      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 145px; margin-top: 790px;" type="text"
-        id="letter2Word6" maxlength="1">
-      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 192px; margin-top: 790px;" type="text"
-        id="letter3Word6" maxlength="1">
-      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 238px; margin-top: 790px;" type="text"
-        id="letter4Word6" maxlength="1">
-      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 285px; margin-top: 790px;" type="text"
-        id="letter5Word6" maxlength="1">
-      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 335px; margin-top: 790px;" type="text"
-        id="letter6Word6" maxlength="1">
-      <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 380px; margin-top: 790px;" type="text"
-        id="letter7Word6" maxlength="1">
 
-        <a href="https://www.w3schools.com/">Visit W3Schools.com!</a>
-        <iframe src="https://player.vimeo.com/video/483230521" width="480" height="640" frameborder="0"
-        allow="autoplay; fullscreen" allowfullscreen></iframe>
-    -->
+        <!--      BLOCK ON TOP OF EVERYTHING ONCE FORWARDED   -->
+                  <div hidden id="completed" onclick="location.href='https://puzzled.tgb.gg/EndGame/', '_blank'" style="cursor: pointer;"></div>
+
+                    
+                    <h3 hidden id="challengetext">CHALLENGE THE DEMON</h3>
+
+                  </div>
+
+
     </div>
+
+
    
     <audio id="pentasuccess">
             <source src="images/pentasuccess.ogg" type="audio/ogg">
@@ -142,11 +117,7 @@ body {margin: 0px;}
     </audio>
 
 
-    <div hidden id="video">
-
-
-
-    </div>
+    
   
 </body>
 
