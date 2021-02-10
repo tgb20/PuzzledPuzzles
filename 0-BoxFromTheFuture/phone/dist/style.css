@@ -46,7 +46,7 @@ canvas {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  border: dashed yellow 2px;
+  border: dashed yellow 0px;
 
 }
 #keypad .key {
