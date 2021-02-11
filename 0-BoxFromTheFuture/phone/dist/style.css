@@ -41,8 +41,8 @@ color: blue; border: dashed blue 3px}
   margin-left: 400px;
   width: 100vw;
   height: 100vh;
-  padding-left: 59vw;
-  padding-right:55vw;
+  padding-left: 58vw;
+  padding-right: 56vw;
   padding-top: 100vh;
   padding-bottom: 10vh;
   
@@ -51,7 +51,7 @@ color: blue; border: dashed blue 3px}
   background-image: url('assets/redbig.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: 30%;
+  background-size: 27%;
   border: dashed yellow 0px;
 
 }
