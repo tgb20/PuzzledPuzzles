@@ -518,7 +518,6 @@ class DtmfPlayer {
 
 let dtmfPlayer = new DtmfPlayer();
 const keypad = document.getElementById("keypad");
-//const demo = document.getElementById("demo");
 let numbers = [];
 
 const lightningfx = new Audio('assets/lightning.mp3');

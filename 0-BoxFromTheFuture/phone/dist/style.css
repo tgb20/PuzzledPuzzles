@@ -5,7 +5,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(26, 26, 26, 0.2);
+  background-color: rgba(0, 0, 0, 1.0);
   border: dashed pink 0px;
 }
 
@@ -38,7 +38,7 @@ color: blue; border: dashed blue 3px}
   display: grid;
   grid-template-columns: 5vw 5vw 5vw;
   grid-template-rows: 5vw 5vw 5vw 5vw;
-  
+  margin-left: 400px;
   width: 100vw;
   height: 100vh;
   padding-left: 59vw;
@@ -52,7 +52,7 @@ color: blue; border: dashed blue 3px}
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30%;
-  border: dashed yellow 3px;
+  border: dashed yellow 0px;
 
 }
 #keypad .key {
