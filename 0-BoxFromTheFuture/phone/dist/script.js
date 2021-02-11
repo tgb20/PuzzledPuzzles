@@ -520,11 +520,20 @@ let dtmfPlayer = new DtmfPlayer();
 const keypad = document.getElementById("keypad");
 let numbers = [];
 
-const audio = new Audio('assets/lightning.mp3');
+const lightningfx = new Audio('assets/lightning.mp3');
 const excellent = new Audio("assets/eaexcellent.mp3");
 const secret1 = new Audio("assets/sec1.mp3");
 const wrong = new Audio("assets/dialagain.mp3");
-const secret2 = new Audio("assets/2525.mp3");
+const intheyear2525 = new Audio("assets/2525.mp3");
+
+const nine11 = new Audio("assets/911.mp3");
+const kevindahl = new Audio("assets/kevindahl.mp3");
+const idontknowhoney = new Audio("assets/idontknowhoney.mp3");
+const isthisaprankcall = new Audio("assets/isthisaprankcall.mp3");
+const areyouonmute = new Audio("assets/areyouonmute.mp3");
+
+
+
 
 keypad.addEventListener("mousedown", function (e) {
 
@@ -632,11 +641,16 @@ function zap() {
 }
 
 function stop() {
-  audio.pause();
+  lightningfx.pause();
   wrong.pause();
   excellent.pause();
   secret1.pause();
-  secret2.pause();
+  intheyear2525.pause();
+  nine11.pause();
+  kevindahl.pause();
+  idontknowhoney.pause();
+  isthisaprankcall.pause();
+  areyouonmute.pause();
   cancelAnimationFrame(run);
   cancelAnimationFrame(tunnel);
 
@@ -657,6 +671,86 @@ function stop() {
 
 
 //   THE VARIOUS PHONE NUMBERS 
+function playAudio() {  //1413 650 5803
+if ((numbers[0] === 1 && numbers[1] === 4 &&     numbers[2] === 1 && numbers[3] === 3 && numbers[4] === 6      && numbers[5] === 5 && numbers[6] === 0 &&            numbers[7] === 5 && numbers[8] === 8 && numbers[9] === 0 && numbers[10] === 3) 
+||
+ (numbers[0] === 9 && numbers[1] === 1))
+  {
+    intheyear2525.play();
+    intheyear2525.volume = 1.0;
+    //secret1.play();
+    
+    setTimeout(() => {
+                        FIELD.stop();
+                        renderTunnel();
+                        render();
+                        lightningfx.volume = 0.05;
+                        lightningfx.currentTime = 0;
+                        lightningfx.play();
+                        document.getElementById('keypad').style.display = 'none';
+                        FIELD.star_speed = 10;
+                      }, 1000);
+    
+  } 
+
+            else if (numbers[0] === 9 && numbers[1] === 1 && numbers[2] === 1) {
+                  nine11.currentTime = 0;
+                  nine11.play();
+                          }
+
+            //TOM DAHL'S NUMBER
+            else if (numbers[0] === 4 && numbers[1] === 1 && numbers[2] === 3 && numbers[3] === 2 && numbers[4] === 0 && numbers[5] === 4 && numbers[6] === 0 && numbers[7] === 7 && numbers[8] === 8 && numbers[9] === 1 ) {
+              kevindahl.currentTime = 0;
+              kevindahl.play();
+                      }
+
+            //OFTEN WRONG CALL NUMBER
+            else if (numbers[0] === 1 && numbers[1] === 4 &&     numbers[2] === 1 && numbers[3] === 3 && numbers[4] === 6      && numbers[5] === 5 && numbers[6] === 2 &&            numbers[7] === 5 && numbers[8] === 8 && numbers[9] === 0 && numbers[10] === 3) {
+              isthisaprankcall.currentTime = 0;
+              isthisaprankcall.play();
+                      }
+
+
+            else if (numbers[0] === 0 && numbers[1] === 0 &&     numbers[2] === 4 && numbers[3] === 7 && numbers[4] === 5      && numbers[5] === 1 && numbers[6] === 5 &&            numbers[7] === 8 && numbers[8] === 2 && numbers[9] === 4 && numbers[10] === 0 && numbers[11] === 9) {
+              idontknowhoney.currentTime = 0;
+              idontknowhoney.play();
+                      }
+
+
+
+            else if (numbers[0] === 6 && numbers[1] === 9) {
+              secret1.currentTime = 0;
+              secret1.play();
+                      } else {
+                              if (numbers.length < 2 || numbers.length > 2) 
+                                  {
+                                    wrong.currentTime = 0;
+                                    wrong.volume = 0.3;
+                                    wrong.play();
+                                  } else {
+                                          excellent.currentTime = 0;
+                                          excellent.play();
+
+                                          setTimeout(() => {
+                                                            //FIELD.stop();
+                                                            //renderTunnel();
+                                                            //render();
+                                                            //lightningfx.volume = 0.3;
+                                                            //audio.currentTime = 0;
+                                                            //audio.play();
+                                                            //FIELD.star_speed = 10;
+                                                          }, 2000);
+                        }
+                      }
+
+  numbers = [];
+}
+
+// END OF PHONE NUMBER AND AMOUNT OF NUMBERS
+
+
+
+/*/   THE VARIOUS PHONE NUMBERS 
 function playAudio() {  //1413 650 5803
   if (numbers[0] === 1 && numbers[1] === 4 &&     numbers[2] === 1 && numbers[3] === 3 && numbers[4] === 6      && numbers[5] === 5 && numbers[6] === 0 &&            numbers[7] === 5 && numbers[8] === 8 && numbers[9] === 0 && numbers[10] === 3) {
     secret2.play();
@@ -690,6 +784,9 @@ function playAudio() {  //1413 650 5803
 }
 
 // END OF PHONE NUMBER AND AMOUNT OF NUMBERS
+*/
+
+
 
 
 

@@ -6,7 +6,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: rgba(26, 26, 26, 0.2);
-  border: dashed pink 2px;
+  border: dashed pink 0px;
 }
 
 canvas {
@@ -16,7 +16,7 @@ canvas {
   width: 100vw;
   height: 100vh;
 
-  background-color: yellow;
+  background-color: #000;
 }
 /*
 #outside {
@@ -29,15 +29,14 @@ canvas {
   opacity: 0.5;
 }
 
+
 #keypad {
   display: grid;
-  grid-template-columns: 10vw 10vw 10vw;
-  grid-template-rows: 10vw 10vw 10vw 10vw;
-  /*padding: 20vh;*/
-  
-  padding-left: 22vw;
-  padding-right:18vw;
-  padding-top: 30vh;
+  grid-template-columns: 5vw 5vw 5vw;
+  grid-template-rows: 5vw 5vw 5vw 5vw;
+  padding-left: 11.5vw;
+  padding-right:8.5vw;
+  padding-top: 32vh;
   padding-bottom: 10vh;
   
   background-position: 0 -4px;
@@ -58,16 +57,50 @@ canvas {
   border: dashed green 0px;
 }
 #keypad .key .inner {
-  /*
-  background-image: url('assets/keypad.jpg');
-  background-position: center;
-  background-image: url("https://assets.codepen.io/86186/keypad");
-  */
   width: 100%;
   height: 100%;
   position: relative;
   border: solid blue 0px;
 }
+
+
+
+/*
+#keypad {
+  display: grid;
+  grid-template-columns: 10vw 10vw 10vw;
+  grid-template-rows: 10vw 10vw 10vw 10vw;
+  padding-left: 22vw;
+  padding-right:18vw;
+  padding-top: 30vh;
+  padding-bottom: 10vh;
+  
+  background-position: 0 -4px;
+  perspective: 800px;
+  background-image: url('assets/redbig.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border: dashed yellow 2px;
+
+}
+#keypad .key {
+  background-color: transparent;
+  box-sizing: border-box;
+  position: relative;
+  perspective: 800px;
+  padding: 0;
+  border: dashed green 2px;
+}
+#keypad .key .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: solid blue 2px;
+}
+
+*/
+
 #keypad .key.key-1 .inner {
   background-position: -17px -28px;
    background-image: url('assets/buttons/one.png');
