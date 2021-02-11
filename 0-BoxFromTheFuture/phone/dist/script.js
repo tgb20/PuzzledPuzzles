@@ -518,6 +518,7 @@ class DtmfPlayer {
 
 let dtmfPlayer = new DtmfPlayer();
 const keypad = document.getElementById("keypad");
+//const demo = document.getElementById("demo");
 let numbers = [];
 
 const lightningfx = new Audio('assets/lightning.mp3');
@@ -542,6 +543,7 @@ keypad.addEventListener("mousedown", function (e) {
   if (key) {
     const val = key.value;
     stop();
+    document.getElementById("demo").innerHTML = key.value;
 
     if (val === "*") {
       keypad.children[11].classList.add("active");
@@ -674,7 +676,7 @@ function stop() {
 function playAudio() {  //1413 650 5803
 if ((numbers[0] === 1 && numbers[1] === 4 &&     numbers[2] === 1 && numbers[3] === 3 && numbers[4] === 6      && numbers[5] === 5 && numbers[6] === 0 &&            numbers[7] === 5 && numbers[8] === 8 && numbers[9] === 0 && numbers[10] === 3) 
 ||
- (numbers[0] === 9 && numbers[1] === 1))
+ (numbers[0] === 2 && numbers[1] === 0))
   {
     intheyear2525.play();
     intheyear2525.volume = 1.0;
@@ -722,14 +724,15 @@ if ((numbers[0] === 1 && numbers[1] === 4 &&     numbers[2] === 1 && numbers[3] 
               secret1.currentTime = 0;
               secret1.play();
                       } else {
-                              if (numbers.length < 2 || numbers.length > 2) 
+                              if (numbers.length < 0 || numbers.length > 0) 
                                   {
                                     wrong.currentTime = 0;
                                     wrong.volume = 0.3;
                                     wrong.play();
                                   } else {
-                                          excellent.currentTime = 0;
-                                          excellent.play();
+                                           wrong.currentTime = 0;
+                                            wrong.volume = 0.3;
+                                            wrong.play()
 
                                           setTimeout(() => {
                                                             //FIELD.stop();

@@ -25,6 +25,10 @@ canvas {
   height: 1100px;
 }
 */
+
+h3 {font-size: 20px;
+color: blue; border: dashed blue 3px}
+
 #c2 {
   opacity: 0.5;
 }
@@ -34,9 +38,12 @@ canvas {
   display: grid;
   grid-template-columns: 5vw 5vw 5vw;
   grid-template-rows: 5vw 5vw 5vw 5vw;
-  padding-left: 11.5vw;
-  padding-right:8.5vw;
-  padding-top: 32vh;
+  
+  width: 100vw;
+  height: 100vh;
+  padding-left: 59vw;
+  padding-right:55vw;
+  padding-top: 100vh;
   padding-bottom: 10vh;
   
   background-position: 0 -4px;
@@ -44,8 +51,8 @@ canvas {
   background-image: url('assets/redbig.png');
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
-  border: dashed yellow 0px;
+  background-size: 30%;
+  border: dashed yellow 3px;
 
 }
 #keypad .key {
