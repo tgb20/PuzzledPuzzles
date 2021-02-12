@@ -1,36 +1,25 @@
-
-
-
 $(() => {
 
     let storage = window.localStorage;
-    
-    if(storage.getItem('lightSwitchValue') == 'false') {
+
+    if (storage.getItem('lightSwitchValue') == 'false') {
         $('#lightSwitch').prop('checked', false);
     }
-    $('input[type="checkbox"]').click(function(){
-         if($(this).prop("checked") == false){
+    $('input[type="checkbox"]').click(function () {
+        if ($(this).prop("checked") == false) {
             storage.setItem('lightSwitchValue', false);
         }
     });
 });
 
-/*OG CODE
+function puzzleReset() {
+    if (window.confirm('Stuck? Click okay to reset the puzzle')) {
+        let storage = window.localStorage;
 
-$(() => {
+        // Remove Items for this puzzle
+        storage.removeItem("lightSwitchValue");
+        $('#lightSwitch').prop('checked', true);
 
-    let storage = window.localStorage;
-    
-    if(storage.getItem('lightSwitchValue') == 'false') {
-        $('#lightSwitch').prop('checked', false);
+        location.reload();
     }
-    $('input[type="checkbox"]').click(function(){
-        if($(this).prop("checked")){
-            storage.setItem('lightSwitchValue', true);
-        }
-        else if($(this).prop("checked") == false){
-            storage.setItem('lightSwitchValue', false);
-        }
-    });
-});
-*/
+}

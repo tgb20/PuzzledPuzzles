@@ -8,15 +8,16 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
-  
+
 </head>
 
 <body>
 
 
 
-  <div class="main" style="width: 480px; height: 640px; margin: auto; display: block; object-fit: contain; position: relative;">
-    
+  <div class="main"
+    style="width: 480px; height: 640px; margin: auto; display: block; object-fit: contain; position: relative;">
+
     <div hidden id="puzzle" class="test">
       <input class="letter" style="width: 35px; height: 75px; position: absolute; margin-left: 100px; margin-top: 60px;"
         type="text" id="letter1Word1" maxlength="1">
@@ -126,45 +127,53 @@
     </div>
     <img onclick="switchImages()" id="image" style="width: 480px; height: 640px;" src="images/click-change_1.png"
       alt="Image 1">
-   
-      <audio id="apertasuccess"
-            <source src="images/apertasuccess.ogg" type="audio/ogg">
-            Your browser does not support the audio element.
-        </audio>
+
+    <audio id="apertasuccess" <source src="images/apertasuccess.ogg" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
 
     <div hidden id="video" class="container" style="height: 640px;">
-        
-        <video width="480" height="640px" autoplay muted style="border-style: dashed; border-color: yellow; border-width: 0px;">
-          <source src="images/bookshelfsized.mp4" type="video/mp4">
-          
-          Your browser does not support the video tag.
-          </video>
-          <div hidden id="linking" class="centered">
-          <a href="https://seekbeak.com/v/NkjxBONe1lQ" target="_blank"><h3>Enter if you dare</h3>
-          </a>
-          </div>
+
+      <video width="480" height="640px" autoplay muted
+        style="border-style: dashed; border-color: yellow; border-width: 0px;">
+        <source src="images/bookshelfsized.mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
+      </video>
+      <div hidden id="linking" class="centered">
+        <a href="https://seekbeak.com/v/NkjxBONe1lQ" target="_blank">
+          <h3>Enter if you dare</h3>
+        </a>
+      </div>
     </div>
 
-      <div hidden id="solvedchalkboard" class="container" 
-            style="background-image: url(images/chalkboard-solved.png); 
+    <div hidden id="solvedchalkboard" class="container" style="background-image: url(images/chalkboard-solved.png); 
             width: 100%; height: 100%; 
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             padding-top: 0px;">
-          
-        
-          <div id="linkimg" style="padding-top: 50%;">
-          <a href="https://seekbeak.com/v/NkjxBONe1lQ" target="_blank"><h3>Enter if you dare</h3>
-          </a>
-          </div>
+
+
+      <div id="linkimg" style="padding-top: 50%;">
+        <a href="https://seekbeak.com/v/NkjxBONe1lQ" target="_blank">
+          <h3>Enter if you dare</h3>
+        </a>
       </div>
-
-
-    
-  
+    </div>
   </div>
-</body> 
+  <!-- Restart Puzzle Button -->
+  <div>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <button
+      style="width:50px; height:50px; background-color: transparent; position: absolute; bottom: 10px; right: 10px;"
+      onclick="puzzleReset()">
+      <i style="color: white;" class="fas fa-redo-alt"></i>
+    </button>
+  </div>
+</body>
+
 </html>
 
 <!--<iframe src="https://player.vimeo.com/video/483230521" width="480" height="640" frameborder="0"

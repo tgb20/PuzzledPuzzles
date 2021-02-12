@@ -1,52 +1,55 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Chess Board</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="./script.js"></script>
-        <style>
-            h3 {color: red; font-size: 40px; margin-left: 15px; margin-right: 15px; margin-top: 40px;}
-            h2 {color: pink; font-size: 40px; margin-left: 15px; margin-right: 15px; margin-top: 40px;}
-        </style>
-    </head>
-    <body>
-        
-        <div id="chessboard">
-                
-                <div hidden id="overlay" class="divstyling">
-                
-                </div>
-                 
-                 <div hidden id="buttondiv" class="divstyling">   
-                    <button id="addoverlay">USE THE PIECE OF WOOD YOU FOUND</button>
-                </div>
+
+<head>
+    <title>Chess Board</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
+    <style>
+        h3 {
+            color: red;
+            font-size: 40px;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 40px;
+        }
+
+        h2 {
+            color: pink;
+            font-size: 40px;
+            margin-left: 15px;
+            margin-right: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="chessboard">
+
+        <div hidden id="overlay" class="divstyling">
+
         </div>
-           
 
-        
-        <!--
-        <h3 id="lockedheading">LOCKED</h3>
-        <h2 hidden id="unlockedheading">NOT LOCKED</h2>
-        -->
+        <div hidden id="buttondiv" class="divstyling">
+            <button id="addoverlay">USE THE PIECE OF WOOD YOU FOUND</button>
+        </div>
+    </div>
+    <!-- Restart Puzzle Button -->
+    <div>
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+            integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+            crossorigin="anonymous" />
+        <button
+            style="width:50px; height:50px; background-color: transparent; position: absolute; bottom: 10px; right: 10px;"
+            onclick="puzzleReset()">
+            <i style="color: white;" class="fas fa-redo-alt"></i>
+        </button>
+    </div>
 
 
-        
-        
-       
-        
+</body>
 
-    </body>
 </html>
-
-
-<!--
-
-
-
-
-<div id="overlay">
-
-        </div>
-
-        -->

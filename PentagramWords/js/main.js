@@ -1,5 +1,5 @@
 
- 
+
 // first word: Spirits of our world and the next  = world
 // second word: lend us your sight = sight 
 // third word: give us the power to conjure our might  = conjure
@@ -16,7 +16,7 @@ $(() => {
 
     let storage = window.localStorage;
 
-    if(storage.getItem("pentagramletters") !== null) {
+    if (storage.getItem("pentagramletters") !== null) {
         words = JSON.parse(storage.getItem('pentagramletters'));
     }
 
@@ -35,10 +35,10 @@ $(() => {
 
         let letter = changedID[6];
         let word = changedID[11];
-        words[word-1][letter-1] = $(this).val().toLowerCase();
+        words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
         // six letters. wptcsu
-        if(solution === 'wptcsg') {
+        if (solution === 'wptcsg') {
             console.log('Solved!');
             //$('#image').hide();
             $('#puzzle').hide();
@@ -51,27 +51,25 @@ $(() => {
 
         let letter = changedID[6];
         let word = changedID[11];
-        words[word-1][letter-1] = $(this).val().toLowerCase();
+        words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
-        
-        if(solution === 'wptcsg') {
+
+        if (solution === 'wptcsg') {
             console.log('Solved!');
             //$('#image').hide();
             $('#puzzle').hide();
-             //make sure the file is correct in index
+            //make sure the file is correct in index
             $('#pentasuccess').trigger('play');
-            
-           
 
             // change this
             $('body').css('image', 'url("images/temp.gif")');
 
-                setInterval(() => {
-                    // Where do you want the player to end up
-                    window.open("https://puzzled.tgb.gg/EndGame/", '_blank');
-                    $('#completed').show();
-                    
-                }, 3 * 1000); // 5 is the number of seconds before redirecting
+            setInterval(() => {
+                // Where do you want the player to end up
+                window.open("https://puzzled.tgb.gg/EndGame/", '_blank');
+                $('#completed').show();
+
+            }, 3 * 1000); // 5 is the number of seconds before redirecting
             //window.open("https://puzzled.tgb.gg/EndGame/");
         }
         console.log(words);
@@ -83,8 +81,13 @@ $(() => {
     });
 });
 
-// var iframe = $("#iframe"); 
-// var newWindow = window.open(iframe.attr(src), 'Dynamic Popup', 'height=' + iframe.height() + ', width=' + iframe.width() + 'scrollbars=auto, resizable=no, location=no, status=no');
-// newWindow.document.write(iframe[0].outerHTML);
-// newWindow.document.close();
-// iframe[0].outerHTML = '';
+function puzzleReset() {
+    if (window.confirm('Stuck? Click okay to reset the puzzle')) { 
+        let storage = window.localStorage;
+
+        // Remove Items for this puzzle
+        storage.removeItem("pentagramletters");
+        
+        location.reload(); 
+    }
+}

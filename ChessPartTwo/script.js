@@ -35,4 +35,15 @@ window.onload = (() => {
     }
 });
 
+function puzzleReset() {
+    if (window.confirm('Stuck? Click okay to reset the puzzle')) {
+        let storage = window.localStorage;
+
+        // Remove Items for this puzzle
+        storage.removeItem("chessValue");
+        
+        location.reload();
+    }
+}
+
 

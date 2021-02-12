@@ -1,5 +1,3 @@
-
-
 $(() => {
 
     let storage = window.localStorage;
@@ -18,23 +16,13 @@ $(() => {
     });
 });
 
-/*
+function puzzleReset() {
+    if (window.confirm('Stuck? Click okay to reset the puzzle')) {
+        let storage = window.localStorage;
 
-$(() => {
-
-    let storage = window.localStorage;
-    
-    if(storage.getItem('chessValue') == 'false') {
-        $('#pic').prop('checked', false);
+        // Remove Items for this puzzle
+        storage.removeItem("chessValue");
+        
+        location.reload();
     }
-    $('input[type="checkbox"]').click(function(){
-        if($(this).prop("checked")){
-            storage.setItem('chessValue', true);
-        }
-        else if($(this).prop("checked") == false){
-            storage.setItem('chessValue', false);
-        }
-    });
-});
-
-*/
+}

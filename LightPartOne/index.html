@@ -2,42 +2,52 @@
 <html>
 
 <head>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./script.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="./script.js"></script>
 </head>
 
 <body>
-    <label for="lightSwitch" class="wrap">
-        <input type="checkbox" checked id="lightSwitch" name="lightSwitch" class="light-switch" />
-        <div class="panel">
-          <div class="overlay"></div>
-          <div class="screw top">
-            <div class="screw__slot"></div>
-          </div>
-          <div class="switch__hole">
-            <div class="switch__groove">
-              <div class="switch">
-                <div class="switch__shadow-box top">
-                  <div class="switch__shadow top"></div>
-                </div>
-                <div class="switch__shadow-box bottom">
-                  <div class="switch__shadow bottom"></div>
-                </div>
-                <div class="switch__top">
-                  <div class="switch__top-outset"></div>
-                </div>
-                <div class="switch__bottom">
-                  <div class="switch__bottom-outset"></div>
-                </div>
-              </div>
+  <label for="lightSwitch" class="wrap">
+    <input type="checkbox" checked id="lightSwitch" name="lightSwitch" class="light-switch" />
+    <div class="panel">
+      <div class="overlay"></div>
+      <div class="screw top">
+        <div class="screw__slot"></div>
+      </div>
+      <div class="switch__hole">
+        <div class="switch__groove">
+          <div class="switch">
+            <div class="switch__shadow-box top">
+              <div class="switch__shadow top"></div>
+            </div>
+            <div class="switch__shadow-box bottom">
+              <div class="switch__shadow bottom"></div>
+            </div>
+            <div class="switch__top">
+              <div class="switch__top-outset"></div>
+            </div>
+            <div class="switch__bottom">
+              <div class="switch__bottom-outset"></div>
             </div>
           </div>
-          <div class="screw bottom">
-            <div class="screw__slot"></div>
-          </div>
         </div>
-      </label>
+      </div>
+      <div class="screw bottom">
+        <div class="screw__slot"></div>
+      </div>
+    </div>
+  </label>
+  
+  <!-- Restart Puzzle Button -->
+  <div>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <button
+      style="width:50px; height:50px; background-color: transparent; position: absolute; bottom: 10px; right: 10px;"
+      onclick="puzzleReset()">
+      <i style="color: white;" class="fas fa-redo-alt"></i>
+    </button>
+  </div>
 </body>
 
 </html>

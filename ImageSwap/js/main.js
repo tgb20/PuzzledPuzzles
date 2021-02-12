@@ -80,3 +80,14 @@ $(() => {
         storage.setItem('paintingletters', JSON.stringify(words));
     });
 });
+
+function puzzleReset() {
+    if (window.confirm('Stuck? Click okay to reset the puzzle')) {
+        let storage = window.localStorage;
+
+        // Remove Items for this puzzle
+        storage.removeItem("paintingletters");
+        
+        location.reload();
+    }
+}
