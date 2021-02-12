@@ -36,13 +36,17 @@ $(() => {
         let letter = changedID[6];
         let word = changedID[11];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
-        let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
-        // six letters. wptcsu
-        if (solution === 'wptcsg') {
+        //let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
+        //if (solution === 'wptcsg') {
+        let solution = words[0][0];
+        if (solution === 'w') {
             console.log('Solved!');
             //$('#image').hide();
-            $('#puzzle').hide();
+            $('#emptypenta').hide();
             $('#completed').show();
+            $('#challengetext').show();
+            $('#reboot').show();
+            
         }
     });
 
@@ -52,12 +56,13 @@ $(() => {
         let letter = changedID[6];
         let word = changedID[11];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
-        let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
-
-        if (solution === 'wptcsg') {
+        //let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
+        //if (solution === 'wptcsg') {
+        let solution = words[0][0];
+        if (solution === 'w') {
             console.log('Solved!');
             //$('#image').hide();
-            $('#puzzle').hide();
+            $('#emptypenta').hide();
             //make sure the file is correct in index
             $('#pentasuccess').trigger('play');
 
@@ -68,6 +73,8 @@ $(() => {
                 // Where do you want the player to end up
                 window.open("https://puzzled.tgb.gg/EndGame/", '_blank');
                 $('#completed').show();
+                $('#challengetext').show();
+                $('#reboot').show();
 
             }, 3 * 1000); // 5 is the number of seconds before redirecting
             //window.open("https://puzzled.tgb.gg/EndGame/");

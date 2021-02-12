@@ -34,11 +34,13 @@ $(() => {
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][2] + words[1][3] + words[2][1] + words[3][1] + words[4][2] + words[5][2];
 
-        if (solution === 'apertb') {
+        if (solution === 'aperta') {
             console.log('Solved!');
             $('#image').hide();
             $('#puzzle').hide();
             $('#video').show();
+            $('#reboot').show();
+            $('#linking').show();
              //$('#video1').show();
         }
     });
@@ -51,12 +53,13 @@ $(() => {
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][2] + words[1][3] + words[2][1] + words[3][1] + words[4][2] + words[5][2];
 
-        if (solution === 'apertb') {
+        if (solution === 'aperta') {
             console.log('Solved!');
             $('#image').hide();
             $('#puzzle').hide();
             $('#apertasuccess').trigger('play');
             $('#video').show();
+            $('#reboot').show();
 
             
             setInterval(() => {

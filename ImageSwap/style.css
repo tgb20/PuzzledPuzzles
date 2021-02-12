@@ -10,7 +10,8 @@ body{
 }
 
 .main{border: solid orange 0px;}
-.test{border: solid blue 0px;}
+.test{width: 480px; height: 400px; margin-top: 0; object-fit: contain; position: absolute; border: dashed blue 0px; z-index: 99;}
+.rebootstyling {width: 480px; height: 240px; margin: 0; object-fit: contain; position: absolute; border: dashed red 0px; z-index: 100;}
 
 .letter {
       font-family: 'Langar', cursive;
@@ -27,6 +28,13 @@ body{
       color: white;
       font-size: 50px;
       text-align: center;}
+
+      h3:hover {
+      font-size: 53px;
+      transition: 0.3s;
+      }
+
+  
 
       .container {
   position: relative;

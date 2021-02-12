@@ -1,53 +1,80 @@
-body {margin: 0px;
+body {margin: auto;
 background-color: black;
-border: 0px solid red;
+border: solid pink 0px;
 overflow-x: none;
         overflow-y: none;
  
- /*
-width: 100vw;
+ 
+width: 100vh;
 height: 100vh;
 justify-content: center;
 
 align-items: center;
 align-content: center;
 vertical-align: center;
-*/
+position: relative;
+
     
           
 
 
 }
 
-#puzzle {   background-image: url('images/pentagram.jpg'); 
-            width: 1000px; 
-            height: 1000px; 
+
+.letter {
+      font-family: 'Langar', cursive;
+      background-color: transparent;
+      border: 0px solid blue;
+      border-bottom: 0.3vh solid rgba(250, 99, 71, 0.7);
+      color: white;
+      font-size: 5.0vh;
+      text-align: center;
+    }
+
+
+#emptypenta {   background-image: url('images/pentagram.jpg'); 
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vh; 
+            height: 100vh; 
             margin: auto; 
             display: block; 
             object-fit: contain; 
             position: relative; 
-            border-style: solid; 
-            border-color: red;
+            
             z-index: 50;
         }
 
 
     
 #completed { 
-            position: relative; 
+            position: absolute; 
             background-image: url('images/pentagram-solved.jpg'); 
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
             
-            width: 1000px; 
-            height: 1000px; 
+            width: 100vh; 
+            height: 100vh; 
             margin: auto; 
-            display: block; 
+            
             object-fit: contain;  
-            border: dashed blue 3px;
-            z-index: 0;
+            border: dashed blue 0px;
             }
+
+
+.rebootstyling { 
+            position: absolute; 
+            padding-left: 10px;
+            padding-top: 10px;
+            width: 100vh; 
+            height: 7vh; margin: auto; 
+            object-fit: contain; 
+            position: relative; border: dashed red 3px; z-index: 100;;
+            
+            }
+
 
 
 
@@ -56,7 +83,7 @@ h3          {
             background-color: transparent;
             border: none;
             color: darkred;
-            font-size: 50px;
+            font-size: 5vh;
             padding-top: 30%;
             text-align: center;}
 
@@ -79,12 +106,4 @@ h3          {
 
 
 
-.letter {
-      font-family: 'Langar', cursive;
-      background-color: transparent;
-      border: 0px solid blue;
-      border-bottom: 3px solid rgba(250, 99, 71, 0.7);
-      color: white;
-      font-size: 50px;
-      text-align: center;
-    }
+
