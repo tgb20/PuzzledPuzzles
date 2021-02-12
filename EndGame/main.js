@@ -5,34 +5,39 @@ $(() => {
 
     let chantsHeard = 0;
 
+    const ctrl = new anycontrol();
+
+    var autoTimeout;
+    let timeoutLength = 30; // Time in seconds before skipping to next candle;
+
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    if(!isChrome) {
+    if (!isChrome) {
         $('#chromeMessage').show();
         $('#scene').hide();
     }
-    
+
     navigator.permissions.query(
         { name: 'microphone' }
-    ).then(function(permissionStatus){
-    
+    ).then(function (permissionStatus) {
+
 
         let state = permissionStatus.state;
 
-        if(state != 'granted') {
+        if (state != 'granted') {
             $('#bottom').show();
             $('#scene').hide();
         }
-    
-        permissionStatus.onchange = function(){
 
-            if(this.state == 'granted') {
+        permissionStatus.onchange = function () {
+
+            if (this.state == 'granted') {
                 $('#bottom').hide();
                 $('#scene').show();
             }
         }
-    
+
     })
-    
+
 
 
     // spirits of our world and the next, 
@@ -43,23 +48,36 @@ $(() => {
 
     const checkWords = (() => {
         if (powerFound && trappedFound && sufferingFound) {
+            clearTimeout(autoTimeout);
             chantsHeard++;
             powerFound = false;
             trappedFound = false;
             sufferingFound = false;
-            
-            if(chantsHeard == 1) {
+
+            if (chantsHeard == 1) {
                 $('#allAudio').trigger('play');
-                $('#candle1').attr("src","assets/candle.jpg");
+                $('#candle1').attr("src", "assets/candle.jpg");
+                autoTimeout = setTimeout(() => {
+                    powerFound = true;
+                    trappedFound = true;
+                    sufferingFound = true;
+                    checkWords();
+                }, timeoutLength * 1000);
             }
 
-            if(chantsHeard == 2) {
-                $('#candle2').attr("src","assets/candle.jpg");
+            if (chantsHeard == 2) {
+                $('#candle2').attr("src", "assets/candle.jpg");
+                autoTimeout = setTimeout(() => {
+                    powerFound = true;
+                    trappedFound = true;
+                    sufferingFound = true;
+                    checkWords();
+                }, timeoutLength * 1000);
             }
 
-            if(chantsHeard == 3) {
+            if (chantsHeard == 3) {
                 $('#allAudio').trigger('pause');
-                $('#candle3').attr("src","assets/candle.jpg");
+                $('#candle3').attr("src", "assets/candle.jpg");
 
                 $('#successsound').trigger('play');
 
@@ -80,9 +98,16 @@ $(() => {
 
     $('#startButton').click(() => {
 
+        autoTimeout = setTimeout(() => {
+            powerFound = true;
+            trappedFound = true;
+            sufferingFound = true;
+            checkWords();
+        }, timeoutLength * 1000);
+
+
         $('#preZone').hide();
         $('#ritual').show();
-        const ctrl = new anycontrol();
         $('body').css('background-image', 'url("assets/demonback.gif")');
 
         ctrl.addCommand("power", function () {
@@ -100,7 +125,6 @@ $(() => {
             checkWords();
         });
 
-        ctrl.getCommand();
         ctrl.start();
     });
 });
