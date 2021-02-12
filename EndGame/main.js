@@ -10,6 +10,30 @@ $(() => {
         $('#chromeMessage').show();
         $('#scene').hide();
     }
+    
+    navigator.permissions.query(
+        { name: 'microphone' }
+    ).then(function(permissionStatus){
+    
+
+        let state = permissionStatus.state;
+
+        if(state != 'granted') {
+            $('#bottom').show();
+            $('#scene').hide();
+        }
+    
+        permissionStatus.onchange = function(){
+
+            if(this.state == 'granted') {
+                $('#bottom').hide();
+                $('#scene').show();
+            }
+        }
+    
+    })
+    
+
 
     // spirits of our world and the next, 
     // lend us the POWER of your sight,
