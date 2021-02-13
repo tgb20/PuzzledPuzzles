@@ -1,0 +1,115 @@
+body {
+            background-image: url('images/locked-drawer.jpg');
+            background-color: black;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            border: double red 0px;
+            width: 100vw;
+            height: 100vh;
+            overflow-x: none;
+            overflow-y: none;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            align-content: center;
+            vertical-align: center;
+            margin: 0;
+            position: relative;
+        }
+
+   h3 {
+            color: white;
+            font-size: 30px;
+            padding-left: 10%;
+            padding-right: 10%;
+            padding-top: 10%;
+        }
+
+
+        .adjusting {
+            align-content: center;
+            -webkit-box-align: center;
+            align-items: center;
+            display: -webkit-box;
+            position: absolute;
+            height: 100vh;
+            width: 100vw;
+            -webkit-box-pack: center;
+            justify-content: center;
+            vertical-align: center;
+            
+            /*top: 50%;
+                        margin-top: -30vh;
+                        */
+            border: dashed green 0px;
+            transition: 1s;
+
+        }
+
+        .adjusting:hover {
+            transform: scaleX(1.4) scaleY(1.3);
+            padding-top: 10vh;
+
+
+        }
+
+
+        .divstylin {
+            border: dashed orange 0px;
+            width: 100vw;
+            height: 100vh;
+            margin: auto;
+            text-align: center;
+            justify-content: center;
+            margin: 0px;
+            position: relative;
+            vertical-align: center;
+            padding-top: 2vh;
+
+        }
+
+        
+        
+        .letterimage {
+            align-content: center;
+            align-items: center;
+            position: relative;
+            height: 90vh;
+            width: 70vh;
+            justify-content: center;
+            vertical-align: center;
+            margin: auto;
+            border: dashed green 0px;
+            transition: 1s;
+        }
+
+
+        .letterimage:hover {
+            transform: scaleX(1.5) scaleY(1.4);
+            padding-top: 10vh;
+        }
+
+
+
+
+        h2 {
+            position: absolute;
+            top: 30%;
+            border: solid black 1px;
+            z-index: 50;
+            color: white;
+            font-size: 3vh;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            height: 5vh;
+            width: 60%;
+            justify-content: center;
+            padding-top: 1vh;
+            padding-bottom: 0.5vh;
+            left: 20%;
+            right: 20%;
+        }
+
+
+  

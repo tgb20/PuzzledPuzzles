@@ -3,117 +3,38 @@
 
 <head>
     <title>Lp2</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./script.js"></script>
     <style>
-        body {
-            background-image: url('images/locked-drawer.jpg');
-            background-color: black;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            border: double red 0px;
-            width: 100vw;
-            height: 100vh;
-            overflow-x: none;
-            overflow-y: none;
-            justify-content: center;
-            text-align: center;
-            align-items: center;
-            align-content: center;
-            vertical-align: center;
-            margin-left: 0;
-            margin-right: 0;
-            margin-top: 0;
-            margin-bottom: 0;
-            padding-bottom: 0;
-            display: relative;
-        }
+        
 
 
-        h3 {
-            color: white;
-            font-size: 30px;
-            padding-left: 10%;
-            padding-right: 10%;
-            padding-top: 10%;
-        }
-
-
-        .adjusting {
-            align-content: center;
-            -webkit-box-align: center;
-            align-items: center;
-            display: -webkit-box;
-            position: absolute;
-            height: 100vh;
-            width: 77vh;
-            -webkit-box-pack: center;
-            justify-content: center;
-            vertical-align: center;
-            left: 11.5%;
-            /*top: 50%;
-                        margin-top: -30vh;
-                        */
-            border: dashed green 0px;
-            transition: 1s;
-
-        }
-
-        .adjusting:hover {
-            transform: scaleX(1.4) scaleY(1.3);
-            padding-top: 10vh;
-
-
-        }
-
-
-        .divstylin {
-            border: dashed orange 0px;
-            text-align: center;
-            justify-content: center;
-
-
-        }
-
-        h2 {
-            position: absolute;
-            top: 30%;
-            border: solid black 1px;
-            z-index: 50;
-            color: white;
-            font-size: 3vh;
-            text-align: center;
-            background-color: rgba(0, 0, 0, 0.6);
-            height: 5vh;
-            width: 60%;
-            justify-content: center;
-            padding-top: 1vh;
-            padding-bottom: 0.5vh;
-            left: 20%;
-            right: 20%;
-        }
+       
     </style>
 </head>
 
 <body>
-    <div style="width: 500px; height: 500px;">
-        <div id="locked" class="adjusting" style="background-image: url('images/locked-drawer.jpg');">
+    
+        <div id="locked" class="adjusting" style="">
 
-            <h3>It seems locked by some sort of hidden mechanism, or perhaps the demons are playing tricks on you.</h3>
+            <h3>It seems locked by some sort of hidden mechanism,<br> or perhaps the demons are playing tricks on you.</h3>
         </div>
+        
         <div id="letter" class="divstylin">
             <h2 id="foundit">Hey its unlocked now! And there's this letter. </h2>
-            <img src="images/letter.jpg" alt="Image 1" class="adjusting">
+            <img src="images/letter.jpg" alt="Image 1" class="letterimage">
         </div>
-    </div>
+    
+    
+
     <!-- Restart Puzzle Button -->
     <div>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
             integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
             crossorigin="anonymous" />
         <button
-            style="width:50px; height:50px; background-color: transparent; position: absolute; bottom: 10px; right: 10px;"
+            style="width:50px; height:50px; background-color: transparent; position: absolute;"
             onclick="puzzleReset()">
             <i style="color: white;" class="fas fa-redo-alt"></i>
         </button>

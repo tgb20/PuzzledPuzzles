@@ -71,7 +71,9 @@ position: relative;
             width: 100vh; 
             height: 7vh; margin: auto; 
             object-fit: contain; 
-            position: relative; border: dashed red 3px; z-index: 100;;
+            position: relative; 
+            border: dashed red 0px; 
+            z-index: 100;;
             
             }
 

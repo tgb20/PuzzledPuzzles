@@ -8,8 +8,12 @@ $(() => {
         $('#letter').show();
         setInterval(() => {
                       $('#foundit').hide();
-                		}, 4 * 1000);
+                		}, 3 * 1000);
    		}
+
+        else {
+            $('#locked').show();
+            $('#letter').hide();}
 });
 
 function puzzleReset() {
