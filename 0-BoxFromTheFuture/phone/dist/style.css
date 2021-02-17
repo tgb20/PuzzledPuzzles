@@ -7,6 +7,7 @@ body {
   justify-content: center;
   background-color: rgba(0, 0, 0, 1.0);
   border: dashed pink 0px;
+  overflow-x: none;
 }
 
 canvas {
@@ -38,10 +39,10 @@ color: blue; border: dashed blue 3px}
   display: grid;
   grid-template-columns: 5vw 5vw 5vw;
   grid-template-rows: 5vw 5vw 5vw 5vw;
-  margin-left: 400px;
+  margin-left: 48vw /*move phone*/
   width: 100vw;
   height: 100vh;
-  padding-left: 58vw;
+  padding-left: 58vw; /*move keys*/
   padding-right: 56vw;
   padding-top: 100vh;
   padding-bottom: 10vh;
