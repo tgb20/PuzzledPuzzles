@@ -85,8 +85,8 @@ $(() => {
                 $('body').css('background-image', 'url("assets/successvid.gif")');
 
                 setInterval(() => {
-                    // Where do you want the player to end up
-                    window.location.href = 'https://www.theprofessoroftheoccult.com/ending'
+                    $('#backup-button').show();
+                    window.location.href = 'https://puzzled.tgb.gg/2-EndofGameVideo/';
                 }, 6 * 1000); // 5 is the number of seconds before redirecting
 
             }
