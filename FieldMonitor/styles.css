@@ -1,0 +1,47 @@
+
+
+body{
+	font-family: 'Libre Baskerville', serif;
+	
+	background-image: url(assets/cherrywooddark.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100vw;
+	height: 100vh;
+	border: dashed blue 2px;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	vertical-align: center;
+	margin-left: 0;
+	margin-right: 0;
+	margin-top: 0;
+	margin-bottom: 0;
+
+	padding-bottom: 0;
+	display: relative;
+  
+}
+
+
+.stylin {
+				position: relative;	
+				background-image: url(assets/fieldmonitor.png);
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				border: dashed red 2px;
+				width: 80vw;
+				height: 80vh;
+
+		}
+
+.video-styling {
+	position: relative;
+				width: 30vw;
+				border: solid orange 2px;
+				top: 35vh;
+				}
+		
