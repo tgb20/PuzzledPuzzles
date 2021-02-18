@@ -10,35 +10,35 @@ $(() => {
     var autoTimeout;
     let timeoutLength = 30; // Time in seconds before skipping to next candle;
 
+
+    $('#backup-button').hide();
+
     var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
-    if (!isChrome) {
-        $('#chromeMessage').show();
-        $('#scene').hide();
-    }
-
-    navigator.permissions.query(
-        { name: 'microphone' }
-    ).then(function (permissionStatus) {
-
-
-        let state = permissionStatus.state;
-
-        if (state != 'granted') {
-            $('#bottom').show();
-            $('#scene').hide();
-        }
-
-        permissionStatus.onchange = function () {
-
-            if (this.state == 'granted') {
-                $('#bottom').hide();
-                $('#scene').show();
+    if (isChrome) {
+        $('#chromeMessage').hide();
+        $('#scene').show();
+        navigator.permissions.query(
+            { name: 'microphone' }
+        ).then(function (permissionStatus) {
+    
+    
+            let state = permissionStatus.state;
+    
+            if (state != 'granted') {
+                $('#bottom').show();
+                $('#scene').hide();
             }
-        }
-
-    })
-
-
+    
+            permissionStatus.onchange = function () {
+    
+                if (this.state == 'granted') {
+                    $('#bottom').hide();
+                    $('#scene').show();
+                }
+            }
+    
+        })
+    }
 
     // spirits of our world and the next, 
     // lend us the POWER of your sight,
