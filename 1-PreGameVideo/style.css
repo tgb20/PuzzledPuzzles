@@ -55,16 +55,17 @@ font-family: Metrophobic;
 {
         float: left;    
         background-color: rgba(0,0,0,0.0); 
-        border: solid red 0px;      
-        width: 15vw; 
+        border: solid red 2px;      
+        width: 25vw; 
         height: 70vh;
         margin: 0px;
+
 
 }
 
 /*Main Div*/
 #center {
-        width: 70vw;
+        width: 60vw;
         height: 70vh;     
         float: left;
         background-color: rgba(0,0,0,0.0); 
@@ -107,19 +108,44 @@ font-family: Metrophobic;
 
 
 /*actual text*/
-.h2chantwords 
+h2 
 {
           font-family: Metrophobic;
           color: white;
-          font-size: 14px;
+          font-size: 1.5vw;
           display: flex;
           font-variant-caps: small-caps;
           border: solid orange 0px;
           justify-content: center;
-        text-align: center;
-        align-items: center;
-        align-content: center;
-        vertical-align: center;
+          text-align: center;
+          align-items: center;
+          align-content: center;
+          vertical-align: center;
+          padding-left: 1vw;
+        padding-right: 1vw;
+}
+
+h3 
+{
+          font-family: Metrophobic;
+          color: white;
+          font-size: 1.2vw;
+          display: flex;
+          font-variant-caps: small-caps;
+          border: solid orange 0px;
+          justify-content: center;
+          text-align: center;
+          align-items: center;
+          align-content: center;
+          vertical-align: center;
+}
+
+a 
+{
+          font-family: Metrophobic;
+          color: whitesmoke;
+          font-size: 1vw;
+          
 }
 
 
