@@ -9,7 +9,7 @@ body{
 	background-size: cover;
 	width: 100vw;
 	height: 100vh;
-	border: dashed blue 2px;
+	border: dashed blue 0px;
 	justify-content: center;
 	text-align: center;
 	align-items: center;
@@ -27,21 +27,33 @@ body{
 
 
 .stylin {
-				position: relative;	
+				position: absolute;	
 				background-image: url(assets/fieldmonitor.png);
 				background-position: center;
 				background-repeat: no-repeat;
 				background-size: contain;
-				border: dashed red 2px;
-				width: 80vw;
-				height: 80vh;
+				border: dashed red 0px;
+				width: 100vw;
+				height: calc(100vw * (9/16));
 
 		}
 
 .video-styling {
-	position: relative;
-				width: 30vw;
-				border: solid orange 2px;
-				top: 35vh;
+				position: absolute;
+				width: 43vw;
+				height: auto;
+				border: solid orange 0px;
+				top: 43vh;
+				left: 27.5vw;
 				}
+
+				button {position: absolute;
+					width: 2.7vw;
+					height: 4vh;
+					top: 100vh;
+					left: 59vw;
+					background-color: rgba(255,0,0,0.0);}
 		
+
+		button:hover {
+					background-color: rgba(0,255,0,0.4);}
