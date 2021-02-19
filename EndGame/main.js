@@ -17,28 +17,34 @@ $(() => {
     if (isChrome) {
         $('#chromeMessage').hide();
         $('#scene').show();
-        navigator.permissions.query(
-            { name: 'microphone' }
-        ).then(function (permissionStatus) {
-    
-    
-            let state = permissionStatus.state;
-    
-            if (state != 'granted') {
-                $('#bottom').show();
-                $('#scene').hide();
-            }
-    
-            permissionStatus.onchange = function () {
-    
-                if (this.state == 'granted') {
-                    $('#bottom').hide();
-                    $('#scene').show();
-                }
-            }
-    
-        })
+        navigator.mediaDevices.getUserMedia({ audio: true })
+            .then(function (stream) {
+                console.log('You let me use your mic!')
+            })
+            .catch(function (err) {
+                console.log('No mic for you!')
+            });
     }
+
+    navigator.permissions.query(
+        { name: 'microphone' }
+    ).then(function (permissionStatus) {
+        let state = permissionStatus.state;
+
+        if (state != 'granted') {
+            $('#bottom').show();
+            $('#scene').hide();
+        }
+
+        permissionStatus.onchange = function () {
+
+            if (this.state == 'granted') {
+                $('#bottom').hide();
+                $('#scene').show();
+            }
+        }
+
+    });
 
     // spirits of our world and the next, 
     // lend us the POWER of your sight,
