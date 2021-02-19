@@ -50,26 +50,26 @@ body{
 .button1 {position: absolute;
 					width: 5.5vh;
 					height: 4.7vh;
-					top: 90vh;
-					left: 105vh;
+					top: 89.4vh;
+					left: 104.2vh;
 					background-color: rgba(255,0,0,0.1);
 					border-radius: 7px;
 				}
 		
 
 .button1:hover {
-			background-color: rgba(0,255,0,0.4);}
+			background-color: rgba(0,255,0,0.2);}
 
 
 .button2 {			position: absolute;
 					width: 5.5vh;
 					height: 4.7vh;
-					top: 90vh;
-					left: 113.7vh;
+					top: 89.4vh;
+					left: 113.3vh;
 					background-color: rgba(255,255,0,0.1);
 					border-radius: 7px;
 }
 		
 
 		.button2:hover {
-					background-color: rgba(0,255,255,0.4);}
+					background-color: rgba(0,255,255,0.2);}
