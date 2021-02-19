@@ -7,8 +7,8 @@ body{
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: 1600px;
-	height: 900px;
+	width: calc(100vh * (16/9));
+	height: 100vh;
 	border: dashed blue 0px;
 	justify-content: center;
 	text-align: center;
@@ -33,27 +33,27 @@ body{
 				background-repeat: no-repeat;
 				background-size: contain;
 				border: dashed red 0px;
-				width: 1600px;
-				height: calc(1600px * (9/16));
+				width: calc(100vh * (16/9));
+				height: 100vh;
 
 		}
 
 .video-styling {
 				position: absolute;
-				width: 700px;
-				height: auto;
+				width: calc(42vh * (16/9));
+				height: 42vh;
 				border: solid orange 0px;
-				top: 350px;
-				left: 437px;
+				top: 39vh;
+				left: 50vh;
 				}
 
 .button1 {position: absolute;
-					width: 50px;
-					height: 38px;
-					top: 805px;
-					left: 939px;
+					width: 5.5vh;
+					height: 4.7vh;
+					top: 90vh;
+					left: 105vh;
 					background-color: rgba(255,0,0,0.1);
-					border-radius: 10px;
+					border-radius: 7px;
 				}
 		
 
@@ -61,14 +61,13 @@ body{
 			background-color: rgba(0,255,0,0.4);}
 
 
-.button2 {position: absolute;
-width: 50px;
-height: 38px;
-top: 805px;
-left: 1000px;
-background-color: rgba(255,255,0,0.7);
-border-radius: 10px;
-border: solid black 8px;
+.button2 {			position: absolute;
+					width: 5.5vh;
+					height: 4.7vh;
+					top: 90vh;
+					left: 113.7vh;
+					background-color: rgba(255,255,0,0.1);
+					border-radius: 7px;
 }
 		
 
