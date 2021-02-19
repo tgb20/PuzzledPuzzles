@@ -36,10 +36,10 @@ $(() => {
         let letter = changedID[6];
         let word = changedID[11];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
-        //let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
-        //if (solution === 'wptcsg') {
-        let solution = words[0][0];
-        if (solution === 'w') {
+        let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
+        if (solution === 'wptcsg') {
+        //let solution = words[0][0];
+        //if (solution === 'w') {
             console.log('Solved!');
             //$('#image').hide();
             $('#emptypenta').hide();
@@ -56,10 +56,10 @@ $(() => {
         let letter = changedID[6];
         let word = changedID[11];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
-        //let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
-        //if (solution === 'wptcsg') {
-        let solution = words[0][0];
-        if (solution === 'w') {
+        let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[4][8];
+        if (solution === 'wptcsg') {
+        //let solution = words[0][0];
+        //if (solution === 'w') {
             console.log('Solved!');
             //$('#image').hide();
             $('#emptypenta').hide();

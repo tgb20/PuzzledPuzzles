@@ -26,11 +26,11 @@ window.onload = (() => {
         if(overlayOpen) {
             document.getElementById('overlay').style.display = 'none';
             overlayOpen = false;
-            document.getElementById("addoverlay").innerText = 'Show Overlay';
+            document.getElementById("addoverlay").innerText = 'USE THE DECODER YOU FOUND';
         } else {
             document.getElementById('overlay').style.display = 'block';
             overlayOpen = true;
-            document.getElementById("addoverlay").innerText = 'Hide Overlay';
+            document.getElementById("addoverlay").innerText = 'HIDE THE DECODER YOU FOUND';
         }
     }
 });
