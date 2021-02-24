@@ -9,11 +9,24 @@ function togglePos(x) {
 }
 
 var dirHist = "";
-var ans = "aaa";
+var ans = "geahecah";
+var answ = "hdhd";
+// North = a
+// nEast = b
+// East = c 
+// sEast = d
+// South = e
+// sWest = f
+// West = g
+// nWest = h
+
+//geahecah 
+//w s n nw s e n nw
+
 
 function logPos(x) {
   dirHist += x;
-  if(dirHist.includes(ans)){ 
+  if(dirHist.includes(ans) || dirHist.includes(answ)){ 
     document.getElementById("fail").style.display = "none";
     document.getElementById("success").style.display = "block";
     setTimeout( function() {

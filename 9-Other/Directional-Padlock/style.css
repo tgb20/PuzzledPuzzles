@@ -20,11 +20,22 @@ padding-bottom: 0;
 display: relative;
 }
 
+#fail {display: none;}
+
 .back {
   font-family: 'Lato', sans-serif;
   font-size: 24px;
   margin-left: 120px;
 }
+
+#opensafe {background-image: url('assets/opensafe.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 99vh;
+height: 99vh;
+border: solid 4px transparent;}
+
 
 #padlock {background-image: url('assets/safe.png');
 background-position: center;
