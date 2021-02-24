@@ -1,0 +1,220 @@
+body {
+    background-image: url('imgs/switchbg.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 100vw;
+height: 100vh;
+border: dashed blue 0px;
+justify-content: center;
+text-align: center;
+align-items: center;
+align-content: center;
+vertical-align: center;
+margin-left: 0;
+margin-right: 0;
+margin-top: 0;
+margin-bottom: 0;
+
+padding-bottom: 0;
+display: relative;
+}
+
+.back {
+  font-family: 'Lato', sans-serif;
+  font-size: 24px;
+  margin-left: 120px;
+}
+
+#padlock {background-image: url('assets/safe.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+width: 99vh;
+height: 99vh;
+border: solid 4px red;}
+
+#outer-circle {
+  position: relative;
+  background-color: rgba(255,10,0,0.3);
+  height: 20vh;
+  width: 20vh;
+  border-radius: 50%;
+  margin-left: 43.4vh;
+  margin-top: 67.6vh;
+  padding: 2.5vh;
+  border: 0.2vh solid rgba(10, 0, 10, 0.4);
+}
+
+#inner-circle {
+background-image: url('assets/innerwheel.png');
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;  
+  border: solid 0.8vh rgba(0,0,0,0.2);
+  height: 19vh;
+  width: 19vh;
+  border-radius: 50%;
+}
+
+#northwest-tri {
+  position: absolute;
+  left: 3.5vh;
+  top: 3.5vh;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  width: 0;
+  height: 0;
+  border-left: 1.5vh solid transparent;
+  border-right: 1.5vh solid transparent;
+  border-bottom: 2.8vh solid blue;
+  cursor: pointer;
+}
+
+
+#north-tri {
+  position: absolute;
+  left: 11vh;
+  top: 0.1vh;
+  width: 0;
+  height: 0;
+  
+   border-left: 1.5vh solid transparent;
+  border-right: 1.5vh solid transparent;
+  border-bottom: 2.8vh solid green;
+  cursor: pointer;
+}
+
+
+#northeast-tri {
+  position: absolute;
+  left: 33.1vh;
+  top: 3.5vh;
+  width: 0;
+  height: 0;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+  border-left: 1.5vh solid transparent;
+  border-right: 1.5vh solid transparent;
+  border-bottom: 2.8vh solid blue;
+  cursor: pointer;
+}
+
+
+
+#west-tri {
+  position: absolute;
+  left: 0.5vh;
+  top: 11vh;
+  width: 0;
+  height: 0;
+  
+   border-bottom: 1.5vh solid transparent;
+  border-right: 2.8vh solid black;
+  border-top: 1.5vh solid transparent;
+  cursor: pointer;
+}
+
+
+
+#southeast-tri {
+  position: absolute;
+  left: 19.5vh;
+  bottom: 3.5vh;
+  width: 0;
+  height: 0;
+   -webkit-transform: rotate(-48deg);
+  -moz-transform: rotate(-48deg);
+  -o-transform: rotate(-48deg);
+  transform: rotate(-48deg);
+   border-left: 1.5vh solid transparent;
+  border-right: 1.5vh solid transparent;
+  border-top: 2.8vh solid yellow;
+  cursor: pointer;
+}
+
+
+#south-tri {
+  position: absolute;
+  left: 11vh;
+  bottom: -0.8vh;
+  width: 0;
+  height: 0;
+   border-left: 1.5vh solid transparent;
+  border-right: 1.5vh solid transparent;
+  border-top: 2.8vh solid rosyBrown;
+  cursor: pointer;
+}
+
+
+#southwest-tri {
+  position: absolute;
+  left: 3.5vh;
+  bottom: 3.5vh;
+  width: 0;
+  height: 0;
+  
+   border-left: 2.8vh solid blue;
+  border-top: 1.5vh solid transparent;
+  border-bottom: 1.5vh solid transparent;
+  cursor: pointer;
+}
+
+
+#east-tri {
+  position: absolute;
+  top: 11vh;
+  right: 1vh;
+  width: 0;
+  height: 0;
+   border-left: 1.5vh solid transparent;
+  border-right: 1.5vh solid transparent;
+  border-bottom: 2.8vh solid green;
+  cursor: pointer;
+}
+
+
+
+.slide-hNorthWest {transform: translate(-5.0vh, -5.0vh)}
+
+.slide-aNorth {transform: translate(0px, -5.0vh)}
+
+.slide-bNorthEast {transform: translate(5.0vh, -5.0vh)}
+
+
+.slide-cEast {transform: translate(5.0vh, 0px)}
+
+
+.slide-dSouthEast {transform: translate(5.0vh, 5.0vh)}
+
+.slide-eSouth {transform: translate(0px, 5.0vh)}
+
+.slide-fSouthWest {transform: translate(-5.0vh, 5.0vh)}
+
+
+.slide-gWest {transform: translate(-5.0vh, 0px);}
+
+
+
+.shake {
+  animation: shake 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
