@@ -16,50 +16,36 @@
     
 
 
-        <div id="header">
-<h2 class="h2chantwords">
-                    HEADER
-                </h2>
-        </div>
-        <!--Top Ends-->
+                       
+                     <div class="stylin">
 
-        
-        <div id="vertical-middle">    
-                        <!--LEFT SIDE-->
-                        <div id="leftside">
-                            <h2 class="h2chantwords">
-                                LEFT
-                            </h2>
+                            <video id="videowindow" class="video-styling">
+                            <source src="assets/TheEnding7mb.mp4" type="video/mp4">
+
+                            Your browser does not support the video tag.
+                          </video>
+
+
                         </div>
 
+
+                    <button class="button1" onclick="playVideo()"></button>
                         
-                        <!--CENTER DIV-->
-                        <div id="center">
-                          
-                            <iframe src="https://player.vimeo.com/video/513184538" width="100%" height="auto" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="padding-top: 0px;"></iframe>
+                        <script>
+                          function playVideo() {$('#videowindow').trigger('play');}
+                        </script>
 
+                        <button class="button2" onclick="pauseVideo()"></button>
                         
+                        <script>
+                          function pauseVideo() {$('#videowindow').trigger('pause');}
+                        </script>
 
-
-
-                        </div>
-                        <!-- CENTER DIV ENDS -->
-
-
-                        <!--RIGHT SIDE-->
-                        <div id="rightside">
-                            <h2 class="h2chantwords">
-                                Right SIDE
-                            </h2>
-
-                        </div>
-
-        </div>
-        
+                       
 
     <!--BOTTOM BEGINS Ends-->
         <div id="footer">
-         <!--   <button>Investigate<br> The Professor's Study</button>-->
+         
         </div>
 </body>
 
