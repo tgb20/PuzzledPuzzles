@@ -21,6 +21,8 @@ function logPos(x) {
     }, 500)
     setTimeout( function() {
       document.getElementById("outer-circle").className = "";
+      document.getElementById("padlock").style.display = "none"
+      document.getElementById("opensafe").style.display = "block"
     }, 1500)
   }
 }

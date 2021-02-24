@@ -1,5 +1,5 @@
 body {
-    background-image: url('imgs/switchbg.png');
+    background-image: url('assets/ProfRoomBlurred.jpg');
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -32,7 +32,7 @@ background-repeat: no-repeat;
 background-size: cover;
 width: 99vh;
 height: 99vh;
-border: solid 4px red;}
+border: solid 4px transparent;}
 
 #outer-circle {
   position: relative;
@@ -69,38 +69,38 @@ background-size: cover;
   height: 0;
   border-left: 1.5vh solid transparent;
   border-right: 1.5vh solid transparent;
-  border-bottom: 2.8vh solid blue;
+  border-bottom: 2.8vh solid rosyBrown;
   cursor: pointer;
 }
 
 
 #north-tri {
   position: absolute;
-  left: 11vh;
+  left: 11.4vh;
   top: 0.1vh;
   width: 0;
   height: 0;
   
    border-left: 1.5vh solid transparent;
   border-right: 1.5vh solid transparent;
-  border-bottom: 2.8vh solid green;
+  border-bottom: 2.8vh solid rosyBrown;
   cursor: pointer;
 }
 
 
 #northeast-tri {
   position: absolute;
-  left: 33.1vh;
+  right: 3vh;
   top: 3.5vh;
   width: 0;
   height: 0;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  -webkit-transform: rotate(60deg);
+  -moz-transform: rotate(60deg);
+  -o-transform: rotate(60deg);
   transform: rotate(45deg);
   border-left: 1.5vh solid transparent;
   border-right: 1.5vh solid transparent;
-  border-bottom: 2.8vh solid blue;
+  border-bottom: 2.8vh solid rosyBrown;
   cursor: pointer;
 }
 
@@ -108,13 +108,13 @@ background-size: cover;
 
 #west-tri {
   position: absolute;
-  left: 0.5vh;
+  left: -0vh;
   top: 11vh;
   width: 0;
   height: 0;
   
    border-bottom: 1.5vh solid transparent;
-  border-right: 2.8vh solid black;
+  border-right: 2.8vh solid rosyBrown;
   border-top: 1.5vh solid transparent;
   cursor: pointer;
 }
@@ -124,7 +124,7 @@ background-size: cover;
 #southeast-tri {
   position: absolute;
   left: 19.5vh;
-  bottom: 3.5vh;
+  bottom: 3.2vh;
   width: 0;
   height: 0;
    -webkit-transform: rotate(-48deg);
@@ -133,14 +133,14 @@ background-size: cover;
   transform: rotate(-48deg);
    border-left: 1.5vh solid transparent;
   border-right: 1.5vh solid transparent;
-  border-top: 2.8vh solid yellow;
+  border-top: 2.8vh solid rosyBrown;
   cursor: pointer;
 }
 
 
 #south-tri {
   position: absolute;
-  left: 11vh;
+  left: 11.4vh;
   bottom: -0.8vh;
   width: 0;
   height: 0;
@@ -153,12 +153,15 @@ background-size: cover;
 
 #southwest-tri {
   position: absolute;
-  left: 3.5vh;
-  bottom: 3.5vh;
+  left: 3vh;
+  bottom: 3vh;
   width: 0;
   height: 0;
-  
-   border-left: 2.8vh solid blue;
+  -webkit-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+  transform: rotate(-40deg);
+   border-right: 2.8vh solid rosyBrown;
   border-top: 1.5vh solid transparent;
   border-bottom: 1.5vh solid transparent;
   cursor: pointer;
@@ -168,35 +171,35 @@ background-size: cover;
 #east-tri {
   position: absolute;
   top: 11vh;
-  right: 1vh;
+  right: -0.5vh;
   width: 0;
   height: 0;
-   border-left: 1.5vh solid transparent;
-  border-right: 1.5vh solid transparent;
-  border-bottom: 2.8vh solid green;
+   border-bottom: 1.5vh solid transparent;
+  border-left: 2.8vh solid rosyBrown;
+  border-top: 1.5vh solid transparent;
   cursor: pointer;
 }
 
 
 
-.slide-hNorthWest {transform: translate(-5.0vh, -5.0vh)}
+.slide-hNorthWest {transform: translate(-3.0vh, -3.0vh)}
 
-.slide-aNorth {transform: translate(0px, -5.0vh)}
+.slide-aNorth {transform: translate(0px, -3.0vh)}
 
-.slide-bNorthEast {transform: translate(5.0vh, -5.0vh)}
-
-
-.slide-cEast {transform: translate(5.0vh, 0px)}
+.slide-bNorthEast {transform: translate(3.0vh, -3.0vh)}
 
 
-.slide-dSouthEast {transform: translate(5.0vh, 5.0vh)}
-
-.slide-eSouth {transform: translate(0px, 5.0vh)}
-
-.slide-fSouthWest {transform: translate(-5.0vh, 5.0vh)}
+.slide-cEast {transform: translate(3.0vh, 0px)}
 
 
-.slide-gWest {transform: translate(-5.0vh, 0px);}
+.slide-dSouthEast {transform: translate(3.0vh, 3.0vh)}
+
+.slide-eSouth {transform: translate(0px, 3.0vh)}
+
+.slide-fSouthWest {transform: translate(-3.0vh, 3.0vh)}
+
+
+.slide-gWest {transform: translate(-3.0vh, 0px);}
 
 
 
