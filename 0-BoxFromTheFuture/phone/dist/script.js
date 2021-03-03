@@ -675,7 +675,7 @@ function stop() {
 function playAudio() {  //1413 650 5803
 if ((numbers[0] === 1 && numbers[1] === 4 &&     numbers[2] === 1 && numbers[3] === 3 && numbers[4] === 6      && numbers[5] === 5 && numbers[6] === 0 &&            numbers[7] === 5 && numbers[8] === 8 && numbers[9] === 0 && numbers[10] === 3) 
 ||
- (numbers[0] === 2 && numbers[1] === 0))
+ (numbers[0] === 3 && numbers[1] === 5 && numbers[2] == 7))
   {
     intheyear2525.play();
     intheyear2525.volume = 1.0;
