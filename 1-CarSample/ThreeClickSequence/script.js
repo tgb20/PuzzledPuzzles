@@ -3,15 +3,15 @@ function acceleratorClick()
             {
                 
                             if(typeof(Storage) !== "undefined") {
-                                    if (localStorage.clickcount) {
-                                      localStorage.clickcount = Number(localStorage.clickcount)+2;
+                                    if (window.localStorage.clickcount) {
+                                      window.localStorage.clickcount = Number(window.localStorage.clickcount)+2;
                                     } else {
-                                      localStorage.clickcount = 0;
+                                      window.localStorage.clickcount = 0;
                                   
                                     }}
 
 
-                            if (localStorage.clickcount > 2) {window.localStorage.clear(); printResults();}
+                            if (window.localStorage.clickcount > 2) {window.localStorage.clear(); printResults();}
             }
 
 function soundClick() {
@@ -19,6 +19,18 @@ function soundClick() {
 
 function soundhonkClick() {
                       var x = document.getElementById("honking"); x.play();}   
+
+
+
+function hornClick() 
+            {
+                if(typeof(Storage) !== "undefined") {
+                                    if (window.localStorage.clickcount) {
+                                      window.localStorage.clickcount = Number(window.localStorage.clickcount)+2;
+                                    } else {
+                                      window.localStorage.clickcount = 1;
+                                    }}
+            }
 
 function redButtonClick() 
             {
@@ -32,7 +44,6 @@ function redButtonClick()
 
                             if (localStorage.clickcount > 2) {window.localStorage.clear(); printResults();}
             }
-
 
 
 function blueButtonClick() 
@@ -60,10 +71,10 @@ function greenButtonClick()
 function clickCounter() {
 
   if(typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    if (window.localStorage.clickcount) {
+      window.localStorage.clickcount = Number(window.localStorage.clickcount)+1;
     } else {
-      localStorage.clickcount = 1;
+      window.localStorage.clickcount = 1;
     }
     document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
   } else {
@@ -75,10 +86,10 @@ function clickCounter() {
 function clickCounterGreen() {
 
   if(typeof(Storage) !== "undefined") {
-    if (localStorage.clickcount) {
-      localStorage.clickcount = Number(localStorage.clickcount)+2;
+    if (window.localStorage.clickcount) {
+      window.localStorage.clickcount = Number(window.localStorage.clickcount)+2;
     } else {
-      localStorage.clickcount = 1;
+      window.localStorage.clickcount = 1;
     }
     document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
   } else {
@@ -88,10 +99,10 @@ function clickCounterGreen() {
 
 
 function doShit() {
-    if (localStorage.clickcount == 6) {document.getElementById("result").innerHTML = "HurraH!";}
+    if (window.localStorage.clickcount == 6) {document.getElementById("result").innerHTML = "HurraH!";}
 
 }
 function printResults() {
-    document.getElementById("result").innerHTML = "You have clicked the button 0 time(s).";
+    document.getElementById("result").innerHTML = "You have clicked the button" + window.localStorage.clickcount + "time";
 
 }

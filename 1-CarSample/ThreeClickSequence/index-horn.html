@@ -27,7 +27,7 @@
     </div>
 
 
-<button id="hornId" class="button1" onclick="hornClick(); soundhonkClick(); clickCounter();"></button>
+<button id="hornId" class="button1" onmousedown="soundhonkClick();" onclick="acceleratorClick(); hornClick(); clickCounter(); doShit()"></button>
     
     
 
@@ -51,7 +51,7 @@
 
 
 <button style="background-color: pink; position: absolute; bottom: 2vh; left: 2vh;" onclick="window.localStorage.clear(); printResults();" type="button">Clear</button> 
-
+<button style="background-color: pink; position: absolute; bottom: 2vh; left: 40vh;" onclick="printResults();" type="button">Printhorn</button> 
 
 
 </body>

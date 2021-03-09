@@ -1,4 +1,5 @@
 body {
+	background-image: url('assets/pedals.png');
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
@@ -20,7 +21,7 @@ background-size: cover;
 }
 
 .horn-body {
-background-image: url('assets/driversview.jpg');}
+background-image: url('assets/driversview.png');}
 
 
 #result {color: white;}

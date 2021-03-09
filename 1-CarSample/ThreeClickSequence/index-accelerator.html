@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>ThreeClickOneSketch</title>
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./style-accelerator.css">
   <script src="script.js"></script>
     
 
@@ -13,10 +13,10 @@
 
 
 </head>
-<body class="accelerator-body">
+<body>
 
 <div class="pedal">
-    <div id="acceleratorId" class="acceleratorClass" onclick="acceleratorClick(); soundClick(); clickCounter(); doShit()">
+    <div id="acceleratorId" class="acceleratorClass" onmousedown="soundClick();" onclick="acceleratorClick(); clickCounter(); doShit()">
     </div>
   </div>
 
@@ -38,7 +38,7 @@
 
 
 <button style="background-color: pink; position: absolute; bottom: 2vh; left: 2vh;" onclick="window.localStorage.clear(); printResults();" type="button">Clear</button> 
-
+<button style="background-color: pink; position: absolute; bottom: 2vh; left: 40vh;" onclick="printResults();" type="button">Print</button> 
 
 
 </body>
