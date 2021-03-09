@@ -1,0 +1,66 @@
+body{
+  font-family: 'Libre Baskerville', serif;
+ 
+  width: 100vw
+  height: 100vh;
+  border: dashed blue 0px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding-bottom: 0;
+  display: relative;
+  
+}
+
+
+.stylin {
+        position: absolute; 
+        background-image: url(assets/driversview.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: dashed red 0px;
+        width: calc(100vh * (16/9));
+        height: 100vh;
+        margin-left: 0px;
+        padding-left: 0px;
+
+    }
+
+
+
+.button1 {position: absolute;
+          background-image: url(assets/carhorn.png);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+          width: 25vh;
+          height: 23.5vh;
+          top: 28.3vh;
+          left: 74.4vh;
+          background-color: transparent;
+          border: solid 0px transparent;
+        
+          transition: all 200ms ease-in-out;
+  will-change: transform;
+        }
+    
+
+.button1:active {
+  transform: scale(0.98);
+      }
+
+
+
+
+p {font-size: 25px;}
+
+
+#result {color: white;}

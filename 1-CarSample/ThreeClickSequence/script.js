@@ -17,6 +17,9 @@ function acceleratorClick()
 function soundClick() {
                       var x = document.getElementById("reving"); x.play();}            
 
+function soundhonkClick() {
+                      var x = document.getElementById("honking"); x.play();}   
+
 function redButtonClick() 
             {
                 document.getElementById('redbutton').style.backgroundColor = "yellow";

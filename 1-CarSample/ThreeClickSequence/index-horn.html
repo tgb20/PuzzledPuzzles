@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>ThreeClickOneSketch</title>
+  <link rel="stylesheet" href="./style-horn.css">
+  <script src="script.js"></script>
+    
+
+<script>
+
+</script>
+
+
+</head>
+<body>
+
+ <div class="stylin">
+
+        <video id="videowindow" class="video-styling">
+        <source src="assets/mid1.mp4" type="video/mp4">
+
+        Your browser does not support the video tag.
+      </video>
+
+
+    </div>
+
+
+<button id="hornId" class="button1" onclick="hornClick(); soundhonkClick(); clickCounter();"></button>
+    
+    
+
+
+
+
+
+
+
+
+
+
+<audio id="honking">
+            <source src="assets/honking.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+    </audio>
+
+
+<p id="result" style="color: green; position: absolute; left: 1vh; bottom: 10vh;">notbuttstuff</p>
+
+
+
+<button style="background-color: pink; position: absolute; bottom: 2vh; left: 2vh;" onclick="window.localStorage.clear(); printResults();" type="button">Clear</button> 
+
+
+
+</body>
+</html>

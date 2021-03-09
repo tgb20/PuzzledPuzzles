@@ -2,27 +2,25 @@ body {
 background-position: center;
 background-repeat: no-repeat;
 background-size: cover;
-background-color: grey;
-color: blue;
-width: 100vw;
-height: 100vh;
-border: dashed blue 0px;
-justify-content: center;
-text-align: center;
-align-items: center;
-align-content: center;
-vertical-align: center;
-margin-left: 0;
-margin-right: 0;
-margin-top: 0;
-margin-bottom: 0;
+  width: calc(100vh * (16/9));
+  height: 100vh;
+  border: dashed blue 0px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
 
-padding-bottom: 0;
-display: relative;
+  padding-bottom: 0;
+  display: relative;
 }
 
-.accelerator-body {
-background-image: url('assets/pedals.png');}
+.horn-body {
+background-image: url('assets/driversview.jpg');}
 
 
 #result {color: white;}
@@ -57,9 +55,36 @@ background-image: url('assets/pedals.png');}
  border: dashed blue 0px;
  cursor: grab;
 }
+
 .pedal .acceleratorClass:active {
   transform: rotateX(30deg);
 }
+
+
+
+
+
+
+
+.hornClass {
+  background-image: url('assets/carhorn.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+  width: 25vh;
+  position: relative;
+  margin-top: 25vh;
+  margin-left: 30vw;
+  transition: all 200ms ease-in-out;
+  will-change: transform;
+ border: dashed blue 0px;
+ cursor: grab;
+}
+.hornClass:active {
+  transform: scale(0.9, 0.9);
+}
+
 
 #redbutton {background-color: red;
 left: 40vh;
