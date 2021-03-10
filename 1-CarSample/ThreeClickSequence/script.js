@@ -24,19 +24,18 @@ function hornClick()
                                                     window.localStorage.clickcount = 0;
                                                 
                                                   }}
-                          window.localStorage.clickcount++;
-
-                            
-            }
-
+                                                  window.localStorage.clickcount++;}
 
 function doorClick() 
             {
                             if(typeof(Storage) !== "undefined") {
-                                                if (window.localStorage.clickcount >= 8) {
-                                                  window.localStorage.clickcount = -1;
-                                                }}
-            }
+                                                  if (window.localStorage.clickcount) {
+                                                    window.localStorage.clickcount = Number(window.localStorage.clickcount)-0;
+                                                  } else {
+                                                    window.localStorage.clickcount = 0;}
+                                                  }
+                                                }
+
 
 
 function clickCounter() {
@@ -70,7 +69,10 @@ function clickCounterGreen() {
 
 
 function doShit() {
-    if (window.localStorage.clickcount == 8) {document.getElementById("result").innerHTML = "HurraH!";}
+    if (window.localStorage.clickcount == 7) {
+                document.getElementById("result").innerHTML = "HurraH!";
+                document.getElementById("solvedPuzzle1").style.display = "block";
+                                              }
 
 }
 function printResults() {
@@ -121,14 +123,16 @@ function greenButtonClick()
 
 function soundClick() {var x = document.getElementById("reving"); x.play();}            
 
-function soundhonkClick() {var x = document.getElementById("honking"); x.play();}   
+function soundhonkClick() {var x = document.getElementById("honking"); x.play();} 
 
 
 
 
 
 
-//BACKUP
+
+
+/*
 function zredButtonClick() 
             {
                 document.getElementById('redbutton').style.backgroundColor = "yellow";
@@ -179,4 +183,4 @@ function zclickCounter() {
   }
 }
 
-
+*/

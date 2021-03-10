@@ -28,26 +28,28 @@
     
     
 
-<audio id="doorButtonSound">
-            <source src="assets/doorButtonSound.mp3" type="audio/mpeg">
+<audio id="reving">
+            <source src="assets/buttonClick.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
     </audio>
 
 
-<p id="result" style="color: green; position: absolute; left: 1vh; top: 10vh;">Nuthing happening</p>
+<p hidden id="result" style="color: green; position: absolute; left: 1vh; top: 10vh;">Nuthing happening</p>
 
  
 
   
+<div hidden id="solvedPuzzle1">
+  <p class="butter">5</p> 
+</div>
 
 
 
 
-
-
+<!--
 <button style="background-color: pink; position: absolute; bottom: 2vh; left: 2vh;" onclick="window.localStorage.clear(); printResults();" type="button">Clear</button> 
 <button style="background-color: pink; position: absolute; bottom: 2vh; left: 40vh;" onclick="printResults();" type="button">Print</button> 
-
+-->
 
 </body>
 </html>
