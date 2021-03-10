@@ -20,6 +20,8 @@ background-size: cover;
   display: relative;
 }
 
+.horn-body {
+background-image: url('assets/driversview.png');}
 
 
 #result {color: white;}
@@ -59,6 +61,57 @@ background-size: cover;
   transform: rotateX(30deg);
 }
 
+
+
+
+
+
+
+.hornClass {
+  background-image: url('assets/carhorn.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 25vh;
+  width: 25vh;
+  position: relative;
+  margin-top: 25vh;
+  margin-left: 30vw;
+  transition: all 200ms ease-in-out;
+  will-change: transform;
+ border: dashed blue 0px;
+ cursor: grab;
+}
+.hornClass:active {
+  transform: scale(0.9, 0.9);
+}
+
+
+#redbutton {background-color: red;
+left: 40vh;
+  top: 0.1vh;}
+
+#bluebutton {background-color: blue;
+left: 60vh;
+  top: 0.1vh;}
+
+#greenbutton {background-color: green;
+left: 80vh;
+  top: 0.1vh;}
+
+
+.key:active {
+  transform-style: preserve-3d;
+  transform: scale(0.80, 0.20);
+
+}
+
+.key {
+  position: absolute;
+  padding: 2vh;
+  transition-duration: 30ms;
+  cursor: pointer;
+}
 
 
 
