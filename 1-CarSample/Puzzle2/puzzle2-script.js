@@ -1,14 +1,16 @@
 
 
 
-function soundCarDescription() {var x = document.getElementById("designDescription"); x.play();}  
+function featureAudio() {var x = document.getElementById("featureAudioId"); x.play();
+document.getElementById("buttonId").style.display = "none";}  
 
 
 
-function revealPuzzle1(){
+function revealPuzzle(){
 	setInterval(() => {
-                      document.getElementById("puzzle1rules").style.display = "block";
+						
+                      document.getElementById("puzzle2rules").style.display = "block";
                       
                       
-                    }, 12 * 1000);
+                    }, 7 * 1000);
       }
