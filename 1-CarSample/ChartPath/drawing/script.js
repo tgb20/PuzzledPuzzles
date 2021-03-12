@@ -9,6 +9,7 @@ var lastEvent,
 function showHome() {
 document.getElementById('cs1').style.display ='none';
 document.getElementById('codeId').style.display ='block';
+document.getElementById('thebtn').style.display ='none';
 document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
 
@@ -26,6 +27,7 @@ function showMap() {
 document.getElementById('codeId').style.display ='none';
 document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
+document.getElementById('thebtn').style.display ='block';
 }
 
 
@@ -135,7 +137,7 @@ $canvas
   formInputs = $(form).children("input");
 
   // Valid Code
-  validCode = "1234";
+  validCode = "523";
 
   //JQuery AutoTab to automatically move forward when maximum length of input is reached.
   $(formInputs).autotab_magic();

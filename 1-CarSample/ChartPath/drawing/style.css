@@ -36,13 +36,33 @@ canvas {
 .displayClass {
  width: 55vw;
  height: 65vh;
-  background-color: grey;
+  background-color: black;
   text-align: center;
   justify-content: center;
   vertical-align: center;
   margin: 0 auto;
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.9;
+
+        top: 15vh;
+        left: 22.5vw;
+    
+  display: block;
+  border-radius: 5px;
+  border: solid yellow 0px;
+  color: white;
+}
+
+.videoDivClass {
+ width: 55vw;
+ height: 65vh;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  margin: 0 auto;
+  position: absolute;
+  opacity: 1;
 
         top: 15vh;
         left: 22.5vw;
@@ -53,15 +73,17 @@ canvas {
 }
 
 
-.video-styling {
-        
+
+.videoPlayerClass {
+        padding-top: 2vh;
         width: calc(60vh * (16/9));
         height: 60vh;
         border: solid orange 0px;
         
         }
 
-.button1 {position: absolute;
+.videoButtonClass {position: absolute;
+  top: 50%;
           border-left: solid orange 10vh;
           border-top: solid transparent 5vh;
           border-bottom: solid transparent 5vh;
@@ -72,7 +94,7 @@ canvas {
         }
     
 
-.button1:hover {
+.videoButtonClass:hover {
           border-left: solid pink 100px;
           border-top: solid transparent 50px;
           border-bottom: solid transparent 50px;}
@@ -116,7 +138,7 @@ canvas {
 .buttonHome {
   position: absolute;
   left: 15vw;
-  top: 38vh;
+  top: 21vh;
   background-color: rgba(0,255,255,0.9);
   border: solid white 2px;
   border-radius: 10%;
@@ -132,6 +154,27 @@ canvas {
   transform: scale(0.95);
   
 }
+
+.buttonVideo {
+  position: absolute;
+  left: 15vw;
+  top: 34vh;
+  background-color: rgba(0,0,255,0.2);
+  border: solid white 2px;
+  border-radius: 10%;
+  box-shadow: 0 3px 0 0 #6A845F;
+  color: #000000;
+  width: 4.2vw;
+  height: 2.2vh;
+  cursor: pointer;
+  transition-delay: 0,5s;
+}
+.buttonVideo:hover {
+  background-color: rgba(0,0,255,0.3);
+  transform: scale(0.95);
+  
+}
+
 
 .buttonMap {
   position: absolute;
@@ -156,25 +199,7 @@ canvas {
 
 
 
-.buttonVideo {
-  position: absolute;
-  left: 15vw;
-  bottom: 50vh;
-  background-color: rgba(0,0,255,0.2);
-  border: solid white 2px;
-  border-radius: 10%;
-  box-shadow: 0 3px 0 0 #6A845F;
-  color: #000000;
-  width: 4.2vw;
-  height: 2.2vh;
-  cursor: pointer;
-  transition-delay: 0,5s;
-}
-.buttonVideo:hover {
-  background-color: rgba(0,0,255,0.3);
-  transform: scale(0.95);
-  
-}
+
 
 
 

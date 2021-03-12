@@ -1,0 +1,84 @@
+body{
+  font-family: 'Libre Baskerville', serif;
+ 
+  width: 100vw
+  height: 100vh;
+  border: dashed blue 0px;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: center;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+
+  padding-bottom: 0;
+  display: relative;
+
+  
+}
+
+
+.imageBG {
+        position: absolute; 
+        background-image: url(assets/speedometer.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: dashed red 0px;
+
+        width: calc(100vh * (16/9));
+        height: 100vh;
+        margin-left: 0px;
+        padding-left: 0px;
+
+    }
+
+
+
+.featureClass {position: absolute;
+                  
+                  border-left: solid 10vh rgba(255,0,10,0.7);
+                  border-top: solid 5vh transparent;
+                  border-bottom: solid 5vh transparent;
+                  border-right: solid 0vh transparent;
+                  top: 50vh;
+                  left: 80vh;
+                  background-color: rgba(0,0,0,0.0);
+                  
+                  
+                
+                  transition: all 200ms ease-in-out;
+          will-change: transform;
+        }
+    
+
+.featureClass:active {
+  transform: scale(0.98);
+  background-color: rgba(255,255,10,0.2);
+
+      }
+
+
+
+#puzzle3rules{
+position: absolute; 
+        border: solid 2px rgba(255,255,255,0.9);
+        width: calc(60vh * (16/9));
+        height: 80vh;
+        margin-left: 10vh;
+        margin-top: 10vh;
+        background-color: rgba(255,255,255,0.7);
+        transition-duration: 5s;
+  transition-delay: 2s;
+
+}
+
+
+
+p {font-size: 5vh;text-transform: uppercase; padding: 2vh;}
+
+
+#result {color: white;}
