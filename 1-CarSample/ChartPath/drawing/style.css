@@ -62,19 +62,18 @@ canvas {
         }
 
 .button1 {position: absolute;
-          border-left: solid orange 100px;
-          border-top: solid transparent 50px;
-          border-bottom: solid transparent 50px;
+          border-left: solid orange 10vh;
+          border-top: solid transparent 5vh;
+          border-bottom: solid transparent 5vh;
           border-right: transparent;
-        top: 50%;
-        left: 50%;
-          background-color: rgba(0,0,0,0.0);
+
+          background-color: transparent;
           border-radius: 7px;
         }
     
 
 .button1:hover {
-      border-left: solid pink 100px;
+          border-left: solid pink 100px;
           border-top: solid transparent 50px;
           border-bottom: solid transparent 50px;}
 
@@ -99,10 +98,10 @@ canvas {
   height: 40px;
 }
 
-button {
+#thebtn {
   position: absolute;
   left: 25vw;
-  bottom: 10vh;
+  bottom: 23vh;
   background: #68B25B;
   box-shadow: 0 3px 0 0 #6A845F;
   color: #fff;
