@@ -10,17 +10,22 @@ function showHome() {
 document.getElementById('cs1').style.display ='none';
 document.getElementById('codeId').style.display ='block';
 document.getElementById('greatSuccess').style.display ='none';
-document.getElementById('videowindow').style.display ='none';
+document.getElementById('videoDiv').style.display ='none';
 
 }
 
 
 function showVideo() {
-document.getElementById('cs1').style.display ='none';
+
+document.getElementById('videoDiv').style.display ='block';
+
+}
+
+function showMap() {
+  document.getElementById('cs1').style.display ='block';
 document.getElementById('codeId').style.display ='none';
 document.getElementById('greatSuccess').style.display ='none';
-document.getElementById('videowindow').style.display ='block';
-
+document.getElementById('videoDiv').style.display ='none';
 }
 
 

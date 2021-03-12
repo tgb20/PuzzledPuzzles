@@ -36,7 +36,7 @@ canvas {
 .displayClass {
  width: 55vw;
  height: 65vh;
-  background-color: red;
+  background-color: grey;
   text-align: center;
   justify-content: center;
   vertical-align: center;
@@ -54,13 +54,11 @@ canvas {
 
 
 .video-styling {
-        position: absolute;
+        
         width: calc(60vh * (16/9));
         height: 60vh;
         border: solid orange 0px;
-        background-color: red;
-        top: 15vh;
-        left: 22.5vw;
+        
         }
 
 .button1 {position: absolute;
@@ -68,8 +66,8 @@ canvas {
           border-top: solid transparent 50px;
           border-bottom: solid transparent 50px;
           border-right: transparent;
-        top: 39vh;
-        left: 85vh;
+        top: 50%;
+        left: 50%;
           background-color: rgba(0,0,0,0.0);
           border-radius: 7px;
         }
@@ -162,7 +160,7 @@ button {
 .buttonVideo {
   position: absolute;
   left: 15vw;
-  bottom: 40vh;
+  bottom: 50vh;
   background-color: rgba(0,0,255,0.2);
   border: solid white 2px;
   border-radius: 10%;
