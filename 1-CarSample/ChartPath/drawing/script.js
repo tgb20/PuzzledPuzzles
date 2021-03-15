@@ -9,17 +9,20 @@ var lastEvent,
 function showHome() {
 document.getElementById('cs1').style.display ='none';
 document.getElementById('codeId').style.display ='block';
-document.getElementById('thebtn').style.display ='none';
+document.getElementById('canvasButton').style.display ='none';
 document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
-
 }
+
+function()
 
 
 function showVideo() {
-
 document.getElementById('videoDiv').style.display ='block';
-
+document.getElementById('cs1').style.display ='none';
+document.getElementById('codeId').style.display ='none';
+document.getElementById('canvasButton').style.display ='none';
+document.getElementById('greatSuccess').style.display ='none';
 }
 
 function showMap() {
@@ -27,7 +30,7 @@ function showMap() {
 document.getElementById('codeId').style.display ='none';
 document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
-document.getElementById('thebtn').style.display ='block';
+document.getElementById('canvasButton').style.display ='block';
 }
 
 

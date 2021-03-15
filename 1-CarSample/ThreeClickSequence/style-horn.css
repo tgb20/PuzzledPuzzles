@@ -1,7 +1,7 @@
 body{
   font-family: 'Libre Baskerville', serif;
  
-  width: 100vw
+  width: 100vh
   height: 100vh;
   border: dashed blue 0px;
   justify-content: center;
@@ -22,12 +22,12 @@ body{
 
 .stylin {
         position: absolute; 
-        background-image: url(assets/driversview.png);
+        background-image: url(assets/steeringWheel.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         border: dashed red 0px;
-        width: calc(100vh * (16/9));
+        width: 100vh;
         height: 100vh;
         margin-left: 0px;
         padding-left: 0px;
@@ -41,10 +41,10 @@ body{
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
-          width: 25vh;
-          height: 23.5vh;
-          top: 28.3vh;
-          left: 74.4vh;
+          width: 48vh;
+          height: 48vh;
+          top: 32.3vh;
+          left: 25.4vh;
           background-color: transparent;
           border: solid 0px transparent;
         

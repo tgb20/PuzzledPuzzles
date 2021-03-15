@@ -13,12 +13,12 @@
             canvas = document.getElementById("cs1");
             if (canvas.width  < window.innerWidth)
             {
-                canvas.width  = window.innerWidth * 0.55;
+                canvas.width  = window.innerWidth * 0.58;
             }
 
             if (canvas.height < window.innerHeight)
             {
-                canvas.height = window.innerHeight * 0.65;;
+                canvas.height = window.innerHeight * 0.68;;
             }
             
            
@@ -26,7 +26,7 @@
     </script>
 </head>
 
-<body onload="resize_canvas(); showHome();" onresize="resize_canvas();">
+<body onload="resize_canvas(); showHome(); showVideo()" onresize="resize_canvas();">
      
 <!-- partial:index.partial.html -->
 <div id="divbg">   
@@ -36,13 +36,17 @@
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
-  <button id="thebtn" onclick="clearCanvas();">Restart Drawing</button>
+  <button id="canvasButton" class="canvasBtn" onclick="clearCanvas();">Restart Drawing</button>
 
   <button class="buttonHome" onclick="showHome();"></button> 
 
+  <button class="buttonVideo" onclick="showVideo();"></button>
+
+  <button class="buttonAudio" onclick="showVideo();"></button>
+
   <button class="buttonMap" onclick="showMap();"></button>
 
-   <button class="buttonVideo" onclick="showVideo();"></button>
+   
 
 
 <div id="codeId" class="displayClass">
@@ -67,22 +71,40 @@
 <div id="greatSuccess" class="displayClass"><h1>You are a genius!</h1></div>
 
  
-<div id="videoDiv" class="videoDivClass">
+<div id="videoDiv" class="videoDivClass" onclick="playVideo()">
         <video id="videowindow" class="videoPlayerClass">
         <source src="assets/temp1.mp4" type="video/mp4">
 
         Your browser does not support the video tag.
       </video>   
 
-<button class="videoButtonClass" onclick="playVideo()"></button>
+
 
     </div>
   
+<button class="videoButtonClass" onclick="playVideo();"></button>
+
 
     
     <script>
-      function playVideo(){$('#videowindow').trigger('play');}
-      function pauseVideo() {$('#videowindow').trigger('pause');}
+
+
+     
+
+var l = 0;
+
+function playVideo() {
+  if (l === 0) {
+    $('#videowindow').trigger('play');
+    l = 1;
+  } else {
+    $('#videowindow').trigger('pause');
+    l = 0;
+  }
+  
+}
+
+      
     </script>
 
 

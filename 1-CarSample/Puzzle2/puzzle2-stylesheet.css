@@ -1,5 +1,5 @@
 body{
-  font-family: 'Libre Baskerville', serif;
+  font-family: 'Arial', sans-serif;
  
   width: 100vw
   height: 100vh;
@@ -65,12 +65,12 @@ body{
 
 #puzzle2rules{
 position: absolute; 
-        border: solid 2px rgba(255,255,255,0.9);
-        width: calc(60vh * (16/9));
-        height: 80vh;
+        border: solid 4px rgba(255,245,255,0.9);
+        
         margin-left: 10vh;
+        margin-right: 10vh;
         margin-top: 10vh;
-        background-color: rgba(255,255,255,0.7);
+        background-color: rgba(255,255,255,0.9);
         transition-duration: 5s;
   transition-delay: 2s;
 

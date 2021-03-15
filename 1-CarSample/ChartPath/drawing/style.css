@@ -2,6 +2,7 @@ body {
   background-image: url('');
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: yellow;
   
   width: 100vw;
   height: 100vh;
@@ -9,9 +10,9 @@ body {
 }
 
 #divbg {
-  background-image: url('assets/display.png');
+  background-image: url('assets/displayOnly.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   
   width: 100vw;
   height: 100vh;
@@ -20,8 +21,8 @@ body {
 
 canvas {
         position: absolute;
-        top: 15vh;
-        left: 22.5vw;
+        top: 13vh;
+        left: 20.6vw;
         background-image: url(assets/map.png);
         
         background-repeat: no-repeat;
@@ -34,8 +35,8 @@ canvas {
 }
 
 .displayClass {
- width: 55vw;
- height: 65vh;
+	width: 58vw;
+  height: 35vw;
   background-color: black;
   text-align: center;
   justify-content: center;
@@ -44,8 +45,8 @@ canvas {
   position: absolute;
   opacity: 0.9;
 
-        top: 15vh;
-        left: 22.5vw;
+        top: 12.8vh;
+        left: 20.6vw;
     
   display: block;
   border-radius: 5px;
@@ -54,9 +55,9 @@ canvas {
 }
 
 .videoDivClass {
- width: 55vw;
- height: 65vh;
-  background-color: black;
+ width: 58vw;
+  height: 35vw;
+  background-color: green;
   text-align: center;
   justify-content: center;
   vertical-align: center;
@@ -64,26 +65,36 @@ canvas {
   position: absolute;
   opacity: 1;
 
-        top: 15vh;
-        left: 22.5vw;
+        top: 14vh;
+        left: 20.5vw;
     
   display: block;
   border-radius: 5px;
-  border: solid yellow 2px;
+  border: solid darkgrey 0px;
 }
 
 
 
 .videoPlayerClass {
+	position: absolute;	
+	left: -4.5vw;
         padding-top: 2vh;
-        width: calc(60vh * (16/9));
-        height: 60vh;
+        width: calc(74vh * (16/9));
+        height: 64vh;
         border: solid orange 0px;
-        
+       
         }
 
+#videoDiv:hover + .videoButtonClass { display: block; transition-delay: 2.5s;
+        transition-duration: 2s;}
+
+
+
+
+
 .videoButtonClass {position: absolute;
-  top: 50%;
+  top: 48%;
+  left: 48%;
           border-left: solid orange 10vh;
           border-top: solid transparent 5vh;
           border-bottom: solid transparent 5vh;
@@ -91,13 +102,18 @@ canvas {
 
           background-color: transparent;
           border-radius: 7px;
+          display: none;
+        
         }
     
 
 .videoButtonClass:hover {
-          border-left: solid pink 100px;
-          border-top: solid transparent 50px;
-          border-bottom: solid transparent 50px;}
+           border-left: solid pink 11vh;
+          border-top: solid transparent 5vh;
+          border-bottom: solid transparent 5vh;
+          display: block;
+
+      }
 
 
 
@@ -120,83 +136,53 @@ canvas {
   height: 40px;
 }
 
-#thebtn {
+button {
+  position: absolute;
+  left: 12.6vw;
+
+  background-color: rgba(0,255,255,0.3);
+  border: solid white 2px;
+  border-radius: 10%;
+  box-shadow: 0 3px 0 0 #6A845F;
+  color: #000000;
+  width: 4vw;
+  height: 2.2vh;
+  cursor: pointer;
+  transition-delay: 0,5s;
+}
+button:hover {
+  background-color: rgba(0,0,255,0.3);
+  transform: scale(0.95);
+				}
+
+
+.canvasBtn {
   position: absolute;
   left: 25vw;
   bottom: 23vh;
-  background: #68B25B;
-  box-shadow: 0 3px 0 0 #6A845F;
+  background: black;
+  width: 10vw;
+  height: 10vh;
   color: #fff;
   outline: none;
   cursor: pointer;
-  text-shadow: 0 1px #6A845F;
   display: block;
   font-size: 16px;
   line-height: 40px;
 }
 
-.buttonHome {
-  position: absolute;
-  left: 15vw;
-  top: 21vh;
-  background-color: rgba(0,255,255,0.9);
-  border: solid white 2px;
-  border-radius: 10%;
-  box-shadow: 0 3px 0 0 #6A845F;
-  color: #000000;
-  width: 4.2vw;
-  height: 2.2vh;
-  cursor: pointer;
-  transition-delay: 0,5s;
-}
-.buttonHome:hover {
-  background-color: rgba(0,0,255,0.3);
-  transform: scale(0.95);
-  
-}
-
-.buttonVideo {
-  position: absolute;
-  left: 15vw;
-  top: 34vh;
-  background-color: rgba(0,0,255,0.2);
-  border: solid white 2px;
-  border-radius: 10%;
-  box-shadow: 0 3px 0 0 #6A845F;
-  color: #000000;
-  width: 4.2vw;
-  height: 2.2vh;
-  cursor: pointer;
-  transition-delay: 0,5s;
-}
-.buttonVideo:hover {
-  background-color: rgba(0,0,255,0.3);
-  transform: scale(0.95);
-  
-}
 
 
-.buttonMap {
-  position: absolute;
-  left: 15vw;
-  bottom: 38vh;
-  background-color: rgba(0,0,255,0.2);
-  border: solid white 2px;
-  border-radius: 10%;
-  box-shadow: 0 3px 0 0 #6A845F;
-  color: #000000;
-  width: 4.2vw;
-  height: 2.2vh;
-  cursor: pointer;
-  transition-delay: 0,5s;
-}
-.buttonMap:hover {
-  background-color: rgba(0,0,255,0.3);
-  transform: scale(0.95);
-  
-}
+
+.buttonHome {top: 19vh;}
 
 
+.buttonVideo {top: 33vh;}
+
+
+.buttonAudio { top: 46vh;}
+
+.buttonMap { top: 59vh;}
 
 
 
