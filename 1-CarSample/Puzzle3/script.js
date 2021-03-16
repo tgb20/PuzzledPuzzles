@@ -2,7 +2,10 @@
 
 
 function featureAudio() {var x = document.getElementById("featureAudioId"); x.play();
-document.getElementById("buttonId").style.display = "none";}  
+setTimeout(function() 
+		{document.getElementById("buttonId").style.display = "none";
+		document.getElementById("squareId").style.display = "none";}, 
+		100);}   
 
 
 

@@ -23,58 +23,61 @@ body{
 
 .imageBG {
         position: absolute; 
-        background-image: url(assets/btwSeats.jpeg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         border: dashed red 0px;
-
         width: calc(100vh * (16/9));
         height: 100vh;
         margin-left: 0px;
         padding-left: 0px;
-
-    }
-
+        }
 
 
-.featureClass {position: absolute;
-                  
-                  border-left: solid 10vh rgba(255,0,10,0.7);
-                  border-top: solid 5vh transparent;
-                  border-bottom: solid 5vh transparent;
-                  border-right: solid 0vh transparent;
+.squareClass {    position: absolute;
+                  width: 22vh;
+                  height: 22vh;
                   top: 50vh;
                   left: 80vh;
-                  background-color: rgba(0,0,0,0.0);
-                  
-                  
-                
+                  background-color: rgba(0,0,0,0.3);
+                  border: 2px solid red;
+                  border-radius: 100%;
                   transition: all 200ms ease-in-out;
-          will-change: transform;
-        }
+                  will-change: transform;
+                  z-index: 100;
+            }
     
 
-.featureClass:active {
-  transform: scale(0.98);
-  background-color: rgba(255,255,10,0.2);
+.squareClass:active   {transform: scale(0.97); background-color: rgba(0,0,0,0.9);}
+.squareClass:hover    {transform: scale(0.97);}
+#squareId:hover + .buttonClass {transform: scale(0.97);}          
 
-      }
+.buttonClass  {       position: absolute;
+                      border-left: solid 12vh rgba(220,0,0,0.9);
+                      border-top: solid 7vh transparent;
+                      border-bottom: solid 7vh transparent;
+                      border-right: solid 0vh transparent;
+                      top: 54vh;
+                      left: 86.5vh;
+                      background-color: rgba(0,0,0,0.0);
+                      transition: all 200ms ease-in-out;
+                      will-change: transform;
+              }
+
+
 
 
 
 #puzzle2rules{
-position: absolute; 
+        position: absolute; 
         border: solid 4px rgba(255,245,255,0.9);
-        
         margin-left: 10vh;
         margin-right: 10vh;
         margin-top: 10vh;
         background-color: rgba(255,255,255,0.9);
         transition-duration: 5s;
-  transition-delay: 2s;
-
-}
+        transition-delay: 2s;
+            }
 
 
 
