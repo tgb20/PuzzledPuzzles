@@ -46,7 +46,10 @@ body{
             }
     
 
-.squareClass:active   {transform: scale(0.97); background-color: rgba(0,0,0,0.9);}
+.squareClass:active   {transform: scale(0.97); background-color: rgba(0,0,0,0.9);
+ -webkit-transform: scale(0.97);
+  -ms-transform: scale(0.97);
+  }
 .squareClass:hover    {transform: scale(0.97);}
 #squareId:hover + .buttonClass {transform: scale(0.97);}          
 
