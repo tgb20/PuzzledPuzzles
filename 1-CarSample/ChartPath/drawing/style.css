@@ -54,6 +54,27 @@ canvas {
   color: white;
 }
 
+
+.videoDisplayClass {
+  width: 58vw;
+  height: 35vw;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  margin: 0 auto;
+  position: absolute;
+  opacity: 0.9;
+
+        top: 12.8vh;
+        left: 20.6vw;
+    
+  
+  border-radius: 5px;
+  border: solid yellow 0px;
+  color: white;
+}
+
 .videoDivClass {
  width: calc(64vh * (16/9));
         height: 70vh;
@@ -71,6 +92,7 @@ canvas {
   display: block;
   border-radius: 5px;
   border: solid darkgrey 0px;
+  z-index: 90;
 }
 
 
@@ -193,7 +215,7 @@ button:focus {outline:0;}
   left: 25vw;
   bottom: 23vh;
   background: black;
-  width: 10vw;
+  width: auto;
   height: 10vh;
   color: #fff;
   outline: none;
@@ -318,6 +340,4 @@ width: 30vw;
   line-height: 40px;
   text-align: center;
   cursor: pointer;
-
-
 }

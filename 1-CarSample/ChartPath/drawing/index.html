@@ -26,7 +26,7 @@
     </script>
 </head>
 
-<body onload="resize_canvas(); showHome(); showVideo(); showSuccess();" onresize="resize_canvas();">
+<body onload="resize_canvas(); showHome(); showVideo();" onresize="resize_canvas();">
      
 <!-- partial:index.partial.html -->
 <div id="divbg">   
@@ -87,7 +87,28 @@
 
 </div>
 
-<div id="audioDisplay" class="displayClass"><h3>The car features</h3><h1> SEVENTEEN SPEAKERS</h1> <h3>so every song will sound like you're in the moshpit!</h3></div>
+
+
+
+<div id="audioDisplay" class="videoDisplayClass">
+<div>
+<video id="video1" class="videoPlayerClass" autoplay="" muted=""  loop="" control="hide">
+<source src="assets/soundbarz.mp4" type="video/mp4">
+</video> 
+
+
+
+</div>
+<div class="videoPlayerClass">
+
+  <h3>The car features</h3><h1> SEVENTEEN SPEAKERS</h1> <h3 style="background-color: black;">so every song will sound like you're in the mosh pit!</h3>
+
+</div>
+
+
+</div>
+
+
 
 
 
@@ -147,7 +168,10 @@ function playVideo() {
             <source src="assets/Car6.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
     </audio>
-
+<audio id="audioDisplaySuccess">
+            <source src="assets/epicfantasywin.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+    </audio>
 
 
 
