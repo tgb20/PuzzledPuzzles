@@ -26,7 +26,7 @@
     </script>
 </head>
 
-<body onload="resize_canvas(); showHome(); showVideo();" onresize="resize_canvas();">
+<body onload="resize_canvas(); showHome(); showVideo(); showSuccess();" onresize="resize_canvas();">
      
 <!-- partial:index.partial.html -->
 <div id="divbg">   
@@ -68,12 +68,34 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-autotab/1.9.2/js/jquery.autotab.js'></script><script  src="./script.js"></script>
 
 
-<div id="greatSuccess" class="displayClass"><h1>You are a genius!</h1></div>
+<div id="greatSuccess" class="displayClass" style="z-index: 100;">
 
-<div id="audioDisplay" class="displayClass"><h1>The car features SEVENTEEN SPEAKERS, so every song will sound like you're in the moshpit!</h1></div>
+                              <h1>Congratulation!</h1>
+  <h3>We are very impressed with your puzzle solving skills.<br>
+      We hope you liked navigating around and getting a feel for the car.<br><br>
+      If you would like to subscribe to our mailing letter for more information and deals fill in your email below:<br>
+
+  </h3>
+
+       <input id="myInput1" class="emailInput" type="email">
 
 
- 
+<button id="myBtn" class="successBtn" onclick="emailSubmission()">Send</button>
+
+<p id="demo"></p>
+
+
+</div>
+
+<div id="audioDisplay" class="displayClass"><h3>The car features</h3><h1> SEVENTEEN SPEAKERS</h1> <h3>so every song will sound like you're in the moshpit!</h3></div>
+
+
+
+
+
+
+
+
 <div id="videoDiv" class="videoDivClass" onclick="playVideo(); myFunction();">
         <video id="videowindow" class="videoPlayerClass" controls>
         <source src="assets/temp1.mp4" type="video/mp4">
@@ -125,6 +147,44 @@ function playVideo() {
             <source src="assets/Car6.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
     </audio>
+
+
+
+
+<script>
+//Script for succesful game email send;
+input.addEventListener("keyup", function(event) {
+  if (event.keyCode === 13) {
+   event.preventDefault();
+   document.getElementById("myBtn").click();
+  }
+});
+
+function emailSubmission() {
+  var writtenResponse;
+  var answer1 =  document.getElementById('myInput1').value;
+  
+
+  
+     if ((answer1 == 'donovan' || answer1 == 'DONOVAN' || answer1 == 'Donovan')) 
+     
+      {writtenResponse; = "CHECKING TO SEE IF THAT IS CORRECT...";
+      window.open('https://puzzledescapegames.com/cctre');
+
+
+  
+  } else {
+  
+  writtenResponse = "No, that does not seem right. Are you sure you want to receive a free game from Puzzled?";
+  }
+  //THIS IS WHAT IT CHANGES
+
+  document.getElementById("demo").innerHTML = writtenResponse;
+}
+
+
+</script>
+
 
 
 </body>

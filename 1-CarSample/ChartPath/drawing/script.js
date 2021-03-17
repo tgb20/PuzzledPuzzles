@@ -23,6 +23,7 @@ document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
 }
 
+function showSuccess() {document.getElementById('greatSuccess').style.display ='block';}
 
 
 
