@@ -55,9 +55,9 @@ canvas {
 }
 
 .videoDivClass {
- width: 58vw;
-  height: 35vw;
-  background-color: green;
+ width: calc(64vh * (16/9));
+        height: 70vh;
+  background-color: transparent;
   text-align: center;
   justify-content: center;
   vertical-align: center;
@@ -65,7 +65,7 @@ canvas {
   position: absolute;
   opacity: 1;
 
-        top: 14vh;
+        top: 10vh;
         left: 20.5vw;
     
   display: block;
@@ -77,44 +77,73 @@ canvas {
 
 .videoPlayerClass {
 	position: absolute;	
-	left: -4.5vw;
-        padding-top: 2vh;
-        width: calc(74vh * (16/9));
-        height: 64vh;
+	left: -0vw;
+        padding-top: 1vh;
+        width: calc(64vh * (16/9));
+        height: 70vh;
         border: solid orange 0px;
        
         }
 
-#videoDiv:hover + .videoButtonClass { display: block; transition-delay: 2.5s;
-        transition-duration: 2s;}
+#videoDiv:hover + .videoButtonPlayClass { display: block;}
+#videoDiv:hover + .videoButtonPauseClass { display: block;}
 
 
 
 
+.videoButtonPlayClass { position: absolute;
+                        top: 48%;
+                        left: 48%;
+                        border-left: solid red 10vh;
+                        border-top: solid transparent 5vh;
+                        border-bottom: solid transparent 5vh;
+                        border-right: transparent;
+                        background-color: rgba(0,0,0,0.0);
+                        border-radius: 0px;
+                        box-shadow: 0 0px 0 0 black;
+                        display: none;
+                        z-index: 100;
+                        transition: border-left 1s;
+                      }
+    
 
-.videoButtonClass {position: absolute;
-  top: 48%;
-  left: 48%;
-          border-left: solid orange 10vh;
-          border-top: solid transparent 5vh;
-          border-bottom: solid transparent 5vh;
-          border-right: transparent;
+.videoButtonPlayClass:hover {
+                        border-left: solid pink 10vh;
+                        border-top: solid transparent 5vh;
+                        border-bottom: solid transparent 5vh;
+                        border-right: solid transparent 0vh;
+                        display: block;
+                        background-color: rgba(0,0,0,0.0);
+                        }
 
-          background-color: transparent;
-          border-radius: 7px;
+
+.videoButtonPauseClass {position: absolute;
+          top: 48%;
+          left: 48%;
+          height: 10vh;
+          border-left: solid red 2vh;
+          border-right: solid red 2vh;
+          border-top: transparent 0px;
+          border-bottom: transparent 0px;
+          background-color: rgba(0,0,0,0.0);
+          border-radius: 0px;
+          box-shadow: 0 0px 0 0 black;
           display: none;
+          z-index: 100;
+          transition: border-left 1s, border-right 1s;
         
         }
     
 
-.videoButtonClass:hover {
-           border-left: solid pink 11vh;
-          border-top: solid transparent 5vh;
-          border-bottom: solid transparent 5vh;
+.videoButtonPauseClass:hover {
+           height: 10vh;
+          border-left: solid pink 2vh;
+          border-right: solid pink 2vh;
+          background-color: rgba(0,0,0,0.0);
+          
           display: block;
 
       }
-
 
 
 
@@ -149,11 +178,14 @@ button {
   height: 2.2vh;
   cursor: pointer;
   transition-delay: 0,5s;
+  outline: none;
 }
 button:hover {
   background-color: rgba(0,0,255,0.3);
   transform: scale(0.95);
 				}
+
+button:focus {outline:0;}
 
 
 .canvasBtn {

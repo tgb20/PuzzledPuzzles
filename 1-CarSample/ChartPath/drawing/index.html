@@ -26,7 +26,7 @@
     </script>
 </head>
 
-<body onload="resize_canvas(); showHome(); showVideo()" onresize="resize_canvas();">
+<body onload="resize_canvas(); showHome(); showVideo();" onresize="resize_canvas();">
      
 <!-- partial:index.partial.html -->
 <div id="divbg">   
@@ -42,7 +42,7 @@
 
   <button class="buttonVideo" onclick="showVideo();"></button>
 
-  <button class="buttonAudio" onclick="showVideo();"></button>
+  <button class="buttonAudio" onclick="startAudio();"></button>
 
   <button class="buttonMap" onclick="showMap();"></button>
 
@@ -70,9 +70,12 @@
 
 <div id="greatSuccess" class="displayClass"><h1>You are a genius!</h1></div>
 
+<div id="audioDisplay" class="displayClass"><h1>The car features SEVENTEEN SPEAKERS, so every song will sound like you're in the moshpit!</h1></div>
+
+
  
-<div id="videoDiv" class="videoDivClass" onclick="playVideo()">
-        <video id="videowindow" class="videoPlayerClass">
+<div id="videoDiv" class="videoDivClass" onclick="playVideo(); myFunction();">
+        <video id="videowindow" class="videoPlayerClass" controls>
         <source src="assets/temp1.mp4" type="video/mp4">
 
         Your browser does not support the video tag.
@@ -81,17 +84,14 @@
 
 
     </div>
-  
-<button class="videoButtonClass" onclick="playVideo();"></button>
+  <button id="videoButtonId" class="videoButtonPlayClass" onclick="playVideo(); myFunction();"></button>
+
 
 
     
-    <script>
-
-
-     
-
+<script>
 var l = 0;
+var vid = document.getElementById('videowindow');
 
 function playVideo() {
   if (l === 0) {
@@ -101,19 +101,31 @@ function playVideo() {
     $('#videowindow').trigger('pause');
     l = 0;
   }
-  
-}
 
-      
+  if (vid.paused == true) {
+    document.getElementById('videoButtonId').className = "videoButtonPlayClass";
+  
+          } else {//document.getElementById('temp').style.display = 'block';
+                  document.getElementById('videoButtonId').className = "videoButtonPauseClass";
+        }
+
+
+
+
+} 
     </script>
 
 
 
 
-
-
-
 </div><!-- BG Div -->
+
+
+<audio id="audioDisplayTrack">
+            <source src="assets/Car6.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+    </audio>
+
 
 </body>
 </html>

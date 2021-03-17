@@ -4,9 +4,18 @@ var context = $canvas[0].getContext('2d');
 var lastEvent,
     mousedown = false;
 
-
+function startAudio() {var x = document.getElementById("audioDisplayTrack"); x.play();
+setTimeout(function() 
+		{document.getElementById('audioDisplay').style.display ='block';
+		document.getElementById('cs1').style.display ='none';
+		document.getElementById('codeId').style.display ='none';
+		document.getElementById('canvasButton').style.display ='none';
+		document.getElementById('greatSuccess').style.display ='none';
+		document.getElementById('videoDiv').style.display ='none';}, 
+		100);}   
 
 function showHome() {
+	document.getElementById('audioDisplay').style.display ='none';
 document.getElementById('cs1').style.display ='none';
 document.getElementById('codeId').style.display ='block';
 document.getElementById('canvasButton').style.display ='none';
@@ -14,10 +23,11 @@ document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
 }
 
-function()
+
 
 
 function showVideo() {
+	document.getElementById('audioDisplay').style.display ='none';
 document.getElementById('videoDiv').style.display ='block';
 document.getElementById('cs1').style.display ='none';
 document.getElementById('codeId').style.display ='none';
@@ -26,6 +36,7 @@ document.getElementById('greatSuccess').style.display ='none';
 }
 
 function showMap() {
+	document.getElementById('audioDisplay').style.display ='none';
   document.getElementById('cs1').style.display ='block';
 document.getElementById('codeId').style.display ='none';
 document.getElementById('greatSuccess').style.display ='none';
