@@ -3,9 +3,30 @@ var $canvas = $('canvas');
 var context = $canvas[0].getContext('2d');
 var lastEvent,
     mousedown = false;
+var l = 0;
+var vid = document.getElementById('videowindow');
+
+
+function resize_canvas(){
+            canvas = document.getElementById("cs1");
+            if (canvas.width  < window.innerWidth)
+            {
+                canvas.width  = window.innerWidth * 0.58;
+            }
+
+            if (canvas.height < window.innerHeight)
+            {
+                canvas.height = window.innerHeight * 0.68;;
+            }
+            
+           
+        }
+
+
 
 function startAudio() {var x = document.getElementById("audioDisplayTrack"); x.play();
-setTimeout(function() 
+    $('#videowindow').trigger('pause');
+    setTimeout(function() 
 		{document.getElementById('audioDisplay').style.display ='block';
 		document.getElementById('cs1').style.display ='none';
 		document.getElementById('codeId').style.display ='none';
@@ -24,23 +45,25 @@ document.getElementById('codeId').style.display ='block';
 document.getElementById('canvasButton').style.display ='none';
 document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
-
+$('#videowindow').trigger('pause');
 }
 
 function showSuccess() {
 	document.getElementById('greatSuccess').style.display ='block';
 	var x = document.getElementById("audioDisplaySuccess"); x.play();
+
 }
 
 
 
 function showVideo() {
+  document.getElementById('greatSuccess').style.display ='none';
 	document.getElementById('audioDisplay').style.display ='none';
 document.getElementById('videoDiv').style.display ='block';
 document.getElementById('cs1').style.display ='none';
 document.getElementById('codeId').style.display ='none';
 document.getElementById('canvasButton').style.display ='none';
-document.getElementById('greatSuccess').style.display ='none';
+
 }
 
 function showMap() {
@@ -50,6 +73,8 @@ document.getElementById('codeId').style.display ='none';
 document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
 document.getElementById('canvasButton').style.display ='block';
+$('#videowindow').trigger('pause');
+
 }
 
 
@@ -60,6 +85,29 @@ canvas = document.getElementById('cs1');
 ctx = canvas.getContext('2d');
 ctx.clearRect(0, 0, canvas.width, canvas.height);
 }
+
+
+
+
+function playVideo() {
+  if (l === 0) {
+    $('#videowindow').trigger('play');
+    l = 1;
+  } else {
+    $('#videowindow').trigger('pause');
+    l = 0;
+  }
+
+  if (vid.paused == true) {
+    document.getElementById('videoButtonId').className = "videoButtonPlayClass";
+  
+          } else {//document.getElementById('temp').style.display = 'block';
+                  document.getElementById('videoButtonId').className = "videoButtonPauseClass";
+        }
+} 
+
+
+
 
 
 

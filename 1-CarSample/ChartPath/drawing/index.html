@@ -26,7 +26,7 @@
     </script>
 </head>
 
-<body onload="resize_canvas(); showHome(); showVideo();" onresize="resize_canvas();">
+<body onload="resize_canvas(); showVideo();" onresize="resize_canvas();">
      
 <!-- partial:index.partial.html -->
 <div id="divbg">   
@@ -50,7 +50,8 @@
 
 
 <div id="codeId" class="displayClass">
-  <h3>enter code</h3>
+  <h2>Enter code Below</h2>
+  <h3 style="color: red; font-family: Times;"> I - II - III</h3>
   <form class='code_input'>
     <input autofocus='' maxlength='1' placeholder='.' type='password'>
     <input maxlength='1' placeholder='.' type='password'>
@@ -68,24 +69,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-autotab/1.9.2/js/jquery.autotab.js'></script><script  src="./script.js"></script>
 
 
-<div id="greatSuccess" class="displayClass" style="z-index: 100;">
 
-                              <h1>Congratulation!</h1>
-  <h3>We are very impressed with your puzzle solving skills.<br>
-      We hope you liked navigating around and getting a feel for the car.<br><br>
-      If you would like to subscribe to our mailing letter for more information and deals fill in your email below:<br>
-
-  </h3>
-
-       <input id="myInput1" class="emailInput" type="email">
-
-
-<button id="myBtn" class="successBtn" onclick="emailSubmission()">Send</button>
-
-<p id="demo"></p>
-
-
-</div>
 
 
 
@@ -128,6 +112,26 @@
 
     </div>
   <button id="videoButtonId" class="videoButtonPlayClass" onclick="playVideo(); myFunction();"></button>
+
+
+<div hidden id="greatSuccess" class="displayClass" style="z-index: 100;">
+
+                              <h1>Congratulation!</h1>
+  <h3>We are very impressed with your puzzle solving skills.<br>
+      We hope you liked navigating around and getting a feel for the car.<br><br>
+      If you would like to subscribe to our mailing letter for more information and deals fill in your email below:<br>
+
+  </h3>
+
+       <input id="myInput1" class="emailInput" type="email">
+
+
+<button id="myBtn" class="successBtn" onclick="emailSubmission()">Send</button>
+
+<p id="demo"></p>
+
+
+</div>
 
 
 
