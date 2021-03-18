@@ -189,7 +189,7 @@ canvas {
 
 button {
   position: absolute;
-  left: 12vw;
+  left: 12.6vw;
 
   background-color: rgba(0,255,255,0.3);
   border: solid white 2px;
@@ -341,3 +341,6 @@ width: 30vw;
   text-align: center;
   cursor: pointer;
 }
+
+
+.romanNumeralClass {font-family: Times; color: red; font-size: 10vh; position: absolute; z-index: 100; left: 23%; top: 8vh;}

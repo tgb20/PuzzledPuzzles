@@ -1,5 +1,5 @@
 body{
-  font-family: 'Arial', sans-serif;
+  font-family: 'Emblema One', sans-serif;
  
   width: 100vw
   height: 100vh;
@@ -65,7 +65,19 @@ body{
               }
 
 
+.headingAnimation {
+              position: relative; 
+              color: black;
+              animation-name: Heading;
+              animation-duration: 4s;
+            }
 
+@keyframes Heading {
+    0%   {color: red; left: -100vh;}
+  25%  {color: purple;}
+  50%  {color: blue;}
+  100% {color: green; left: 0vh;}
+}
 
 
 #puzzle2rules{
@@ -75,9 +87,22 @@ body{
         margin-right: 10vh;
         margin-top: 10vh;
         background-color: rgba(255,255,255,0.9);
-        transition-duration: 5s;
-        transition-delay: 2s;
+        color: black;
+        /*transition-duration: 5s;
+        transition-delay: 2s;*/
+        animation-name: example;
+  animation-duration: 10s;
+    animation-iteration-count: infinite;
+
+
             }
+@keyframes example {
+  0%   {color: red;}
+  25%  {color: purple;}
+  50%  {color: blue;}
+  100% {color: red;}
+}
+
 
 
 

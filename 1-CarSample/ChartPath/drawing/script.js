@@ -5,7 +5,7 @@ var lastEvent,
     mousedown = false;
 var l = 0;
 var vid = document.getElementById('videowindow');
-
+ 
 
 function resize_canvas(){
             canvas = document.getElementById("cs1");
@@ -24,13 +24,14 @@ function resize_canvas(){
 
 
 
-function startAudio() {var x = document.getElementById("audioDisplayTrack"); x.play();
+function startAudio() { var x = document.getElementById("audioDisplayTrack");x.play();
     $('#videowindow').trigger('pause');
     setTimeout(function() 
 		{document.getElementById('audioDisplay').style.display ='block';
 		document.getElementById('cs1').style.display ='none';
-		document.getElementById('codeId').style.display ='none';
 		document.getElementById('canvasButton').style.display ='none';
+    document.getElementById('romanII').style.display ='none';
+    document.getElementById('codeId').style.display ='none';
 		document.getElementById('greatSuccess').style.display ='none';
 		document.getElementById('videoDiv').style.display ='none';}, 
 		100);}   
@@ -46,6 +47,9 @@ document.getElementById('canvasButton').style.display ='none';
 document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
 $('#videowindow').trigger('pause');
+var x = document.getElementById("audioDisplayTrack");x.pause();
+    document.getElementById('romanII').style.display ='none';
+
 }
 
 function showSuccess() {
@@ -63,6 +67,8 @@ document.getElementById('videoDiv').style.display ='block';
 document.getElementById('cs1').style.display ='none';
 document.getElementById('codeId').style.display ='none';
 document.getElementById('canvasButton').style.display ='none';
+var x = document.getElementById("audioDisplayTrack");x.pause();
+    document.getElementById('romanII').style.display ='none';
 
 }
 
@@ -74,6 +80,8 @@ document.getElementById('greatSuccess').style.display ='none';
 document.getElementById('videoDiv').style.display ='none';
 document.getElementById('canvasButton').style.display ='block';
 $('#videowindow').trigger('pause');
+var x = document.getElementById("audioDisplayTrack");x.pause();
+    document.getElementById('romanII').style.display ='block';
 
 }
 
