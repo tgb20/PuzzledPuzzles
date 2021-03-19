@@ -16,7 +16,7 @@ body{
   display: relative;
 
 }
-.romanNumeralClass {font-family: Times; color: red; font-size: 10vh; position: absolute; z-index: 100; left: 48%; top: 10vh;}
+.romanNumeralClass {font-family: Times; color: red; font-size: 10vh; position: relative; z-index: 100;}
 
 
 .imageBG {
