@@ -24,14 +24,13 @@ canvas {
         top: 13vh;
         left: 20.6vw;
         background-image: url(assets/map.jpg);
-        
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.8;
-  display: block;
-  border-radius: 5px;
-  box-shadow: 0 4px 0 0 #222;
-  cursor: url(../img/cursor.png), crosshair;
+        display: block;
+        border-radius: 5px;
+        box-shadow: 0 4px 0 0 #222;
+        cursor: url(../img/cursor.png), crosshair;
 }
 
 
@@ -40,7 +39,7 @@ canvas {
 
 .navClass {
           position: absolute;
-          left: 40vw;
+          left: 35vw;
           bottom: 23vh;
           color: white;
           font-size: 4vh;

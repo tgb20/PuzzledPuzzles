@@ -81,7 +81,7 @@ body{
 
 #puzzle2rules{
         position: absolute; 
-        border: solid 4px rgba(255,245,255,0.9);
+        border: solid 10px rgba(0,0,0,0.7);
         margin-left: 10vh;
         margin-right: 10vh;
         margin-top: 10vh;
@@ -97,10 +97,10 @@ body{
 
             }
 @keyframes example {
-  0%   {background-color: rgba(255,255,255,0.9); color: rgba(0,0,0,0.3);}
+  0%   {background-color: rgba(200,200,200,0.9); color: rgba(0,0,0,0.3);}
   25%  {color: rgba(0,0,10,0.5);}
   50%  {color: rgba(0,10,0,0.7);}
-  100% {background-color: rgba(200,200,200,0.9); color: rgba(0,0,10,0.9);}
+  100% {background-color: rgba(255,255,255,0.9); color: rgba(0,0,10,0.9);}
 }
 
 

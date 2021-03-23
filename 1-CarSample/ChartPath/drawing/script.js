@@ -63,11 +63,11 @@ function showSuccess() {
 function showVideo() {
   document.getElementById('greatSuccess').style.display ='none';
 	document.getElementById('audioDisplay').style.display ='none';
-document.getElementById('videoDiv').style.display ='block';
-document.getElementById('cs1').style.display ='none';
-document.getElementById('codeId').style.display ='none';
-document.getElementById('canvasButton').style.display ='none';
-var x = document.getElementById("audioDisplayTrack");x.pause();
+  document.getElementById('videoDiv').style.display ='block';
+  document.getElementById('cs1').style.display ='none';
+  document.getElementById('codeId').style.display ='none';
+  document.getElementById('canvasButton').style.display ='none';
+  var x = document.getElementById("audioDisplayTrack");x.pause();
     document.getElementById('romanII').style.display ='none';
 
 }
@@ -219,7 +219,7 @@ $canvas
   formInputs = $(form).children("input");
 
   // Valid Code
-  validCode = "523";
+  validCode = "553";
 
   //JQuery AutoTab to automatically move forward when maximum length of input is reached.
   $(formInputs).autotab_magic();
