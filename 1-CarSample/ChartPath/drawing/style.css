@@ -2,7 +2,7 @@ body {
   background-image: url('');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: yellow;
+  background-color: black;
   
   width: 100vw;
   height: 100vh;
@@ -23,7 +23,7 @@ canvas {
         position: absolute;
         top: 13vh;
         left: 20.6vw;
-        background-image: url(assets/map.png);
+        background-image: url(assets/map.jpg);
         
         background-repeat: no-repeat;
         background-size: cover;
@@ -33,6 +33,25 @@ canvas {
   box-shadow: 0 4px 0 0 #222;
   cursor: url(../img/cursor.png), crosshair;
 }
+
+
+
+
+
+.navClass {
+          position: absolute;
+          left: 40vw;
+          bottom: 23vh;
+          color: white;
+          font-size: 4vh;
+          background-color: rgba(0,0,0,0.3);
+          padding: 2vh;
+          border: solid black 2px;
+          animation-name: nav;
+          animation-duration: 5s;
+           animation-iteration-count: 5;
+          }
+
 
 .displayClass {
 	width: 58vw;
@@ -208,6 +227,8 @@ button:hover {
 				}
 
 button:focus {outline:0;}
+
+
 
 
 .canvasBtn {

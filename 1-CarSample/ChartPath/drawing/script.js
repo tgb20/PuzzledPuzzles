@@ -73,6 +73,7 @@ var x = document.getElementById("audioDisplayTrack");x.pause();
 }
 
 function showMap() {
+  document.getElementById('navigationInstId').style.display ='block';
 	document.getElementById('audioDisplay').style.display ='none';
   document.getElementById('cs1').style.display ='block';
 document.getElementById('codeId').style.display ='none';
@@ -82,7 +83,10 @@ document.getElementById('canvasButton').style.display ='block';
 $('#videowindow').trigger('pause');
 var x = document.getElementById("audioDisplayTrack");x.pause();
     document.getElementById('romanII').style.display ='block';
-
+       setInterval(() => {
+                      document.getElementById('navigationInstId').style.display ='none';
+                    }, 3 * 1000);
+   
 }
 
 
