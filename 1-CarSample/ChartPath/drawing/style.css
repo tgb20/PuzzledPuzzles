@@ -23,7 +23,7 @@ canvas {
         position: absolute;
         top: 13vh;
         left: 20.6vw;
-        background-image: url(assets/map.png);
+        background-image: url(assets/map.jpg) , url('assets/map1.png');
         background-repeat: no-repeat;
         background-size: cover;
         opacity: 0.8;
