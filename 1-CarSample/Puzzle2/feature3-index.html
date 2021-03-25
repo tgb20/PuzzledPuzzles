@@ -14,10 +14,10 @@
 
 
 </head>
-<body>
+<body onload="triggerPuzzleOrAudio3();">
 
 
-
+<button onclick="window.localStorage.clear(); triggerPuzzleOrAudio3();" type="button" style="position: absolute; bottom: 2vh; left: 2vh; z-index: 100;">Reset Puzzle</button> 
 
 
  <div class="imageBG" style="background-image: url('assets/upperGloveCompartment.jpeg');">
@@ -31,10 +31,10 @@
 
     </div>
 
-<div id="squareId" class="squareClass" onmousedown="" onclick="featureAudio(); revealPuzzle();">
+<div id="squareId" class="squareClass" onmousedown="" onclick="featureAudio(); myCountingFunction3();">
 </div>    
     
-<button id="buttonId" class="buttonClass" onmousedown="featureAudio(); revealPuzzle();" onclick=""></button>
+<button id="buttonId" class="buttonClass" onmousedown="featureAudio(); myCountingFunction3();" onclick=""></button>
 
 <div hidden id="puzzle2rules">
   <p class="headingAnimation">Yonge St is closed for a parade.</p> 

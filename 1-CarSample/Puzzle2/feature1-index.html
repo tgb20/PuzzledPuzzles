@@ -13,9 +13,18 @@
 
 
 </head>
-<body>
+<body onload="triggerPuzzleOrAudio1();">
 
 
+
+
+<button onclick="window.localStorage.clear(); triggerPuzzleOrAudio1();" type="button" style="position: absolute; bottom: 2vh; left: 2vh; z-index: 100;">Reset Puzzle</button> 
+<!--
+<button onclick="showResult();" type="button">Show count</button> 
+<button onclick="myCountingFunction(); triggerPuzzleOrAudio();">increase</button>
+
+<p id="demo"></p>
+-->
 
 
 
@@ -31,10 +40,10 @@
     </div>
 
 
-<div id="squareId" class="squareClass" onmousedown="" onclick="featureAudio(); revealPuzzle();">
+<div id="squareId" class="squareClass" onmousedown="" onclick="featureAudio(); myCountingFunction1();">
 </div>    
     
-<button id="buttonId" class="buttonClass" onmousedown="featureAudio(); revealPuzzle();" onclick=""></button>
+<button id="buttonId" class="buttonClass" onmousedown="featureAudio(); myCountingFunction1();" onclick=""></button>
     
 
 
@@ -49,7 +58,6 @@
             Your browser does not support the audio element.
     </audio>
 
-
-
+-->
 </body>
 </html>

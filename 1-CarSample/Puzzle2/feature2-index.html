@@ -14,10 +14,10 @@
 
 
 </head>
-<body>
+<body onload="triggerPuzzleOrAudio2();">
 
 
-
+<button onclick="window.localStorage.clear(); triggerPuzzleOrAudio2();" type="button" style="position: absolute; bottom: 2vh; left: 2vh; z-index: 100;">Reset Puzzle</button> 
 
 
  <div class="imageBG" style="background-image: url('assets/backseatCupHolder.png');">
@@ -32,10 +32,10 @@
     </div>
 
     
-<div id="squareId" class="squareClass" onmousedown="" onclick="featureAudio(); revealPuzzle();">
+<div id="squareId" class="squareClass" onmousedown="" onclick="featureAudio(); myCountingFunction2();">
 </div>    
     
-<button id="buttonId" class="buttonClass" onmousedown="featureAudio(); revealPuzzle();" onclick=""></button> 
+<button id="buttonId" class="buttonClass" onmousedown="featureAudio(); myCountingFunction2();" onclick=""></button> 
 
 
 
