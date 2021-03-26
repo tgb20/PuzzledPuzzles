@@ -34,6 +34,7 @@ background-size: cover;
   height: 200px;
   width: 80px;
   perspective: 700px;
+  -webkit-perspective: 700px;
   border: solid red 0px;
 }
 .pedal .acceleratorClass {
@@ -48,15 +49,23 @@ background-size: cover;
   position: absolute;
   left: 15vh;
   transform: rotateX(0deg);
+    -webkit-transform: rotateX(0deg);  
+    -ms-transform: rotateX(0deg);
   transform-origin: 0 100%;
+    -webkit-transform-origin: 0 100%;
+    -webkit-transition: all 400ms ease-in-out;
   transition: all 400ms ease-in-out;
+    -webkit-transition: all 400ms ease-in-out;
   will-change: transform;
+  will-change: -webkit-transform;
  border: dashed blue 0px;
  cursor: grab;
 }
 
 .pedal .acceleratorClass:active {
   transform: rotateX(30deg);
+  -webkit-transform: rotateX(30deg);  
+      -ms-transform: rotateX(30deg);
 }
 
 

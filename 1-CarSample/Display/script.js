@@ -198,6 +198,30 @@ $canvas
   });
 
 
+// On mouse event(s) on the canvas
+$canvas
+  .touchdown(function (event) {
+    lastEvent = event;
+    touchdown = true;
+  })
+  .touchmove(function (event) {
+    if (mousedown) {
+      // Draw lines
+      context.beginPath();
+      context.moveTo(lastEvent.offsetX, lastEvent.offsetY);
+      context.lineTo(event.offsetX, event.offsetY);
+      context.strokeStyle = color;
+      context.stroke();
+      
+      lastEvent = event;
+    }
+  })
+  .touchup(function (event) {
+    touchdown = false;
+  })
+  .touchleave(function (event) {
+    touchdown = false;
+  });
 
 
 
