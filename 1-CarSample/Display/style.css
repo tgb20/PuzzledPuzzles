@@ -230,6 +230,9 @@ button:focus {outline:0;}
 
 
 
+
+
+
 .canvasBtn {
   position: absolute;
   left: 25vw;
@@ -336,6 +339,38 @@ input:focus {
       -ms-user-select: initial;
       user-select: initial;
      } 
+
+
+.buttonSubmit {
+  display: block-inline;
+
+    margin-top: 2vh;
+  background: white;
+  width: 10vw;
+  height: 6vh;
+  color: black;
+  outline: none;
+  cursor: pointer;
+  display: block-inline;
+  font-size: 16px;
+  line-height: 40px;
+}
+
+
+.buttonSubmit:hover {
+  display: block-inline;
+
+    margin-top: 2vh;
+  background: darkred;
+  width: 10vw;
+  height: 6vh;
+  color: white;
+  outline: none;
+  cursor: pointer;
+  display: block-inline;
+  font-size: 16px;
+  line-height: 40px;
+}
 
 
 .hint {

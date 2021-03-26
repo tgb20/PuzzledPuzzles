@@ -19,7 +19,7 @@
 <div id="divbg">   
 
 <canvas id="cs1"></canvas>
-<h3 id="romanII" class="romanNumeralClass">II</h3>
+<h3 hidden id="romanII" class="romanNumeralClass">II</h3>
 <p hidden id="navigationInstId" class="navClass">Navigate the quickest route from A to B</p>
 
 <!-- partial -->
@@ -27,26 +27,32 @@
 
   <button id="canvasButton" class="canvasBtn" onclick="clearCanvas();">Restart Drawing</button>
 
-  <button class="buttonHome" onclick="showHome();"></button> 
+  <button class="buttonHome" onclick="startAudio();"></button> 
 
   <button class="buttonVideo" onclick="showVideo();"></button>
 
-  <button class="buttonAudio" onclick="startAudio();"></button>
-
+<!--
+  <button class="buttonAudio" onclick="showSuccess();"></button>
+-->
+ 
   <button class="buttonMap" onclick="showMap();"></button>
 
    
 
-
-
+<!--
 <div id="codeId" class="displayClass">
   <h2>ENTER CODE BELOW</h2>
-  <h3 style="color: red; font-family: Times;"> I  -  II  -  III</h3>
+  
   <form class='code_input'>
-    <input autofocus='' maxlength='1' placeholder='.' type='password'>
-    <input maxlength='1' placeholder='.' type='password'>
-    <input maxlength='1' placeholder='.' type='password'>
+    <h3 style="color: red; font-family: Times;"> I  -  II  -  III</h3>
+    <input id="inputRom1" maxlength='1' type='number'>
+    <input id="inputRom2" maxlength='1' type='number'>
+    <input id="inputRom3" maxlength='1' type='number'>
     
+ <br>
+<input type="button" class="buttonSubmit" onclick="codeInputting()" value="SUBMIT">
+  
+
   </form>
   <ul class='hint'>
     <li>
@@ -55,8 +61,7 @@
     </li>
   </ul>
 </div>
-  
-
+-->
 
 
 
@@ -67,7 +72,7 @@
 
 <div id="audioDisplay" class="videoDisplayClass">
 <div>
-<video id="video1" class="videoPlayerClass" autoplay="" muted=""  loop="" controls="hide">
+<video id="video1" class="videoPlayerClass" autoplay="" muted=""  controls="hide">
 <source src="assets/soundBarz.mp4" type="video/mp4">
 </video> 
 
@@ -78,13 +83,20 @@
 <!--CODE ENTRY PART-->
 <div class="videoPlayerClass">
 
-  <h2>ENTER CODE BELOW</h2>
-  <h3 style="color: red; font-family: Times;"> I  -  II  -  III</h3>
-  <form class='code_input'>
-    <input autofocus='' maxlength='1' placeholder='.' type='password'>
-    <input maxlength='1' placeholder='.' type='password'>
-    <input maxlength='1' placeholder='.' type='password'>
+  
+  
+  <form hidden id="formForCode" class='code_input'>
+    <h2>ENTER CODE BELOW</h2>
+    <h3 style="color: red; font-family: Times;"> I  -  II  -  III</h3>
+    <input id="inputRom1" maxlength='1' type='number'>
+    <input id="inputRom2" maxlength='1' type='number'>
+    <input id="inputRom3" maxlength='1' type='number'>
     
+ <br>
+<input type="button" class="buttonSubmit" onclick="codeInputting()" value="SUBMIT">
+
+<p id="wrongAnswerId" style="color: green; z-index: 100; position: absolute; left: 50%; top: 75%; color: white; font-size: 3vh;"></p>
+
   </form>
   <ul class='hint'>
     <li>
@@ -109,7 +121,7 @@
 
 
 
-
+<!-- VIDEO BEGIN-->
 
 <div id="videoDiv" class="videoDivClass" onclick="playVideo(); myFunction();">
         <video id="videowindow" class="videoPlayerClass" controls>
@@ -123,6 +135,13 @@
     </div>
   <button id="videoButtonId" class="videoButtonPlayClass" onclick="playVideo(); myFunction();"></button>
 
+<!-- VIDEO END-->
+
+
+
+
+
+<!-- SUCCESSFULL PUZZLE SOLVING BEGINS-->
 
 <div hidden id="greatSuccess" class="displayClass" style="z-index: 80;">
 
@@ -132,23 +151,22 @@
       If you would like to subscribe to our mailing letter for more information and deals fill in your email below:<br>
 
   </h3>
-
-       <input id="myInput1" class="emailInput" type="email">
-
-
-<button id="myBtn" class="successBtn" onclick="emailSubmission()">Send</button>
-
-<p id="demo"></p>
-
-
-</div>
-
+<form class="code">
+       <input id="myInput1" class="emailInput" type="text">
+       <br>
+<button class="buttonSubmit">SEND</button>
+</form>
 
 
     
-<script>
 
-    </script>
+<p id="demo" style="color: green; z-index: 100; position: absolute; left: 50%; top: 75%; color: white; font-size: 3vh;">b</p>
+
+
+</div>
+<!-- SUCCESSFULL PUZZLE SOLVING BEGINS-->
+
+
 
 
 
@@ -165,37 +183,16 @@
             Your browser does not support the audio element.
     </audio>
 
-
+<audio id="failureAudio">
+            <source src="assets/failure.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+    </audio>
 
 <script>
-//Script for succesful game email send;
-input.addEventListener("keyup", function(event) {
-  if (event.keyCode === 13) {
-   event.preventDefault();
-   document.getElementById("myBtn").click();
-  }
-});
+
 
 function emailSubmission() {
-  var writtenResponse;
-  var answer1 =  document.getElementById('myInput1').value;
-  
-
-  
-     if ((answer1 == 'donovan' || answer1 == 'DONOVAN' || answer1 == 'Donovan')) 
-     
-      {writtenResponse; = "CHECKING TO SEE IF THAT IS CORRECT...";
-      window.open('https://puzzledescapegames.com/cctre');
-
-
-  
-  } else {
-  
-  writtenResponse = "No, that does not seem right. Are you sure you want to receive a free game from Puzzled?";
-  }
-  //THIS IS WHAT IT CHANGES
-
-  document.getElementById("demo").innerHTML = writtenResponse;
+  document.getElementById('cs1').style.display ='none';
 }
 
 
