@@ -13,19 +13,22 @@
     </script>
 </head>
 
-<body onload="resize_canvas(); showVideo();" onresize="resize_canvas();">
+<body onload="showVideo();" onresize="">
+
+
+<iframe hidden id="iFrameId" src="indexCanvas.html" title="Iframe Example" class="iFrameDisplayClass" onload="resize_canvas()" 
+    overflow="hidden"></iframe>
      
-<!-- partial:index.partial.html -->
+
 <div id="divbg">   
 
-<canvas id="cs1"></canvas>
+
 <h3 hidden id="romanII" class="romanNumeralClass">II</h3>
 <p hidden id="navigationInstId" class="navClass">Navigate the quickest route from A to B</p>
 
-<!-- partial -->
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
 
-  <button id="canvasButton" class="canvasBtn" onclick="clearCanvas();">Restart Drawing</button>
+
+  
 
   <button class="buttonHome" onclick="startAudio();"></button> 
 
@@ -160,7 +163,7 @@
 
     
 
-<p id="demo" style="color: green; z-index: 100; position: absolute; left: 50%; top: 75%; color: white; font-size: 3vh;">b</p>
+<p id="demo" style="color: green; z-index: 100; position: absolute; left: 50%; top: 75%; color: white; font-size: 3vh;"></p>
 
 
 </div>

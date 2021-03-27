@@ -34,15 +34,19 @@ canvas {
 }
 
 
+iframe{
+    overflow:hidden;
+    
 
+}
 
 
 .navClass {
           position: absolute;
-          left: 35vw;
+          left: 37vw;
           bottom: 23vh;
           color: white;
-          font-size: 4vh;
+          font-size: 3vh;
           background-color: rgba(0,0,0,0.3);
           padding: 2vh;
           border: solid black 2px;
@@ -72,6 +76,28 @@ canvas {
   color: white;
 }
 
+.iFrameDisplayClass {
+  width: 58vw;
+  height: 35vw;
+  background-color: grey;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  margin-left: 0px;
+  margin-top: 0px;
+  position: absolute;
+  opacity: 0.9;
+
+        top: 12.8vh;
+        left: 20.6vw;
+    overflow:hidden;
+  display: block;
+  border-radius: 0px;
+  border: solid yellow 0px;
+  color: white;
+}
+
+
 
 .videoDisplayClass {
   width: 58vw;
@@ -84,7 +110,7 @@ canvas {
   position: absolute;
   opacity: 0.9;
 
-        top: 12.8vh;
+        top: 13vh;
         left: 20.6vw;
     
   
@@ -104,7 +130,7 @@ canvas {
   position: absolute;
   opacity: 1;
 
-        top: 10vh;
+        top: 13vh;
         left: 20.5vw;
     
   display: block;
@@ -118,7 +144,7 @@ canvas {
 .videoPlayerClass {
 	position: absolute;	
 	left: -0vw;
-        padding-top: 1vh;
+        padding-top: 0vh;
         width: calc(64vh * (16/9));
         height: 70vh;
         border: solid orange 0px;
@@ -233,20 +259,7 @@ button:focus {outline:0;}
 
 
 
-.canvasBtn {
-  position: absolute;
-  left: 25vw;
-  bottom: 23vh;
-  background: black;
-  width: auto;
-  height: 10vh;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
-  display: block;
-  font-size: 16px;
-  line-height: 40px;
-}
+
 
 .successBtn {
   position: relative;
