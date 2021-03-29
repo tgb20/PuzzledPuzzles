@@ -25,7 +25,7 @@ body {
 
 .door {
         position: absolute; 
-        background-image: url(assets/doorhandle.jpg);
+        background-image: url(assets/doorhandleSmall.jpg);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -42,10 +42,10 @@ body {
           background-position: center;
           background-repeat: no-repeat;
           background-size: contain;
-          width: calc(14vh * (129/68));
-          height: calc(14vh * (68/129));
-          top: 39.5vh;
-          left: 99.2vh;
+          width: calc(28vh * (129/68));
+          height: calc(28vh * (68/129));
+          top: 31.5vh;
+          left: 79.2vh;
           background-color: transparent;
           border: solid 0px transparent;
         
