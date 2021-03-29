@@ -13,12 +13,12 @@
     </script>
 </head>
 
-<body onload="showVideo();" onresize="">
+<body onload="" onresize="">
 
-
+<!-- MAP CANVAS   -->
 <iframe hidden id="iFrameId" src="indexCanvas.html" title="Iframe Example" class="iFrameDisplayClass" onload="resize_canvas()" 
     overflow="hidden"></iframe>
-     
+ 
 
 <div id="divbg">   
 
@@ -42,32 +42,6 @@
 
    
 
-<!--
-<div id="codeId" class="displayClass">
-  <h2>ENTER CODE BELOW</h2>
-  
-  <form class='code_input'>
-    <h3 style="color: red; font-family: Times;"> I  -  II  -  III</h3>
-    <input id="inputRom1" maxlength='1' type='number'>
-    <input id="inputRom2" maxlength='1' type='number'>
-    <input id="inputRom3" maxlength='1' type='number'>
-    
- <br>
-<input type="button" class="buttonSubmit" onclick="codeInputting()" value="SUBMIT">
-  
-
-  </form>
-  <ul class='hint'>
-    <li>
-      Valid Code:
-      <strong>553</strong>
-    </li>
-  </ul>
-</div>
--->
-
-
-
 
 
 
@@ -90,7 +64,7 @@
   
   <form hidden id="formForCode" class='code_input'>
     <h2>ENTER CODE BELOW</h2>
-    <h3 style="color: red; font-family: Times;"> I  -  II  -  III</h3>
+    <h1 style="color: red; font-family: Times;"> I  -   II  -  III</h3>
     <input id="inputRom1" maxlength='1' type='number'>
     <input id="inputRom2" maxlength='1' type='number'>
     <input id="inputRom3" maxlength='1' type='number'>
@@ -101,12 +75,6 @@
 <p id="wrongAnswerId" style="color: green; z-index: 100; position: absolute; left: 50%; top: 75%; color: white; font-size: 3vh;"></p>
 
   </form>
-  <ul class='hint'>
-    <li>
-      Valid Code:
-      <strong>553</strong>
-    </li>
-  </ul>
 
 </div>
 
@@ -119,6 +87,7 @@
 <script  src="./script.js"></script>
 
 
+<!--CODE ENTRY PART ENDS-->
 
 
 
@@ -136,8 +105,8 @@
 
 
     </div>
-  <button id="videoButtonId" class="videoButtonPlayClass" onclick="playVideo(); myFunction();"></button>
-
+  <!--<button id="videoButtonId" class="videoButtonPlayClass" onclick="playVideo(); myFunction();"></button>
+-->
 <!-- VIDEO END-->
 
 
@@ -146,10 +115,10 @@
 
 <!-- SUCCESSFULL PUZZLE SOLVING BEGINS-->
 
-<div hidden id="greatSuccess" class="displayClass" style="z-index: 80;">
+<div hidden id="greatSuccess" class="displayClass" alt="Loading...">
 
-                              <h1>Congratulation!</h1>
-  <h3>We are very impressed with your puzzle solving skills.<br>
+                              <h1 class="delayedEntry">Congratulation!</h1>
+  <h3 class="delayedEntry">We are very impressed with your puzzle solving skills.<br>
       We hope you liked navigating around and getting a feel for the car.<br><br>
       If you would like to subscribe to our mailing letter for more information and deals fill in your email below:<br>
 
@@ -157,14 +126,10 @@
 <form class="code">
        <input id="myInput1" class="emailInput" type="text">
        <br>
-<button class="buttonSubmit">SEND</button>
+<button class="sendEmailClass" style="background-color: rgba(255,255,255,1.0);">SEND</button>
 </form>
 
-
-    
-
 <p id="demo" style="color: green; z-index: 100; position: absolute; left: 50%; top: 75%; color: white; font-size: 3vh;"></p>
-
 
 </div>
 <!-- SUCCESSFULL PUZZLE SOLVING BEGINS-->

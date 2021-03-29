@@ -21,7 +21,7 @@ function startAudio() { var x = document.getElementById("audioDisplayTrack");x.p
         setTimeout(function() 
             {document.getElementById('video1').style.display ='none';
              document.getElementById('formForCode').style.display ='block';},
-            5000);
+            4000);
 
 
               }   
