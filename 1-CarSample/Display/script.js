@@ -7,7 +7,8 @@ var vid = document.getElementById('videowindow');
 
 
 
-function startAudio() { var x = document.getElementById("audioDisplayTrack");x.play();
+function startAudio() { 
+    var x = document.getElementById("audioDisplayTrack");x.play();
     $('#videowindow').trigger('pause');
     document.getElementById('romanII').style.display ='none';
     setTimeout(function() 
@@ -21,7 +22,7 @@ function startAudio() { var x = document.getElementById("audioDisplayTrack");x.p
         setTimeout(function() 
             {document.getElementById('video1').style.display ='none';
              document.getElementById('formForCode').style.display ='block';},
-            4000);
+            5000);
 
 
               }   

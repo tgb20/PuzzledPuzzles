@@ -108,7 +108,7 @@ iframe{
   vertical-align: center;
   margin: 0 auto;
   position: absolute;
-  opacity: 0.9;
+  opacity: 1;
 
         top: 13vh;
         left: 20.6vw;
@@ -122,7 +122,7 @@ iframe{
 .videoDivClass {
  width: calc(64vh * (16/9));
         height: 70vh;
-  background-color: transparent;
+  background-color: black;
   text-align: center;
   justify-content: center;
   vertical-align: center;
@@ -146,11 +146,26 @@ iframe{
 	left: -0vw;
         padding-top: 0vh;
         width: calc(64vh * (16/9));
-        height: 70vh;
+        height: 64vh;
         border: solid orange 0px;
        
         }
 
+
+
+.SoundBarzClass {
+  position: absolute; 
+  left: -0vw;
+        padding-top: 0vh;
+        width: calc(64vh * (16/9));
+        height: 80vh;
+        border: solid orange 0px;
+       
+        }
+
+
+
+/*
 #videoDiv:hover + .videoButtonPlayClass { display: block;}
 #videoDiv:hover + .videoButtonPauseClass { display: block;}
 
@@ -211,7 +226,7 @@ iframe{
 
       }
 
-
+*/
 
 .controls {
   min-height: 60px;
@@ -286,14 +301,13 @@ button:focus {outline:0;}
 
 
 
-
 h3 {
   font-weight: 100;
-  font-size: 2.8vh;
+  font-size: 3.5vh;
   color: #ccc;
   line-height: 3.6vh;
-  margin-bottom: 1em;
-  padding: 1vh;
+  margin-bottom: 0.4vh;
+  padding: 0.51vh;
 }
 
 .delayedEntry {
@@ -318,16 +332,17 @@ form.success input {
 input {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 200;
-  width: 40px;
-  height: 50px;
+  width: 5vw;
+  height: 12vh;
   border: 1px solid #CCCCCC;
   display: block-inline;
   
-  margin-right: 10px;
+  margin-right: 1vw;
   outline: 0;
-  font-size: 28px;
-  color: #ccc;
-  line-height: 40px;
+  
+  color: black;
+  line-height: 4vh;
+font-size: 7vh;
   text-align: center;
   cursor: pointer;
 }
@@ -365,8 +380,8 @@ input[type=number] {
 
 .buttonSubmit {
   display: inline-block;
-  border: solid red 2px;
-  margin-top: 1vh;
+  border: solid 0.2vh rgba(255,255,255,0.5);
+  margin-top: 2vh;
   
   width: 16vw;
   border-radius: 5%;
@@ -375,26 +390,12 @@ input[type=number] {
 
 
 .buttonSubmit:hover {
-  display: block-inline;
+  display: inline-block;
   background: darkred;
 }
 
 
-.successBtn {
-  position: relative;
-  float: left;
 
-    margin-right: 10px;
-  background: black;
-  width: 10vw;
-  height: 10vh;
-  color: #fff;
-  outline: none;
-  cursor: pointer;
-  display: block-inline;
-  font-size: 16px;
-  line-height: 40px;
-}
 
 .sendEmailClass {
   display: inline-block;
@@ -414,27 +415,28 @@ input[type=number] {
 }
 
 
-.sendEmailClass {
-  display: block-inline;
-  background: darkred;
-}
-
-
 
 .emailInput {
 width: 30vw;
   height: 10vh;
   border: 1px solid #CCCCCC;
-  display: block-inline;
-  float: right;
-  margin-right: 6vh;
+  
+  margin-bottom: 2vh;
+  margin-top: 3vh;
+  
   outline: 0;
-  font-size: 28px;
+  font-size: 4vh;
   color: #ccc;
-  line-height: 40px;
   text-align: center;
   cursor: pointer;
 }
 
+.successBtn {
+    
+  border: solid 0.2vh rgba(255,255,255,0.5);
+  background-color: white;
+  width: 16vw;
+  border-radius: 5%;
 
+}
 .romanNumeralClass {font-family: Times; color: red; font-size: 10vh; position: absolute; z-index: 100; left: 23%; top: 8vh;}

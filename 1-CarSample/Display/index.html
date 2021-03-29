@@ -49,7 +49,7 @@
 
 <div id="audioDisplay" class="videoDisplayClass">
 <div>
-<video id="video1" class="videoPlayerClass" autoplay="" muted=""  controls="hide">
+<video id="video1" class="SoundBarzClass" autoplay="" muted="">
 <source src="assets/soundBarz.mp4" type="video/mp4">
 </video> 
 
@@ -58,19 +58,21 @@
 </div>
 
 <!--CODE ENTRY PART-->
-<div class="videoPlayerClass">
+<div style="border: solid yellow 0px; position: relative;  
+  
+        padding-top: 0vh;">
 
   
-  
-  <form hidden id="formForCode" class='code_input'>
-    <h2>ENTER CODE BELOW</h2>
-    <h1 style="color: red; font-family: Times;"> I  -   II  -  III</h3>
+  <h2 style="margin-bottom: 0px; padding-bottom: 0px; font-size: 6vh; ">ENTER CODE BELOW</h2>
+    <h1 style="color: red; font-family: Times; font-size: 4vh; margin-top: 0px; padding-top: 0px;"> I  -   II  -  III</h1>
+  <form id="formForCode" class='code_input' style="border: solid blue 0px; width: 100%;">
+    
     <input id="inputRom1" maxlength='1' type='number'>
     <input id="inputRom2" maxlength='1' type='number'>
     <input id="inputRom3" maxlength='1' type='number'>
     
  <br>
-<input type="button" class="buttonSubmit" onclick="codeInputting()" value="SUBMIT">
+<input type="button" class="buttonSubmit" onclick="codeInputting()" style="background-color: white;" value="SUBMIT">
 
 <p id="wrongAnswerId" style="color: green; z-index: 100; position: absolute; left: 50%; top: 75%; color: white; font-size: 3vh;"></p>
 
@@ -117,20 +119,20 @@
 
 <div hidden id="greatSuccess" class="displayClass" alt="Loading...">
 
-                              <h1 class="delayedEntry">Congratulation!</h1>
+                              <h2 class="delayedEntry" style="margin-bottom: 0px; padding-bottom: 0px; font-size: 6vh;">Congratulation!</h2>
   <h3 class="delayedEntry">We are very impressed with your puzzle solving skills.<br>
       We hope you liked navigating around and getting a feel for the car.<br><br>
       If you would like to subscribe to our mailing letter for more information and deals fill in your email below:<br>
 
   </h3>
-<form class="code">
+
+<div style="border: solid 0px green;">
+<form class="code" style="border: solid 0px pink;">
        <input id="myInput1" class="emailInput" type="text">
        <br>
-<button class="sendEmailClass" style="background-color: rgba(255,255,255,1.0);">SEND</button>
+<input type="button" class="successBtn" onclick="codeInputting()" style="" value="SEND">
 </form>
-
-<p id="demo" style="color: green; z-index: 100; position: absolute; left: 50%; top: 75%; color: white; font-size: 3vh;"></p>
-
+</div>
 </div>
 <!-- SUCCESSFULL PUZZLE SOLVING BEGINS-->
 
