@@ -11,14 +11,14 @@ function startAudio() {
     var x = document.getElementById("audioDisplayTrack");x.play();
     $('#videowindow').trigger('pause');
     document.getElementById('romanII').style.display ='none';
-    setTimeout(function() 
-		{
     document.getElementById('video1').style.display ='block';
     document.getElementById('audioDisplay').style.display ='block';
     document.getElementById('romanII').style.display ='none';
 		document.getElementById('greatSuccess').style.display ='none';
-		document.getElementById('videoDiv').style.display ='none';}, 
-		100);
+		document.getElementById('videoDiv').style.display ='none'; 
+		
+
+    
         setTimeout(function() 
             {document.getElementById('video1').style.display ='none';
              document.getElementById('formForCode').style.display ='block';},

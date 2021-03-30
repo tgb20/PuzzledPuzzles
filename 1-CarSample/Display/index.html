@@ -63,18 +63,20 @@
         padding-top: 0vh;">
 
   
-  <h2 style="margin-bottom: 0px; padding-bottom: 0px; font-size: 6vh; ">ENTER CODE BELOW</h2>
+  
+  <form hidden id="formForCode" class='code_input' style="border: solid blue 0px; width: 100%;">
+    <h2 style="margin-bottom: 0px; padding-bottom: 0px; font-size: 6vh; ">ENTER CODE BELOW</h2>
     <h1 style="color: red; font-family: Times; font-size: 4vh; margin-top: 0px; padding-top: 0px;"> I  -   II  -  III</h1>
-  <form id="formForCode" class='code_input' style="border: solid blue 0px; width: 100%;">
-    
-    <input id="inputRom1" maxlength='1' type='number'>
-    <input id="inputRom2" maxlength='1' type='number'>
+
+
+    <input id="inputRom1" maxlength='1' type="text" inputmode="decimal"/>
+    <input id="inputRom2" maxlength='1' type='number'/>
     <input id="inputRom3" maxlength='1' type='number'>
     
  <br>
 <input type="button" class="buttonSubmit" onclick="codeInputting()" style="background-color: white;" value="SUBMIT">
 
-<p id="wrongAnswerId" style="color: green; z-index: 100; position: absolute; left: 50%; top: 75%; color: white; font-size: 3vh;"></p>
+<p id="wrongAnswerId" style="color: green; z-index: 100; position: absolute; left: 40%; top: 100%; color: white; font-size: 3vh;"></p>
 
   </form>
 

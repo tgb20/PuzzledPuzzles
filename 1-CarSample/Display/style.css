@@ -382,8 +382,8 @@ input[type=number] {
   display: inline-block;
   border: solid 0.2vh rgba(255,255,255,0.5);
   margin-top: 2vh;
-  
-  width: 16vw;
+  padding: 0px;
+  width: 19vw;
   border-radius: 5%;
 
 }
