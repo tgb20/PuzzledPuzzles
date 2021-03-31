@@ -13,7 +13,7 @@
 
 
 </head>
-<body>
+<body onload="triggerPuzzleOrAudioButton()">
 
 
 
@@ -31,7 +31,7 @@
     </div>
 
 
-<button id="buttonId" class="pushButtonClass" onmousedown="soundCarDescription();" onclick="revealPuzzle1()"></button>
+<button id="buttonId" class="pushButtonClass" onmousedown="" onclick="featureAudio(); myCountingFunctionButton()"></button>
     
     
 
@@ -50,7 +50,7 @@
             Your browser does not support the audio element.
     </audio>
 
-
+<button onclick="window.localStorage.clear(); triggerPuzzleOrAudio2();" type="button" style="position: absolute; bottom: 2vh; left: 2vh; z-index: 100;">Reset Puzzle</button> 
 
 </body>
 </html>
