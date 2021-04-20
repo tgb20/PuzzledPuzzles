@@ -69,7 +69,7 @@ $(() => {
             // change this
             $('body').css('image', 'url("images/temp.gif")');
 
-            setInterval(() => {
+            setTimeout(() => {
                 // Where do you want the player to end up
                 window.open("https://puzzled.tgb.gg/EndGame/", '_blank');
                 $('#completed').show();

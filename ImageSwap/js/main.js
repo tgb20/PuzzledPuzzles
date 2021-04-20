@@ -61,7 +61,16 @@ $(() => {
             $('#video').show();
             $('#reboot').show();
 
-            
+            setTimeout(function() 
+    				{
+      // Where do you want the player to be sent to
+                    //window.location.href = 'https://seekbeak.com/v/NkjxBONe1lQ'
+                    window.open("https://seekbeak.com/v/NkjxBONe1lQ", '_blank');
+                    $('#linking').show();
+                    $('#video').hide();
+                    $('#solvedchalkboard').show();
+                	}, 7000); 
+            /*
             setInterval(() => {
                     // Where do you want the player to be sent to
                     //window.location.href = 'https://seekbeak.com/v/NkjxBONe1lQ'
@@ -74,7 +83,9 @@ $(() => {
 
                     }, 7 * 1000); // 7 is the number of seconds before redirecting
             //$('#solvedchalkboard').show();
+            */
         }
+        
 
         if (this.value.length == this.maxLength) {
             $(this).next('.letter').focus();

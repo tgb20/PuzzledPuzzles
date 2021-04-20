@@ -3,6 +3,8 @@ window.onload = (() => {
     let correctOrder = ['CHANTS', 'ELEMENTS', 'GATES', 'HERBS', 'RITUALS', 'SPIRITS', 'SYMBOLS', 'WITCH'];
     //let correctOrder = ['HERBS', 'RITUALS', 'WITCH', 'GATES', 'SPIRITS', 'CHANTS', 'ELEMENTS', 'SYMBOLS'];
 
+    var solved = 0;
+
     let dropzones = document.querySelectorAll('.dropzone');
 
     let droppable = new Draggable.Swappable(
@@ -24,6 +26,8 @@ window.onload = (() => {
 
         let bookImages = [];
 
+        
+
         bookElements.forEach(bookElement => {
 
             let bookName = bookElement.src.split('/').slice(-1)[0].split('.')[0];
@@ -35,23 +39,40 @@ window.onload = (() => {
             document.getElementById('solvedtext').style.display = 'block';
             document.getElementById('pentashelf').style.display = 'block';
             document.getElementById('books').style.display = 'none';
-            setInterval(() => {
+            /*setInterval(() => {
                     document.getElementById('linking').style.display = 'block';
-                    
-
                     //$('#pentasoundsolved').trigger('play');
-                    
                     //window.location.href = 'https://seekbeak.com/v/NkjxBONe1lQ'
                     window.open("https://seekbeak.com/v/60qZ0Zn8zrB", '_blank');
                     
                     
                 }, 2 * 1000);
+                */
+           
+            setTimeout(funky(), 2000);
+            
+                       
+            function funky(){
+            if (solved === 0) {
+                    document.getElementById('linking').style.display = 'block';
+                    window.open("https://seekbeak.com/v/60qZ0Zn8zrB", '_blank');
+                    solved = 1;
+                       }
+                       }
+
+
+
+
         } else {
             document.getElementById('solvedtext').style.display = 'block';
         }
 
     }, 250);
 });
+
+
+                       
+
 
 function arraysEqual(a1, a2) {
     /* WARNING: arrays must not contain {objects} or behavior may be undefined */
