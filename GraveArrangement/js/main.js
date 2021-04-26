@@ -45,7 +45,6 @@ window.onload = (() => {
 
             storage.setItem('graveSolved', 1);
             isItSolved = 1;
-            checkIfItsSolvedFunction();
 
             //document.getElementById('graves').style.display = 'none';
             //document.getElementById('video').style.display = 'block';
@@ -66,14 +65,6 @@ window.onload = (() => {
 
         document.getElementById('value').innerHTML = isItSolved;
 
-        if (graveSolved === 0) {
-            //document.getElementById('graves').style.display = 'none';
-            //document.getElementById('video').style.display = 'block';
-            //document.getElementById('solvedtext').style.display = 'block';
-            //localStorage.graveSolved = 1;
-            //isItSolved = 1;      
-        }
-
         if (graveSolved === 1) {
             document.getElementById('graves').style.display = 'none';
             document.getElementById('video').style.display = 'block';
@@ -83,6 +74,15 @@ window.onload = (() => {
             //graveSolved = 1;      
         }
     }, 250);
+
+
+    function puzzleReset() {
+        if (window.confirm('Stuck? Click okay to reset the puzzle')) {
+            storage.setItem('graveSolved', 0);
+            location.reload();
+        }
+    }
+
 });
 
 function arraysEqual(a1, a2) {
@@ -104,12 +104,3 @@ $(function () {
         }
     });
 });
-
-
-
-function puzzleReset() {
-    if (window.confirm('Stuck? Click okay to reset the puzzle')) {
-        storage.setItem('graveSolved', 0);
-        location.reload();
-    }
-}
