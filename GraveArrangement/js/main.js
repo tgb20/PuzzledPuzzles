@@ -1,6 +1,9 @@
 window.onload = (() => {
+
+    let storage = window.localStorage;
+
     //let correctOrder = ['ANTHROPOLOGY', 'HERBOLOGY', 'PSYCHOLOGY', 'THEOLOGY', 'CHICKEN', 'ELK', 'FISH', 'RABBIT', 'BEER', 'CHAMPAGNE', 'VODKA', 'COGNAC', 'GOETHE', 'KAFKA', 'NIETZSCHE', 'TOLSTOY', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK'];
-    let correctOrder = ['BEER', 'ANTHROPOLOGY', 'CHAMPAGNE', 'CHICKEN',     'COGNAC', 'ELK', 'FISH', 'GOETHE',       'HERBOLOGY', 'KAFKA', 'NIETZSCHE',  'PSYCHOLOGY',     'RABBIT', 'THEOLOGY', 'TOLSTOY', 'VODKA',     'BLANK', 'BLANK', 'BLANK', 'BLANK',      'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK'];
+    let correctOrder = ['BEER', 'ANTHROPOLOGY', 'CHAMPAGNE', 'CHICKEN', 'COGNAC', 'ELK', 'FISH', 'GOETHE', 'HERBOLOGY', 'KAFKA', 'NIETZSCHE', 'PSYCHOLOGY', 'RABBIT', 'THEOLOGY', 'TOLSTOY', 'VODKA', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK'];
     //let correctOrder = ['BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',    'THEOLOGY', 'RABBIT', 'VODKA', 'TOLSTOY',     'PSYCHOLOGY', 'ELK', 'CHAMPAGNE', 'GOETHE',       'ANTHROPOLOGY', 'CHICKEN', 'BEER',  'KAFKA',     'HERBOLOGY', 'FISH', 'COGNAC','NIETZSCHE'];
 
 
@@ -17,11 +20,9 @@ window.onload = (() => {
 
     setInterval(() => {
 
-//document.getElementById('value').innerHTML = solutionVar;
+        //document.getElementById('value').innerHTML = solutionVar;
 
-        var isItSolved = 0;
-        let graveSolved = window.localStorage;
-        graveSolved = isItSolved;
+        let graveSolved = storage.getItem('graveSolved');
 
         let htmlGraves = document.getElementsByClassName("graveimg");
 
@@ -39,16 +40,16 @@ window.onload = (() => {
         });
 
 
-document.getElementById('video').style.display = 'none';
+        document.getElementById('video').style.display = 'none';
         if (arraysEqual(graveImages, correctOrder)) {
-                
-            localStorage.graveSolved = 1;
+
+            storage.setItem('graveSolved', 1);
             isItSolved = 1;
             checkIfItsSolvedFunction();
 
             //document.getElementById('graves').style.display = 'none';
             //document.getElementById('video').style.display = 'block';
-            
+
 
             ///*
             //setTimeout(() => {
@@ -56,41 +57,31 @@ document.getElementById('video').style.display = 'none';
             //        document.getElementById('solvedtext').style.display = 'block';
             //    }, 6 * 1000);
             //*/
-        } 
-        
-    //let graveSolved = window.localStorage;
-    //graveSolved = isItSolved;
+        }
 
-   
+        //let graveSolved = window.localStorage;
+        //graveSolved = isItSolved;
 
-    checkIfItsSolvedFunction(); 
 
-    function checkIfItsSolvedFunction() {
-                    
-                    
-                    document.getElementById('value').innerHTML = isItSolved;
 
-                    if (graveSolved === 0) {
-                        //document.getElementById('graves').style.display = 'none';
-                        //document.getElementById('video').style.display = 'block';
-                        //document.getElementById('solvedtext').style.display = 'block';
-                        //localStorage.graveSolved = 1;
-                        //isItSolved = 1;      
-                    } 
+        document.getElementById('value').innerHTML = isItSolved;
 
-                    if (graveSolved === 1) {
-                        document.getElementById('graves').style.display = 'none';
-                        document.getElementById('video').style.display = 'block';
-                        document.getElementById('solvedtext').style.display = 'block';
-                        localStorage.graveSolved = 1;
-                        isItSolved = 1;
-                        //graveSolved = 1;      
-                    } 
+        if (graveSolved === 0) {
+            //document.getElementById('graves').style.display = 'none';
+            //document.getElementById('video').style.display = 'block';
+            //document.getElementById('solvedtext').style.display = 'block';
+            //localStorage.graveSolved = 1;
+            //isItSolved = 1;      
+        }
 
-                 
-                                }
-                                
-
+        if (graveSolved === 1) {
+            document.getElementById('graves').style.display = 'none';
+            document.getElementById('video').style.display = 'block';
+            document.getElementById('solvedtext').style.display = 'block';
+            storage.setItem('graveSolved', 1);
+            isItSolved = 1;
+            //graveSolved = 1;      
+        }
     }, 250);
 });
 
@@ -99,29 +90,26 @@ function arraysEqual(a1, a2) {
     return JSON.stringify(a1) == JSON.stringify(a2);
 }
 
-$(function(){
-  var $curParent, Content;
-  $(document).delegate("span","click", function(){
-    if($(this).closest("s").length) {
-      Content = $(this).parent("s").html();
-      $curParent = $(this).closest("s");
-      $(Content).insertAfter($curParent);
-      $(this).closest("s").remove();
-    }
-    else {
-      $(this).wrapAll("<s />");
-    }
-  });
+$(function () {
+    var $curParent, Content;
+    $(document).delegate("span", "click", function () {
+        if ($(this).closest("s").length) {
+            Content = $(this).parent("s").html();
+            $curParent = $(this).closest("s");
+            $(Content).insertAfter($curParent);
+            $(this).closest("s").remove();
+        }
+        else {
+            $(this).wrapAll("<s />");
+        }
+    });
 });
 
 
 
 function puzzleReset() {
     if (window.confirm('Stuck? Click okay to reset the puzzle')) {
-        let graveSolved = window.localStorage;
-
-        
-        
+        storage.setItem('graveSolved', 0);
         location.reload();
     }
 }
