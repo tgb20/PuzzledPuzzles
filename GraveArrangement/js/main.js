@@ -1,7 +1,7 @@
 window.onload = (() => {
     //let correctOrder = ['ANTHROPOLOGY', 'HERBOLOGY', 'PSYCHOLOGY', 'THEOLOGY', 'CHICKEN', 'ELK', 'FISH', 'RABBIT', 'BEER', 'CHAMPAGNE', 'VODKA', 'COGNAC', 'GOETHE', 'KAFKA', 'NIETZSCHE', 'TOLSTOY', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK'];
-    //let correctOrder = ['ANTHROPOLOGY', 'BEER', 'CHAMPAGNE', 'CHICKEN',     'COGNAC', 'ELK', 'FISH', 'GOETHE',       'HERBOLOGY', 'KAFKA', 'NIETZSCHE',  'PSYCHOLOGY',     'RABBIT', 'THEOLOGY', 'VODKA', 'TOLSTOY',     'BLANK', 'BLANK', 'BLANK', 'BLANK',      'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK'];
-        let correctOrder = ['BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',    'THEOLOGY', 'RABBIT', 'VODKA', 'TOLSTOY',     'PSYCHOLOGY', 'ELK', 'CHAMPAGNE', 'GOETHE',       'ANTHROPOLOGY', 'CHICKEN', 'BEER',  'KAFKA',     'HERBOLOGY', 'FISH', 'COGNAC','NIETZSCHE'];
+    let correctOrder = ['BEER', 'ANTHROPOLOGY', 'CHAMPAGNE', 'CHICKEN',     'COGNAC', 'ELK', 'FISH', 'GOETHE',       'HERBOLOGY', 'KAFKA', 'NIETZSCHE',  'PSYCHOLOGY',     'RABBIT', 'THEOLOGY', 'TOLSTOY', 'VODKA',     'BLANK', 'BLANK', 'BLANK', 'BLANK',      'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK',    'BLANK', 'BLANK', 'BLANK', 'BLANK'];
+    //let correctOrder = ['BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',  'BLANK', 'BLANK', 'BLANK', 'BLANK',    'THEOLOGY', 'RABBIT', 'VODKA', 'TOLSTOY',     'PSYCHOLOGY', 'ELK', 'CHAMPAGNE', 'GOETHE',       'ANTHROPOLOGY', 'CHICKEN', 'BEER',  'KAFKA',     'HERBOLOGY', 'FISH', 'COGNAC','NIETZSCHE'];
 
 
     let dropzones = document.querySelectorAll('.dropzone');
@@ -17,35 +17,79 @@ window.onload = (() => {
 
     setInterval(() => {
 
-        let htmlBooks = document.getElementsByClassName("bookimg");
+//document.getElementById('value').innerHTML = solutionVar;
 
-        let bookElements = Array.prototype.filter.call(htmlBooks, (book) => {
-            return book;
+        var isItSolved = 0;
+        let graveSolved = window.localStorage;
+        graveSolved = isItSolved;
+
+        let htmlGraves = document.getElementsByClassName("graveimg");
+
+        let graveElements = Array.prototype.filter.call(htmlGraves, (grave) => {
+            return grave;
         });
 
-        let bookImages = [];
+        let graveImages = [];
 
-        bookElements.forEach(bookElement => {
+        graveElements.forEach(graveElement => {
 
-            let bookName = bookElement.src.split('/').slice(-1)[0].split('.')[0];
+            let graveName = graveElement.src.split('/').slice(-1)[0].split('.')[0];
 
-            bookImages.push(bookName);
+            graveImages.push(graveName);
         });
 
-        if (arraysEqual(bookImages, correctOrder)) {
-            //document.getElementById('solvedtext').style.display = 'block';
-            document.getElementById('books').style.display = 'none';
-            document.getElementById('video').style.display = 'block';
-            setInterval(() => {
-                    document.getElementById('video').style.display = 'none';
-                    //$('#solvedtext').show();
-                    document.getElementById('solvedtext').style.display = 'block';
-                }, 6 * 1000);
-            //$('#video').show();
-        } else {
-            document.getElementById('solvedtext').style.display = 'none';
-            document.getElementById('video').style.display = 'none';
-        }
+
+document.getElementById('video').style.display = 'none';
+        if (arraysEqual(graveImages, correctOrder)) {
+                
+            localStorage.graveSolved = 1;
+            isItSolved = 1;
+            checkIfItsSolvedFunction();
+
+            //document.getElementById('graves').style.display = 'none';
+            //document.getElementById('video').style.display = 'block';
+            
+
+            ///*
+            //setTimeout(() => {
+            //        document.getElementById('video').style.display = 'none';
+            //        document.getElementById('solvedtext').style.display = 'block';
+            //    }, 6 * 1000);
+            //*/
+        } 
+        
+    //let graveSolved = window.localStorage;
+    //graveSolved = isItSolved;
+
+   
+
+    checkIfItsSolvedFunction(); 
+
+    function checkIfItsSolvedFunction() {
+                    
+                    
+                    document.getElementById('value').innerHTML = isItSolved;
+
+                    if (graveSolved === 0) {
+                        //document.getElementById('graves').style.display = 'none';
+                        //document.getElementById('video').style.display = 'block';
+                        //document.getElementById('solvedtext').style.display = 'block';
+                        //localStorage.graveSolved = 1;
+                        //isItSolved = 1;      
+                    } 
+
+                    if (graveSolved === 1) {
+                        document.getElementById('graves').style.display = 'none';
+                        document.getElementById('video').style.display = 'block';
+                        document.getElementById('solvedtext').style.display = 'block';
+                        localStorage.graveSolved = 1;
+                        isItSolved = 1;
+                        //graveSolved = 1;      
+                    } 
+
+                 
+                                }
+                                
 
     }, 250);
 });
@@ -69,3 +113,15 @@ $(function(){
     }
   });
 });
+
+
+
+function puzzleReset() {
+    if (window.confirm('Stuck? Click okay to reset the puzzle')) {
+        let graveSolved = window.localStorage;
+
+        
+        
+        location.reload();
+    }
+}

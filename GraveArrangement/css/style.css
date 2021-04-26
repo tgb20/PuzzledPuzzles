@@ -130,7 +130,7 @@ max-height: 70vh;
 
 
 /*ID THAT JAVASCRIPT USES. ALSO THE DIV ABOVE GRAVES AND POTENTIALLY BLANKS*/
-#books
+#graves
 {
   /*border: solide green 1px;*/
   display: flex;
@@ -240,7 +240,7 @@ background-size: cover;
 
 
 
-.bookimg 
+.graveimg 
 {
     width: auto;
     margin: 0px;
@@ -250,7 +250,7 @@ background-size: cover;
 }
 
 
-.notbookimg 
+.notgraveimg 
 {
     width: 100%;
     
@@ -259,7 +259,7 @@ background-size: cover;
     
 }
 
-.notbookimg:hover 
+.notgraveimg:hover 
 {
     
   
