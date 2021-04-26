@@ -20,6 +20,8 @@ window.onload = (() => {
 
     setInterval(() => {
 
+        let isItSolved = 0;
+
         //document.getElementById('value').innerHTML = solutionVar;
 
         let graveSolved = storage.getItem('graveSolved');
