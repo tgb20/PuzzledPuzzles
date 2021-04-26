@@ -20,9 +20,7 @@ window.onload = (() => {
 
     setInterval(() => {
 
-        let isItSolved = 0;
-
-        //document.getElementById('value').innerHTML = solutionVar;
+        
 
         let graveSolved = storage.getItem('graveSolved');
 
@@ -42,37 +40,31 @@ window.onload = (() => {
         });
 
 
-        document.getElementById('video').style.display = 'none';
+        
+        
         if (arraysEqual(graveImages, correctOrder)) {
 
             storage.setItem('graveSolved', 1);
-            isItSolved = 1;
 
-            //document.getElementById('graves').style.display = 'none';
-            //document.getElementById('video').style.display = 'block';
+            document.getElementById('value').innerHTML = graveSolved;
+            document.getElementById('graves').style.display = 'none';
+            document.getElementById('video').style.display = 'block';
 
-
-            ///*
-            //setTimeout(() => {
-            //        document.getElementById('video').style.display = 'none';
-            //        document.getElementById('solvedtext').style.display = 'block';
-            //    }, 6 * 1000);
-            //*/
+            /*
+            setTimeout(() => {
+                    document.getElementById('video').style.display = 'none';
+                    document.getElementById('solvedtext').style.display = 'block';
+                            }, 6 * 1000);
+            */
         }
 
-        //let graveSolved = window.localStorage;
-        //graveSolved = isItSolved;
-
-
-
-        document.getElementById('value').innerHTML = isItSolved;
+       
 
         if (graveSolved === 1) {
             document.getElementById('graves').style.display = 'none';
             document.getElementById('video').style.display = 'block';
             document.getElementById('solvedtext').style.display = 'block';
             storage.setItem('graveSolved', 1);
-            isItSolved = 1;
             //graveSolved = 1;      
         }
     }, 250);
