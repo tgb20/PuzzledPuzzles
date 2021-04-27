@@ -1,5 +1,10 @@
 window.onload = (() => {
 
+
+    $('#resetButton').click(() => {
+        puzzleReset();
+    });
+
     let storage = window.localStorage;
 
     //let correctOrder = ['ANTHROPOLOGY', 'HERBOLOGY', 'PSYCHOLOGY', 'THEOLOGY', 'CHICKEN', 'ELK', 'FISH', 'RABBIT', 'BEER', 'CHAMPAGNE', 'VODKA', 'COGNAC', 'GOETHE', 'KAFKA', 'NIETZSCHE', 'TOLSTOY', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK', 'BLANK'];
@@ -18,13 +23,22 @@ window.onload = (() => {
         }
     );
 
-    setInterval(() => {
-
-        let isItSolved = 0;
-
-        //document.getElementById('value').innerHTML = solutionVar;
+    let gameloop = setInterval(() => {
 
         let graveSolved = storage.getItem('graveSolved');
+        if (graveSolved == 1) {
+            document.getElementById('graves').style.display = 'none';
+            document.getElementById('video').style.display = 'block';
+            document.getElementById('solvedtext').style.display = 'block';
+            document.getElementById('graves').style.display = 'none';
+            document.getElementById('video').style.display = 'block';
+
+            setTimeout(() => {
+                document.getElementById('video').style.display = 'none';
+                document.getElementById('solvedtext').style.display = 'block';
+            }, 6 * 1000);
+            clearInterval(gameloop);
+        }
 
         let htmlGraves = document.getElementsByClassName("graveimg");
 
@@ -41,39 +55,8 @@ window.onload = (() => {
             graveImages.push(graveName);
         });
 
-
-        document.getElementById('video').style.display = 'none';
         if (arraysEqual(graveImages, correctOrder)) {
-
             storage.setItem('graveSolved', 1);
-            isItSolved = 1;
-
-            //document.getElementById('graves').style.display = 'none';
-            //document.getElementById('video').style.display = 'block';
-
-
-            ///*
-            //setTimeout(() => {
-            //        document.getElementById('video').style.display = 'none';
-            //        document.getElementById('solvedtext').style.display = 'block';
-            //    }, 6 * 1000);
-            //*/
-        }
-
-        //let graveSolved = window.localStorage;
-        //graveSolved = isItSolved;
-
-
-
-        document.getElementById('value').innerHTML = isItSolved;
-
-        if (graveSolved === 1) {
-            document.getElementById('graves').style.display = 'none';
-            document.getElementById('video').style.display = 'block';
-            document.getElementById('solvedtext').style.display = 'block';
-            storage.setItem('graveSolved', 1);
-            isItSolved = 1;
-            //graveSolved = 1;      
         }
     }, 250);
 
