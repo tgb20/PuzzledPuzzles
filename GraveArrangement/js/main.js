@@ -29,7 +29,7 @@ window.onload = (() => {
         if (graveSolved == 1) {
             document.getElementById('graves').style.display = 'none';
             document.getElementById('video').style.display = 'block';
-            document.getElementById('solvedtext').style.display = 'block';
+            //document.getElementById('solvedtext').style.display = 'block';
             document.getElementById('graves').style.display = 'none';
             document.getElementById('video').style.display = 'block';
 
