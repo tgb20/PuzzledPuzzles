@@ -1,0 +1,270 @@
+body {
+/*background-image: url('../images/BG.png');*/
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+height: 100vh;
+width: auto;
+border: dashed red 0px;
+}
+
+.image-box {
+  /* Here's the trick second value is the top, first value the bottom */
+  background: linear-gradient(rgba(155,100,100,0.5), rgba(040,040,055,0.2)), var(--image-url) center center;
+}
+
+
+
+.headingstyle {
+  justify-content: center;
+  padding-top: 10%;
+  color: #000000;
+  font-size: 2vw;
+  font-family: Futura;
+  background-color: #666666;
+  text-shadow: 1px 4px 4px #555;
+  text-align: center;
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+
+}
+
+p1 {
+    font-size: 100px;
+    color:#c3a343;
+    -webkit-text-fill-color: transparent;
+    background: -webkit-linear-gradient(transparent, transparent),
+    url(../images/gold.png) repeat;
+    background: -o-linear-gradient(transparent, transparent);
+    -webkit-background-clip: text;
+    text-shadow: rgba(245,245,245,0.8) 3px 5px 1px;
+}
+    
+#engraved {
+    font-size: 3vw;
+    font-family: "Fantasy" Papyrus;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    background: -o-linear-gradient(transparent, transparent);
+    color: transparent;
+    text-shadow: rgba(245,245,245,0.5) 3px 5px 1px;
+}
+
+#embossed{
+  color: #f0f0f0;
+  font-size: 10vw;
+  font-family: Futura;
+  background-color: #666666;
+  text-shadow: 1px 4px 4px #555;
+  text-align: center;
+  -webkit-background-clip: text;
+    -moz-background-clip: text;
+}
+
+
+
+
+/* Container holding the image and the text   rules   */
+.container {
+  text-align: center;
+  color: black;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  transition: 0.3s; 
+}
+
+
+.container:hover
+{transform: scale(1.0);
+  cursor: w-resize;
+}
+
+
+/*DIV FOR RULEZ*/
+.rulez
+{
+border: solid orange 0px;
+display: block;
+min-height: 55vh;
+max-height: 70vh;
+}
+
+
+
+/* Centered text font-size: 2.2vh;s    THE RULES */
+.centered {
+  position: absolute;
+  font-size: 1.5vw;
+   
+  font-family: Metrophobic;
+  font-weight: lighter;
+  /*text-transform: uppercase;*/
+  color: #dedbd9;
+  top: 0%;
+  min-width: 100%;
+  
+  background: -o-linear-gradient(transparent, transparent);
+    color: darkgrey;
+    text-shadow: rgba(245,245,245,0.3) -1px -1px -1px;
+  
+  border-style: solid;
+  border-color: yellow;
+  border-width: 0px;
+  transition: 0.3s;
+  justify-content: center;
+ 
+
+
+}
+
+
+.centered:hover
+{transform: scale(1.25);
+  cursor: w-resize;
+}
+
+
+/*ID THAT JAVASCRIPT USES. ALSO THE DIV ABOVE GRAVES AND POTENTIALLY BLANKS*/
+#graves
+{
+  /*border: solide green 1px;*/
+  display: flex;
+}
+
+
+.rightside
+{
+/*border-style: dotted;
+border-color: blue;*/ 
+display: inline;
+}
+
+
+/*DIV FOR ALL FOUR GRAVES*/
+.graves
+{
+border: dashed yellow 0px;
+display: flex;
+min-height: 40vh;
+max-height: 40vh;
+justify-content: center;
+}
+
+
+/*DIV FOR EACH INDIVIDUAL GRAVE*/
+.spaced
+{
+
+border: solid pink 0px;
+padding-top: 4%;
+padding-left: 2%;
+padding-right: 2%;
+background-image: url("../images/GRAVEREAL.png"); /**/
+background-size: contain;
+background-position: center;
+background-repeat: no-repeat;
+height: 35vh;
+max-width: 20%;
+
+}
+
+/*TO PUSH THE GRAVE DROP ZONE WHERE EVER*/
+#alpha {margin-top: 40%;}
+#echo {margin-top: 35%;}
+#india {margin-top: 35%;}
+#mike {margin-top: 35%;}
+
+
+/*DIV FOR ALL BLANK SPOTS*/
+.blankarea {
+/*border-style: dotted;
+border-color: red; */
+padding-top: 0%;
+padding-left: 1%;
+padding-right: 1%;
+height: 96vh;
+border: blue dashed 0px;
+/*
+background-image: url("");
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+*/
+}
+
+
+
+.draggable
+{
+  background:  rgba(0,0,0,0.0);
+  cursor:      move;
+  font-weight: bold;
+  list-style:  none;
+  padding-top:     3%;
+  padding-left:     3%;
+  padding-right:     3%;
+  /*border-style: double dashed;
+  border-color: blue;*/
+  
+  z-index: 100;
+  display: flex;
+}
+
+
+
+
+#solvedtext 
+{
+    font-size: xx-large;
+    font-weight: bolder;
+    color: green;
+    display: none;
+}
+
+/*  STARTING AREA FOR TABS  */
+.dropzone
+{
+  min-height: 1%;
+  flex: 1;
+  border: dashed white 0px;
+  justify-content: center;
+  padding-right: 8px;
+}
+
+
+
+
+
+.graveimg 
+{
+    width: auto;
+    margin: 0px;
+    height: 5.1vh;
+    
+
+}
+
+
+.notgraveimg 
+{
+    width: 100%;
+    
+    height: 3.6vh;
+    
+    
+}
+
+.notgraveimg:hover 
+{
+    
+  
+}
+
+
+
+

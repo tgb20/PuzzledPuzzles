@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Grave Swap</title>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.7/lib/draggable.bundle.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/swappable.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@shopify/draggable@1.0.0-beta.11/lib/plugins.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Metrophobic">
+    <script src="js/main.js"></script>
+</head>
+
+<body class="image-box" style="--image-url: url('https://raw.githubusercontent.com/tgb20/PuzzledPuzzles/main/GraveArrangement/images/BG.png');">
+   
+
+
+<div><h1 id="value">val</h1></div>
+
+
+
+<div id="reboot" class="rebootstyling">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <button
+      style="width:50px; height:50px; background-color: transparent; position: relative;"
+      onclick="puzzleReset()">
+      <i style="color: white;" class="fas fa-redo-alt"></i>
+    </button>
+
+<script>
+
+</script>
+
+  </div>
+
+
+<div id="graves">
+       
+					
+    				<!-- BLANK AREA -->
+			<div class="blankarea"; style="background-image: url('');">
+			        
+			        <div class="dropzone" id="al" >
+			            <div class='draggable'><img class="graveimg" src="images/ANTHROPOLOGY.png" alt=""></div>
+			        </div>
+
+			        <div class="dropzone" id="be">
+			            <div class='draggable'><img class="graveimg" src="images/BEER.png" alt=""></div>
+			        </div>
+
+			        <div class="dropzone" id="ch">
+			            <div class='draggable'><img class="graveimg" src="images/CHAMPAGNE.png" alt=""></div>
+			        </div>
+			        <div class="dropzone" id="de">
+			            <div class='draggable'><img class="graveimg" src="images/CHICKEN.png" alt=""></div>
+			        </div>
+	    	
+
+
+			
+			        <div class="dropzone" id="ec">
+			            <div class='draggable'><img class="graveimg" src="images/COGNAC.png" alt=""></div>
+			        </div>
+			        <div class="dropzone" id="fo">
+			            <div class='draggable'><img class="graveimg" src="images/ELK.png" alt=""></div>
+			        </div>
+			        <div class="dropzone" id="go">
+			            <div class='draggable'><img class="graveimg" src="images/FISH.png" alt=""></div>
+			        </div>
+			        <div class="dropzone" id="ho">
+			            <div class='draggable'><img class="graveimg" src="images/GOETHE.png" alt=""></div>
+			        </div>
+	    	
+
+
+	    	
+			        <div class="dropzone" id="in" >
+			            <div class='draggable'><img class="graveimg" src="images/HERBOLOGY.png" alt=""></div>
+			        </div>
+
+			        <div class="dropzone" id="ju">
+			            <div class='draggable'><img class="graveimg" src="images/KAFKA.png" alt=""></div>
+			        </div>
+
+			        <div class="dropzone" id="ki">
+			            <div class='draggable'><img class="graveimg" src="images/NIETZSCHE.png" alt=""></div>
+			        </div>
+			        <div class="dropzone" id="li">
+			            <div class='draggable'><img class="graveimg" src="images/PSYCHOLOGY.png" alt=""></div>
+			        </div>
+	    	
+
+
+			
+			        <div class="dropzone" id="mi">
+			            <div class='draggable'><img class="graveimg" src="images/RABBIT.png" alt=""></div>
+			        </div>
+			        <div class="dropzone" id="no">
+			            <div class='draggable'><img class="graveimg" src="images/THEOLOGY.png" alt=""></div>
+			        </div>
+			        <div class="dropzone" id="os">
+			            <div class='draggable'><img class="graveimg" src="images/TOLSTOY.png" alt=""></div>
+			        </div>
+			        <div class="dropzone" id="pa">
+			            <div class='draggable'><img class="graveimg" src="images/VODKA.png" alt=""></div>
+			        </div>
+	
+			</div>
+
+
+
+
+
+			<div class="rightside">
+
+						
+
+											  
+			
+						<div class="rulez">
+
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg">
+											  <div class="centered"><span style="padding-top: 0px">The professor who read Goethe rests next to the professor who read Tolstoy.</span></div>
+											</div>
+
+
+
+																						<!--   RULE 2 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Anthropology Professor was a beer drinker.</span></div>
+											</div>
+
+
+																						<!--   RULE 3 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Professor who only read Nietzsche is next to the professor who only ate chicken.</span></div>
+											</div>
+
+
+																						<!--   RULE 4 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Psychology Professor only read Goethe.</span></div>
+											</div>
+
+
+																						<!--   RULE 5 			 		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Professor who only ate fish is on the far right.</span></div>
+											</div>
+
+
+																						<!--   RULE 6 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Herbologist does not rest next to the Professor of Theology and the professor who only ate elk.</span></div>
+											</div>
+
+
+																						<!--   RULE 7 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Professor who only ate rabbit resides next to the Professor of Psychology.</span></div>
+											</div>
+
+
+																						<!--   RULE 8 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Professor who only drank vodka rests next to the Professor of Psychology.</span></div>
+											</div>
+
+
+																						<!--   RULE 9 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Professor who only read Goethe only ate elk.</span></div>
+											</div>
+
+
+																						<!--   RULE 10 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Professor who only drank cognac ate fish.</span></div>
+											</div>
+
+
+																						<!--   RULE 11 				    		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The Professor who only ate rabbit is left of the professor who only drank Champagne.</span></div>
+											</div>
+
+
+																						<!--   RULE 12 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The first grave belongs to the professor who only drank vodka.</span></div>
+											</div>
+							
+
+																						<!--   RULE 13 				    		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The professor who only read Kafka rests next to the professor who only read Nietzsche.</span></div>
+											</div>
+
+
+																						<!--   RULE 14 				DOUBLE		-->
+										<div class="container">
+											  <img src="images/Rules/ruleblank.jpg" class="notgraveimg" alt="Snow" style="width:100%;">
+											  <div class="centered"><span>The grave of the professor who only drank beer is next to the Herbology Professor.</span></div>
+											</div>
+							
+
+
+					
+						</div> <!-- END OF RULEZ -->
+
+
+
+
+
+						<div class="graves">
+
+										<div class="spaced">
+										        <div class="dropzone" id="alpha" >
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+
+										        <div class="dropzone" id="beta">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+
+										        <div class="dropzone" id="charlie">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+										        <div class="dropzone" id="delta">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div></div>
+
+
+										<div class="spaced">
+										        <div class="dropzone" id="echo">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+										        <div class="dropzone" id="foxtrot">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+										        <div class="dropzone" id="golf">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+										        <div class="dropzone" id="hotel">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div></div>
+
+
+								    	<div class="spaced">
+										        <div class="dropzone" id="india" >
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+
+										        <div class="dropzone" id="juliette">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+
+										        <div class="dropzone" id="kilo">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+										        <div class="dropzone" id="lima">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div></div>
+
+
+										<div class="spaced">
+										        <div class="dropzone" id="mike">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+										        <div class="dropzone" id="november">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+										        <div class="dropzone" id="oscar">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div>
+										        <div class="dropzone" id="november">
+										            <div class='draggable'><img class="graveimg" src="images/BLANK.png" alt=""></div>
+										        </div></div>
+			
+
+						</div> <!--END GRAVES-->
+	
+						
+
+			</div> <!--  END OF RIGHT SIDE CONTAINER -->
+			
+			
+				
+
+</div> <!-- END OF BOOKS -->
+
+
+<div hidden id="video" class="container" style="padding-top: 10%;">
+    
+    <video width="100%" height="auto" controls autoplay muted>
+      <source src="images/graveskeleton.mp4" type="video/mp4">
+      <source src="movie.ogg" type="video/ogg">
+      Your browser does not support the video tag.
+      </video>
+      
+</div>
+
+
+<div hidden id="solvedtext" style="border-style: solid; border-color: red; border-width: 0px; padding-top: 5%;">
+			
+			<div style="width: 50%; border-style: dashed; border-color: red; border-width: 0px; margin-left: 25%;">
+			<p3 class="headingstyle"><center>Take the first letter of the third professor's profession (anthropology), drink (beer), meat (chicken) and preferred author (Kafka), add the letter "L", rescramble the five letters, and you will know the last name of the professor</center></p3>
+			</div>
+        
+</div>
+<!-- 
+<iframe src="https://player.vimeo.com/video/489051542" width="640" height="480" frameborder="0"
+            allow="autoplay; fullscreen" allowfullscreen></iframe> -->
+
+</body>
+
+</html>
