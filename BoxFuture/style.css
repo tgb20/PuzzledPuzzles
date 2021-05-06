@@ -56,12 +56,13 @@ font-family: Metrophobic;
 
 #phoneBFTF { 
             overflow: hidden;
-            border:2px solid yellow; background-color: rgba(0,0,0,0.0); 
-            width: 60vw; 
-            height: calc(60vw*0.63); 
+            border:0px solid yellow; 
+            background-color: rgba(0,0,0,0.0); 
+            width: 65vw; 
+            height: calc(65vw*0.63); 
             position: absolute; 
-            right: 9vw; 
-            top: 75vh; 
+            right: 0vw; 
+            top: 110vh; 
             overflow-y: none;
             overflow-x: none;
           }

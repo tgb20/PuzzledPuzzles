@@ -542,7 +542,7 @@ keypad.addEventListener("mousedown", function (e) {
   if (key) {
     const val = key.value;
     stop();
-    document.getElementById("demo").innerHTML = key.value;
+    document.getElementById("numDisp").innerHTML = key.value;
 
     if (val === "*") {
       keypad.children[11].classList.add("active");
