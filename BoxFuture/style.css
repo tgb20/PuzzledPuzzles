@@ -1,28 +1,61 @@
 body {
-  background-image: url(assets/tempBGtest.png);
+  background-image: url('assets/bg.jpg');
 background-position: center;
 background-repeat: no-repeat;
-
-background-size: cover;
+background-size: 100vw 100%;
+min-height: 2900px;
 width: 100vw;
-height: auto;
 border: dashed blue 0px;
 justify-content: center;
 text-align: center;
 align-items: center;
 align-content: center;
 vertical-align: center;
-margin-left: 0;
-margin-right: 0;
-margin-top: 0;
-margin-bottom: 0;
-
-padding-bottom: 0;
+margin: 0 auto;
 font-family: Metrophobic;
   font-variant-caps: small-caps;
+  position: relative;
+  /*filter: blur(10px);*/
    
-        margin: 0;
 }
+
+
+#popUp {
+      background-image: url('assets/box-open.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 800px;
+      height: 400px;
+      border: dashed blue 0px;
+      justify-content: center;
+      margin: 0 auto;
+      margin-top: 100px;
+      font-family: Metrophobic;
+      border: solid red 2px; 
+      /*
+        filter: blur(10px);
+        background-color: rgba(255,255,255,0.8);
+      */      
+}
+
+#popUpBackground {
+      
+      
+      width: 1600px;
+      height: 1600px;
+     
+      position: absolute;
+      left: 0;
+      top: 0;
+        
+        z-index: 100;
+              
+}
+
+
+
+
 
 .iframinIt {background-color: black;}
 
@@ -68,6 +101,15 @@ font-family: Metrophobic;
         margin: 0px;
      
         }
+
+        .topItems {
+  width: 50%;
+  height: auto;
+  position: relative;
+  transition: 800ms;
+  box-shadow: rgba(200,0,0,0.9);
+
+}
 
 .deskItems {
   width: 300px;
@@ -209,7 +251,7 @@ background-size: cover;
   padding-top:     3%;
   padding-left:     3%;
   padding-right:     3%;
-  /border-style: double dashed;
+
   border-color: blue;
   
   z-index: 100;
@@ -232,9 +274,8 @@ background-size: cover;
 {
   min-height: 1%;
   flex: 1;
-  border: dashed white 2px;
   justify-content: center;
-  padding-right: 0px;
+
 }
 
 
@@ -243,7 +284,7 @@ background-size: cover;
 
 .graveimg 
 {
-    width: 15vw;
+    width: 300px;
     margin: 0px;
     height: auto;
     

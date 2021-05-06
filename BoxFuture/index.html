@@ -13,114 +13,69 @@
 </head>
 
 <body>
-    <div id="popUp" style="width: 800; height: 600; border: solid red 2px; background-image: url(assets/box-open.png); background-size: cover;"><br><br>
+    <div hidden id="popUp" >
+
     </div>
 
+    <script>
+        
 
-        <div id="header">
-<!--<img src="assets/half-open box-withtext.png" style="width: 95%; height: auto;">-->
-            
-            
+    let storage = window.localStorage;
+    l = storage
 
-        </div>
-        <!--Top Ends-->
+    function showPop_up() {
+        if (l === 1) {
+    document.getElementById('popUp').style.display ='block';
+    
+  } else {
+    document.getElementById('popUp').style.display ='none';
+    l = 0;
+    }
+    }
+
+    </script>
+
+ <!--
+
+            <img src="assets/solobox.png" class="topItems" style="position: absolute; left: -5vw; width: 55%; box-shadow: -10px 40px 3px 0 rgba(255, 0, 0, 0.2), -10px 40px 3px 0 rgba(255, 0, 0, 0.6); opacity: 0.6;">
+            <img src="assets/device.png" class="topItems" style="position: absolute; right: 1vw; top: 10vh;">
+            <img src="assets/phone-solo.png" class="topItems" style="position: absolute; right: 1vw; top: 70vh;">
+            <img src="assets/solobox.png" height="200" width="300" style="position: absolute; left: 30%; top: 10%; box-shadow: -10px 20px 9px 0 rgba(255, 0, 0, 0.2), 10px 40px 13px 0 rgba(0, 0, 255, 0.2);">
+            
+-->
+
+                  
+
+<div class="droppingItLikeItsHot" style="position: absolute; bottom: 25%; border: solid white 6px; width: 90vw; height: 10%;">
+
+
+
+                <div class="dropzone" id="al" style="border: solid red 5px;">
+
+                    <div class='draggable' style="border: dashed pink 4px;">
+                        <img class="graveimg" src="assets/blanco.png" alt="" style="border: dashed brown 3px;">
+                    </div>
+
+                </div>
+
+
+                <div class="dropzone" id="be" style="border: solid blue 5px; float: right;">
+                    <div class='draggable' style="border: solid darkblue 4px">
+                        <img class="graveimg" src="assets/orange.png" alt="" style="border: solid lightblue 3px"></div>
+                </div>
+
+</div>
+
 
         
-        <div id="vertical-middle"> 
+        
 
-                        <!--LEFT SIDE-->
-                        <div id="leftside">
-                            
-
-                        </div>
-
-                        
-                        <!--CENTER DIV-->
-                        <div id="center">
-                          <!--CENTER DIV
-                            <img src="assets/I-forgoodtime.png" class="deskItems" >
-                            <img src="assets/artist_label.png" class="deskItems" style="padding-left: 20px;">
-                            
-                            <
-                            <img src="assets/III_framed_map.png" class="deskItems">
-
-                            <img src="assets/II.png" class="deskItems">
-                            <img src="assets/IV mirror.png" class="deskItems">
-                            
-                       
-                            div class="dropzone" id="al" style="background-image: url(''); width: 300px; height: 300px; position: absolute; left: 5%; bottom: -160px;">
-                            <div class='draggable' style="width: 300px; height: 300px;"><img class="deskItems" src="" alt=""></div>
-                            </div>
-
-                            <img src="assets/grid-with-holes.png" class="deskItems" style="height: 500px; width: auto; position: absolute; right: 25%; bottom: -160px;">
-
-                            <img class="" src="assets/V.png" alt="" style="z-index: 1; opacity: 0.4; width: 300px; height: 300px; position: absolute; left: 5%; bottom: -160px;">
-                            
-                           
-                            
-
-                            
-
-
-
-                             <div class="dropzone" id="be">
-                            <div class='draggable'><img class="deskItems" src="assets/grid-with-holes.png" alt=""style="width: 600px; height: 300px;"></div>
-                            </div>   
-                          
--->
-<br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br>
-                        </div>
-                        <!-- CENTER DIV ENDS -->
-
-
-                        <!--RIGHT SIDE-->
-                        <div id="rightside">
-<div style="background-image: url(assets/mobTemp.png); height: 600px; width: 350px; background-size: cover; margin-top: 20px;">
-<iframe src="https://fxo.io/m/39nzj6wx" style="border: 2px solid black; width: 320; height: 500px; border-radius: 10px; margin-top: 50px;" allowfullscreen></iframe>
+<iframe src="https://fxo.io/m/39nzj6wx" style="border: 2px solid black; width: 24vw; height: 75vh; border-radius: 18px; position: absolute; right: 9vw; top: 15vh;" allowfullscreen></iframe>
                         
 
-                        </div>
+                  
 
-        </div>
+        
         
 
     <!--BOTTOM BEGINS Ends-->

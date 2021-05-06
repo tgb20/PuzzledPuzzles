@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Crossword</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+<script>
+
+</script> 
+
+
+  <div class="main"
+    style="
+    width: calc(100vh*(16/9));
+    height: 100vh; margin: auto; display: block; object-fit: contain; position: relative;">
+
+    <div id="puzzle" class="test">
+<!--     
+      <input class="letter" style="width: 3%; height: 2%; position: absolute; left: 19.2%; top: 6.0%;" type="text" id="letter2Word1" maxlength="1">
+      <input class="letter" style="width: 3%; height: 2%; position: absolute; left: 19.2%; top: 14.5%;" type="text" id="letter3Word1" maxlength="1">
+      <input class="letter" style="width: 3%; height: 2%; position: absolute; left: 19.2%; top: 23.0%;" type="text" id="letter4Word1" maxlength="1">
+      <input class="letter" style="width: 3%; height: 2%; position: absolute; left: 19.2%; top: 31.5%;" type="text" id="letter5Word1" maxlength="1">
+      <input class="letter" style="width: 3%; height: 2%; position: absolute; left: 19.2%; top: 40.0%;" type="text" id="letter1Word1" maxlength="1">
+-->
+
+
+
+  <form name="formName" style="width: calc(100vh*(16/9));
+    height: 100vh;">
+
+    <!--HORIZONTAL -->
+      
+      <!--D-WORD = INSULT TO INJURY -->
+      <div   class="heading" style="left: 50%;    top: 45%;" >D</div>
+      
+      <input class="letter" style=" left: 52.5%;    top: 45%;" type="text" id="letter1Word2" maxlength="1" name="d1" oninput="autotab(this, document.formName.d2)">
+      <input class="letter" style=" left: 55.0%;    top: 45%;" type="text" id="letter2Word2" maxlength="1" name="d2" oninput="autotab(this, document.formName.d3)">
+      <input class="letter" style=" left: 57.5%;    top: 45%;" type="text" id="letter3Word2" maxlength="1" name="d3" oninput="autotab(this, document.formName.d4)">
+      <input class="letter" style=" left: 60%;      top: 45%;" type="text" id="letter4Word2" maxlength="1" name="d4" oninput="autotab(this, document.formName.d5)">
+      <input class="letter" style=" left: 62.5%;    top: 45%;" type="text" id="letter5Word2" maxlength="1" name="d5" oninput="autotab(this, document.formName.d6)">
+      
+      <input class="letter" style=" left: 65%;      top: 45%;" type="text" id="letter6Word2" maxlength="1" name="d6" oninput="autotab(this, document.formName.d7)">
+      <input class="letter" style=" left: 67.5%;    top: 45%;" type="text" id="letter7Word2" maxlength="1" name="d7" oninput="autotab(this, document.formName.d8)">
+      <input class="letter" style=" left: 70.0%;    top: 45%;" type="text" id="letter8Word2" maxlength="1" name="d8" oninput="autotab(this, document.formName.d9)">
+      <input class="letter" style=" left: 72.5%;    top: 45%;" type="text" id="letter9Word2" maxlength="1" name="d9" oninput="autotab(this, document.formName.d10)">
+      <input class="letter" style=" left: 75.0%;    top: 45%;" type="text" id="letter10Word2" maxlength="1"name="d10" oninput="autotab(this, document.formName.d11)">
+      
+      <input class="letter" style=" left: 77.5%;    top: 45%;" type="text" id="letter11Word2" maxlength="1"name="d11" oninput="autotab(this, document.formName.d12)">
+      <input class="letter" style=" left: 80.0%;    top: 45%;" type="text" id="letter12Word2" maxlength="1"name="d12" oninput="autotab(this, document.formName.d13)">
+      <input class="letter" style=" left: 82.5%;    top: 45%;" type="text" id="letter13Word2" maxlength="1"name="d13" oninput="autotab(this, document.formName.d14)">
+      <input class="letter" style=" left: 85.0%;    top: 45%;" type="text" id="letter14Word2" maxlength="1"name="d14" oninput="autotab(this, document.formName.e5)">
+
+
+
+
+
+     <!--A-WORD = BARKING UP THE WRONG TREE -->
+      <div   class="heading" style="left: 12.5%;   top: 50%;" >A</div>
+      
+      <input class="letter" style=" left: 15.0%;   top: 50%;" type="text" id="letter1Word2" maxlength="1" name="a1" oninput="autotab(this, document.formName.a2)" autofocus>
+      <input class="letter" style=" left: 17.5%;   top: 50%;" type="text" id="letter2Word2" maxlength="1" name="a2" oninput="autotab(this, document.formName.a3)">
+      <input class="letter" style=" left: 20.0%;   top: 50%;" type="text" id="letter3Word2" maxlength="1" name="a3" oninput="autotab(this, document.formName.a4)">
+      <input class="letter" style=" left: 22.5%;   top: 50%;" type="text" id="letter4Word2" maxlength="1" name="a4" oninput="autotab(this, document.formName.a5)">
+      <input class="letter" style=" left: 25.0%;   top: 50%;" type="text" id="letter5Word2" maxlength="1" name="a5" oninput="autotab(this, document.formName.a6)">
+      
+      <input class="letter" style=" left: 27.5%;   top: 50%;" type="text" id="letter6Word2" maxlength="1" name="a6" oninput="autotab(this, document.formName.a7)">
+      <input class="letter" style=" left: 30.0%;   top: 50%;" type="text" id="letter7Word2" maxlength="1" name="a7" oninput="autotab(this, document.formName.a8)">
+      <input class="letter" style=" left: 32.5%;   top: 50%;" type="text" id="letter8Word2" maxlength="1" name="a8" oninput="autotab(this, document.formName.a9)">
+      <input class="letter" style=" left: 35.0%;   top: 50%;" type="text" id="letter9Word2" maxlength="1" name="a9" oninput="autotab(this, document.formName.a10)" >
+      <input class="letter" style=" left: 37.5%;   top: 50%;" type="text" id="letter10Word2" maxlength="1" name="a10" oninput="autotab(this, document.formName.a11)">
+      
+      <input class="letter" style=" left: 40.0%;   top: 50%;" type="text" id="letter11Word2" maxlength="1"name="a11" oninput="autotab(this, document.formName.a12)">
+      <input class="letter" style=" left: 42.5%;   top: 50%;" type="text" id="letter12Word2" maxlength="1" name="a12" oninput="autotab(this, document.formName.a13)">
+      <input class="letter" style=" left: 45.0%;   top: 50%;" type="text" id="letter13Word2" maxlength="1"name="a13" oninput="autotab(this, document.formName.a14)">
+      <input class="letter" style=" left: 47.5%;   top: 50%;" type="text" id="letter14Word2" maxlength="1"name="a14" oninput="autotab(this, document.formName.a15)">
+      <input class="letter" style=" left: 50.0%;   top: 50%;" type="text" id="letter15Word2" maxlength="1"name="a15" oninput="autotab(this, document.formName.a16)">
+    
+      <input class="letter" style=" left: 52.5%;   top: 50%;" type="text" id="letter16Word2" maxlength="1" name="a16" oninput="autotab(this, document.formName.a17)">
+      <input class="letter" style=" left: 55.0%;   top: 50%;" type="text" id="letter17Word2" maxlength="1" name="a17" oninput="autotab(this, document.formName.a18)">
+      <input class="letter" style=" left: 57.5%;   top: 50%;" type="text" id="letter18Word2" maxlength="1" name="a18" oninput="autotab(this, document.formName.a19)">
+      <input class="letter" style=" left: 60.0%;   top: 50%;" type="text" id="letter16Word2" maxlength="1" name="a19" oninput="autotab(this, document.formName.a20)">
+      <input class="letter" style=" left: 62.5%;   top: 50%;" type="text" id="letter17Word2" maxlength="1" name="a20" oninput="autotab(this, document.formName.a21)">
+      
+      <input class="letter" style=" left: 65.0%;   top: 50%;" type="text" id="letter18Word2" maxlength="1" name="a21" oninput="autotab(this, document.formName.b1)">
+
+
+
+      <!--F-WORD = BEHIND THE EIGHT BALL -->
+      <div   class="heading" style="left: 2.5%;   top: 60%;" >F</div>
+      
+      <input class="letter" style=" left: 5%;     top: 60%;" type="text" id="letter1Word2" maxlength="1" name="f1" oninput="autotab(this, document.formName.f2)">
+      <input class="letter" style=" left: 7.5%;   top: 60%;" type="text" id="letter2Word2" maxlength="1" name="f2" oninput="autotab(this, document.formName.f3)">
+      <input class="letter" style=" left: 10%;    top: 60%;" type="text" id="letter3Word2" maxlength="1" name="f3" oninput="autotab(this, document.formName.f4)">
+      <input class="letter" style=" left: 12.5%;  top: 60%;" type="text" id="letter4Word2" maxlength="1" name="f4" oninput="autotab(this, document.formName.f5)">
+      <input class="letter" style=" left: 15%;    top: 60%;" type="text" id="letter5Word2" maxlength="1" name="f5" oninput="autotab(this, document.formName.f6)">
+      
+      <input class="letter" style=" left: 17.5%;  top: 60%;" type="text" id="letter6Word2" maxlength="1" name="f6" oninput="autotab(this, document.formName.f7)">
+      <input class="letter" style=" left: 20%;    top: 60%;" type="text" id="letter7Word2" maxlength="1" name="f7" oninput="autotab(this, document.formName.f8)">
+      <input class="letter" style=" left: 22.5%;  top: 60%;" type="text" id="letter8Word2" maxlength="1" name="f8" oninput="autotab(this, document.formName.f9)">
+      <input class="letter" style=" left: 25%;    top: 60%;" type="text" id="letter9Word2" maxlength="1" name="f9" oninput="autotab(this, document.formName.f10)">
+      
+      <input class="letter" style=" left: 27.5%;  top: 60%; background-color: yellow;" type="text" id="letter10Word2" maxlength="1" name="f10" oninput="autotab(this, document.formName.f11)">
+      <input class="letter" style=" left: 30%;    top: 60%; background-color: yellow;" type="text" id="letter11Word2" maxlength="1"name="f11" oninput="autotab(this, document.formName.f12)">
+      <input class="letter" style=" left: 32.5%;  top: 60%; background-color: yellow;" type="text" id="letter12Word2" maxlength="1" name="f12" oninput="autotab(this, document.formName.f13)">
+      <input class="letter" style=" left: 35%;    top: 60%; background-color: yellow;" type="text" id="letter13Word2" maxlength="1"name="f13" oninput="autotab(this, document.formName.f14)">
+      <input class="letter" style=" left: 37.5%;  top: 60%; background-color: yellow;" type="text" id="letter14Word2" maxlength="1"name="f14" oninput="autotab(this, document.formName.f15)">
+      
+      <input class="letter" style=" left: 40%;    top: 60%;" type="text" id="letter15Word2" maxlength="1"name="f15"  oninput="autotab(this, document.formName.f16)">
+      <input class="letter" style=" left: 42.5%;  top: 60%;" type="text" id="letter16Word2" maxlength="1" name="f16" oninput="autotab(this, document.formName.f17)"> <!-- INTERSECTION bottom -->
+      <input class="letter" style=" left: 45%;    top: 60%;" type="text" id="letter17Word2" maxlength="1" name="f17" oninput="autotab(this, document.formName.f18)">
+      <input class="letter" style=" left: 47.5%;  top: 60%;" type="text" id="letter18Word2" maxlength="1" name="f18" oninput="autotab(this, document.formName.g1)">
+      
+
+<!-- 
+             
+-->
+ <!--VERTICAL -->
+
+       <!--B-WORD = TAKE FIVE -->
+       <div class="heading" style="left: 25%; top: 20%;" >B</div>
+      <input class="letter" style="left: 25%; top: 25%;"                          type="text" id="letter2Word1" maxlength="1" name="b1" oninput="autotab(this, document.formName.b2)">
+      <input class="letter" style="left: 25%; top: 30%;"                          type="text" id="letter3Word1" maxlength="1" name="b2" oninput="autotab(this, document.formName.b3)">
+      <input class="letter" style="left: 25%; top: 35%;"                          type="text" id="letter4Word1" maxlength="1" name="b3" oninput="autotab(this, document.formName.b4)">
+      <input class="letter" style="left: 25%; top: 40%;"                          type="text" id="letter5Word1" maxlength="1" name="b4" oninput="autotab(this, document.formName.b5)">
+
+      <input class="letter" style="left: 25%; top: 45%; background-color: green;" type="text" id="letter1Word1" maxlength="1" name="b5" oninput="autotab(this, document.formName.b6)">
+      <input class="letter" style="left: 25%; top: 50%; background-color: green;" type="text" id="letter2Word1" maxlength="1" name="b6" oninput="autotab(this, document.formName.b7)"><!-- INTERSECTION 1 -->
+      <input class="letter" style="left: 25%; top: 55%; background-color: green;" type="text" id="letter3Word1" maxlength="1" name="b7" oninput="autotab(this, document.formName.b8)">
+      <input class="letter" style="left: 25%; top: 60%; background-color: green;" type="text" id="letter4Word1" maxlength="1" name="b8" oninput="autotab(this, document.formName.c1)"><!-- INTERSECTION 2 -->
+      
+
+
+        <!--G-WORD = ZERO SUM GAME -->
+       <div class="heading" style="left: 32.5%; top: 20%;" >G</div>
+
+      <input class="letter" style=" left: 32.5%; top: 25%; background-color: pink;"         type="text" id="letter2Word1" maxlength="1" name="g1" oninput="autotab(this, document.formName.g2)">
+      <input class="letter" style=" left: 32.5%; top: 30%; background-color: pink;"         type="text" id="letter3Word1" maxlength="1" name="g2" oninput="autotab(this, document.formName.g3)">
+      <input class="letter" style=" left: 32.5%; top: 35%; background-color: pink;"         type="text" id="letter4Word1" maxlength="1" name="g3" oninput="autotab(this, document.formName.g4)">
+      <input class="letter" style=" left: 32.5%; top: 40%; background-color: pink;"         type="text" id="letter5Word1" maxlength="1" name="g4" oninput="autotab(this, document.formName.g5)">
+
+      <input class="letter" style=" left: 32.5%; top: 45%;"                                 type="text" id="letter1Word1" maxlength="1" name="g5" oninput="autotab(this, document.formName.g6)">
+      <input class="letter" style=" left: 32.5%; top: 50%;"                                 type="text" id="letter2Word1" maxlength="1" name="g6" oninput="autotab(this, document.formName.g7)"><!-- INTERSECTION 1 -->
+      <input class="letter" style=" left: 32.5%; top: 55%;"                                 type="text" id="letter3Word1" maxlength="1" name="g7" oninput="autotab(this, document.formName.g8)">
+      <input class="letter" style=" left: 32.5%; top: 60%; background-color: transparent;"  type="text" id="letter4Word1" maxlength="1" name="g8" oninput="autotab(this, document.formName.g9)"><!-- INTERSECTION 2 -->
+
+      <input class="letter" style=" left: 32.5%; top: 65%;"                                 type="text" id="letter2Word1" maxlength="1" name="g9" oninput="autotab(this, document.formName.g10)">
+      <input class="letter" style=" left: 32.5%; top: 70%;"                                 type="text" id="letter3Word1" maxlength="1" name="g10"oninput="autotab(this, document.formName.g11)">
+      <input class="letter" style=" left: 32.5%; top: 75%;"                                 type="text" id="letter4Word1" maxlength="1" name="g11"oninput="autotab(this, document.formName.h0)">
+
+
+
+       <!--E-WORD = THREE'S A CROWD -->
+       <div class="heading" style="left: 42.5%; top: 25%;" >E</div>
+      <input class="letter" style="left: 42.5%; top: 30%; background-color: silver;" type="text" id="letter1Word1" maxlength="1" name="e5" oninput="autotab(this, document.formName.e6)">
+      <input class="letter" style="left: 42.5%; top: 35%; background-color: silver;" type="text" id="letter2Word1" maxlength="1" name="e6" oninput="autotab(this, document.formName.e7)">
+      <input class="letter" style="left: 42.5%; top: 40%; background-color: silver;" type="text" id="letter3Word1" maxlength="1" name="e7" oninput="autotab(this, document.formName.e8)">
+      <input class="letter" style="left: 42.5%; top: 45%; background-color: silver;" type="text" id="letter4Word1" maxlength="1" name="e8" oninput="autotab(this, document.formName.e9)">
+      <input class="letter" style="left: 42.5%; top: 50%; background-color: silver;" type="text" id="letter5Word1" maxlength="1" name="e9" oninput="autotab(this, document.formName.e10)"> <!-- INTERSECTION 1 -->
+      
+      <input class="letter" style="left: 42.5%; top: 55%;"                            type="text" id="letter4Word1" maxlength="1" name="e10" oninput="autotab(this, document.formName.e11)">
+      <input class="letter" style="left: 42.5%; top: 60%;"                            type="text" id="letter5Word1" maxlength="1" name="e11" oninput="autotab(this, document.formName.e12)"> <!-- INTERSECTION 3 -->
+      <input class="letter" style="left: 42.5%; top: 65%;" type="text" id="letter3Word1" maxlength="1" name="e12" oninput="autotab(this, document.formName.e13)">
+      <input class="letter" style="left: 42.5%; top: 70%;" type="text" id="letter4Word1" maxlength="1" name="e13" oninput="autotab(this, document.formName.e14)">
+      <input class="letter" style="left: 42.5%; top: 75%;" type="text" id="letter5Word1" maxlength="1" name="e14" oninput="autotab(this, document.formName.e15)">
+      <input class="letter" style="left: 42.5%; top: 80%;" type="text" id="letter4Word1" maxlength="1" name="e15" oninput="autotab(this, document.formName.e16)">
+
+      <input class="letter" style="left: 42.5%; top: 85%;" type="text" id="letter5Word1" maxlength="1" name="e16" oninput="autotab(this, document.formName.f1)" >
+
+
+
+
+       <!--C-WORD = CLOUD NINE -->
+       <div class="heading" style="left: 52.5%; top: 10%;" >C</div>
+      <input class="letter" style="left: 52.5%; top: 15%;" type="text" id="letter2Word1" maxlength="1" name="c1" oninput="autotab(this, document.formName.c2)">
+      <input class="letter" style="left: 52.5%; top: 20%;" type="text" id="letter3Word1" maxlength="1" name="c2" oninput="autotab(this, document.formName.c3)">
+      <input class="letter" style="left: 52.5%; top: 25%;" type="text" id="letter4Word1" maxlength="1" name="c3" oninput="autotab(this, document.formName.c4)">
+      <input class="letter" style="left: 52.5%; top: 30%;" type="text" id="letter5Word1" maxlength="1" name="c4" oninput="autotab(this, document.formName.c5)">
+      <input class="letter" style="left: 52.5%; top: 35%;" type="text" id="letter1Word1" maxlength="1" name="c5" oninput="autotab(this, document.formName.c6)">
+
+      <input class="letter" style="left: 52.5%; top: 40%;" type="text" id="letter2Word1" maxlength="1" name="c6" oninput="autotab(this, document.formName.c7)">
+      <input class="letter" style="left: 52.5%; top: 45%;" type="text" id="letter3Word1" maxlength="1" name="c7" oninput="autotab(this, document.formName.c8)">
+      <input class="letter" style="left: 52.5%; top: 50%;" type="text" id="letter4Word1" maxlength="1" name="c8" oninput="autotab(this, document.formName.c9)"><!-- INTERSECTION 1 -->
+      <input class="letter" style="left: 52.5%; top: 55%;" type="text" id="letter5Word1" maxlength="1" name="c9" oninput="autotab(this, document.formName.d1)"> 
+      
+
+
+       <!--H-WORD = ON ALL FOURS -->
+       <div class="heading" style="left: 60%; top: 5%;" >H</div>
+      <input class="letter" style="left: 60%; top: 10%;" type="text" id="letter2Word1" maxlength="1" name="h0" oninput="autotab(this, document.formName.h1)">
+      <input class="letter" style="left: 60%; top: 15%;" type="text" id="letter2Word1" maxlength="1" name="h1" oninput="autotab(this, document.formName.h2)">
+      <input class="letter" style="left: 60%; top: 20%;" type="text" id="letter3Word1" maxlength="1" name="h2" oninput="autotab(this, document.formName.h3)">
+      <input class="letter" style="left: 60%; top: 25%;" type="text" id="letter4Word1" maxlength="1" name="h3" oninput="autotab(this, document.formName.h4)">
+      <input class="letter" style="left: 60%; top: 30%;" type="text" id="letter5Word1" maxlength="1" name="h4" oninput="autotab(this, document.formName.h5)">
+      <input class="letter" style="left: 60%; top: 35%;" type="text" id="letter1Word1" maxlength="1" name="h5" oninput="autotab(this, document.formName.h6)">
+
+      <input class="letter" style="left: 60%; top: 40%;" type="text" id="letter2Word1" maxlength="1" name="h6" oninput="autotab(this, document.formName.h7)">
+      <input class="letter" style="left: 60%; top: 45%;" type="text" id="letter3Word1" maxlength="1" name="h7" oninput="autotab(this, document.formName.h8)">
+      <input class="letter" style="left: 60%; top: 50%;" type="text" id="letter4Word1" maxlength="1" name="h8" oninput="autotab(this, document.formName.h9)"><!-- INTERSECTION 1 -->
+      <input class="letter" style="left: 60%; top: 55%;" type="text" id="letter5Word1" maxlength="1" name="h9" oninput="autotab(this, document.formName.a1)"> 
+     
+<!--green, yellow, pink, grey-->
+<div class="heading" style="left: 10%; top: 75%; color: red; background-color: green;" >IX</div>
+<div class="heading" style="left: 10%; top: 80%; color: red; background-color: yellow;" >X</div>
+<div class="heading" style="left: 10%; top: 85%; color: red; background-color: pink;" >XI</div>
+<div class="heading" style="left: 10%; top: 90%; color: red; background-color: silver;" >XII</div>
+
+      </form>
+
+    </div>
+
+</div>
+   
+</body>
+
+</html>
+
+<!--<iframe src="https://player.vimeo.com/video/483230521" width="480" height="640" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>-->
