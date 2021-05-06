@@ -2,8 +2,8 @@ body {
   background-image: url('assets/bg.jpg');
 background-position: center;
 background-repeat: no-repeat;
-background-size: 100vw 100%;
-min-height: 2900px;
+background-size: 100vw auto;
+height: 4500px;
 width: 100vw;
 border: dashed blue 0px;
 justify-content: center;
@@ -54,7 +54,17 @@ font-family: Metrophobic;
 }
 
 
-
+#phoneBFTF { 
+            overflow: hidden;
+            border:2px solid yellow; background-color: rgba(0,0,0,0.0); 
+            width: 60vw; 
+            height: calc(60vw*0.63); 
+            position: absolute; 
+            right: 9vw; 
+            top: 75vh; 
+            overflow-y: none;
+            overflow-x: none;
+          }
 
 
 .iframinIt {background-color: black;}
