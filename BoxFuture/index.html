@@ -35,14 +35,32 @@
 
     </script>
 
- <!--
 
-            <img src="assets/solobox.png" class="topItems" style="position: absolute; left: -5vw; width: 55%; box-shadow: -10px 40px 3px 0 rgba(255, 0, 0, 0.2), -10px 40px 3px 0 rgba(255, 0, 0, 0.6); opacity: 0.6;">
-            <img src="assets/device.png" class="topItems" style="position: absolute; right: 1vw; top: 10vh;">
-            <img src="assets/phone-solo.png" class="topItems" style="position: absolute; right: 1vw; top: 70vh;">
-            <img src="assets/solobox.png" height="200" width="300" style="position: absolute; left: 30%; top: 10%; box-shadow: -10px 20px 9px 0 rgba(255, 0, 0, 0.2), 10px 40px 13px 0 rgba(0, 0, 255, 0.2);">
+
+           <!--ROMAN NUMERAL I-->
+            <img src="assets/I-forgoodtime.png" class="hoverItems" style="position: absolute; right: 1vw; top: 200vh; box-shadow: -10px 20px 9px 0 rgba(255, 0, 0, 0.2), 10px 40px 13px 0 rgba(0, 0, 255, 0.2);">
+
+
+            <!--ROMAN NUMERAL II   &   VIII--> 
+            <img id="II" src="assets/II-color.jpg" class="hoverItems" style="position: absolute; left: 1vw; top: 200vh;" onclick="imageSwap()">
+            <img id="VIII" src="assets/VIII-color.jpg" class="hoverItems" onclick="imageSwap()" style="position: absolute; left: 1vw; top: 200vh;" >
+            <!--<h1 id="gimme" style="position: absolute; left: 1vw; top: 230vh;" >val</h1> -->
+            <script>
+            var imageStatus = 0;
+            function imageSwap() {
+            		if (imageStatus === 0) {document.getElementById('VIII').style.display = "none";
+        									document.getElementById('II').style.display = "block";
+        									imageStatus = 1;
+
+            		} else {	document.getElementById('VIII').style.display = "block"; 
+            					document.getElementById('II').style.display = "none";
+            					imageStatus = 0;}
+            					//document.getElementById('gimme').innerHTML = imageStatus;
+            				}
+            </script>>
+
             
--->
+
 
                   
 
@@ -79,9 +97,7 @@
         
 
     <!--BOTTOM BEGINS Ends-->
-        <div id="footer">
-            
-        </div>
+       
 </body>
 
 </html>

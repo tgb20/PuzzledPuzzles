@@ -1,9 +1,10 @@
 body {
-  background-image: url('assets/bg.jpg');
-background-position: center;
+background-image: url('assets/bg.jpg');
+background-position: center top;
 background-repeat: no-repeat;
-background-size: 100vw auto;
-height: 4500px;
+background-size: 100vw, auto;
+
+height: 2793px;
 width: 100vw;
 border: dashed blue 0px;
 justify-content: center;
@@ -12,9 +13,11 @@ align-items: center;
 align-content: center;
 vertical-align: center;
 margin: 0 auto;
+padding: 0 0;
 font-family: Metrophobic;
   font-variant-caps: small-caps;
   position: relative;
+  border: solid GreenYellow 5px;
   /*filter: blur(10px);*/
    
 }
@@ -122,7 +125,7 @@ font-family: Metrophobic;
 
 }
 
-.deskItems {
+.hoverItems {
   width: 300px;
   height: auto;
   position: relative;
@@ -131,7 +134,7 @@ font-family: Metrophobic;
 
 }
 
-.deskItems:hover { transform: scale(1.5); z-index: 100;}
+.hoverItems:hover { transform: scale(1.5); z-index: 100;}
 
 
 #rightside 
