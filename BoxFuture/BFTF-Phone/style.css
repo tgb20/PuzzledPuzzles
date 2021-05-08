@@ -12,6 +12,7 @@ body {
   border: solid blue 0px;
   overflow-x: none;
   overflow-y: none;
+  cursor: pointer
 }
 
 canvas {
