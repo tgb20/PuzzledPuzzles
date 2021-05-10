@@ -2,7 +2,7 @@ body{
     background-color: white;
     width: calc(100vh*(16/9));
     height: 100vh;
-    border: 0px solid red;
+    border: 1px solid red;
     color: yellow;
     
         overflow-x: none;
@@ -11,7 +11,7 @@ body{
 
 .main{border: solid orange 0px;}
 .test{width: calc(100vh*(16/9));
-    height: 100vh; margin-top: 0; object-fit: contain; position: absolute; border: dashed blue 0px; z-index: 99;}
+    height: 100vh; margin-top: 0; object-fit: contain; position: absolute; border: dashed blue 1px; z-index: 99;}
 
 
 .letter {
