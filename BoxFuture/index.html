@@ -85,7 +85,7 @@
 <!------------------------------------------------------------------------------------------------------------------->
             <!--ROMAN NUMERAL III--> 
             <img id="IIIa" src="assets/III-europemap.png" class="hoverItems" style="">
-            <img id="IIIb" src="assets/III-directions.png" class="hoverItems" style="position: absolute; right: 7vw; top: 210vw; height: 10%; width: auto;">
+            <img id="IIIb" src="assets/III-directionsI.png" class="hoverItems" style="position: absolute; right: 7vw; top: 210vw; height: 10%; width: auto;">
 
 
 
@@ -125,24 +125,125 @@
 <!------------------------------------------------------------------------------------------------------------------->
 
         
-        
-            
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL VI-->
+
+            <img id="VI" src="assets/VI-polaroid.png" class="hoverItems" 
+                    style=" top: 105vw; 
+                            right: 7vw; 
+                            width: 15vw;  
+                            filter: brightness(130%) drop-shadow(-8px 8px 10px rgba(255,0,0,0.4));
+                            ">     
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL VII-->
+
+            <div id="squareId" class="squareClass" onmousedown="" onclick="playPuzzleVII();"></div>    
+                
+            <button id="buttonId" class="audioPlayClass" onmousedown="playPuzzleVII();" onclick=""></button>
+                
+
+
+            <div hidden id="puzzleVIIrules">
+                <p class="headingAnimation">Leader Lane is one way.</p><p class="restofText">... going North...</p> 
+            </div>
+
+                        <audio id="puzzleVIIAudio">
+                                <source src="assets/puzzleVII.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                        </audio>
+
+
+             <img id="VIIfrontsideOG" src="assets/VII-frontside.png" style="position: absolute; right: 9vw; top: 140vw; width: 30vw; z-index: 1;" >
+            <!--CLICK BG-->
+            <img hidden id="VIIbackside" src="assets/VII-backside.png" class="hoverItems" style="position: absolute; right: 9vw; top: 140vw; width: 30vw" onmousedown="cdSwap()">
+            <img hidden id="VIIfrontside" src="assets/VII-frontside.png" class="hoverItems" style="position: absolute; right: 9vw; top: 140vw; width: 30vw;" onmousedown="cdSwap()">
+            <!--<h1 id="gimme" style="position: absolute; left: 1vw; top: 230vh;" >val</h1> -->
+                    <script>
+                    var cdStatus = 0;
+                    function cdSwap() {
+                            if (cdStatus === 0) {   document.getElementById('VIIbackside').style.display = "none";
+                                                    document.getElementById('VIIfrontside').style.display = "block";
+                                                    cdStatus = 1;} 
+                                            else {  document.getElementById('VIIbackside').style.display = "block"; 
+                                                    document.getElementById('VIIfrontside').style.display = "none";
+                                                    cdStatus = 0;}
+                                                    //document.getElementById('gimme').innerHTML = imageStatus;
+                                                }
+                    </script>
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
 
 <script>
-        
 
-    let storage = window.localStorage;
-    l = storage
 
-    function showPop_up() {
-        if (l === 1) {
-    document.getElementById('popUp').style.display ='block';
-    
+      
+
+var l = 0;
+
+function playPuzzleVII()
+        {
+            var x = document.getElementById("puzzleVIIAudio"); 
+            if (l === 0) {
+            x.play();
+            l = 1;
+          } else {
+            x.pause();
+            l = 0;
+          }
+
+
+          if (x.paused == true) {
+            document.getElementById('buttonId').className = "audioPlayClass";
+          
+                  } else {//document.getElementById('temp').style.display = 'block';
+                          document.getElementById('buttonId').className = "audioPauseClass";
+                }
+       // x.play(); 
+            //document.getElementById("buttonId").style.display = "none";
+            //document.getElementById("squareId").style.display = "none";
+
+        setTimeout(() => {
+                        document.getElementById("squareId").style.display = "none";
+                        document.getElementById("buttonId").style.display = "none";
+                        document.getElementById("VIIfrontsideOG").style.display = "none";
+                        document.getElementById("VIIfrontside").style.display = "block";
+                            }, 65 * 1000);
+
+        }
+
+
+
+
+
+  function myCountingFunction1() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.klikkcount1) {
+      localStorage.klikkcount1 = Number(localStorage.klikkcount1)+1;
+    } else {
+      localStorage.klikkcount1 = 1;
+    }
+    document.getElementById("demo").innerHTML = "You have clicked the button " + localStorage.klikkcount1 + " time(s).";
   } else {
-    document.getElementById('popUp').style.display ='none';
-    l = 0;
-    }
-    }
+    document.getElementById("demo").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+</script>
+
+
+
+<style>
+  
 
     </script>
 
