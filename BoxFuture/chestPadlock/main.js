@@ -82,8 +82,16 @@ $(function () {
                             $this.fadeOut(function () {
                                 $('.welcome-message').fadeIn(() => {
                                     $('#lock-plate').hide();
-                                    $('#revealedimage').show();
-                                    parent.document.getElementById('IIIa').style.display ='none';
+                                    $('#chestOpen').show();
+                                    
+                                    setTimeout(function() 
+                                            {
+                                  
+                                            window.open("../index-boxopened.html", '_blank');
+                                            
+                                            
+                                            }, 1000); 
+
 
 
                                 });
@@ -109,7 +117,9 @@ $(function () {
                     $this.fadeOut(function () {
                         $('.welcome-message').fadeIn(() => {
                             $('#lock-plate').hide();
-                            $('#revealedimage').show();
+                            $('#chestOpen').show();
+                            parent.document.getElementById('IIIa').style.display ='none';
+
                         });
                     });
                 });

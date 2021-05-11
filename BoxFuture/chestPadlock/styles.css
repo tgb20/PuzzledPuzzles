@@ -7,8 +7,8 @@ body{
 	background-image: url(images/chest-padlock.png);
 	background-size: cover;
 	background-position: center;
-	width: 994px;
-	height: 685px;
+	width: 100vw;
+	height: 68.5vw;
 	background-repeat: no-repeat;
   
 }
@@ -59,7 +59,7 @@ body{
 /*BACKGROUND OF THE DIALS*/
 .lock-dial{
 	height: 140%;
-	width: 23%;
+	width: 21%;
 	margin-left: 0.5rem;
 	/*EACH PERCENTAGE IS A DIFFERENT PART OF THE WHEEL FROM TOP*/
 	background: -webkit-linear-gradient(top, #ded2ce 0%,#FFD700 9%,#ededed 18%,#ededed 55%,#969696 82%,#FFD700 91%,#bfaea8 100%);

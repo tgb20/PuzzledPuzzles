@@ -13,11 +13,122 @@
 </head>
 
 <body>
-    <div hidden id="popUp" >
 
-    </div>
 
-    <script>
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--CHAT BOX FLOWXO-->
+            <iframe src="https://fxo.io/m/39nzj6wx" id="flowXOchatbox" style="" allowfullscreen></iframe>
+<!------------------------------------------------------------------------------------------------------------------->
+
+                                    
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--PHONE BOX FLOWXO-->
+            <iframe id="phoneBFTF" src="BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--- CHEST POP-UP --->
+                
+              <!-- Trigger/Open The Modal -->
+            <button id="padlockButton"></button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+            <!-- Modal content -->
+            <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe src="chestPadlock/index.html" id="padlockIframe" style="border: 2px solid black;" allowfullscreen></iframe>
+            </div>
+
+            </div>
+ <!------------------------------------------------------------------------------------------------------------------->               
+
+
+
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+<!---------     ALL THE ROMAN NUMERAL PUZZLES BELOW        ------>
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+           <!--ROMAN NUMERAL I-->
+            <img src="assets/I-forgoodtime.png" class="hoverItems" style="position: absolute; left: 2vw; top: 190vw; box-shadow: -10px 20px 9px 0 rgba(255, 0, 0, 0.2), 10px 40px 13px 0 rgba(0, 0, 255, 0.2);">
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL II   &   VIII--> 
+            <img hidden id="II" src="assets/II-color.jpg" class="hoverItems" style="position: absolute; left: 1vw; top: 90vw;" onclick="imageSwap()">
+            <img id="VIII" src="assets/VIII-color.jpg" class="hoverItems" onclick="imageSwap()" style="position: absolute; left: 1vw; top: 90vw;" >
+            <!--<h1 id="gimme" style="position: absolute; left: 1vw; top: 230vh;" >val</h1> -->
+                    <script>
+                    var imageStatus = 0;
+                    function imageSwap() {
+                    		if (imageStatus === 0) {document.getElementById('VIII').style.display = "none";
+                									document.getElementById('II').style.display = "block";
+                									imageStatus = 1;} 
+                                            else {	document.getElementById('VIII').style.display = "block"; 
+                    					            document.getElementById('II').style.display = "none";
+                    					            imageStatus = 0;}
+                    					            //document.getElementById('gimme').innerHTML = imageStatus;
+                    				            }
+                    </script>
+<!------------------------------------------------------------------------------------------------------------------->
+
+            
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL III--> 
+            <img id="IIIa" src="assets/III-europemap.png" class="hoverItems" style="">
+            <img id="IIIb" src="assets/III-directions.png" class="hoverItems" style="position: absolute; right: 7vw; top: 210vw; height: 10%; width: auto;">
+
+
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL IV-->
+
+            <img id="IV_Mirror" src="assets/IV-mirror.png" class="hoverItems" style="top: 170vw; right: 30vw; width: 40vw;">
+
+
+
+
+
+
+                  
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--ROMAN NUMERAL V--> 
+            
+
+                <img src="assets/fjord.png" style="position: absolute; top: 108vw; left: 0vw; width: 400px; height: auto; z-index: 1;">
+
+                <div class="dropzone" id="al" style="border: solid red 0px; position: absolute; top: 107vw; border: solid white 0px; width: 300px; height: auto; z-index: 99">
+                    <div class='draggable' style="border: dashed pink 0px;">
+                        <img class="graveimg" src="assets/blanco.png" alt="" style="border: dashed brown 0px;">
+                    </div>
+                </div>
+
+
+                
+
+           
+
+            <div class="dropzone" id="be" style="border: solid blue 0px; position: absolute; top: 180vw; left: 65vw">
+                    <div class='draggable' style="border: solid darkblue 0px">
+                        <img class="graveimg" src="assets/orange.png" alt="" style="border: solid lightblue 0px; z-index: 100;">
+                    </div>
+                </div>
+<!------------------------------------------------------------------------------------------------------------------->
+
+        
+        
+            
+
+<script>
         
 
     let storage = window.localStorage;
@@ -37,81 +148,8 @@
 
 
 
-           <!--ROMAN NUMERAL I-->
-            <img src="assets/I-forgoodtime.png" class="hoverItems" style="position: absolute; right: 1vw; top: 200vh; box-shadow: -10px 20px 9px 0 rgba(255, 0, 0, 0.2), 10px 40px 13px 0 rgba(0, 0, 255, 0.2);">
 
-
-            <!--ROMAN NUMERAL II   &   VIII--> 
-            <img id="II" src="assets/II-color.jpg" class="hoverItems" style="position: absolute; left: 1vw; top: 200vh;" onclick="imageSwap()">
-            <img id="VIII" src="assets/VIII-color.jpg" class="hoverItems" onclick="imageSwap()" style="position: absolute; left: 1vw; top: 200vh;" >
-            <!--<h1 id="gimme" style="position: absolute; left: 1vw; top: 230vh;" >val</h1> -->
-            <script>
-            var imageStatus = 0;
-            function imageSwap() {
-            		if (imageStatus === 0) {document.getElementById('VIII').style.display = "none";
-        									document.getElementById('II').style.display = "block";
-        									imageStatus = 1;} 
-                                    else {	document.getElementById('VIII').style.display = "block"; 
-            					            document.getElementById('II').style.display = "none";
-            					            imageStatus = 0;}
-            					            //document.getElementById('gimme').innerHTML = imageStatus;
-            				            }
-            </script>
-
-            
-
-            <!--ROMAN NUMERAL III--> 
-            <img id="IIIa" src="assets/III-europemap.png" class="hoverItems" style="position: absolute; left: 3vw; top: 270vh; height: 30%; width: auto;">
-            <img id="IIIb" src="assets/III-directions.png" class="hoverItems" style="position: absolute; right: 3vw; top: 270vh; height: 30%; width: auto;">
-
-
-                  
-
-<div class="droppingItLikeItsHot" style="position: absolute; bottom: 25%; border: solid white 6px; width: 90vw; height: 10%;">
-
-
-
-                <div class="dropzone" id="al" style="border: solid red 5px;">
-
-                    <div class='draggable' style="border: dashed pink 4px;">
-                        <img class="graveimg" src="assets/blanco.png" alt="" style="border: dashed brown 3px;">
-                    </div>
-
-                </div>
-
-
-                <div class="dropzone" id="be" style="border: solid blue 5px; float: right;">
-                    <div class='draggable' style="border: solid darkblue 4px">
-                        <img class="graveimg" src="assets/orange.png" alt="" style="border: solid lightblue 3px"></div>
-                </div>
-
-</div>
-
-
-        
-        
-
-<iframe src="https://fxo.io/m/39nzj6wx" style="border: 2px solid black; width: 24vw; height: 80vh; border-radius: 18px; position: absolute; right: 9vw; top: 11vh;" allowfullscreen></iframe>
-                        
-
-                  
-<iframe id="phoneBFTF" src="BFTF-Phone/index.html" style="" scrolling="no" allowfullscreen></iframe>
-
-<a href="chestPadlock/index.html">
-<div id="clickablePadlock" style="width: 7vw; height: 20vh; background-color: rgba(0,255,0,0.9); position: absolute; left: 20vw; top: 147vh;"></div></a>
-
- <div hidden id="theOne" style="font-family: 'Libre Baskerville', serif;
-    
-    background-image: url(assets/chest-padlock.png);
-    background-size: cover;
-    background-position: center;
-    width: 330px;
-    height: 230px;
-    background-repeat: no-repeat;
-    position: absolute;
-    left: 0;
-    top: 70vh;"
-    >
+ 
 
 
     
@@ -119,11 +157,9 @@
 
     
 
-</div>
-        
+  
         
 
-    <!--BOTTOM BEGINS Ends-->
        
 </body>
 

@@ -2,9 +2,9 @@ body {
 background-image: url('assets/bg.jpg');
 background-position: center top;
 background-repeat: no-repeat;
-background-size: 100vw, auto;
+background-size: 100vw, calc(100vw * 2.41);
 
-height: 2793px;
+height: calc(100vw * 2.41);
 width: 100vw;
 border: dashed blue 0px;
 justify-content: center;
@@ -17,45 +17,57 @@ padding: 0 0;
 font-family: Metrophobic;
   font-variant-caps: small-caps;
   position: relative;
-  border: solid GreenYellow 5px;
+  border: solid GreenYellow 0px;
   /*filter: blur(10px);*/
    
 }
 
 
-#popUp {
-      background-image: url('assets/box-open.png');
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-      width: 800px;
-      height: 400px;
-      border: dashed blue 0px;
-      justify-content: center;
-      margin: 0 auto;
-      margin-top: 100px;
-      font-family: Metrophobic;
-      border: solid red 2px; 
-      /*
-        filter: blur(10px);
-        background-color: rgba(255,255,255,0.8);
-      */      
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(255,0,0,0.6); /* Black w/ opacity */
+  
 }
 
-#popUpBackground {
-      
-      
-      width: 1600px;
-      height: 1600px;
-     
-      position: absolute;
-      left: 0;
-      top: 0;
-        
-        z-index: 100;
-              
+/* Modal Content/Box */
+.modal-content {
+  background-color: rgb(0,0,255, 0.3);
+  margin: 10% auto; /* 15% from the top and centered */
+  padding: 2%;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  height: auto;
 }
 
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+/*      IFRAMES       */
 
 #phoneBFTF { 
             overflow: hidden;
@@ -65,11 +77,17 @@ font-family: Metrophobic;
             height: calc(65vw*0.63); 
             position: absolute; 
             right: 0vw; 
-            top: 110vh; 
+            top: 58vw; 
             overflow-y: none;
             overflow-x: none;
             cursor: pointer;
           }
+
+
+#flowXOchatbox {
+            border: 2px solid silver; width: 24.7vw; height: 42vw; border-radius: 24px; position: absolute; left: 66.4vw; top: 7.8vw;
+
+            }
 
 #chestPadlock { 
             overflow: hidden;
@@ -81,59 +99,46 @@ font-family: Metrophobic;
             position: absolute; 
             left: 0vw; 
             top: 110vh; 
-            overflow-y: none;
-            overflow-x: none;
-            cursor: pointer;
+            
           }
 
+#padlockIframe {
+          width:1004px;
+          height:685px;
+          overflow-y: none;
+            overflow-x: none;
+            cursor: pointer;
+        }
 
 
-
+iframe {
+  padding: 0px;
+  width: center.width;
+  height: auto;
+  border: dashed white 0px;
+}
 
 .iframinIt {background-color: black;}
 
 
-#header {
-        background-image: url('');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: contain;
-        background-color: rgba(0,0,0,0.0); 
-        border: solid red 0px;
-        height: auto;
-        width: 100vw;
-        justify-content: center;
-        text-align: center;
-        align-items: center;
-        align-content: center;
-        vertical-align: center;
-}
+/*STYLING OF THE PADLOCK TRIGGERING OF THE MODAL*/
+#padlockButton {
+            position: absolute;
+            left: 20vw;
+            top: 75vw;
+            width: 7vw; 
+            height: 9vw; 
+            background-color: rgba(0,0,0,0.0);
+            border: none;
+            }
+
+#padlockButton:hover {
+            scale: 0.9;
+            background-color: rgba(0,255,0,0.1);
+            cursor: pointer;
+            }
 
 
-#vertical-middle
-        {   background-color: rgba(0,0,0,0.0);
-            border: solid red 0px;
-            height: auto; width: 100vw; margin: 0;
-        }
-
-
-#leftside 
-        {   float: left;    
-            background-color: rgba(0,0,0,0.0); 
-            border: solid red 0px;      
-            width: 1vw; height: auto; margin: 0px;
-        }
-
-/*Main Div*/
-#center {
-        width: 61vw;
-        height: auto;     
-        float: left;
-        background-color: rgba(0,0,0,0.0); 
-        border: solid black 0px;  
-        margin: 0px;
-     
-        }
 
         .topItems {
   width: 50%;
@@ -145,16 +150,26 @@ font-family: Metrophobic;
 }
 
 .hoverItems {
-  width: 300px;
+  width: 20vw;
   height: auto;
-  position: relative;
+  position: absolute;
   transition: 800ms;
   box-shadow: rgba(200,0,0,0.9);
+  cursor: pointer;
 
 }
 
-.hoverItems:hover { transform: scale(1.5); z-index: 100;}
+.hoverItems:hover { transform: scale(1.5); z-index: 100; margin-left: 10vw;}
 
+#IIIa       { position: absolute; 
+              left: 3vw; 
+              top: 140vw; 
+              height: 40vw; 
+              width: auto;
+              transition: 1s;
+            }
+
+#IIIa:hover {right: 14vw; transform: scale(1.9);}
 
 #rightside 
 {
@@ -240,17 +255,12 @@ p
 
 
 
-iframe {
-  padding: 0px;
-  width: center.width;
-  height: 69vh;
-  border: dashed white 0px;
-}
 
 
 
 
-/*TO PUSH THE GRAVE DROP ZONE WHERE EVER*/
+/*  ALL THE DRAGGING OVERLAY OVER THE IMAGE FOR PUZZLE FJORD*/
+/*TO PUSH THE GRAVE DROP ZONE WHERE EVER
 #alpha {margin-top: 40%;}
 #echo {margin-top: 35%;}
 #india {margin-top: 35%;}
@@ -292,8 +302,6 @@ background-size: cover;
 }
 
 
-
-
 #solvedtext 
 {
     font-size: xx-large;
@@ -313,11 +321,9 @@ background-size: cover;
 
 
 
-
-
 .graveimg 
 {
-    width: 300px;
+    width: 400px;
     margin: 0px;
     height: auto;
     
