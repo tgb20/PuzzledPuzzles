@@ -1,5 +1,5 @@
 body {
-background-image: url('assets/bg.jpg');
+background-image: url('assets/bg1.jpg');
 background-position: center top;
 background-repeat: no-repeat;
 background-size: 100vw, calc(100vw * 2.41);
@@ -23,11 +23,51 @@ font-family: Metrophobic;
 }
 
 
+.bodyOpenChest {
+background-image: url('assets/bg2.jpg');
+background-position: center top;
+background-repeat: no-repeat;
+background-size: 100vw, calc(100vw * 2.41);
 
+height: calc(100vw * 2.41);
+width: 100vw;
+border: dashed blue 0px;
+justify-content: center;
+text-align: center;
+align-items: center;
+align-content: center;
+vertical-align: center;
+margin: 0 auto;
+padding: 0 0;
+font-family: Metrophobic;
+  font-variant-caps: small-caps;
+  position: relative;
+  border: solid GreenYellow 0px;
+  /*filter: blur(10px);*/
+   
+}
+
+
+/* COORDINATES MODEL */
+
+#coordinatesButton       {     
+  position: absolute;
+  top: 10vw;
+  left: 7vw;
+  width: 40vw;
+  height: 30vw;
+  background-color: rgba(0,0,0,0.0);
+  background-image: url("assets/coordinates-small.png");
+  background-size: cover;
+  border: none;
+  transition: all 200ms ease-in-out;
+  will-change: transform;
+  transform: rotate(45deg);
+              }
 
 /* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
+.coordinatesModalBackground {
+  display: none;  /*Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 1; /* Sit on top */
   left: 0;
@@ -36,18 +76,70 @@ font-family: Metrophobic;
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(255,0,0,0.6); /* Black w/ opacity */
+  background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
+  z-index: 85;
+  
+}
+
+/* Modal Content/Box */
+.coordinates-modal-content {
+  background-image: url("assets/coordinates-small.png");
+  background-size: cover;
+  background-color: rgb(10,0,0, 0.2);
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 2%;
+  border: 1px solid #888;
+  width: 80vw;
+  height: 60vw; /* Could be more or less, depending on screen size */
+  
+}
+
+
+/* The Close Button */
+.closeCoordinates {
+  color: #aaa;
+  float: right;
+  font-size: 2vw;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.closeCoordinates:hover,
+.closeCoordinates:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 71; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(10,0,0,0.6); /* Black w/ opacity */
   
 }
 
 /* Modal Content/Box */
 .modal-content {
-  background-color: rgb(0,0,255, 0.3);
-  margin: 10% auto; /* 15% from the top and centered */
+  background-color: rgb(10,0,0, 0.7);
+  margin: 5% auto; /* 15% from the top and centered */
   padding: 2%;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 90%; /* Could be more or less, depending on screen size */
   height: auto;
+  z-index: 72; /* Sit on top */
 }
 
 /* The Close Button */
@@ -159,7 +251,58 @@ iframe {
 
 }
 
-.hoverItems:hover { transform: scale(1.5); z-index: 100; margin-left: 10vw;}
+.hoverItems:hover { transform: scale(1.5); z-index: 100; margin-left: 10vw;z-index: 100;}
+
+#alamoId {  
+  width: 20vw;
+  height: auto;
+  position: absolute;
+  transition: 800ms;
+  cursor: pointer;
+  transform: rotate(25deg);}
+
+
+#alamoId:hover {  
+  
+  transform: rotate(-15deg) scale(2.0);z-index: 100;}
+
+
+
+#cardId {  
+  width: 20vw;
+  transition: 800ms;
+  cursor: pointer;
+  transform: rotate(-20deg);}
+
+
+#cardId:hover {  
+  
+  transform: rotate(5deg) scale(2.0);
+  z-index: 100;}
+
+
+#leftPostcardId {  
+  width: 15vw;
+  transition: 800ms;
+  cursor: pointer; 
+  transform: rotate(85deg);
+  
+  }
+  
+#leftPostcardId:hover {  
+  transform: rotate(65deg) scale(1.5);z-index: 100;}
+
+#rightPostcardId {  
+  width: 15vw;
+  transition: 800ms;
+  cursor: pointer; 
+  transform: rotate(-17deg);
+  }
+  
+#rightPostcardId:hover {  
+  transform: rotate(-25deg) scale(1.5);z-index: 99;}
+
+
 
 #IIIa       { position: absolute; 
               left: 3vw; 
@@ -279,7 +422,7 @@ p
 
 
 
-#buttonId       {     position: absolute;
+#playButtonId       {     position: absolute;
                       
                       top: 147vw;
                       left: 75vw;

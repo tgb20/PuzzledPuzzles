@@ -87,7 +87,7 @@ $(function () {
                                     setTimeout(function() 
                                             {
                                   
-                                            window.open("../index-boxopened.html", '_blank');
+                                            window.open("../index-box-opened.html", '_blank');
                                             
                                             
                                             }, 1000); 

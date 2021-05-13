@@ -14,6 +14,41 @@
 
 <body>
 
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--COORDINATES -->
+
+            <!-- Trigger/Open The Modal -->
+            <button id="coordinatesButton" style="z-index: 99;"></button>
+
+            <!-- The Modal -->
+            <div id="coordinatesModal" class="coordinatesModalBackground">
+
+            <!-- Modal content -->
+            <div class="coordinates-modal-content"> 
+                <div id="xout" style="width: 5vw; height: 5vw; background-color: transparent; z-index: 100; float: right; background-image: url('assets/x.png'); background-size: cover;" onclick="closeCoordinates()"></div>
+                
+           
+
+            </div>
+
+            </div>
+
+
+                <script>
+                    function closeCoordinates() {
+                                    document.getElementById('coordinatesModal').style.display = "none";
+                                    document.getElementById('coordinatesButton').style.display = "block";
+                                    }
+
+                 
+
+
+                </script>
+
+            
+<!------------------------------------------------------------------------------------------------------------------->
+
+
 
 
 <!------------------------------------------------------------------------------------------------------------------->
@@ -32,18 +67,43 @@
             <!--- CHEST POP-UP --->
                 
               <!-- Trigger/Open The Modal -->
-            <button id="padlockButton"></button>
+            <button id="padlockButton" onclick="chesty();"></button>
 
             <!-- The Modal -->
             <div id="myModal" class="modal">
 
             <!-- Modal content -->
             <div class="modal-content">
-            <span class="close">&times;</span>
+            <div id="yout" style="width: 3vw; height: 3vw; margin: 0; padding: 0; background-color: transparent; z-index: 100; float: right; background-image: url('assets/x.png'); background-size: cover; background-repeat: none;" onclick="closePadlock()"></div>
+
+
             <iframe src="chestPadlock/index.html" id="padlockIframe" style="border: 2px solid black;" allowfullscreen></iframe>
             </div>
 
             </div>
+
+
+            <script>
+                 function chesty() {document.getElementById('myModal').style.display = "block";}
+
+                  function closePadlock() {
+                                    document.getElementById('myModal').style.display = "none";
+                                    document.getElementById('padlockButton').style.display = "block";
+                                    }
+
+                    
+                $( document ).on( 'keydown', function ( e ) {
+                    if ( e.keyCode === 27 ) { // ESC
+                        
+                        document.getElementById('myModal').style.display = "none";
+                        document.getElementById('coordinatesModal').style.display = "none";
+                        document.getElementById('coordinatesButton').style.display = "block";
+                        document.getElementById('padlockButton').style.display = "block";
+                    }
+                });
+
+
+            </script>
  <!------------------------------------------------------------------------------------------------------------------->               
 
 
@@ -104,9 +164,9 @@
             <!--ROMAN NUMERAL V--> 
             
 
-                <img src="assets/fjord.png" style="position: absolute; top: 108vw; left: 0vw; width: 400px; height: auto; z-index: 1;">
+                <img src="assets/fjord.png" style="position: absolute; top: 107.5vw; left: 0vw; width: 400px; height: auto; z-index: 1;">
 
-                <div class="dropzone" id="al" style="border: solid red 0px; position: absolute; top: 107vw; border: solid white 0px; width: 300px; height: auto; z-index: 99">
+                <div class="dropzone" id="al" style="border: solid red 0px; position: absolute; top: 107vw; border: solid white 0px; width: 300px; height: auto; z-index: 70">
                     <div class='draggable' style="border: dashed pink 0px;">
                         <img class="graveimg" src="assets/blanco.png" alt="" style="border: dashed brown 0px;">
                     </div>
@@ -119,7 +179,7 @@
 
             <div class="dropzone" id="be" style="border: solid blue 0px; position: absolute; top: 180vw; left: 65vw">
                     <div class='draggable' style="border: solid darkblue 0px">
-                        <img class="graveimg" src="assets/orange.png" alt="" style="border: solid lightblue 0px; z-index: 100;">
+                        <img class="graveimg" src="assets/orange.png" alt="" style="border: solid lightblue 0px; z-index: 80;">
                     </div>
                 </div>
 <!------------------------------------------------------------------------------------------------------------------->
@@ -140,7 +200,7 @@
 
             <div id="squareId" class="squareClass" onmousedown="" onclick="playPuzzleVII();"></div>    
                 
-            <button id="buttonId" class="audioPlayClass" onmousedown="playPuzzleVII();" onclick=""></button>
+            <button id="playButtonId" class="audioPlayClass" onmousedown="playPuzzleVII();" onclick=""></button>
                 
 
 
@@ -204,10 +264,10 @@ function playPuzzleVII()
 
 
           if (x.paused == true) {
-            document.getElementById('buttonId').className = "audioPlayClass";
+            document.getElementById('playButtonId').className = "audioPlayClass";
           
                   } else {//document.getElementById('temp').style.display = 'block';
-                          document.getElementById('buttonId').className = "audioPauseClass";
+                          document.getElementById('playButtonId').className = "audioPauseClass";
                 }
        // x.play(); 
             //document.getElementById("buttonId").style.display = "none";
@@ -215,7 +275,7 @@ function playPuzzleVII()
 
         setTimeout(() => {
                         document.getElementById("squareId").style.display = "none";
-                        document.getElementById("buttonId").style.display = "none";
+                        document.getElementById("playButtonId").style.display = "none";
                         document.getElementById("VIIfrontsideOG").style.display = "none";
                         document.getElementById("VIIfrontside").style.display = "block";
                             }, 65 * 1000);

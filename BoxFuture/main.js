@@ -1,5 +1,8 @@
 
 
+function clickFunc(parameter){
+  console.log(parameter)
+}
 
 
 
@@ -25,20 +28,55 @@ window.onload = (() => {
         }
     );
 
-    
+
+
+
+// Get the Coordinates modal
+var coordinatesModal = document.getElementById("coordinatesModal");
+
+// Get the button that opens the modal
+var coordinatesBTN = document.getElementById("coordinatesButton");
+
+// Get the <span> element that closes the modal
+var coordinatesSpan = document.getElementsByClassName("closeCoordinates")[0];
+
+// When the user clicks on the button, open the modal
+coordinatesBTN.onclick = function() {
+ coordinatesModal.style.display = "block";
+ coordinatesBTN.style.display = "none";
+}
+
+// When the user clicks on <span> (x), close the modal
+coordinatesSpan.onclick = function() {
+  coordinatesModal.style.display = "none";
+  coordinatesBTN.style.display = "block";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == coordinatesModal) {
+    coordinatesModal.style.display = "none";
+    coordinatesBTN.style.display = "block";
+  }
+}
+
+
+
+
+  
 // Get the modal
 var modal = document.getElementById("myModal");
 
 // Get the button that opens the modal
-var btn = document.getElementById("padlockButton");
+//var btn = document.getElementById("padlockButton");
 
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
-  modal.style.display = "block";
-}
+//btn.onclick = function() {
+//  modal.style.display = "block";
+//}
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -51,6 +89,9 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
+
 
 
     
