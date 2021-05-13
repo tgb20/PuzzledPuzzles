@@ -19,6 +19,7 @@ font-family: Metrophobic;
   position: relative;
   border: solid GreenYellow 0px;
   /*filter: blur(10px);*/
+
    
 }
 
@@ -47,6 +48,66 @@ font-family: Metrophobic;
    
 }
 
+/* COORDINATES MODEL */
+
+
+
+/* The Modal (background) */
+.introVideoModalBackground {
+  /* Hidden by default */
+  position: fixed; /* Stay in place */
+  background-image: url("");
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  z-index: 88;
+  
+  
+}
+
+/* Modal Content/Box */
+.introVideo-modal-content {
+  background-image: url("");
+  background-size: cover;
+  background-color: rgba(255,0,0, 0.2);
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 2%;
+  border: 1px solid #888;
+  width: 80vw;
+  height: 60vw; /* Could be more or less, depending on screen size */
+  
+}
+
+
+/* The Close Button */
+.closeintroVideo {
+  color: #aaa;
+  float: right;
+  font-size: 2vw;
+  font-weight: bold;
+  z-index: 100;
+}
+
+.closeintroVideo:hover,
+.closeintroVideo:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
 
 /* COORDINATES MODEL */
 
@@ -63,13 +124,14 @@ font-family: Metrophobic;
   transition: all 200ms ease-in-out;
   will-change: transform;
   transform: rotate(45deg);
+  z-index: 70;
               }
 
 /* The Modal (background) */
 .coordinatesModalBackground {
   display: none;  /*Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+
   left: 0;
   top: 0;
   width: 100%; /* Full width */
@@ -77,7 +139,7 @@ font-family: Metrophobic;
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.3); /* Black w/ opacity */
-  z-index: 85;
+  z-index: 80;
   
 }
 
@@ -160,6 +222,22 @@ font-family: Metrophobic;
 
 
 /*      IFRAMES       */
+
+
+#introVideoIframe { 
+            overflow: hidden;
+            overflow-y: none;
+            overflow-x: none;
+            border:3px solid pink; 
+            background-color: rgba(0,0,0,0.0); 
+            width: 100%; 
+            height: calc(100vw*0.63); 
+            position: relative; 
+            
+            
+            cursor: pointer;
+          }
+
 
 #phoneBFTF { 
             overflow: hidden;
@@ -582,3 +660,65 @@ background-size: cover;
     
 
 }
+
+
+
+
+
+/* VIDEO LOADING*/
+
+
+
+
+.videoDisplayClass {
+  width: 58vw;
+  height: 35vw;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  margin: 0 auto;
+  position: absolute;
+  opacity: 1;
+
+        top: 13vh;
+        left: 20.6vw;
+    
+  
+  border-radius: 5px;
+  border: solid yellow 0px;
+  color: white;
+  z-index: 100;
+}
+
+.videoDivClass {
+ width: calc(64vh * (16/9));
+        height: 70vh;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  margin: 0 auto;
+  position: absolute;
+  opacity: 1;
+
+        top: 13vh;
+        left: 20.5vw;
+    
+  display: block;
+  border-radius: 5px;
+  border: solid darkgrey 0px;
+  z-index: 100;
+}
+
+
+
+.videoPlayerClass {
+  position: absolute; 
+  left: -0vw;
+        padding-top: 0vh;
+        width: calc(64vh * (16/9));
+        height: 64vh;
+        border: solid orange 0px;
+       
+        }

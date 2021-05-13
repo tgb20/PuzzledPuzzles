@@ -31,6 +31,12 @@ window.onload = (() => {
 
 
 
+
+
+
+
+
+
 // Get the Coordinates modal
 var coordinatesModal = document.getElementById("coordinatesModal");
 
@@ -63,7 +69,7 @@ window.onclick = function(event) {
 
 
 
-  
+  /*
 // Get the modal
 var modal = document.getElementById("myModal");
 

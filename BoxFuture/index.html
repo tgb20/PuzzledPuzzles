@@ -14,18 +14,62 @@
 
 <body>
 
+
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--introVideo -->
+
+            <!-- Trigger/Open The INTRO VIDEO Modal -->
+         
+
+            <!-- The Modal -->
+            <div id="introVideoModal" class="introVideoModalBackground">
+
+            <!-- Modal content -->
+            <div class="introVideo-modal-content"> 
+                
+               
+           <iframe src="https://player.vimeo.com/video/467496691" id="introVideoIframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+
+            </div>
+
+            </div>
+
+
+                <script>
+                    function closeIntroVideo() {
+                                    document.getElementById('introVideoModal').style.display = "none";
+                                    document.getElementById('thebody').style.overflow = "hidden";
+                                    document.getElementById('zout').style.display = "none";
+                                    }
+                    function introVideo {
+                        document.getElementById('introVideoModal').style.display = "block";
+                        document.getElementById('thebody').style.overflow = "hidden";
+                        document.getElementById('zout').style.display = "block";
+                    }
+                 
+
+
+                </script>
+
+            
+<!------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
 <!------------------------------------------------------------------------------------------------------------------->
             <!--COORDINATES -->
 
             <!-- Trigger/Open The Modal -->
-            <button id="coordinatesButton" style="z-index: 99;"></button>
+            <button id="coordinatesButton" style="z-index: 80;" onclick="openCoordinates()"></button>
 
             <!-- The Modal -->
             <div id="coordinatesModal" class="coordinatesModalBackground">
 
             <!-- Modal content -->
             <div class="coordinates-modal-content"> 
-                <div id="xout" style="width: 5vw; height: 5vw; background-color: transparent; z-index: 100; float: right; background-image: url('assets/x.png'); background-size: cover;" onclick="closeCoordinates()"></div>
+                <div id="xout" style="width: 5vw; height: 5vw; background-color: transparent; z-index: 80; float: right; background-image: url('assets/x.png'); background-size: cover;" onclick="closeCoordinates()"></div>
                 
            
 
@@ -40,7 +84,9 @@
                                     document.getElementById('coordinatesButton').style.display = "block";
                                     }
 
-                 
+                    function openCoordinates() {
+                        document.getElementById("coordinatesModal")style.display = "block";
+                    }
 
 
                 </script>
