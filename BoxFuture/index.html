@@ -12,57 +12,36 @@
     <script src="main.js"></script>
 </head>
 
-<body>
-
+<body id="thebody">
 
 <!------------------------------------------------------------------------------------------------------------------->
             <!--introVideo -->
 
             <!-- Trigger/Open The INTRO VIDEO Modal -->
          
-
-            <!-- The Modal -->
-            <div id="introVideoModal" class="introVideoModalBackground">
+            <div hidden id="introVideoModal" class="introVideoModalBackground">
 
             <!-- Modal content -->
             <div class="introVideo-modal-content"> 
                 
-               
+               <div id="zout" style="width: 5vw; height: 5vw; background-color: white; z-index: 100; position: absolute; top: 5vh; right: 5vw; background-image: url('assets/x.png'); background-size: cover; border-radius: 50%;" onclick="closeIntroVideo()"></div>
+           
            <iframe src="https://player.vimeo.com/video/467496691" id="introVideoIframe" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-
+           
             </div>
 
             </div>
 
-
-                <script>
-                    function closeIntroVideo() {
-                                    document.getElementById('introVideoModal').style.display = "none";
-                                    document.getElementById('thebody').style.overflow = "hidden";
-                                    document.getElementById('zout').style.display = "none";
-                                    }
-                    function introVideo {
-                        document.getElementById('introVideoModal').style.display = "block";
-                        document.getElementById('thebody').style.overflow = "hidden";
-                        document.getElementById('zout').style.display = "block";
-                    }
-                 
-
-
-                </script>
 
             
 <!------------------------------------------------------------------------------------------------------------------->
-
-
-
 
 
 <!------------------------------------------------------------------------------------------------------------------->
             <!--COORDINATES -->
 
             <!-- Trigger/Open The Modal -->
-            <button id="coordinatesButton" style="z-index: 80;" onclick="openCoordinates()"></button>
+            <button id="coordinatesButton" style="z-index: 80;" onclick="openCoordinatesFunction()"></button>
 
             <!-- The Modal -->
             <div id="coordinatesModal" class="coordinatesModalBackground">
@@ -77,20 +56,6 @@
 
             </div>
 
-
-                <script>
-                    function closeCoordinates() {
-                                    document.getElementById('coordinatesModal').style.display = "none";
-                                    document.getElementById('coordinatesButton').style.display = "block";
-                                    }
-
-                    function openCoordinates() {
-                        document.getElementById("coordinatesModal")style.display = "block";
-                    }
-
-
-                </script>
-
             
 <!------------------------------------------------------------------------------------------------------------------->
 
@@ -99,7 +64,7 @@
 
 <!------------------------------------------------------------------------------------------------------------------->
             <!--CHAT BOX FLOWXO-->
-            <iframe src="https://fxo.io/m/39nzj6wx" id="flowXOchatbox" style="" allowfullscreen></iframe>
+            <iframe src="https://fxo.io/m/6ax3am7p" id="flowXOchatbox" style="" allowfullscreen></iframe>
 <!------------------------------------------------------------------------------------------------------------------->
 
                                     
@@ -120,10 +85,12 @@
 
             <!-- Modal content -->
             <div class="modal-content">
+            
+            <!-- CLOSE MODAL BUTTON -->
             <div id="yout" style="width: 3vw; height: 3vw; margin: 0; padding: 0; background-color: transparent; z-index: 100; float: right; background-image: url('assets/x.png'); background-size: cover; background-repeat: none;" onclick="closePadlock()"></div>
 
 
-            <iframe src="chestPadlock/index.html" id="padlockIframe" style="border: 2px solid black;" allowfullscreen></iframe>
+            <iframe src="chestPadlock/index.html" id="padlockIframe"  allowfullscreen></iframe>
             </div>
 
             </div>
@@ -148,6 +115,26 @@
                     }
                 });
 
+                function openCoordinatesFunction() {        document.getElementById('coordinatesModal').style.display = "block";}
+
+
+                function openIntroVideoFunction() {
+                        document.getElementById('introVideoModal').style.display = "block";
+                        document.getElementById('thebody').style.overflow = "hidden";
+                        document.getElementById('zout').style.display = "block";
+                    }
+
+
+                function closeIntroVideo() {
+                                    document.getElementById('introVideoModal').style.display = "none";
+                                    document.getElementById('thebody').style.overflow = "auto";
+                                    document.getElementById('zout').style.display = "none";
+                                    }
+
+                function closeCoordinates() {
+                                    document.getElementById('coordinatesModal').style.display = "none";
+                                    document.getElementById('coordinatesButton').style.display = "block";
+                                    }
 
             </script>
  <!------------------------------------------------------------------------------------------------------------------->               
@@ -282,7 +269,106 @@
 <!------------------------------------------------------------------------------------------------------------------->
 <!------------------------------------------------------------------------------------------------------------------->
 
+<!------------------------------------------------------------------------------------------------------------------->
+            <!--USB--> 
+            
+            <img id="usbStick" src="assets/usbStick.png" style="position: absolute; right: 5vw; top: 57vw; width: 10vw;" onclick="insertUSB()">
+            <!--<h1 id="gimme" style="position: absolute; left: 1vw; top: 230vh;" >val</h1> -->
+                    
+            <div id="usbModal" class="modal" style="z-index: 89;">
+                    <div class="usb-modal-content">
 
+                                <div id="zout" style="width: 5vw; height: 5vw; background-color: white; z-index: 100; position: absolute; top: 5vh; right: 5vw; background-image: url('assets/x.png'); background-size: cover; border-radius: 50%;" onclick="closeUSB()"></div>
+
+                                
+                                <video id="videoUSB" autoplay muted style="height: 100%; width: 100%; background-color: red;">
+                                  <source src="assets/usbVideo.mp4" type="video/mp4">
+                                  <source src="movie.ogg" type="video/ogg">
+                                  Your browser does not support the video tag.
+                                </video>
+                                
+
+                            <!-- CODE INPUTTING -->
+                                <div hidden id="codeInputtingDiv" style="border: solid yellow 0px; position: relative;  padding-top: 0vh; margin: 0;">
+
+                                  
+                                <form id="formForCode" class='code_input' style="border: solid blue 0px; width: 100%;">
+                                <h2 style="margin-bottom: 0px; padding-bottom: 0px; font-size: 6vh; ">ENTER CODE BELOW</h2>
+                                <h1 style="color: red; font-family: Times; font-size: 4vh; margin-top: 0px; padding-top: 0px;"> to crack the code</h1>
+
+
+                                <input id="inputRom1" maxlength='8' type="text"/>
+                                <input hidden id="inputRom2" maxlength='1' type="text" inputmode="decimal"/>
+                                <input hidden id="inputRom3" maxlength='1' type="text" inputmode="decimal"/>
+                            
+                                 <br>
+                                <input type="button" class="buttonSubmit" onclick="codeInput()" style="background-color: white;" value="SUBMIT">
+
+                                <p id="wrongAnswerId" style="color: green; z-index: 100; position: absolute; left: 40%; top: 100%; color: white; font-size: 3vh;"></p>
+
+                                  </form>
+
+                                </div><!--END OF CODE INPUTTING-->
+
+
+
+                                <div hidden id="binaryDiv" style="width: 100%; height: 100%; background-color: rgba(0,0,0,0.4); border: white;"><a href="assets/diary.pdf" target="_blank" download>
+                                  <img src="assets/pdfImage.png" class="linkimage" alt="W3Schools" width="104" height="142" style="margin: 13%;">
+                                </a></div>
+
+                    </div>
+            </div>
+
+                    <script>
+                    var usbStatus = 0;
+                    function insertUSB() {
+                                            document.getElementById('usbModal').style.display = "block";
+                                            
+
+                                            setTimeout(function(){ 
+                                                                    document.getElementById('videoUSB').style.display = "none";
+                                                                    document.getElementById('codeInputtingDiv').style.display = "block";
+                                                                }, 2400);
+                                            
+                                             }
+
+
+
+                                            //THE SCRIPT FOR CODE
+
+                          function codeInput() {
+                          var wrongResponse;
+                          var blankResponse;
+                          var puzzleOne =  document.getElementById('inputRom1').value;
+                          var puzzleTwo =  document.getElementById('inputRom2').value;
+                          var puzzleThree =  document.getElementById('inputRom3').value;
+
+
+                             if ((puzzleOne == 'yourewrong') || (puzzleOne == "tea"))  
+                             
+                             {document.getElementById('wrongAnswerId').innerHTML = "yessss";
+                                document.getElementById('codeInputtingDiv').style.display = "none";
+                                document.getElementById('binaryDiv').style.display = "block";
+
+                          
+                                } else {
+                          document.getElementById('wrongAnswerId').innerHTML = "No, that's not right.";
+                          document.getElementById('binaryDiv').innerHTML = "No, that's not right.";
+
+                          //var x = document.getElementById("failureAudio");x.play();
+                          //setTimeout(function() 
+                           // {
+                           // document.getElementById('wrongAnswerId').innerHTML = " "; }, 
+                           // 1000);
+                          } 
+                        }
+
+
+
+                        function closeUSB() {document.getElementById('usbModal').style.display = "none";}
+
+                    </script>
+<!------------------------------------------------------------------------------------------------------------------->
 
 
 
@@ -329,29 +415,9 @@ function playPuzzleVII()
         }
 
 
-
-
-
-  function myCountingFunction1() {
-  if (typeof(Storage) !== "undefined") {
-    if (localStorage.klikkcount1) {
-      localStorage.klikkcount1 = Number(localStorage.klikkcount1)+1;
-    } else {
-      localStorage.klikkcount1 = 1;
-    }
-    document.getElementById("demo").innerHTML = "You have clicked the button " + localStorage.klikkcount1 + " time(s).";
-  } else {
-    document.getElementById("demo").innerHTML = "Sorry, your browser does not support web storage...";
-  }
-}
 </script>
 
 
-
-<style>
-  
-
-    </script>
 
 
 

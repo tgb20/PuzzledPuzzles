@@ -19,7 +19,6 @@ font-family: Metrophobic;
   position: relative;
   border: solid GreenYellow 0px;
   /*filter: blur(10px);*/
-
    
 }
 
@@ -48,7 +47,35 @@ font-family: Metrophobic;
    
 }
 
-/* COORDINATES MODEL */
+.usb-modal-content {
+  background-image: url('assets/blueprint.jpg');
+  background-size: cover;
+  background-color: rgba(255,0,0, 0.2);
+  margin: 3% auto; /* 15% from the top and centered */
+  padding: 0;
+  border: 4px solid white;
+  width: 65.4vw;
+  height: 48.0vw; /* Could be more or less, depending on screen size */
+}
+
+
+/* The Modal (background) */
+.usbModalBackground {
+  display: none;/* Hidden by default */
+  position: fixed; /* Stay in place */
+  background-image: url("");
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+  z-index: 89;
+  
+  
+}
+
 
 
 
@@ -74,8 +101,8 @@ font-family: Metrophobic;
   background-image: url("");
   background-size: cover;
   background-color: rgba(255,0,0, 0.2);
-  margin: 5% auto; /* 15% from the top and centered */
-  padding: 2%;
+  margin: 3% auto; /* 15% from the top and centered */
+  padding: 0;
   border: 1px solid #888;
   width: 80vw;
   height: 60vw; /* Could be more or less, depending on screen size */
@@ -198,8 +225,8 @@ font-family: Metrophobic;
   background-color: rgb(10,0,0, 0.7);
   margin: 5% auto; /* 15% from the top and centered */
   padding: 2%;
-  border: 1px solid #888;
-  width: 90%; /* Could be more or less, depending on screen size */
+  border: 1px solid red;
+  width: 80%; /* Could be more or less, depending on screen size */
   height: auto;
   z-index: 72; /* Sit on top */
 }
@@ -231,11 +258,11 @@ font-family: Metrophobic;
             border:3px solid pink; 
             background-color: rgba(0,0,0,0.0); 
             width: 100%; 
-            height: calc(100vw*0.63); 
+            height: 100%; 
             position: relative; 
-            
-            
             cursor: pointer;
+            padding: 0 0;
+            margin: 0;
           }
 
 
@@ -259,34 +286,18 @@ font-family: Metrophobic;
 
             }
 
-#chestPadlock { 
-            overflow: hidden;
-            border:2px solid yellow; 
-            background-color: rgba(0,0,0,0.0); 
-            width:100vw; 
 
-            height: 685px; 
-            position: absolute; 
-            left: 0vw; 
-            top: 110vh; 
-            
-          }
 
 #padlockIframe {
-          width:1004px;
-          height:685px;
+          width: 100%;
+          height: 80vh;
           overflow-y: none;
             overflow-x: none;
             cursor: pointer;
         }
 
 
-iframe {
-  padding: 0px;
-  width: center.width;
-  height: auto;
-  border: dashed white 0px;
-}
+
 
 .iframinIt {background-color: black;}
 
