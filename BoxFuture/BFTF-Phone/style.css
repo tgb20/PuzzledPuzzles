@@ -97,6 +97,7 @@ color: blue; border: dashed blue 0px}
   position: relative;
   perspective: 800px;
 
+
   
   border: dashed green 0px;
 }
@@ -259,6 +260,7 @@ color: blue; border: dashed blue 0px}
 #keypad .key:active, #keypad .key.active {
   transform-style: preserve-3d;
   transform: scale(0.8);
+  transition-duration: 1s;
 }
 
 
