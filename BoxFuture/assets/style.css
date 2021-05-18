@@ -1,12 +1,12 @@
 body {
-background-image: url('assets/bg1.jpg');
+background-image: url('images/bg1.jpg'), url('');
 background-position: center top;
 background-repeat: no-repeat;
 background-size: 100vw, calc(100vw * 2.41);
 
 height: calc(100vw * 2.41);
 width: 100vw;
-border: dashed blue 0px;
+
 justify-content: center;
 text-align: center;
 align-items: center;
@@ -24,7 +24,7 @@ font-family: Metrophobic;
 
 
 .bodyOpenChest {
-background-image: url('assets/bg2.jpg');
+background-image: url('images/bg2.jpg');
 background-position: center top;
 background-repeat: no-repeat;
 background-size: 100vw, calc(100vw * 2.41);
@@ -48,7 +48,7 @@ font-family: Metrophobic;
 }
 
 .usb-modal-content {
-  background-image: url('assets/blueprint.jpg');
+  background-image: url('images/blueprint.jpg');
   background-size: cover;
   background-color: rgba(255,0,0, 0.2);
   margin: 3% auto; /* 15% from the top and centered */
@@ -160,7 +160,7 @@ font-family: Metrophobic;
   width: 40vw;
   height: 30vw;
   background-color: rgba(0,0,0,0.0);
-  background-image: url("assets/coordinates-small.png");
+  background-image: url("images/coordinates-small.png");
   background-size: cover;
   border: none;
   transition: all 200ms ease-in-out;
@@ -187,7 +187,7 @@ font-family: Metrophobic;
 
 /* Modal Content/Box */
 .coordinates-modal-content {
-  background-image: url("assets/coordinates-blank.png");
+  background-image: url("images/coordinates-blank.png");
   background-size: cover;
   background-color: rgb(10,0,0, 0.2);
   margin: 5% auto; /* 15% from the top and centered */
@@ -286,7 +286,8 @@ font-family: Metrophobic;
 
 
 #flowXOchatbox {
-            border: 2px solid silver; width: 30vw; height: 50.5vw; border-radius: 24px; position: absolute; left: 64.5vw; top: 3vw;
+            border: 2px solid silver; width: 30vw; height: 50.5vw; border-radius: 24px; 
+            position: absolute; left: 64.5vw; top: 3vw;
 
             }
 
@@ -439,23 +440,22 @@ font-family: Metrophobic;
         border: solid red 0px;
 }
 
-.imageDivs {background-image: url(assets/VII.png);
-background-position: center;
-background-repeat: no-repeat;
-
-background-size: cover;
-width: 35vw;
-height: 35vw;
-border: dashed blue 0px;
-justify-content: center;
-text-align: center;
-align-items: center;
-align-content: center;
-vertical-align: center;
-margin-left: 0;
-margin-right: 0;
-margin-top: 0;
-margin-bottom: 0;}
+.imageDivs {background-image: url('images/VII.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+			width: 35vw;
+			height: 35vw;
+			border: dashed blue 0px;
+			justify-content: center;
+			text-align: center;
+			align-items: center;
+			align-content: center;
+			vertical-align: center;
+			margin-left: 0;
+			margin-right: 0;
+			margin-top: 0;
+			margin-bottom: 0;}
 
 #playId { border-left: 9.8vh solid black;
           border-top: 8.5vh solid transparent;
