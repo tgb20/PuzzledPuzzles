@@ -28,7 +28,7 @@ $(() => {
         let letter = changedID[6];
         let word = changedID[11];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
-        let solution = words[0][2] + words[1][3] + words[2][1] + words[3][1] + words[4][2] + words[5][2];
+        let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[5][0];
 
         if (solution === 'aperta') {
             console.log('Solved!');
@@ -47,7 +47,7 @@ $(() => {
         let letter = changedID[6];
         let word = changedID[11];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
-        let solution = words[0][2] + words[1][3] + words[2][1] + words[3][1] + words[4][2] + words[5][2];
+        let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[5][0];
 
         if (solution === 'aperta') {
             console.log('Solved!');

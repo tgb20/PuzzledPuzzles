@@ -10,18 +10,20 @@ body{
 }
 
 .main{border: solid orange 0px;}
-.test{width: 480px; height: 400px; margin-top: 0; object-fit: contain; position: absolute; border: dashed blue 0px; z-index: 99;}
+
 .rebootstyling {width: 480px; height: 240px; margin: 0; object-fit: contain; position: absolute; border: dashed red 0px; z-index: 100;}
 
 .letter {
       font-family: 'Langar', cursive;
       background-color: transparent;
-      border: red;
-      color: white;
-      font-size: 50px;
+      border: solid red 0.2vh;
+      color: black;
+      font-size: 2.7vh;
       text-align: center;
-      width: 35px; height: 75px; position: absolute; 
+      width: 1.5vh; height: calc(1.5vh*2); position: absolute; 
     }
+
+
 
     h3 {font-family: 'Langar', cursive;
       background-color: transparent;
