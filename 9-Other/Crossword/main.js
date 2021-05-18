@@ -1,6 +1,15 @@
 
 
-let words = [['', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', ''], ['', '', '', '', '', ''], ['', '', '', '', '', '', ''], ['', '', '', '', '', '', '']];
+let words = [['', '', '', '', '', '', '', ''],              //   Foie gras
+            ['', '', '', '', '', '', '', '', '', '', ''],       // deviled eggs
+            ['', '', '', '', '', '', '', '', '', '', '', '', '', ''],               // confit de canard
+            ['', '', '', '', '', '', '', '', '', '', '', '', '', ''],           // quiche lorraine
+            ['', '', '', '', '', '', '', '', '', '', '', ''],       // croque madame
+            ['', '', '', '', '', '', '', '', '', '', ''],      // ratatouille
+            ['', '', '', '', '', '', '', '', '', ''],       // creme brule
+           ['', '', '', '', '', ''] // sunday
+            ];      
+
 
 $(() => {
 
@@ -24,9 +33,11 @@ $(() => {
 
     $("input[type='text']").each(function () {
         let changedID = $(this).attr('id');
+        
+        let arrayVer = changedID.split('letter')[1].split('Word');
+        let letter = arrayVer[0];
+        let word = arrayVer[1];
 
-        let letter = changedID[6];
-        let word = changedID[12];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[5][0];
 
@@ -44,10 +55,11 @@ $(() => {
     $("input[type='text']").bind('input', function () {
         let changedID = $(this).attr('id');
 
-        let letter = changedID[6];
-        let word = changedID[12];
+       let arrayVer = changedID.split('letter')[1].split('Word');
+        let letter = arrayVer[0];
+        let word = arrayVer[1];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
-        let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[5][0];
+            let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[5][0];
 
         if (solution === 'aperta') {
             console.log('Solved!');
