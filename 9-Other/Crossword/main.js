@@ -26,7 +26,7 @@ $(() => {
         let changedID = $(this).attr('id');
 
         let letter = changedID[6];
-        let word = changedID[11];
+        let word = changedID[12];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[5][0];
 
@@ -45,7 +45,7 @@ $(() => {
         let changedID = $(this).attr('id');
 
         let letter = changedID[6];
-        let word = changedID[11];
+        let word = changedID[12];
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[5][0];
 
@@ -58,14 +58,14 @@ $(() => {
             $('#reboot').show();
 
             setTimeout(function() 
-    				{
+                    {
       // Where do you want the player to be sent to
                     //window.location.href = 'https://seekbeak.com/v/NkjxBONe1lQ'
                     window.open("https://seekbeak.com/v/NkjxBONe1lQ", '_blank');
                     $('#linking').show();
                     $('#video').hide();
                     $('#solvedchalkboard').show();
-                	}, 7000); 
+                    }, 7000); 
             /*
             setInterval(() => {
                     // Where do you want the player to be sent to
