@@ -83,15 +83,9 @@ $(function () {
                                 $('.welcome-message').fadeIn(() => {
                                     $('#lock-plate').hide();
                                     $('#chestOpen').show();
-                                    
-                                    setTimeout(function() 
-                                            {
-                                  
-                                            window.open("../../index-box-opened.html", '_blank');
-                                            
-                                            
-                                            }, 1000); 
+                                    window.open("../../index-box-opened.html", '_blank');
 
+                                    
 
 
                                 });
@@ -127,3 +121,5 @@ $(function () {
         });
     }
 })
+
+function openChest () {window.open("../../index-box-opened.html", '_blank');}
