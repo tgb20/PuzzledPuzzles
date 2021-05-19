@@ -40,7 +40,7 @@ body{
 
 .main{border: solid orange 0px;}
 
-.rebootstyling {width: 100px; height: 100px; margin: 0; object-fit: contain; position: absolute; bottom: 0; right: 0px; border: dashed blue 3px; z-index: 90;}
+.rebootstyling {width: 100px; height: 100px; margin: 0; object-fit: contain; position: absolute; bottom: 0; right: 0px; border: dashed blue 0px; z-index: 90;}
 
 .letter {
       font-family: 'Langar', cursive;
