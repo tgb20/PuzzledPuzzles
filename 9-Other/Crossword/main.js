@@ -6,8 +6,8 @@ let words = [['', '', '', '', '', '', '', ''],              //   Foie gras
             ['', '', '', '', '', '', '', '', '', '', '', '', '', ''],           // quiche lorraine
             ['', '', '', '', '', '', '', '', '', '', '', ''],       // croque madame
             ['', '', '', '', '', '', '', '', '', '', ''],      // ratatouille
-            ['', '', '', '', '', '', '', '', '', ''],       // creme brule
-           ['', '', '', '', '', ''] // sunday
+            //['', '', '', '', '', '', '', '', '', ''],       // creme brule
+           //['', '', '', '', '', ''] // sunday
             ];      
 
 
@@ -41,7 +41,8 @@ $(() => {
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
         let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[5][0];
 
-        if (solution === 'aperta') {
+
+        if (solution === 'dcqcrc') {
             console.log('Solved!');
             $('#image').hide();
             $('#puzzle').hide();
@@ -61,7 +62,7 @@ $(() => {
         words[word - 1][letter - 1] = $(this).val().toLowerCase();
             let solution = words[0][0] + words[1][0] + words[2][0] + words[3][0] + words[4][0] + words[5][0];
 
-        if (solution === 'aperta') {
+        if (solution === 'dcqcrc') {
             console.log('Solved!');
             $('#image').hide();
             $('#puzzle').hide();
@@ -73,7 +74,7 @@ $(() => {
                     {
       // Where do you want the player to be sent to
                     //window.location.href = 'https://seekbeak.com/v/NkjxBONe1lQ'
-                    window.open("https://seekbeak.com/v/NkjxBONe1lQ", '_blank');
+                    
                     $('#linking').show();
                     $('#video').hide();
                     $('#solvedchalkboard').show();

@@ -9,15 +9,45 @@ body{
         overflow-y: none;
 }
 
+.note { position: absolute; 
+        margin-left: 37vh; 
+        top: 10vh; 
+        width: 4vh;
+        height: 4vh;
+        background-color: rgba(240, 200, 0, 1.0);
+        transition-duration: 500ms;
+        font-size: 0.5vh;
+        padding: 0.3vh;
+        font-family: Indie Flower;
+  
+      }
+
+
+#one {transform: scale(1) rotate(10deg); }
+#one:hover {transform: scale(7) rotate(1deg);z-index: 100;}    
+#two {transform: scale(1) rotate(0deg);}
+#two:hover {transform: scale(7) rotate(1deg);z-index: 100;}
+#three {transform: scale(1) rotate(3deg);}
+#three:hover {transform: scale(7) rotate(1deg);z-index: 100;}
+#four {transform: scale(1) rotate(10deg);}
+#four:hover {transform: scale(7) rotate(1deg);z-index: 100;}
+#five {transform: scale(1) rotate(20deg);}
+#five:hover {transform: scale(7) rotate(1deg);z-index: 100;}
+#six {transform: scale(1) rotate(1deg);}
+#six:hover {transform: scale(7) rotate(-1deg);z-index: 100;}
+
+
+
 .main{border: solid orange 0px;}
 
-.rebootstyling {width: 480px; height: 240px; margin: 0; object-fit: contain; position: absolute; border: dashed red 0px; z-index: 100;}
+.rebootstyling {width: 100px; height: 100px; margin: 0; object-fit: contain; position: absolute; bottom: 0; right: 0px; border: dashed blue 3px; z-index: 90;}
 
 .letter {
       font-family: 'Langar', cursive;
       background-color: transparent;
       border: transparent;
-      border-bottom: solid red;
+      border-bottom: dashed 1px grey;
+      
       color: black;
       font-size: 2.7vh;
       text-align: center;
@@ -46,11 +76,7 @@ body{
   color: white;
 }
 
-
-
 /*video { object-fit: 100%; }*/
-
-
 
 /* Centered text */
 .centered {
