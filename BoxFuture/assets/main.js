@@ -32,7 +32,7 @@ window.onload = (() => {
 
 
 
- //openIntroVideoFunction();
+ openIntroVideoFunction();
 
 
 
