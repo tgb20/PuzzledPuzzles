@@ -1,0 +1,12 @@
+body{
+    background-color: transparent;
+    width: 1200px;
+    height: auto;
+    border: 1px solid red;
+    color: black;
+    overflow-x: none;
+    overflow-y: none;
+    display: inline-block;
+}
+
+.formStylin {background-color: none; color: black;}
