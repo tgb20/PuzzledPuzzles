@@ -1,10 +1,10 @@
 body{
     background-color: transparent;
     width: 1200px;
-    height: auto;
-    border: 1px solid red;
+    height: 600px;
+    border: 0px solid red;
     color: black;
-    overflow-x: none;
+
     overflow-y: none;
     display: inline-block;
 }
