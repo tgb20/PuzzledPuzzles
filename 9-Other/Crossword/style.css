@@ -64,7 +64,7 @@ background-size: cover;
 
 
 .note { position: absolute; 
-        left: 37vh; 
+        left: 46vh; 
         top: 10vh; 
         width: 4vh;
         height: 4vh;
@@ -96,23 +96,12 @@ background-size: cover;
 
 .rebootstyling {width: 100px; height: 100px; margin: 0; object-fit: contain; position: absolute; bottom: 0; right: 0px; border: dashed blue 0px; z-index: 90;}
 
-.letter {
-      font-family: 'Langar', cursive;
-      background-color: transparent;
-      border: transparent;
-      border-bottom: dashed 1px grey;
-      
-      color: black;
-      font-size: 2.7vh;
-      text-align: center;
-      width: 2.3vh; height: calc(1.5vh*2); position: absolute; 
-    }
 
 .xletter {
       font-family: 'Langar', cursive;
       background-color: transparent;
       border: transparent;
-      border-bottom: dashed 1px grey;
+      border-bottom: dashed 2px grey;
       
       color: black;
       font-size: 3vh;
