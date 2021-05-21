@@ -30,9 +30,34 @@
             <div id="one" class="note" style="margin-left: 38vh; margin-top: 12vh;">
             I remember thinking these eggs aren't gonna make it into the promised land
             </div>
-      <!-- WORD ONE - DEVILED EGGS -->
-      <input class="letter" style="  margin-left: 5vh; margin-top: 22vh;"type="text" id="letter1Word1" maxlength="1">
-      <input class="letter" style="  margin-left: 7vh;  margin-top: 22vh;" type="text"id="letter2Word1" maxlength="1">
+      
+      <input class="xletter" style="  margin-left: 5vh; margin-top: 22vh;"type="text" id="starterDeviled" maxlength="7" oninput="thisFunction()">
+      <input class="xletter" style="  margin-left: 15vh;  margin-top: 22vh;" type="text"id="starterEggs" maxlength="4" oninput="thisFunction()">
+      	
+      	<p id="test" style="color: black; margin-left: 20px;">test</p>
+
+
+<script>
+		
+
+	function thisFunction() {
+
+		var wordDeviled = document.getElementById('starterDeviled').value;
+		var wordEggs = document.getElementById('starterEggs').value;
+
+	if ((wordDeviled == "deviled") && (wordEggs == "eggs"))
+	{
+		document.getElementById("test").innerHTML = "yay";
+
+	}
+	else {document.getElementById("test").innerHTML = "nope";}
+
+	}
+
+</script>
+
+
+<!-- WORD ONE - DEVILED EGGS 
       <input class="letter" style="  margin-left: 9vh;  margin-top: 22vh;" type="text"id="letter3Word1" maxlength="1">
       <input class="letter" style="  margin-left: 11vh;  margin-top: 22vh;" type="text" id="letter4Word1" maxlength="1">
       <input class="letter" style="  margin-left: 13vh;  margin-top: 22vh;" type="text"id="letter5Word1" maxlength="1">
@@ -44,7 +69,7 @@
       <input class="letter" style="  margin-left: 25vh;  margin-top: 22vh;" type="text" id="letter10Word1" maxlength="1">
       <input class="letter" style="  margin-left: 27vh;  margin-top: 22vh;" type="text" id="letter11Word1" maxlength="1">
 
-
+-->
 
 
               <!-- MAINS -->
@@ -52,7 +77,7 @@
                <div id="two" class="note" style="margin-left: 40vh; margin-top: 23vh;">
               - I think it was Confit de ... sounded a bit like Canada? The chef said it was some sort of fowl. 
               </div>
-       <!-- WORD TWO - CONFIT DE CANARD -->
+       <!-- WORD TWO - CONFIT DE CANARD 
       <input class="letter" style="  margin-left: 5vh; margin-top: 33vh;" type="text" id="letter1Word2" maxlength="1">
       <input class="letter" style="  margin-left: 7vh; margin-top: 33vh;" type="text" id="letter2Word2" maxlength="1">
       <input class="letter" style="  margin-left: 9vh; margin-top: 33vh;" type="text" id="letter3Word2" maxlength="1">
@@ -71,14 +96,14 @@
       <input class="letter" style="  margin-left: 35vh; margin-top: 33vh;" type="text" id="letter14Word2" maxlength="1">
 
 
-
+-->
 
 
 
                      <div id="three" class="note" style="margin-left: 40vh; margin-top: 28vh;">
                     An egg pie of sorts. With a woman's name. 
                     </div>
-       <!-- WORD THREE - quiche lorraine -->
+       <!-- WORD THREE - quiche lorraine 
       <input class="letter" style="  margin-left: 5vh; margin-top: 37vh;" type="text" id="letter1Word3" maxlength="1">
       <input class="letter" style="  margin-left: 7vh; margin-top: 37vh;" type="text" id="letter2Word3" maxlength="1">
       <input class="letter" style="  margin-left: 9vh; margin-top: 37vh;" type="text" id="letter3Word3" maxlength="1">
@@ -96,12 +121,12 @@
       <input class="letter" style="  margin-left: 33vh; margin-top: 37vh;" type="text" id="letter14Word3" maxlength="1">
 
 
-
+-->
 
                      <div id="four" class="note" style="margin-left: 40vh; margin-top: 35vh; font-size: 0.4vh;">
                       I ate one. A delicious cheese sandwich. The chef told me the Monsieur version has no egg. This one has an egg on it. 
                       </div>
-             <!-- WORD FOUR - CROQUE MADAME -->
+             <!-- WORD FOUR - CROQUE MADAME 
       <input class="letter" style="  margin-left: 5vh; margin-top: 41vh;" type="text" id="letter1Word4" maxlength="1">
       <input class="letter" style="  margin-left: 7vh; margin-top: 41vh;" type="text" id="letter2Word4" maxlength="1">
       <input class="letter" style="  margin-left: 9vh; margin-top: 41vh;" type="text" id="letter3Word4" maxlength="1">
@@ -115,11 +140,11 @@
       <input class="letter" style="  margin-left: 25vh; margin-top: 41vh;" type="text" id="letter10Word4" maxlength="1">
       <input class="letter" style="  margin-left: 27vh; margin-top: 41vh;" type="text" id="letter11Word4" maxlength="1">
       <input class="letter" style="  margin-left: 29vh; margin-top: 41vh;" type="text" id="letter12Word4" maxlength="1">
-
+-->
                     <div id="five" class="note" style="margin-left: 37vh; margin-top: 40vh;">
                       It sounds strange, but I think it was named after a Pixar movie featuring vermin.  
                       </div>
-            <!-- WORD FIVE - RATATOUILLE -->
+            <!-- WORD FIVE - RATATOUILLE 
       <input class="letter" style="  margin-left: 5vh; margin-top: 45vh;" type="text" id="letter1Word5" maxlength="1">
       <input class="letter" style="  margin-left: 7vh; margin-top: 45vh;" type="text" id="letter2Word5" maxlength="1">
       <input class="letter" style="  margin-left: 9vh; margin-top: 45vh;" type="text" id="letter3Word5" maxlength="1">
@@ -132,11 +157,11 @@
       <input class="letter" style="  margin-left: 23vh; margin-top: 45vh;" type="text" id="letter10Word5" maxlength="1">
       <input class="letter" style="  margin-left: 25vh; margin-top: 45vh;" type="text" id="letter11Word5" maxlength="1">
 
-
+-->
                      <div id="six" class="note" style="margin-left: 35vh; margin-top: 50vh;">
                        Chef said it was the most classic of French desserts. Something burnt.
                       </div>
-        <!-- WORD SIX - CREME BRULEE -->
+        <!-- WORD SIX - CREME BRULEE 
       <input class="letter" style="  margin-left: 5vh; margin-top: 60vh;" type="text" id="letter1Word6" maxlength="1">
       <input class="letter" style="  margin-left: 7vh; margin-top: 60vh;" type="text" id="letter2Word6" maxlength="1">
       <input class="letter" style="  margin-left: 9vh; margin-top: 60vh;" type="text" id="letter3Word6" maxlength="1">
@@ -149,7 +174,7 @@
       <input class="letter" style="  margin-left: 23vh; margin-top: 60vh;" type="text" id="letter9Word6" maxlength="1">
       <input class="letter" style="  margin-left: 25vh; margin-top: 60vh;" type="text" id="letter10Word6" maxlength="1">
       
-
+-->
 
 
     </div>

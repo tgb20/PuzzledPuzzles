@@ -1,0 +1,25 @@
+    
+<script>
+  $("input").keydown(function () {
+    if (this.value.length == this.maxLength) {
+      $(this).next('input').focus();
+    }
+
+});
+
+
+function clicked () {
+    alert('clicked!');
+    
+    //some code
+}
+document.onkeydown = function (e) {
+    var keyCode = e.keyCode;
+    if(keyCode == 90) {
+        clicked();
+    }
+};
+btnZ.onclick = clicked;
+
+
+</script>
