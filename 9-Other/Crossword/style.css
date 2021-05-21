@@ -1,16 +1,70 @@
-body{
+.thebody{
     background-color: black;
-    width: 480px;
-    height: 640px;
+    width: 100vw;
+    height: 100vh;
     border: 0px solid red;
     margin-left: auto;
     margin-right: auto;
-        overflow-x: none;
-        overflow-y: none;
+        
 }
 
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="thebody"] {background-color: black;
+    width: 100vw;
+    height: auto;
+    border: 0px solid blue;
+    margin-left: auto;
+    margin-right: auto;}}
+
+
+.backgroundDiv {
+width: 100vw; height: 100vh; position: absolute; left: 0; top: 0; 
+background-image: url('images/laundryBG.jpeg'); 
+background-color: transparent; 
+background-position: center; 
+background-repeat: no-repeat; 
+background-size: cover; 
+filter: blur(3px); 
+z-index: -1;}
+
+
+/* For desktop: */
+.main {
+width: 53.125vh; height: 87.5vh; 
+padding: 0; position: 
+absolute; left: 5vw; bottom: 0; 
+border: solid red 0px; 
+background-image: url('images/sandwichboardsolo.png'); 
+
+background-size: cover; 
+background-repeat: no-repeat;
+
+
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  [class*="main"] {
+    width: 90vw;
+    height: 100vh;
+    border: solid green 0px;
+    background-image: url('images/sandwichboardsolo.png'); 
+
+background-position: center; 
+background-repeat: no-repeat; 
+background-size: cover; 
+
+  }
+}
+
+
+
+
+
 .note { position: absolute; 
-        margin-left: 37vh; 
+        left: 37vh; 
         top: 10vh; 
         width: 4vh;
         height: 4vh;
@@ -38,23 +92,6 @@ body{
 
 
 
-.main{border: solid orange 3px;
-      width: 53.125%; 
-      height: 87.5vh; 
-      padding: 0; position: absolute;
-      left: 10vw; bottom: 0; 
-      background-image: url(images/sandwichboardsolo.png); 
-      background-position: center; 
-      background-size: cover; 
-      background-repeat: no-repeat;"}
-
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="main"] {
-    width: 100%;
-  }
-}
 
 
 .rebootstyling {width: 100px; height: 100px; margin: 0; object-fit: contain; position: absolute; bottom: 0; right: 0px; border: dashed blue 0px; z-index: 90;}
@@ -78,23 +115,28 @@ body{
       border-bottom: dashed 1px grey;
       
       color: black;
-      font-size: 2.7vh;
-      text-align: center;
-      width: 7vh; height: calc(1.5vh*2); position: absolute; 
+      font-size: 3vh;
+      text-align: left;
+      
+      height: 3.5vh; position: absolute; 
     }
 
 
-    h3 {font-family: 'Langar', cursive;
-      background-color: transparent;
-      border: none;
-      color: white;
-      font-size: 50px;
-      text-align: center;}
+h2 {font-family: 'Langar';
+      padding: 0;
+      margin: 0;
+       color: darkgrey;
+      font-size: 4vh;
+      text-align: left;}
 
-      h3:hover {
-      font-size: 53px;
-      transition: 0.3s;
-      }
+
+h3 {font-family: 'Langar', cursive;
+      padding: 0;
+      margin: 0;
+       color: black;
+      font-size: 3vh;
+      text-align: left;}
+
 
   
 
@@ -113,3 +155,6 @@ body{
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+
+
