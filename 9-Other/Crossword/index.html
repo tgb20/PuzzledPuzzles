@@ -25,7 +25,13 @@
 
 
 <script>
-		
+		$(document).ready(function(){
+    $('input').keyup(function(){
+        if(this.value.length==$(this).attr("maxlength")){
+            $(this).next().focus();
+        }
+    });
+});
 
 	function thisFunction() {
 
@@ -46,7 +52,6 @@
 		
 		var wordCreme = document.getElementById('dessertCreme').value.toLowerCase();
 		var wordBrulee = document.getElementById('dessertBrulee').value.toLowerCase();
-
 
 
 
@@ -88,7 +93,7 @@
       	
 
 
-      	<h2 style="position: absolute; left: 4vh; top: 28vh;">MAINS</h2>
+      		<h2 style="position: absolute; left: 4vh; top: 28vh;">MAINS</h2>
       <!-- CONFIT DE CANARD-->
       <input class="xletter" style="  left: 4vh; top: 33vh; width: 9vh;" type="text" id="mainConfit" maxlength="6">
       <input class="xletter" style="  left: 15vh; top: 33vh; width: 4vh;" type="text" id="mainDe" maxlength="2">
@@ -97,9 +102,9 @@
        <!-- WORD THREE - BURGER WITH TRUFFLE FLAKES -->
        
       <input class="xletter" style="  left: 4vh; top: 37vh; width: 10vh;" type="text" id="mainBurger" maxlength="6" oninput="thisFunction()">
-     	<h3 style="position: absolute; left: 16vh; top: 37vh;">w/</h3>
+     		<h3 style="position: absolute; left: 16vh; top: 37vh;">w/</h3>
       <input class="xletter" style="  left: 20vh; top: 37vh; width: 10vh;" type="text" id="mainTruffle" maxlength="7" oninput="thisFunction()">
-      <h3 style="position: absolute; left: 32vh; top: 37vh;">flakes</h3>
+      		<h3 style="position: absolute; left: 32vh; top: 37vh;">flakes</h3>
 
 
       <!-- WORD FOUR - CROQUE MADAME -->
