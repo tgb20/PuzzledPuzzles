@@ -69,8 +69,9 @@
 		(wordBrulee == "brulee")
 		) || (wordEggs == "abba"))
 	{
-		document.getElementById("test").innerHTML = "yay";
+		//document.getElementById("test").innerHTML = "yay";
 		document.getElementById("everything").style.display = "none";
+		document.getElementById("success").style.display = "block";
 	}
 	else {document.getElementById("test").innerHTML = "nope";}
 
@@ -120,7 +121,7 @@
       <input class="xletter" style="  left: 4vh; top: 60vh;width: 9vh;" type="text" id="dessertCreme" maxlength="5" oninput="thisFunction()">
       <input class="xletter" style="  left: 15vh; top: 60vh;width: 9vh;" type="text" id="dessertBrulee" maxlength="6" oninput="thisFunction()">
 
-      	<p id="test" style="color: black;position: absolute; left: 60px; top: -20vh; font-size: 60px; background-color: white;">test</p>
+      	<p id="test" style="color: black;position: absolute; left: 60px; top: -20vh; font-size: 60px;"></p>
 
 
 
@@ -136,7 +137,7 @@
 
 
                      <div id="three" class="note" style="left: 40vh; top: 39vh;">
-                    I remember the chef said it was the most American meal only with black gold on top of it.
+                    I remember the chef said it was the most American fast food only with black gold on top of it.
                     </div>
       
 
@@ -158,6 +159,32 @@
 
     
 </div>
+
+<div id="success" class="main" style="display: none">
+<h3 style="padding: 4vh; font-size: 2.4vh;">YAY!<br>
+
+	You did it. Kevin is so grateful. <br>
+	<br>
+	As promised, the discount codes are below.<br>
+
+	The first puzzle solver to get in here and redeem the code, gets a $40 discount code on our store. 
+	It's first come, first serve. <br><br>
+
+	The code is:<br>
+	"chefpuzzle100"<br><br>
+
+	The next ten solvers can use: <br>
+	"chefpuzzle10". <br><br>
+
+	To redeem, go to <a href="https://puzzled-boxes.myshopify.com/">our Shopify Store</a>
+	<br><br>
+
+	Good job!
+
+
+</h3>
+<div>
+
 
 
 

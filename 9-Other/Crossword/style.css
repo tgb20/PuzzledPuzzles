@@ -99,9 +99,9 @@ background-size: cover;
 
 .xletter {
       font-family: 'Langar', cursive;
-      background-color: transparent;
+      background-color: rgba(0,0,0,0.03);
       border: transparent;
-      border-bottom: dashed 2px grey;
+      border-bottom: dashed 0.2vh grey;
       
       color: black;
       font-size: 3vh;
