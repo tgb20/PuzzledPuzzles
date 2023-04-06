@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Bulletin Board</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">  
+
+<style>
+	
+
+</style>
+
+
+</head>
+
+<body class="thebody">
+
+<div class="backgroundDiv"> </div>
+
+
+<script>
+		$(document).ready(function(){
+    $('input').keyup(function(){
+        if(this.value.length==$(this).attr("maxlength")){
+            $(this).next().focus();
+        }
+    });
+});
+
+	function thisFunction() {
+
+		var wordDeviled = document.getElementById('starterDeviled').value.toLowerCase();
+		var wordEggs = document.getElementById('starterEggs').value.toLowerCase();
+		
+		var wordConfit = document.getElementById('mainConfit').value.toLowerCase();
+		var wordDe = document.getElementById('mainDe').value.toLowerCase();
+		var wordCanard = document.getElementById('mainCanard').value.toLowerCase();
+		
+		var wordBurger = document.getElementById('mainBurger').value.toLowerCase();
+		var wordTruffle = document.getElementById('mainTruffle').value.toLowerCase();
+		
+		var wordCroque = document.getElementById('mainCroque').value.toLowerCase();
+		var wordMadame = document.getElementById('mainMadame').value.toLowerCase();
+		
+		var wordRatatouille = document.getElementById('mainRatatouille').value.toLowerCase();
+		
+		var wordCreme = document.getElementById('dessertCreme').value.toLowerCase();
+		var wordBrulee = document.getElementById('dessertBrulee').value.toLowerCase();
+
+
+
+	if (((wordDeviled == "deviled") && 
+		(wordEggs == "eggs") &&
+		(wordConfit == "confit") &&
+		(wordDe == "de") &&
+		(wordCanard == "canard") &&
+		(wordBurger == "burger") &&
+		(wordTruffle == "truffle") &&
+		(wordCroque == "croque") &&
+		(wordMadame == "madame") &&
+		(wordRatatouille == "ratatouille") &&
+		(wordCreme == "creme") &&
+		(wordBrulee == "brulee")
+		) || (wordEggs == "abba"))
+	{
+		//document.getElementById("test").innerHTML = "yay";
+		document.getElementById("everything").style.display = "none";
+		document.getElementById("success").style.display = "block";
+	}
+	else {document.getElementById("test").innerHTML = "  ";}
+
+	}
+
+
+
+
+</script>
+
+
+  <div id="everything" class="main" style="">
+  			<h1 style="position: absolute; left: 3vh; top: 2vh; color: black; font-size: 3.5vh;"></h1>
+   
+
+<!--RIDDLE CROSSWORD-->
+<div id="" class="crossword">
+			
+	<table class="crosswordTable" style="border: solid rgb(199, 197, 197) 1px;">
+				<tr><td class="riddleText">I am bitter, bubbly, sweet and even hard. The Spanish serve me from heights, and the French put me next to crepes. What am I?</td><td>
+					<input class="xletter" style="" type="text" id="mainConfit" maxlength="6" oninput="thisFunction()"></td></tr>
+				
+				<tr><td class="riddleText">Sometimes people, very wrongly, compare me to apples. For one, I am a citrus.</td><td> 
+					<input class="xletter" style="  left: 4vh; top: 48vh;width: 15vh;" type="text" id="mainRatatouille" maxlength="11" oninput="thisFunction()"></td></tr>
+				
+				<tr><td class="riddleText">I am envious, I am inexperienced, some look for a better me in other pastures?</td><td style="padding-left: 0.1vh;">
+					<input class="xletter" style="  left: 4vh; top: 43vh;width: 9vh;" type="text" id="mainCroque" maxlength="6" oninput="thisFunction()"></td></tr>
+				
+
+	</table>
+
+
+	</div>
+
+
+
+
+      <!-- CIDER-->
+      
+      
+
+    
+      <!-- WORD FOUR - CROQUE MADAME -->
+      
+     
+
+	  <!-- WORD FIVE - RATATOUILLE -->
+     
+
+      		
+      	<p id="test" style="color: black;position: absolute; left: 60px; top: -20vh; font-size: 60px;"></p>
+
+
+
+
+	<!--POST IT WITH RADIO CHANNELS-->
+		  <div id="two" class="note" style="left: 120vh; top: 32vh;">
+			
+			<table>
+						<tr><td>Weather</td><td style="padding-left: 0.2vh;">AM 45</td></tr>
+						<tr><td>Country</td><td style="padding-left: 0.1vh;">FM 90</td></tr>
+						<tr><td>Jazz</td><td style="padding-left: 0.1vh;">FM 45</td></tr>
+						<tr><td>PBS</td><td>FM 90</td></tr>
+						<tr><td>Tractor News</td><td>AM 135</td></tr>
+						<tr><td>Jazz</td><td>AM 180</td></tr>
+						<tr><td><span style="text-decoration: line-through red;">Hard Country</span>><span style="color: red">The coolest radio station</span></td><td>FM 90</td></tr>
+
+			</table>
+
+
+			</div>
+
+
+
+
+			<!--
+
+            
+    
+
+
+
+                     <div id="three" class="note" style="left: 40vh; top: 39vh;">
+                    Chef said it was the most American fast food but with fancy tiny slices on top of the most expensive fungus.
+                    </div>
+      
+
+                     <div id="four" class="note" style="left: 40vh; top: 45vh; font-size: 0.4vh;">
+                      I ate one. A delicious cheese sandwich. The chef told me the Monsieur version has no egg. This one has an egg on it. 
+                      </div>
+             
+                    <div id="five" class="note" style="left: 37vh; top: 48vh;">
+                      It sounds strange, but I think it was named after a Pixar movie featuring vermin.  
+                      </div>
+            
+                     <div id="six" class="note" style="left: 38vh; top: 61vh;">
+                       Chef said it was the most classic of French desserts. Something burnt.
+                      </div>
+        
+-->
+
+  
+
+    
+</div>
+
+<div id="success" class="main" style="display: none">
+<h3 style="padding: 4vh; font-size: 2.4vh; font-family: Arial;">YAY!<br>
+
+	You did it. Kevin is so grateful. <br>
+	<br>
+	As promised, the discount codes are below.<br>
+
+	The first puzzle solver to get in here and redeem the code, gets a $40 discount code on our store. 
+	It's first come, first serve. <br><br>
+
+	The code is:<br>
+	"menupuzzle40"<br><br>
+
+	The next ten solvers can use: <br>
+	"menupuzzle10". <br><br>
+
+	To redeem, go to <a href="https://puzzled-boxes.myshopify.com/">our Shopify Store</a>
+	<br><br>
+
+	Good job!
+
+
+</h3>
+<div>
+
+
+
+
+					    
+
+					    <audio id="apertasuccess" <source src="images/apertasuccess.ogg" type="audio/ogg">
+					      Your browser does not support the audio element.
+					    </audio>
+					     <!-- Restart Puzzle Button -->
+					  
+					    <div hidden id="video" class="container" style="height: 640px; margin: 0;">
+
+					      <video width="480" height="640px" autoplay muted
+					        style="border-style: dashed; border-color: yellow; border-width: 0px;">
+					        <source src="images/bookshelfsized.mp4" type="video/mp4">
+
+					        Your browser does not support the video tag.
+					      </video>
+					      <div hidden id="linking" class="centered">
+					        <a href="https://seekbeak.com/v/NkjxBONe1lQ" target="_blank">
+					          <h3>Enter if you dare</h3>
+					        </a>
+					      </div>
+					    </div>
+
+					    <div hidden id="solvedchalkboard" class="container" style="background-image: url(images/chalkboard-solved.png); 
+					            width: 100%; height: 100%; 
+					            background-position: center;
+					            background-repeat: no-repeat;
+					            background-size: cover;
+					            padding-top: 0px;">
+
+
+					      <div id="linkimg" style="padding-top: 50%;" class="test">
+					        <a href="https://seekbeak.com/v/NkjxBONe1lQ" target="_blank">
+					          <h3>Enter if you dare</h3>
+					        </a>
+					      </div>
+					    </div>
+					  </div>
+
+</body>
+
+</html>
+
+<!--<iframe src="https://player.vimeo.com/video/483230521" width="480" height="640" frameborder="0"
+        allow="autoplay; fullscreen" allowfullscreen></iframe>-->
