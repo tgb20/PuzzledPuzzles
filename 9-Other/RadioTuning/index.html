@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<title>Radio</title>
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+
+
+    <script src="js-toggle.js"></script>
+    
+  </head>
+
+<body>
+
+  <!-- DIAGNOSTIC BANNER-->
+<div hidden id="diagnosticID" style="height: auto; width: 100vw; background-color: black; ">
+  
+<table>
+  <tr><td>Dial Position</td>              <td>  <p id="changeThis" style="color: pink;">Change This</p></td></tr>
+  <tr><td>R_Frequencey</td><td>    <p id="success">Fail</p>       </td></tr>
+  <tr><td>Click Counter</td><td><p id="result">blankity</p></td></tr>
+  <tr><td>Radio Setting</td><td><p id="radio-info">which</p></td></tr>
+  <tr><td>Clear Storage:</td><td><button onclick="window.localStorage.clear(); printResults();" type="button">>Reset Puzzle</button></td></tr>
+  
+  <button id="redbutton" class="key" onmousedown="redButtonClick(); clickCounter();">red</button>
+      
+  <button id="bluebutton" class="key" onmousedown="blueButtonClick(); clickCounter();"></button>
+  
+  <button id="greenbutton" class="key" onmousedown="addCount()"></button>
+      
+
+</table>>  
+</div>
+
+
+
+
+<!--        BEHIND RADIO TO SET FREQUENCY-->
+  <div id="behindFrequencyBar" style="background-color: rgb(28, 27, 27); height: 30px; width: 600px; position: absolute; left: 400px; top: 600px;"></div>
+  <div id="frequencyBar" style="background-color: rgba(255, 230, 0, 0.534); height: 30px; width: 20px; position: absolute; left: 550px; top: 600px;"></div>
+
+
+
+
+
+    <div class="stylin">
+
+
+      <div class="dial">
+        <div class="direction-indicator"></div>
+      </div>
+      
+      <script src='https://s3.amazonaws.com/popmotion.io/static/dist/popmotion.min.js'></script><script  src="dialscript.js"></script>
+      
+      <audio id="click" preload="none">
+        <source src="assets/audio/switch.ogg" type="audio/ogg">
+        <source src="assets/audio/switchClick.wav" type="audio/wav" />  
+      </audio>
+
+
+
+     
+
+    </div> <!-- DIV STYLIN ENDS-->
+
+    <div style="position: absolute; right: 100px;">
+      <input id="stopButton" type="button" value="Stop All Audio" />
+    </div>
+
+
+<!-- TOGGLE BUTTON BEGINS-->      
+      <div class="wrapper">
+        <input type="range" name="points" onchange="filterme(this.value);" min="1" step="1" id="custom-toggle" class="tgl-def" max="3" value="2">
+      </div>
+      <!--<span>All</span>-->
+
+      
+<!-- TOGGLE BUTTON ENDS-->
+
+   
+
+<!--
+<button class="button1" onclick="featureAudio()"></button>
+    
+    <script>
+      function playVideo() {$('#videowindow').trigger('play');}
+    </script>
+-->
+  
+
+
+
+<!-- AUDIO AM-->
+<audio id="AMsong45">
+  <source src="assets/texasradiofish_-_Rockin_Joe.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="AMsong90">
+  <source src="assets/SiobhanD_-_For_You_I_ll_Jazz_There_(feat_DJazzlang)_1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="AMsong135">
+  <source src="assets/storyTime.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="AMsong180">
+  <source src="assets/weather.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+
+<!-- AUDIO FM-->
+<audio id="FMsong45">
+  <source src="assets/Car1.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="FMsong90">
+  <source src="assets/Car2.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="FMsong135">
+  <source src="assets/Car3.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="FMsong180">
+  <source src="assets/weather.wav" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+
+
+
+
+</body>
+
+
+
+
+</html>
