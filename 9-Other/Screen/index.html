@@ -33,7 +33,7 @@
 
 <!-- VIDEO BEGIN-->
 
-<div id="videoDiv" style="background-color:pink;"class="videoDivClass" onclick="playVideo(); myFunction();">
+<div id="videoDiv" style="background-color:pink; z-index: -1;"class="videoDivClass" onclick="playVideo(); myFunction();">
   <video id="videowindow" class="videoPlayerClass" controls="none">
     <source src="assets/vid-182.mp4" type="video/mp4">
   
@@ -57,7 +57,7 @@
   <hr style="background-color: rgba(10,255,0.70); border: rgba(10,255,0.70); height: 0.0vh;">
    
   <input id="inputFirstName" class="inputClass" maxlength='3' type="text" inputmode="decimal" tabindex="1" style="width: 12vh;"/>
-  <input id="inputLastName" class="inputClass" maxlength='10' type="text" inputmode="decimal" tabindex="2" style="width: 36vh;"/>
+  <input id="inputLastName" class="inputClass" maxlength='9' type="text" inputmode="decimal" tabindex="2" style="width: 36vh;"/>
 
 
 <input type="button" class="buttonSubmit" onclick="codeInputting()" style="" value="SUBMIT">

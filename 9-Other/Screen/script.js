@@ -43,6 +43,8 @@ var x = document.getElementById("audioDisplayTrack");x.pause();
 function showSuccess() {
 	document.getElementById('greatSuccess').style.display ='none';
   document.getElementById('videoDiv').style.display ='block';
+  document.getElementById('formDiv').style.display ='none';
+  
   var x = document.getElementById("audioDisplaySuccess"); x.play();
 
 }
