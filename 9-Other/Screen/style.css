@@ -1,43 +1,236 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+
 body {
   background-image: url('');
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
-  
-  width: 100vw;
+  background-color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: auto;
   height: 100vh;
   font-family: sans-serif;
+
 }
 
 #fieldMonitorId {
   background-image: url('assets/fieldmonitor.png');
   background-repeat: no-repeat;
   background-size: contain;
-  
   width: 200vh;
   height: 100vh;
-  font-family: sans-serif;
+  font-family: sans-serif; 
+
+  
+}
+
+.insideMonitor {
+  border: solid rgb(28, 0, 0) 2px;
+  background-color:rgb(0, 16, 0);
+  width: 105vh;
+  height: 64vh;
+  position: absolute;
+  left: 20vh;
+  top: 18vh;
+  padding: 3vh;
   
 }
 
 
-.insideMonitor {
-  border: solid red 2px;
-  background-color:green;
-  width: 75vh;
-  height: 46vh;
-  position: absolute;
-  left: 50vh;
-  top: 38vh;
-  padding: 1vh;
+
+h6 {
+position: relative;     
+font-family: 'Press Start 2P', cursive;
+font-size: 3vh;
+font-weight: normal;
+color: rgba(10,255,0.70);
+font-weight: normal;
+overflow-wrap: break-word; word-wrap: break-word;
+overflow-wrap: break-word; word-wrap: break-word;
+white-space: pre-wrap;      /* CSS3 */   white-space: -moz-pre-wrap; /* Firefox */    white-space: -pre-wrap;     /* Opera <7 */   white-space: -o-pre-wrap;   /* Opera 7 */    
+word-wrap: break-word; 
+text-align: left;
+line-height: 1.2;
+z-index: 1;
+border: solid 0PX red;
 }
 
-#formDiv {display:block}
+.tvText {    
+font-weight: normal; 
+word-wrap: break-word; 
+text-align: left;
+margin-bottom: 3vh;
+}
+
+.typingText {
+border-right: solid 0.6vh rgba(0,255,0,.75);
+white-space: nowrap;
+overflow: hidden;
+background-color: none;
+text-align: left;
+margin-top: 0;
+}
+
+/* Animation */
+.typingText {
+animation: animated-text 4s steps(29,end) 1s 1 normal both,
+          animated-cursor 600ms steps(22,end) infinite;
+}
+
+/* text animation */
+@keyframes animated-text{
+from{width: 0;}
+to{width: 70%;}
+}
+
+/* cursor animations */
+@keyframes animated-cursor{
+from{border-right-color: rgba(0,255,0,.75);}
+to{border-right-color: transparent;}
+}
+
+
+
+
+/*DIV THAT'S THE CONTAINER BEHIND THE TV*/
+.insideTVframe {
+  position: absolute;
+
+  background-color: rgba(0, 0, 0, 1.0);
+  top: 22.7vw;
+  left: 12vw;
+  /*border-radius: 36% 7% 7% 8% / 19% 10% 53% 8%; */
+  width: 33vw;
+
+  height:  26vw;
+  word-wrap: break-word;
+  overflow-wrap: break-word; word-wrap: break-word;
+  white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word; 
+   align-items: left;
+   align-content: left;
+   vertical-align: center;
+   
+}
+
+#formDiv {}
 #successDiv {display:hidden}
+
+.animaker {   
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+
+.videoDivClass {
+ width: calc(60vh * (16/9));
+        height: 70vh;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  margin: 0 auto;
+  position: absolute;
+  opacity: 1;
+
+        top: 13vh;
+        left: 8vw;
+    
+ 
+  border-radius: 5px;
+  border: solid darkgrey 0px;
+
+  
+}
+
+
+
+.videoPlayerClass {
+	position: relative;	
+        width: calc(70vh * (16/9));
+        height: 70vh;
+        border: solid orange 0px;
+       
+        }
+
+
+
+.videoButtonPlayClass {
+      width: 7vh;
+      height: 6vh;
+      border-radius: 1vh;
+      position: absolute;
+      left: 95vh;
+      top: 87.5vh;
+      background-color: rgba(255, 0, 234, 0.382);
+      animation-name: strobing;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
+}
+
+@keyframes strobing {
+  0% {background-color: rgba(255, 0, 234, 0.382);}
+  50% {background-color: rgba(255, 255, 0, 0.567);}
+  100% {background-color: rgba(255, 0, 234, 0.382);}
+}
+
+.videoButtonPauseClass {
+  width: 7vh;
+  height: 6vh;
+  border-radius: 1vh;
+  position: absolute;
+  left: 106.5vh;
+  top: 87.5vh;
+  background-color: rgba(255, 0, 234, 0.382);
+  animation-name: strobing;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
 
 
 
 /*
+
+.videoDisplayClass {
+  width: 58vw;
+  height: 35vw;
+  background-color: black;
+  text-align: center;
+  justify-content: center;
+  vertical-align: center;
+  margin: 0 auto;
+  position: absolute;
+  opacity: 1;
+
+        top: 13vh;
+        left: 20.6vw;
+    
+  
+  border-radius: 5px;
+  border: solid yellow 0px;
+  color: white;
+}
+
+
 .displayClass {
 	width: 58vw;
   height: 35vw;
@@ -62,57 +255,7 @@ body {
 
 
 
-.videoDisplayClass {
-  width: 58vw;
-  height: 35vw;
-  background-color: black;
-  text-align: center;
-  justify-content: center;
-  vertical-align: center;
-  margin: 0 auto;
-  position: absolute;
-  opacity: 1;
 
-        top: 13vh;
-        left: 20.6vw;
-    
-  
-  border-radius: 5px;
-  border: solid yellow 0px;
-  color: white;
-}
-
-.videoDivClass {
- width: calc(64vh * (16/9));
-        height: 70vh;
-  background-color: black;
-  text-align: center;
-  justify-content: center;
-  vertical-align: center;
-  margin: 0 auto;
-  position: absolute;
-  opacity: 1;
-
-        top: 13vh;
-        left: 20.5vw;
-    
-  display: block;
-  border-radius: 5px;
-  border: solid darkgrey 0px;
-  z-index: 90;
-}
-
-
-
-.videoPlayerClass {
-	position: absolute;	
-	left: -0vw;
-        padding-top: 0vh;
-        width: calc(64vh * (16/9));
-        height: 64vh;
-        border: solid orange 0px;
-       
-        }
 
 
 
@@ -233,19 +376,20 @@ form.success input {
 p {color: white}
 
 input {
-  font-family: "Source Sans Pro", sans-serif;
-  font-weight: 50;
+  position: relative;     
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3vh;
+  font-weight: normal;
+  font-weight: 100;
   width: 5vh;
   height: 7vh;
   border: 1px solid #CCCCCC;
   display: block-inline;
-  
   margin-right: 0.2vh;
   outline: 0;
-  
-  color: black;
+  color: rgb(0, 0, 0);
   line-height: 4vh;
-font-size: 5vh;
+  font-size: 5vh;
   text-align: center;
   cursor: pointer;
 }
@@ -257,7 +401,7 @@ input:hover {
 }
 input:focus {
   color: #0091FF;
-  border-color: #0091FF;
+  border-color:  rgba(243, 82, 93, 0.954);
 }
 
  input, input:before, input:after {
@@ -268,6 +412,16 @@ input:focus {
       user-select: initial;
      } 
 
+     .inputClass {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 3vh;
+      font-weight: normal;
+      color: rgba(10,255,0.70);
+      font-weight: normal;
+      background-color: transparent;
+      border: solid 2px rgb(30, 31, 30);
+      border-bottom: dashed 2px rgba(10,255,0.70);
+    }
 
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
@@ -282,14 +436,16 @@ input[type=number] {
 }
 
 .buttonSubmit {
-  display: inline-block;
-  border: solid 0.2vh rgba(255,255,255,0.5);
-  margin-top: 2vh;
+  display: inline-block; 
   padding: 0px;
-  width: 15vh;
+  width: auto;
   border-radius: 5%;
   font-size: 3vh;
-
+  background-color: rgba(10,255,0.70);;
+  color: black;
+  border: solid 0.7vh rgba(243, 82, 93, 0.954);
+  margin-left: 2vh;
+  padding: 1.3vh;
 }
 
 

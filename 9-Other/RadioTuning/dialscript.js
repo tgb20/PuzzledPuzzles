@@ -43,36 +43,37 @@ function startTracking(e) {
 function stopTracking() {
   dialRotation.stop();
 
-  let percentPosition = dialRotation.get() / 36; 
+  let percentPosition = dialRotation.get() / 16; 
   let frequencyPosition = dialRotation.get();
 
   document.getElementById('changeThis').innerHTML = dialRotation.get();
-  document.getElementById('frequencyBar').style.paddingLeft = percentPosition + "%";
+  //document.getElementById('frequencyBar').style.paddingLeft = percentPosition + "%";
+  document.getElementById('frequencyBar').style.marginLeft = percentPosition + "%";
   document.getElementById('success').innerHTML = percentPosition;
  
 
 
 
  // AM SETTINGS AND FREQUENCY 
-  if (frequencyPosition === 45 && localStorage.radioSetting == "AM") {
-    document.querySelectorAll('audio').forEach(el => el.pause());
-    $('#AMsong45').trigger('play');
-    document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
-
-  } else if (frequencyPosition === 90 && localStorage.radioSetting == "AM") {
+  if (frequencyPosition === 90 && localStorage.radioSetting == "AM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
     $('#AMsong90').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
-  
+
   } else if (frequencyPosition === 135 && localStorage.radioSetting == "AM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
     $('#AMsong135').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
+  
+  } else if (frequencyPosition === 180 && localStorage.radioSetting == "AM") {
+    document.querySelectorAll('audio').forEach(el => el.pause());
+    $('#AMsong180').trigger('play');
+    document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
   }
 
-    else if (frequencyPosition === 180 && localStorage.radioSetting == "AM") {
+    else if (frequencyPosition === 225 && localStorage.radioSetting == "AM") {
       document.querySelectorAll('audio').forEach(el => el.pause());
-      $('#AMsong180').trigger('play');
+      $('#AMsong225').trigger('play');
       document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
   }
 
@@ -88,15 +89,15 @@ function stopTracking() {
   $('#FMsong90').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 
-} else if (frequencyPosition === 135 && localStorage.radioSetting == "FM") {
+} else if (frequencyPosition === 180 && localStorage.radioSetting == "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
-  $('#FMsong135').trigger('play');
+  $('#FMsong180').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 }
 
-  else if (frequencyPosition === 180 && localStorage.radioSetting == "FM") {
+  else if (frequencyPosition === 270 && localStorage.radioSetting == "FM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
-    $('#FMsong180').trigger('play');
+    $('#FMsong270').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 }  
 

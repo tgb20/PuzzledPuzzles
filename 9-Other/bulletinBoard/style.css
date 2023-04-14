@@ -1,15 +1,4 @@
 
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="thebody"] {background-color: black;
-    width: 100vw;
-    height: auto;
-    border: 0px solid blue;
-    margin-left: auto;
-    margin-right: auto;}}
-
-
 .backgroundDiv {
 width: 100vw; height: 100vh; position: absolute; left: 0; top: 0; 
 background-image: url('images/orchardBG.png'); 
@@ -25,7 +14,7 @@ z-index: -1;}
 .main {
 width: 90vw; height: 60vw; 
 padding: 0; 
-position: absolute; left: 5vw; bottom: 1vw; 
+position: absolute; left: 5vw; top 2vw; 
 border: solid red 0px; 
 background-image: url('images/bulletinBoard.png'); 
 
@@ -35,78 +24,66 @@ background-repeat: no-repeat;
 
 }
 
-
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="main"] {
-    width: 90vw;
-    height: 100vh;
-    border: solid green 2px;
-    background-image: url('images/bulletinBoard.png'); 
-
-background-position: center; 
-background-repeat: no-repeat; 
-background-size: cover; 
-
-  }
-}
-
-
-
 /*CROSSWORD*/
-.crossword { position: absolute; 
-  left: 55vh; 
-  top: 20vh; 
-  max-width: 60vh;
+.crossword { 
+  position: absolute; 
+  left: 32vw; 
+  top: 12vw; 
+  max-width: 55vw;
   background-color: transparent;
   font-family: Indie Flower;
 }
 
-.riddleText {color:white}
+.riddleText{
+color:white;
+width: 30vw;}
 
 .crosswordTable td{
-  border: solid 1px white
+  border: solid 1px white;
+  width: 50%;
 }
+/*CROSSWORD ENDS*/
+
+
 
 
 
 /*RADIO POST-IT*/
 .note { position: absolute; 
-        left: 46vh; 
-        top: 10vh; 
-        width: 10vh;
-        height: 10vh;
+        left: 76vw; 
+        top: 50vw; 
+        width: 10vw;
+        height: 10vw;
         background-color: rgba(240, 200, 0, 1.0);
         transition-duration: 500ms;
-        font-size: 0.5vh;
-        padding: 0.3vh;
+        font-size: 0.5vw;
+        padding: 0.3vw;
         font-family: Indie Flower;
+        transition-delay: 100ms;
       }
 
 
 
 #two {transform: scale(1) rotate(-5deg);}
-#two:hover {transform: scale(7) rotate(1deg); z-index: 100;}
+#two:hover {transform: scale(3) rotate(1deg); z-index: 100; left:70vw; top: 40vw;}
 
+td {border: solid 0px pink; width: 65%;}
 
+/*RADIO POST IT ENDS*/
 
-
-
-
-.rebootstyling {width: 100px; height: 100px; margin: 0; object-fit: contain; position: absolute; bottom: 0; right: 0px; border: dashed blue 0px; z-index: 90;}
 
 
 .xletter {
       font-family: 'Langar', cursive;
       background-color: rgba(0,0,0,0.03);
       border: transparent;
-      border-bottom: dashed 1vh lightgray;
+      border-bottom: dashed 1vw lightgray;
       
       color:white;
-      font-size: 3vh;
+      font-size: 3vw;
       text-align: left;
-      
-      height: 3.5vh; 
+      letter-spacing: 1vw;
+      height: 3.5vw; 
     }
 
 
@@ -114,7 +91,7 @@ h2 {font-family: 'Langar';
       padding: 0;
       margin: 0;
        color: darkgrey;
-      font-size: 4vh;
+      font-size: 4vw;
       text-align: left;}
 
 
@@ -122,7 +99,7 @@ h3 {font-family: 'Langar', cursive;
       padding: 0;
       margin: 0;
        color: black;
-      font-size: 3vh;
+      font-size: 3vw;
       text-align: left;}
 
 
@@ -134,7 +111,6 @@ h3 {font-family: 'Langar', cursive;
   color: white;
 }
 
-/*video { object-fit: 100%; }*/
 
 /* Centered text */
 .centered {

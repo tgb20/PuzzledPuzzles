@@ -4,104 +4,103 @@
   <meta charset="UTF-8">
   <title>Field Monitor</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Langar&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+  <script type="text/javascript"></script>
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
-<link rel="stylesheet" href="./style.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
-<script type="text/javascript">
-        
-    </script>
+
+  
+
 </head>
 
 <body onload="" onresize="">
+
+  <script>
+    $(document).ready(function(){
+      $('input').keyup(function(){
+          if(this.value.length==$(this).attr("maxlength")){
+              $(this).next().focus();
+          }
+      });
+  });
+  </script>
  
+
+<!-- VIDEO BEGIN-->
+
+<div id="videoDiv" style="background-color:pink;"class="videoDivClass" onclick="playVideo(); myFunction();">
+  <video id="videowindow" class="videoPlayerClass" controls="none">
+    <source src="assets/vid-182.mp4" type="video/mp4">
+  
+    Your browser does not support the video tag.
+  </video> 
+
+</div>
+<!-- VIDEO END-->
+
 <!--FIELD MONITOR DIV-->
-<div id="fieldMonitorId">   
+<div id="fieldMonitorId">   </div>  <!--FIELD MONITOR ENDS-->
 
-
+  
+<!---->
 <div id="formDiv" class="insideMonitor" style="">
 
-  <form id="formForCode" class='code_input' style="border: solid blue 0px; width: 100%;">
-   <p>Agent, please input the name of the trickster in the field below.</p>
+  <form id="formForCode" class="code_input" style="border: solid blue 0px; width: 100%;">
+  <h6 class="tvText">Agent, please let me know when you know the name of the trickster</h6>
+  <h6 class="tvText typingText">And please hurry!</h6> 
+
+  <hr style="background-color: rgba(10,255,0.70); border: rgba(10,255,0.70); height: 0.0vh;">
+   
+  <input id="inputFirstName" class="inputClass" maxlength='3' type="text" inputmode="decimal" tabindex="1" style="width: 12vh;"/>
+  <input id="inputLastName" class="inputClass" maxlength='10' type="text" inputmode="decimal" tabindex="2" style="width: 36vh;"/>
 
 
-    <input id="inputF1" maxlength='1' type="text" inputmode="decimal"/>
-    <input id="inputF2" maxlength='1' type="text" inputmode="decimal"/>
-    <input id="inputF3" maxlength='1' type="text" inputmode="decimal"/>
+<input type="button" class="buttonSubmit" onclick="codeInputting()" style="" value="SUBMIT">
 
-    <input id="inputL1" maxlength='1' type="text" inputmode="decimal"/> 
-    <input id="inputL2" maxlength='1' type="text" inputmode="decimal"/>
-    <input id="inputL3" maxlength='1' type="text" inputmode="decimal"/>
-    <input id="inputL4" maxlength='1' type="text" inputmode="decimal"/>
-    <input id="inputL5" maxlength='1' type="text" inputmode="decimal"/>
-    <input id="inputL6" maxlength='1' type="text" inputmode="decimal"/>
-    <input id="inputL7" maxlength='1' type="text" inputmode="decimal"/>
-    <input id="inputL8" maxlength='1' type="text" inputmode="decimal"/>
-    <input id="inputL9" maxlength='1' type="text" inputmode="decimal"/>
-
-
-    
- <br>
-<input type="button" class="buttonSubmit" onclick="codeInputting()" style="background-color: white;" value="SUBMIT">
-
-<p id="wrongAnswerId" style="color: green; z-index: 100; position: absolute; left: 40%; top: 100%; color: white; font-size: 3vh;"></p>
+<h6 id="wrongAnswerId" class="tvText" style="z-index: 100; position: relative; font-size: 3vh;"></h6>
 
   </form>
 
-</div>  <!--CODE ENTRY ENDS-->>
+</div>  <!--CODE ENTRY ENDS-->
 
 <!-- SUCCESSFULL PUZZLE SOLVING BEGINS-->
 
 <div hidden id="greatSuccess" class="insideMonitor" alt="Loading...">
 
-  <h2 class="delayedEntry" style="margin-bottom: 0px; padding-bottom: 0px; font-size: 6vh;">Congratulations!</h2>
-<h3 class="delayedEntry">We are very impressed with your puzzle solving skills.<br>
-We hope you enjoyed navigating around and getting a feel for the car.<br><br>
+<h6 class="delayedEntry tvText" style="margin-bottom: 0px; padding-bottom: 0px; font-size: 4vh;">Congratulations!</h6>
+<h6 class="delayedEntry tvText">
+We hope you enjoyed the demo.<br>
+This game is a tiny, tiny sample of what we can do. If you are interested in a game for your company, product or marketing launch, let us know by sending us an email to: info@puzzledescapegames.com.<br>
 
-This game is a tiny sample of what we can do. If you are interested in a virtual game for your company, product or marketing launch, let us know by sending us an email to: info@puzzledescapegames.com.<br>
+</h6>
 
-</h3>
+
 
 
 </div>
+
 <!-- SUCCESSFULL PUZZLE SOLVING ENDS-->
 
 
 
 
 
-</div>  <!--FIELD MONITOR ENDS-->
 
   
-
-  <button class="buttonHome" onclick="startAudio();"></button> 
-
-  <button class="buttonVideo" onclick="showVideo();"></button>
- 
-  <button class="buttonMap" onclick="showMap();"></button>
 
    
 
 
+<button id="videoButtonId" class="videoButtonPlayClass" onclick="playVideo(); myFunction();"></button>
 
 
 
 
-<div id="audioDisplay" class="videoDisplayClass">
-<div>
-<video id="video1" class="SoundBarzClass" autoplay="" muted="">
-<source src="assets/soundBarz.mp4" type="video/mp4">
-</video> 
-
-
-
-
-
-
-
-
-
-</div>
 
   <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-autotab/1.9.2/js/jquery.autotab.js'></script>
@@ -114,21 +113,6 @@ This game is a tiny sample of what we can do. If you are interested in a virtual
 
 
 
-<!-- VIDEO BEGIN-->
-
-<div hidden id="videoDiv" class="videoDivClass" onclick="playVideo(); myFunction();">
-        <video hidden id="videowindow" class="videoPlayerClass" controls>
-        <source src="assets/vid-182.mp4" type="video/mp4">
-
-        Your browser does not support the video tag.
-      </video>   
-
-
-
-    </div>
-  <!--<button id="videoButtonId" class="videoButtonPlayClass" onclick="playVideo(); myFunction();"></button>
--->
-<!-- VIDEO END-->
 
 
 
@@ -141,7 +125,9 @@ This game is a tiny sample of what we can do. If you are interested in a virtual
 
 
 
-</div><!-- BG Div -->
+
+
+<!-- BG Div -->
 
 
 <audio id="audioDisplayTrack">
@@ -160,15 +146,10 @@ This game is a tiny sample of what we can do. If you are interested in a virtual
 
 <script>
 
-
 function emailSubmission() {
-  document.getElementById('cs1').style.display ='none';
-}
-
-
+          document.getElementById('cs1').style.display ='none';
+          }
 </script>
-
-
 
 </body>
 </html>

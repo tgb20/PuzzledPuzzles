@@ -14,7 +14,7 @@
 <body>
 
   <!-- DIAGNOSTIC BANNER-->
-<div hidden id="diagnosticID" style="height: auto; width: 100vw; background-color: black; ">
+<div hidden id="diagnosticID" style="height: auto; width: 100vw; background-color: black; position: absolute; top: 0px; z-index: 100;">
   
 <table>
   <tr><td>Dial Position</td>              <td>  <p id="changeThis" style="color: pink;">Change This</p></td></tr>
@@ -28,17 +28,19 @@
   <button id="bluebutton" class="key" onmousedown="blueButtonClick(); clickCounter();"></button>
   
   <button id="greenbutton" class="key" onmousedown="addCount()"></button>
-      
+  <div style="position: absolute; right: 100px;">
+    <input id="stopButton" type="button" value="Stop All Audio" />
+  </div>
 
-</table>>  
+</table>  
 </div>
 
 
 
 
 <!--        BEHIND RADIO TO SET FREQUENCY-->
-  <div id="behindFrequencyBar" style="background-color: rgb(28, 27, 27); height: 30px; width: 600px; position: absolute; left: 400px; top: 600px;"></div>
-  <div id="frequencyBar" style="background-color: rgba(255, 230, 0, 0.534); height: 30px; width: 20px; position: absolute; left: 550px; top: 600px;"></div>
+  <div id="behindFrequencyBar" style="background-color: rgb(28, 27, 27); height: 3vh; width: calc(30vh * (16/9)); position: absolute; left: calc(35vh * (16/9)); top: 71.0vh; z-index:;"></div>
+  <div id="frequencyBar" style="background-color: rgba(255, 230, 0, 0.534); height: 3vh; width: calc(1vh * (16/9)); position: absolute; left: calc(38vh * (16/9)); top: 71vh;"></div>
 
 
 
@@ -64,9 +66,7 @@
 
     </div> <!-- DIV STYLIN ENDS-->
 
-    <div style="position: absolute; right: 100px;">
-      <input id="stopButton" type="button" value="Stop All Audio" />
-    </div>
+   
 
 
 <!-- TOGGLE BUTTON BEGINS-->      
@@ -92,44 +92,44 @@
 
 
 <!-- AUDIO AM-->
-<audio id="AMsong45">
-  <source src="assets/texasradiofish_-_Rockin_Joe.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
 <audio id="AMsong90">
-  <source src="assets/SiobhanD_-_For_You_I_ll_Jazz_There_(feat_DJazzlang)_1.mp3" type="audio/mpeg">
+  <source src="assets/weather.wav" type="audio/wav">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="AMsong135">
-  <source src="assets/storyTime.wav" type="audio/wav">
+  <source src="assets/texasradiofish_-_Rockin_Joe.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="AMsong180">
-  <source src="assets/weather.wav" type="audio/wav">
+  <source src="assets/tractornews.mp3" type="audio/wav">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="AMsong225">
+  <source src="assets/riddle.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
 
 <!-- AUDIO FM-->
 <audio id="FMsong45">
-  <source src="assets/Car1.mp3" type="audio/mpeg">
+  <source src="assets/SiobhanD_-_For_You_I_ll_Jazz_There_(feat_DJazzlang)_1.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="FMsong90">
-  <source src="assets/Car2.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<audio id="FMsong135">
-  <source src="assets/Car3.mp3" type="audio/mpeg">
+  <source src="assets/PBS.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="FMsong180">
+  <source src="assets/Car3.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<audio id="FMsong270">
   <source src="assets/weather.wav" type="audio/wav">
   Your browser does not support the audio element.
 </audio>

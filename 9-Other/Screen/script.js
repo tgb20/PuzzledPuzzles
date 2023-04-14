@@ -41,21 +41,21 @@ var x = document.getElementById("audioDisplayTrack");x.pause();
 }
 
 function showSuccess() {
-	document.getElementById('greatSuccess').style.display ='block';
-	var x = document.getElementById("audioDisplaySuccess"); x.play();
-  document.getElementById('audioDisplay').style.display ='none';
-  document.getElementById('iFrameId').style.display ='none';
-  document.getElementById('videoDiv').style.display ='none';
+	document.getElementById('greatSuccess').style.display ='none';
+  document.getElementById('videoDiv').style.display ='block';
+  var x = document.getElementById("audioDisplaySuccess"); x.play();
+
 }
 
 
 function showVideo() {
   document.getElementById('greatSuccess').style.display ='none';
-	document.getElementById('audioDisplay').style.display ='none';
-  document.getElementById('videoDiv').style.display ='block';
-  document.getElementById('iFrameId').style.display ='none';
-  document.getElementById('romanII').style.display ='none';
+  document.getElementById('videoDiv').style.display ='block'; 
+
   var x = document.getElementById("audioDisplayTrack");x.pause();
+  setInterval(() => {
+    document.getElementById('navigationInstId').style.display ='none';
+  }, 3 * 1000);
   }
 
 
@@ -71,9 +71,7 @@ function showMap() {
       document.getElementById('videoDiv').style.display ='none';
       document.getElementById('navigationInstId').style.display ='block';}, 
     100);       
-           setInterval(() => {
-                          document.getElementById('navigationInstId').style.display ='none';
-                        }, 3 * 1000);
+           
        
     }
 
@@ -110,30 +108,34 @@ function playVideo() {
 
 //THE SCRIPT FOR CODE
 
+
+
+
   function codeInputting() {
   var wrongResponse;
   var blankResponse;
-  var puzzleOne =  document.getElementById('inputF1').value;
-  var puzzleTwo =  document.getElementById('inputF2').value;
-  var puzzleThree =  document.getElementById('inputF3').value;
-  var puzzleFour =  document.getElementById('inputL1').value;
+  
+  var puzzleOne =  document.getElementById('inputFirstName').value.toLowerCase();
+  var puzzleTwo =  document.getElementById('inputLastName').value.toLowerCase();
+  
 
-     if ( (puzzleOne == 'R') && 
-          (puzzleTwo == 'O') && 
-          (puzzleThree == 'N') &&
-          
-          (puzzleFour == 'A')
+
+     if ( (puzzleOne == 'ron') && 
+          (puzzleTwo == 'appleseed') 
           
         )  
      
-     {showSuccess();
+     {document.getElementById('formForCode').style.display ='none';
+      showSuccess();
+
+
   } else {
   document.getElementById('wrongAnswerId').innerHTML = "No, that's not right.";
   var x = document.getElementById("failureAudio");x.play();
   setTimeout(function() 
     {
     document.getElementById('wrongAnswerId').innerHTML = " "; }, 
-    1000);
+    2000);
   }
  
 }

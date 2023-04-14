@@ -1,6 +1,8 @@
 function filterme(value) {
     value = parseInt(value, 10); // Convert to an integer
     
+    //while (value === 2) {document.querySelectorAll('audio').forEach(el => el.pause());}
+
     if (value === 1) {
       $('#custom-toggle').removeClass('tgl-off', 'tgl-def').addClass('tgl-on');
       $('#radio-info').text('AM Radio');
