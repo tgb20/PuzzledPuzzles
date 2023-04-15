@@ -1,24 +1,24 @@
 
-
 .backgroundDiv {
-width: 108vw; height: 100vh; position: absolute; left: 0; top: 0; 
+width: 100vw; height: 100vh; position: absolute; left: 0; top: 0; 
 background-image: url('images/orchardBG.png'); 
 background-color: transparent; 
 background-position: center; 
 background-repeat: no-repeat; 
-background-size: 108vw 102vh; 
+background-size: cover; 
 filter: blur(3px); 
 z-index: -1;}
 
 
 /* For desktop: */
 .main {
-width: 120vh; height: 90vh; 
+width: 90vw; height: 60vw; 
 padding: 0; 
-position: absolute; left: 5vh; top: 2vh; 
+position: absolute; left: 5vw; top 2vw; 
 border: solid red 0px; 
 background-image: url('images/bulletinBoard.png'); 
-background-size: 120vh 90vh; 
+
+background-size: 90vw 60vw; 
 background-repeat: no-repeat;
 
 
@@ -27,18 +27,16 @@ background-repeat: no-repeat;
 /*CROSSWORD*/
 .crossword { 
   position: absolute; 
-  left: 40vh; 
-  top: 17vh; 
-  width: 75vh;
-  height: 50vh;
+  left: 32vw; 
+  top: 12vw; 
+  max-width: 55vw;
   background-color: transparent;
   font-family: Indie Flower;
-  font-size: 3vh;
 }
 
 .riddleText{
 color:white;
-width: 40vh;}
+width: 30vw;}
 
 .crosswordTable td{
   border: solid 1px white;
@@ -52,14 +50,14 @@ width: 40vh;}
 
 /*RADIO POST-IT*/
 .note { position: absolute; 
-        left: 16vh; 
-        top: 50vh; 
-        width: 10vh;
-        height: 10vh;
+        left: 76vw; 
+        top: 50vw; 
+        width: 10vw;
+        height: 10vw;
         background-color: rgba(240, 200, 0, 1.0);
         transition-duration: 500ms;
-        font-size: 0.5vh;
-        padding: 0.3vh;
+        font-size: 0.5vw;
+        padding: 0.3vw;
         font-family: Indie Flower;
         transition-delay: 100ms;
       }
@@ -67,7 +65,7 @@ width: 40vh;}
 
 
 #two {transform: scale(1) rotate(-5deg);}
-#two:hover {transform: scale(4) rotate(1deg); z-index: 100; left:24vh; top: 40vh;}
+#two:hover {transform: scale(3) rotate(1deg); z-index: 100; left:70vw; top: 40vw;}
 
 td {border: solid 0px pink; width: 65%;}
 
@@ -79,14 +77,13 @@ td {border: solid 0px pink; width: 65%;}
       font-family: 'Langar', cursive;
       background-color: rgba(0,0,0,0.03);
       border: transparent;
-      border-bottom: solid 1vh lightgray;
-      margin-left: 1vh;
+      border-bottom: dashed 1vw lightgray;
+      
       color:white;
-      font-size: 8vh;
+      font-size: 3vw;
       text-align: left;
-      letter-spacing: 1vh;
-      height: 8vh; 
-      width: 30vh;
+      letter-spacing: 1vw;
+      height: 3.5vw; 
     }
 
 
@@ -94,7 +91,7 @@ h2 {font-family: 'Langar';
       padding: 0;
       margin: 0;
        color: darkgrey;
-      font-size: 4vh;
+      font-size: 4vw;
       text-align: left;}
 
 
@@ -102,7 +99,7 @@ h3 {font-family: 'Langar', cursive;
       padding: 0;
       margin: 0;
        color: black;
-      font-size: 3vh;
+      font-size: 3vw;
       text-align: left;}
 
 
