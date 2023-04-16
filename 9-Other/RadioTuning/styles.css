@@ -21,32 +21,22 @@
 
 body{
 	font-family: 'Libre Baskerville', serif;
-	
 	background-image: url(assets/cherrywood.jpeg);
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	width: calc(100vh * (16/9));
-	height: 100vh;
+	width: auto;
+	height: auto;
 	border: dashed blue 0px;
-	justify-content: center;
-	text-align: center;
-	align-items: center;
-	align-content: center;
-	vertical-align: center;
-	margin-left: 0;
-	margin-right: 0;
-	margin-top: 0;
-	margin-bottom: 0;
-
-	padding-bottom: 0;
-	display: relative;
+	
   
 }
 
 
 .stylin {
-				position: absolute;	
+				position: absolute;
+				left: 0;
+				top: 0;	
 				background-image: url(assets/radio-tight.png);
 				background-position: center;
 				background-repeat: no-repeat;
