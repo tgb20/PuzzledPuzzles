@@ -70,44 +70,47 @@
 
 <!-- SUCCESSFULL PUZZLE SOLVING BEGINS-->
 
-<div hidden id="greatSuccess" class="insideMonitor" alt="Loading...">
+<div hidden id="greatSuccess" class="insideMonitor" style="" alt="Loading...">
 
-<!-- VIDEO INTRO BEGIN-->
+<!-- VIDEO SUCCESS BEGIN-->
 
-<div id="videoDivSuccess" style="background-color:pink; z-index: -1;"class="videoDivClass" onclick="playVideoSuccess(); myFunction();">
-  <video id="videowindowSuccess" class="videoPlayerClass" controls="none">
+<div id="videoDivSuccess" style=""class="videoDivClass" onclick="playVideoSuccess(); myFunction();">
+  <video id="videowindowSuccess" class="videoPlayerClass" controls="none" onended="yesFunction()">
     <source src="assets/congrats.MOV" type="video/mp4">
   
     Your browser does not support the video tag.
   </video> 
 
+  <button id="videoButtonSuccessId" class="vbPlayClass" onclick="playCongrats(); myFunction();"></button>
+
+
 </div>
+
+<script>
+  function yesFunction() {
+  document.getElementById('videoDivSuccess').style.display ='none';
+  document.getElementById('videoButtonSuccessId').style.display ='none';
+  document.getElementById('textAfterCongratsVideoId').style.display ='block';
+
+  }
+</script>
 <!-- VIDEO END-->
 
-
+<div hidden id="textAfterCongratsVideoId">
 <h6 class="delayedEntry tvText" style="margin-bottom: 0px; padding-bottom: 0px; font-size: 4vh;">Congratulations!</h6>
 <h6 class="delayedEntry tvText">
 We hope you enjoyed the demo.<br>
 This game is a tiny, tiny sample of what we can do. If you are interested in a game for your company, product or marketing launch, let us know by sending us an email to: info@puzzledescapegames.com.<br>
 
 </h6>
-
+</div>
 
 
 
 </div>
 
 <!-- SUCCESSFULL PUZZLE SOLVING ENDS-->
-
-
-
-
-
-
-  
-
    
-
 
 <button id="videoButtonId" class="videoButtonPlayClass" onclick="playVideo(); myFunction();"></button>
 

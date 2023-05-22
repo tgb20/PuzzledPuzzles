@@ -41,11 +41,13 @@ var x = document.getElementById("audioDisplayTrack");x.pause();
 }
 
 function showSuccess() {
-	document.getElementById('greatSuccess').style.display ='none';
-  document.getElementById('videoDiv').style.display ='block';
+	document.getElementById('greatSuccess').style.display ='block';
+  document.getElementById('videoDivSuccess').style.display ='block';
   document.getElementById('formDiv').style.display ='none';
+  document.getElementById('videoButtonId').style.display ='none';
+  document.getElementById('videoButtonSuccessId').style.display ='block';
   
-  var x = document.getElementById("audioDisplaySuccess"); x.play();
+  //var x = document.getElementById("audioDisplaySuccess"); x.play();
 
 }
 
@@ -61,28 +63,18 @@ function showVideo() {
   }
 
 
-function showMap() {
-    var x = document.getElementById("audioDisplayTrack");x.pause();
-    $('#videowindow').trigger('pause');
-    setTimeout(function() 
-    {
-      document.getElementById('iFrameId').style.display ='block';
-      document.getElementById('audioDisplay').style.display ='none';
-      document.getElementById('romanII').style.display ='block';
-      document.getElementById('greatSuccess').style.display ='none';
-      document.getElementById('videoDiv').style.display ='none';
-      document.getElementById('navigationInstId').style.display ='block';}, 
-    100);       
-           
-       
-    }
 
+function myFunction() {    
+    //document.getElementById('formDiv').style.display ='block';
+    //document.getElementById('videowindow').style.display ='none';
+}
 
 
 
 
 function playVideo() {
   if (l === 0) {
+
     $('#videowindow').trigger('play');
     l = 1;
   } else {
@@ -90,16 +82,48 @@ function playVideo() {
     l = 0;
   }
 
+
   if (vid.paused == true) {
     document.getElementById('videoButtonId').className = "videoButtonPlayClass";
-  
+
           } else {//document.getElementById('temp').style.display = 'block';
                   document.getElementById('videoButtonId').className = "videoButtonPauseClass";
+
+        }
+} 
+
+
+function playCongrats() {
+  if (l === 0) {
+
+    $('#videowindowSuccess').trigger('play');
+    l = 1;
+  } else {
+    $('#videowindowSuccess').trigger('pause');
+    l = 0;
+  }
+
+
+  if (vid.paused == true) {
+    document.getElementById('videoButtonSuccessId').className = "vbPlayClass";
+
+          } else {//document.getElementById('temp').style.display = 'block';
+                  document.getElementById('videoButtonSuccessId').className = "vbPauseClass";
+
         }
 } 
 
 
 
+document.getElementById('videowindow').addEventListener('ended',myHandler,false);
+function myHandler(e) {
+    // What you want to do after the event
+    document.getElementById('videowindow').style.display ='none';
+    document.getElementById('videoDiv').style.display ='none';
+    document.getElementById('formDiv').style.zIndex ='1';
+    document.getElementById('videoButtonId').style.display ='none';
+
+}
 
 
 
@@ -141,3 +165,6 @@ function playVideo() {
   }
  
 }
+
+
+

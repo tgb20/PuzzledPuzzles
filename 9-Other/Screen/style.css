@@ -124,7 +124,10 @@ to{border-right-color: transparent;}
    
 }
 
-#formDiv {display:block}
+#formDiv {
+  display:block;
+  z-index: -2;
+  }
 #successDiv {display:hidden}
 
 .animaker {   
@@ -166,6 +169,7 @@ to{border-right-color: transparent;}
 
   
 }
+
 
 
 
@@ -212,70 +216,53 @@ to{border-right-color: transparent;}
 }
 
 
+#videoDivSuccess{position:absolute; left: 0; top: 0;}
+#videowindowSuccess{z-index: 1;}
+
+.vbPlayClass {
+  width: 7vh;
+  height: 6vh;
+  border-radius: 1vh;
+  position: absolute;
+  left: 79vh;
+  top: 74.8vh;
+  background-color: black;
+ 
+  background-color: rgba(255, 0, 234, 0.382);
+  animation-name: strobingSuccess;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+.vbnPauseClass {
+  width: 7vh;
+  height: 6vh;
+  border-radius: 1vh;
+  position: absolute;
+  left: 124vh;
+  top: 74.8vh;
+  background-color: rgba(255, 0, 234, 0.382);
+  animation-name: strobingSuccess;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes strobingSuccess {
+  0% {background-color: rgba(255, 0, 234, 0.382);}
+  50% {background-color: rgba(255, 255, 0, 0.567);}
+  100% {background-color: rgba(255, 0, 234, 0.382);}
+}
+
+
+
+
+
 
 
 
 
 /*
 
-.videoDisplayClass {
-  width: 58vw;
-  height: 35vw;
-  background-color: black;
-  text-align: center;
-  justify-content: center;
-  vertical-align: center;
-  margin: 0 auto;
-  position: absolute;
-  opacity: 1;
-
-        top: 13vh;
-        left: 20.6vw;
-    
-  
-  border-radius: 5px;
-  border: solid yellow 0px;
-  color: white;
-}
-
-
-.displayClass {
-	width: 58vw;
-  height: 35vw;
-  background-color: black;
-  text-align: center;
-  justify-content: center;
-  vertical-align: center;
-  margin: 0 auto;
-  position: absolute;
-  opacity: 0.9;
-
-        top: 12.8vh;
-        left: 20.6vw;
-    
-  display: block;
-  border-radius: 5px;
-  border: solid yellow 0px;
-  color: white;
-}
-
-
-
-
-
-
-
-
-
-.SoundBarzClass {
-  position: absolute; 
-  left: -0vw;
-        padding-top: 0vh;
-        width: calc(64vh * (16/9));
-        height: 80vh;
-        border: solid orange 0px;
-       
-        }
 
 
 
