@@ -1,5 +1,15 @@
+body {
+  width: 800px;
+  height: 568px;
+  border: 0px red solid;
+  background-image: url(images/bulletinBoard.png);
+  background-position: left;
+  background-size: 800px 568px;
+  background-repeat: no-repeat;
+ background-color: black;
 
-
+}
+/*
 .backgroundDiv {
 width: 180vh; height: 100vh; position: absolute; left: 0; top: 0; 
 background-image: url('images/orchardBG.png'); 
@@ -9,9 +19,10 @@ background-repeat: no-repeat;
 background-size: 180vh 102vh; 
 filter: blur(3px); 
 z-index: -1;}
-
+/*
 
 /* For desktop: */
+/*
 .main {
 width: 120vh; height: 90vh; 
 padding: 0; 
@@ -20,9 +31,8 @@ border: solid red 0px;
 background-image: url('images/bulletinBoard.png'); 
 background-size: 120vh 90vh; 
 background-repeat: no-repeat;
-
-
 }
+*/
 
 /*CROSSWORD*/
 .crossword { 
@@ -53,7 +63,7 @@ width: 40vh;}
 /*RADIO POST-IT*/
 .note { position: absolute; 
         left: 16vh; 
-        top: 50vh; 
+        top: 60vh; 
         width: 10vh;
         height: 10vh;
         background-color: rgba(240, 200, 0, 1.0);
@@ -125,3 +135,7 @@ h3 {font-family: 'Langar', cursive;
 
 
 
+.johnnyPhotos {
+  position: absolute;
+  z-index: 1;
+}
