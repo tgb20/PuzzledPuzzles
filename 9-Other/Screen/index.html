@@ -33,9 +33,9 @@
 
 <!-- VIDEO INTRO BEGIN-->
 <!-- VIDEO MISSION VIDEO BEGIN-->
-<div hidden id="videoDiv" style="background-color:pink; z-index: -1;"class="videoDivClass" onclick="playVideo(); myFunction();">
-  <video id="videowindow" class="videoPlayerClass" controls="none">
-    <source src="assets/missionIntro.MOV" type="video/mp4">
+<div hidden id="videoDiv" style="background-color:none;"class="videoDivClass" onclick="playVideo(); myFunction();">
+  <video id="videoWindow" class="videoPlayerClass" controls="none">
+    <source src="assets/missionIntro.mp4" type="video/mp4">
   
     Your browser does not support the video tag.
   </video> 
@@ -44,12 +44,10 @@
 <!-- VIDEO END-->
 
 
-<!--FIELD MONITOR DIV-->
-<div id="fieldMonitorId">   </div>  <!--FIELD MONITOR ENDS-->
 
   
 <!---->
-<div id="formDiv" class="insideMonitor" style="border: solid 2px red;">
+<div id="formDiv" class="insideMonitor" style="border: solid 0px red;">
 
     <form id="formForCode" class="code_input" style="border: solid blue 0px; width: 100%;">
     <h6 class="tvText">Agent, please let me know when you know the name of the trickster</h6>
@@ -63,7 +61,7 @@
 
     <input type="button" class="buttonSubmit" onclick="codeInputting()" style="" value="SUBMIT">
 
-    <h6 id="wrongAnswerId" class="tvText" style="z-index: 100; position: relative; font-size: 3vh;"></h6>
+    <h6 id="wrongAnswerId" class="tvText" style="z-index: 1; position: relative; font-size: 3vh;"></h6>
 
   </form>
 
@@ -76,15 +74,17 @@
 
 <!-- VIDEO SUCCESS BEGIN-->
 
-<div hidden id="videoDivSuccess" style=""class="videoDivClass" onclick="playVideoSuccess(); myFunction();">
+<div hidden id="videoDivSuccess" style=""class="videoDivClass">
   
-  <video id="videowindowSuccess" class="videoPlayerClass" controls="none" onended="yesFunction()">
+  <video id="videoSuccess" class="videoPlayerClass" controls="none" onended="initiateContactInfo()">
         <source src="assets/congrats.MOV" type="video/mp4">
-    
-
     Your browser does not support the video tag.
   </video> 
-  <button id="videoButtonSuccessId" class="vbPlayClass" onclick="playCongrats(); myFunction();"></button>
+
+  <button id="videoButtonSuccessId" 
+          class="vbPlayClass" 
+          style="display: none;"
+          onclick="playCongrats(); myFunction();"></button>
 
 </div>
 
@@ -105,8 +105,20 @@ This game is a tiny, tiny sample of what we can do. If you are interested in a g
 <!-- SUCCESSFULL PUZZLE SOLVING ENDS-->
    
 
-<button id="videoButtonId" class="videoButtonPlayClass" onclick="playVideo(); myFunction();"></button>
+<button id="videoButtonId" 
+        class="videoButtonPlayClass"
+        style="display:none;" 
+        onclick="playVideo(); myFunction();"></button>
 
+<button id="playMissionButton" 
+        class="videoButtonPlayClass" 
+        style="left:3.6vh; top: 20vh; display: none;"
+        onclick="playMissionVideo();">PlayMissionVideo</button>
+
+<button id="resumeCodeInput" 
+        class="videoButtonPlayClass" 
+        style="left:3.6vh; top: 40vh; display:none;"
+        onclick="resumeCodeScreen();"></button>
 
 
 
@@ -122,14 +134,23 @@ This game is a tiny, tiny sample of what we can do. If you are interested in a g
 
 
 
+<script>
+
+document.getElementById('videoWindow').addEventListener('ended',myHandler,false);
+function myHandler(e) {
+    document.getElementById('videoWindow').style.display ='none';
+    document.getElementById('formDiv').style.display ='block';
+  
+}
+</script>
 
 
 
 
+<!--FIELD MONITOR DIV-->
+<div id="fieldMonitorId">   </div>  <!--FIELD MONITOR ENDS-->
 
 
-
-<!-- BG Div -->
 
 
 <audio id="audioDisplayTrack">

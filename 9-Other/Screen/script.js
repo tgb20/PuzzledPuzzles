@@ -1,6 +1,7 @@
-/*
 var l = 0;
 var vid = document.getElementById('videowindow');
+/*
+
  
 
 
@@ -43,6 +44,10 @@ var x = document.getElementById("audioDisplayTrack");x.pause();
 
 
 
+
+*/
+
+
 function showVideo() {
   document.getElementById('greatSuccess').style.display ='none';
   document.getElementById('videoDiv').style.display ='block'; 
@@ -52,7 +57,7 @@ function showVideo() {
     document.getElementById('navigationInstId').style.display ='none';
   }, 3 * 1000);
   }
-*/
+
 function emailSubmission() {
   document.getElementById('cs1').style.display ='none';
   }
@@ -63,34 +68,43 @@ function showSuccess() {
   document.getElementById('videoDivSuccess').style.display ='block';
   document.getElementById('formDiv').style.display ='none';
   document.getElementById('videoButtonId').style.display ='none';
-  document.getElementById('videoButtonSuccessId').style.display ='block';
+  document.getElementById('videoButtonSuccessId').style.display ='none';
 }
 
-function yesFunction() {
-  document.getElementById('videoDivSuccess').style.display ='none';
-  document.getElementById('videoButtonSuccessId').style.display ='none';
-  document.getElementById('textAfterCongratsVideoId').style.display ='block';
-  document.getElementById('formDiv').style.display ='none';
 
-  }
+function playMissionVideo() {
+  document.getElementById('formDiv').style.display ='none';
+  document.getElementById('videoDiv').style.display ='block';
+  document.getElementById('videoWindow').style.display ='block';
+}
+
+
+$("#videoWindow").on('ended', function(){
+  this.webkitExitFullscreen();
+});
+document.getElementById("videowindow").onended = function() {myFunction()};
+function myFunction() {
+  
+  document.getElementById("gameButton").style.opacity = "1.0";
+  document.getElementById("theText").style.opacity ="0.0";
+  document.getElementById("videowindow").style.display ="none";
+}
+
 
 function playVideo() {
   if (l === 0) {
-
-    $('#videowindow').trigger('play');
+    $('#videoWindow').trigger('play');
     l = 1;
   } else {
-    $('#videowindow').trigger('pause');
+    $('#videoWindow').trigger('pause');
     l = 0;
   }
 
 
   if (vid.paused == true) {
     document.getElementById('videoButtonId').className = "videoButtonPlayClass";
-
           } else {//document.getElementById('temp').style.display = 'block';
                   document.getElementById('videoButtonId').className = "videoButtonPauseClass";
-
         }
 } 
 
@@ -98,10 +112,10 @@ function playVideo() {
 function playCongrats() {
   if (l === 0) {
 
-    $('#videowindowSuccess').trigger('play');
+    $('#videoSuccess').trigger('play');
     l = 1;
   } else {
-    $('#videowindowSuccess').trigger('pause');
+    $('#videoSuccess').trigger('pause');
     l = 0;
   }
 
@@ -117,15 +131,7 @@ function playCongrats() {
 
 
 
-document.getElementById('videowindow').addEventListener('ended',myHandler,false);
-function myHandler(e) {
-    // What you want to do after the event
-    document.getElementById('videowindow').style.display ='none';
-    document.getElementById('videoDiv').style.display ='none';
-    document.getElementById('formDiv').style.zIndex ='1';
-    document.getElementById('videoButtonId').style.display ='none';
 
-}
 
 
 
@@ -170,3 +176,9 @@ function myHandler(e) {
 
 
 
+function initiateContactInfo() {
+  document.getElementById('videoDivSuccess').style.display ='none';
+  document.getElementById('videoButtonSuccessId').style.display ='none';
+  document.getElementById('textAfterCongratsVideoId').style.display ='block';
+  document.getElementById('formDiv').style.display ='none';
+  }
