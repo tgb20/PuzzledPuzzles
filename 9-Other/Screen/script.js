@@ -82,12 +82,12 @@ function playMissionVideo() {
 $("#videoWindow").on('ended', function(){
   this.webkitExitFullscreen();
 });
-document.getElementById("videowindow").onended = function() {myFunction()};
+document.getElementById("videoWindow").onended = function() {myFunction()};
 function myFunction() {
   
   document.getElementById("gameButton").style.opacity = "1.0";
   document.getElementById("theText").style.opacity ="0.0";
-  document.getElementById("videowindow").style.display ="none";
+  document.getElementById("videoWindow").style.display ="none";
 }
 
 
