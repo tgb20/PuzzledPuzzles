@@ -1,3 +1,9 @@
+document.addEventListener("DOMContentLoaded", function(){
+  localStorage.setItem("radioSetting", "OFF");
+});
+
+
+
 function filterme(value) {
     value = parseInt(value, 10); // Convert to an integer
     

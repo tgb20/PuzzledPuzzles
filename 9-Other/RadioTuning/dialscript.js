@@ -6,6 +6,7 @@ const dial = document.querySelector('.dial');
 const dialRenderer = css(dial);
 const dialRotation = value(0, v => dialRenderer.set('rotate', v));
 
+//var btnRad = localStorage.radioSetting.getItem();
 // get the position of the button inside the container (%)
 
       
@@ -32,7 +33,7 @@ function startTracking(e) {
     from: dialRotation.get(),
     transform: pipe(
     wrap(0, 360),
-    snap([0, 45, 90, 135, 180, 225, 270, 315, 360])),
+    snap([0, 60, 140, 210, 290])),
 
     onUpdate: dialRotation,
     onStop: () => pointerAngle.stop() }).
@@ -46,61 +47,65 @@ function stopTracking() {
   let percentPosition = dialRotation.get() / 16; 
   let frequencyPosition = dialRotation.get();
 
+  //localStorage.radioSetting.getItem();
+
   document.getElementById('changeThis').innerHTML = dialRotation.get();
   //document.getElementById('frequencyBar').style.paddingLeft = percentPosition + "%";
   document.getElementById('frequencyBar').style.marginLeft = percentPosition + "%";
   document.getElementById('success').innerHTML = percentPosition;
+  document.getElementById
+  //localStorage.radioSetting.getItem();
  
 
 
 
  // AM SETTINGS AND FREQUENCY 
-  if (frequencyPosition === 90 && localStorage.radioSetting == "AM") {
+  if (frequencyPosition === 60 && localStorage.radioSetting === "AM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
     $('#AMsong90').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 
-  } else if (frequencyPosition === 135 && localStorage.radioSetting == "AM") {
+  } else if (frequencyPosition === 140 && localStorage.radioSetting === "AM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
     $('#AMsong135').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
   
-  } else if (frequencyPosition === 180 && localStorage.radioSetting == "AM") {
+  } else if (frequencyPosition === 210 && localStorage.radioSetting === "AM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
     $('#AMsong180').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
   }
 
-    else if (frequencyPosition === 225 && localStorage.radioSetting == "AM") {
+    else if (frequencyPosition === 290 && localStorage.radioSetting === "AM") {
       document.querySelectorAll('audio').forEach(el => el.pause());
       $('#AMsong225').trigger('play');
       document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
   }
 
-
- // FM SETTINGS AND FREQUENCY 
- if (frequencyPosition === 45 && localStorage.radioSetting == "FM") {
+/*
+  FM SETTINGS AND FREQUENCY 
+  if (frequencyPosition === 60 && localStorage.radioSetting === "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
   $('#FMsong45').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 
-} else if (frequencyPosition === 90 && localStorage.radioSetting == "FM") {
+} else if (frequencyPosition === 140 && localStorage.radioSetting == "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
   $('#FMsong90').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 
-} else if (frequencyPosition === 180 && localStorage.radioSetting == "FM") {
+} else if (frequencyPosition === 210 && localStorage.radioSetting == "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
   $('#FMsong180').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 }
 
-  else if (frequencyPosition === 270 && localStorage.radioSetting == "FM") {
+  else if (frequencyPosition === 290 && localStorage.radioSetting == "FM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
     $('#FMsong270').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 }  
-
+*/
   
   
 
