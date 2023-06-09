@@ -1,4 +1,4 @@
-
+/*
 var l = 0;
 var vid = document.getElementById('videowindow');
  
@@ -40,16 +40,7 @@ var x = document.getElementById("audioDisplayTrack");x.pause();
 
 }
 
-function showSuccess() {
-	document.getElementById('greatSuccess').style.display ='block';
-  document.getElementById('videoDivSuccess').style.display ='block';
-  document.getElementById('formDiv').style.display ='none';
-  document.getElementById('videoButtonId').style.display ='none';
-  document.getElementById('videoButtonSuccessId').style.display ='block';
-  
-  //var x = document.getElementById("audioDisplaySuccess"); x.play();
 
-}
 
 
 function showVideo() {
@@ -61,16 +52,27 @@ function showVideo() {
     document.getElementById('navigationInstId').style.display ='none';
   }, 3 * 1000);
   }
+*/
+function emailSubmission() {
+  document.getElementById('cs1').style.display ='none';
+  }
 
 
-
-function myFunction() {    
-    //document.getElementById('formDiv').style.display ='block';
-    //document.getElementById('videowindow').style.display ='none';
+function showSuccess() {
+	document.getElementById('greatSuccessDiv').style.display ='block';
+  document.getElementById('videoDivSuccess').style.display ='block';
+  document.getElementById('formDiv').style.display ='none';
+  document.getElementById('videoButtonId').style.display ='none';
+  document.getElementById('videoButtonSuccessId').style.display ='block';
 }
 
+function yesFunction() {
+  document.getElementById('videoDivSuccess').style.display ='none';
+  document.getElementById('videoButtonSuccessId').style.display ='none';
+  document.getElementById('textAfterCongratsVideoId').style.display ='block';
+  document.getElementById('formDiv').style.display ='none';
 
-
+  }
 
 function playVideo() {
   if (l === 0) {
@@ -134,9 +136,6 @@ function myHandler(e) {
 
 //THE SCRIPT FOR CODE
 
-
-
-
   function codeInputting() {
   var wrongResponse;
   var blankResponse;
@@ -148,6 +147,9 @@ function myHandler(e) {
 
      if ( (puzzleOne == 'ron') && 
           (puzzleTwo == 'appleseed') 
+          ||
+          (puzzleOne == 'ron') && 
+          (puzzleTwo == 'bob')
           
         )  
      

@@ -32,8 +32,8 @@
  
 
 <!-- VIDEO INTRO BEGIN-->
-
-<div id="videoDiv" style="background-color:pink; z-index: -1;"class="videoDivClass" onclick="playVideo(); myFunction();">
+<!-- VIDEO MISSION VIDEO BEGIN-->
+<div hidden id="videoDiv" style="background-color:pink; z-index: -1;"class="videoDivClass" onclick="playVideo(); myFunction();">
   <video id="videowindow" class="videoPlayerClass" controls="none">
     <source src="assets/missionIntro.MOV" type="video/mp4">
   
@@ -43,26 +43,27 @@
 </div>
 <!-- VIDEO END-->
 
+
 <!--FIELD MONITOR DIV-->
 <div id="fieldMonitorId">   </div>  <!--FIELD MONITOR ENDS-->
 
   
 <!---->
-<div id="formDiv" class="insideMonitor" style="border: solid 0px red;">
+<div id="formDiv" class="insideMonitor" style="border: solid 2px red;">
 
-  <form id="formForCode" class="code_input" style="border: solid blue 0px; width: 100%;">
-  <h6 class="tvText">Agent, please let me know when you know the name of the trickster</h6>
-  <h6 class="tvText typingText">And please hurry!</h6> 
+    <form id="formForCode" class="code_input" style="border: solid blue 0px; width: 100%;">
+    <h6 class="tvText">Agent, please let me know when you know the name of the trickster</h6>
+    <h6 class="tvText typingText">And please hurry!</h6> 
 
-  <hr style="background-color: rgba(10,255,0.70); border: rgba(10,255,0.70); height: 0.0vh;">
-   
-  <input id="inputFirstName" class="inputClass" maxlength='3' type="text" inputmode="text" tabindex="1" style="width: 15vh;"/>
-  <input id="inputLastName" class="inputClass" maxlength='9' type="text" inputmode="text" tabindex="2" style="width: 38vh; margin-left: 2vh;"/>
+    <hr style="background-color: rgba(10,255,0.70); border: rgba(10,255,0.70); height: 0.0vh;">
+    
+    <input id="inputFirstName" class="inputClass" maxlength='3' type="text" inputmode="text" tabindex="1" style="width: 15vh;"/>
+    <input id="inputLastName" class="inputClass" maxlength='9' type="text" inputmode="text" tabindex="2" style="width: 38vh; margin-left: 2vh;"/>
 
 
-<input type="button" class="buttonSubmit" onclick="codeInputting()" style="" value="SUBMIT">
+    <input type="button" class="buttonSubmit" onclick="codeInputting()" style="" value="SUBMIT">
 
-<h6 id="wrongAnswerId" class="tvText" style="z-index: 100; position: relative; font-size: 3vh;"></h6>
+    <h6 id="wrongAnswerId" class="tvText" style="z-index: 100; position: relative; font-size: 3vh;"></h6>
 
   </form>
 
@@ -70,31 +71,25 @@
 
 <!-- SUCCESSFULL PUZZLE SOLVING BEGINS-->
 
-<div hidden id="greatSuccess" class="insideMonitor" style="" alt="Loading...">
+<div hidden id="greatSuccessDiv" class="insideMonitor" style="" alt="Loading...">
+
 
 <!-- VIDEO SUCCESS BEGIN-->
 
-<div id="videoDivSuccess" style=""class="videoDivClass" onclick="playVideoSuccess(); myFunction();">
+<div hidden id="videoDivSuccess" style=""class="videoDivClass" onclick="playVideoSuccess(); myFunction();">
+  
   <video id="videowindowSuccess" class="videoPlayerClass" controls="none" onended="yesFunction()">
-    <source src="assets/congrats.MOV" type="video/mp4">
-    <button id="videoButtonSuccessId" class="vbPlayClass" onclick="playCongrats(); myFunction();"></button>
+        <source src="assets/congrats.MOV" type="video/mp4">
+    
 
     Your browser does not support the video tag.
   </video> 
-
-
+  <button id="videoButtonSuccessId" class="vbPlayClass" onclick="playCongrats(); myFunction();"></button>
 
 </div>
 
-<script>
-  function yesFunction() {
-  document.getElementById('videoDivSuccess').style.display ='none';
-  document.getElementById('videoButtonSuccessId').style.display ='none';
-  document.getElementById('textAfterCongratsVideoId').style.display ='block';
-
-  }
-</script>
 <!-- VIDEO END-->
+
 
 <div hidden id="textAfterCongratsVideoId">
 <h6 class="delayedEntry tvText" style="margin-bottom: 0px; padding-bottom: 0px; font-size: 4vh;">Congratulations!</h6>
@@ -106,9 +101,7 @@ This game is a tiny, tiny sample of what we can do. If you are interested in a g
 </div>
 
 
-
 </div>
-
 <!-- SUCCESSFULL PUZZLE SOLVING ENDS-->
    
 
@@ -117,18 +110,11 @@ This game is a tiny, tiny sample of what we can do. If you are interested in a g
 
 
 
-
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-autotab/1.9.2/js/jquery.autotab.js'></script>
-<script  src="./script.js"></script>
-
-
 <!--CODE ENTRY PART ENDS-->
 
-
-
-
-
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery-autotab/1.9.2/js/jquery.autotab.js'></script>
+<script  src="./script.js"></script>
 
 
 
@@ -160,12 +146,7 @@ This game is a tiny, tiny sample of what we can do. If you are interested in a g
             Your browser does not support the audio element.
     </audio>
 
-<script>
 
-function emailSubmission() {
-          document.getElementById('cs1').style.display ='none';
-          }
-</script>
 
 </body>
 </html>

@@ -34,11 +34,11 @@ body {
 
 .insideMonitor {
   border: solid rgb(28, 0, 0) 2px;
-  background-color:rgb(0, 16, 0);
-  width: 111vh;
-  height: 68vh;
+  background-color:rgb(16, 0, 14);
+  width: calc(75vh * (1050/700));
+  height: 70vh;
   position: absolute;
-  left: 32vh;
+  left: 19vh;
   top: 14vh;
   padding: 3vh;
   
@@ -68,6 +68,7 @@ font-weight: normal;
 word-wrap: break-word; 
 text-align: left;
 margin-bottom: 3vh;
+
 }
 
 .typingText {
@@ -126,7 +127,7 @@ to{border-right-color: transparent;}
 
 #formDiv {
   display:block;
-  z-index: -2;
+  z-index: ;
   }
 #successDiv {display:hidden}
 
@@ -150,34 +151,26 @@ to{border-right-color: transparent;}
 
 
 .videoDivClass {
- width: calc(60vh * (16/9));
-        height: 70vh;
-  background-color: black;
-  text-align: center;
-  justify-content: center;
-  vertical-align: center;
-  margin: 0 auto;
-  position: absolute;
-  opacity: 1;
-
+      
+        background-color: black;
+        text-align: center;
+        justify-content: center;
+        vertical-align: center;
+        margin: 0 auto;
+        position: absolute;
+        opacity: 1;
         top: 13vh;
         left: 19vh;
-    
- 
-  border-radius: 5px;
-  border: solid darkgrey 0px;
-
-  
+        border-radius: 5px;
+        border: solid darkgrey 2px; 
 }
 
-
-
-
 .videoPlayerClass {
-	position: relative;	
-        width: calc(70vh * (16/9));
+	      position: relative;	
+        width: calc(63vh * (16/9));
         height: 70vh;
-        border: solid orange 0px;
+        border: solid orange 2px;
+        margin: -10 auto;
        
         }
 
