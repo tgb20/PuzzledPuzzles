@@ -22,7 +22,7 @@ body {
   background-image: url('assets/fieldmonitor.png');
   background-repeat: no-repeat;
   background-size: contain;
-  width: calc(100vh * (16/9));
+  width: calc(100vh * (1050/700));
   height: 100vh;
   font-family: sans-serif; 
   margin: 0;

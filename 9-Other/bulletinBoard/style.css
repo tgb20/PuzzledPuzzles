@@ -1,38 +1,40 @@
+
 body {
-  width: 800px;
-  height: 568px;
-  border: 0px red solid;
-  background-image: url(images/bulletinBoard.png);
-  background-position: left;
-  background-size: 800px 568px;
+  /*
+  background-image: url('');
   background-repeat: no-repeat;
- background-color: black;
+  background-size: cover;
+  background-color: rgb(0, 0, 0);
+  */
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  width: auto;
+  height: 100vh;
+  padding: 0 auto;
+  margin: 0 auto;
+  background-color: black;
 
 }
-/*
+
 .backgroundDiv {
-width: 180vh; height: 100vh; position: absolute; left: 0; top: 0; 
-background-image: url('images/orchardBG.png'); 
-background-color: transparent; 
-background-position: center; 
-background-repeat: no-repeat; 
-background-size: 180vh 102vh; 
-filter: blur(3px); 
-z-index: -1;}
-/*
-
-/* For desktop: */
-/*
-.main {
-width: 120vh; height: 90vh; 
-padding: 0; 
-position: absolute; left: 5vh; top: 2vh; 
-border: solid red 0px; 
-background-image: url('images/bulletinBoard.png'); 
-background-size: 120vh 90vh; 
-background-repeat: no-repeat;
+  background-image: url('images/bulletinBoard.jpg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: calc(100vh * (987/711));
+  height: 100vh;
+  font-family: sans-serif; 
+  margin: 0;
+  border: solid 0px red;
+/*1250
+703*/
+  
 }
-*/
+
+
+
+
+
 
 /*CROSSWORD*/
 .crossword { 
@@ -63,7 +65,7 @@ width: 40vh;}
 /*RADIO POST-IT*/
 .note { position: absolute; 
         left: 16vh; 
-        top: 60vh; 
+        top: 15vh; 
         width: 10vh;
         height: 10vh;
         background-color: rgba(240, 200, 0, 1.0);
