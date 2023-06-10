@@ -151,11 +151,14 @@ function playCongrats() {
   
 
 
-     if ( (puzzleOne == 'ron') && 
+     if ( (puzzleOne == 'johnny') && 
           (puzzleTwo == 'appleseed') 
           ||
-          (puzzleOne == 'ron') && 
-          (puzzleTwo == 'bob')
+          (puzzleOne == 'johnny') && 
+          (puzzleTwo == 'apple')
+          ||
+          (puzzleOne == 'johnny') && 
+          (puzzleTwo == 'seed')
           
         )  
      
