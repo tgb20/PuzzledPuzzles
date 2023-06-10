@@ -62,52 +62,57 @@ function stopTracking() {
  // AM SETTINGS AND FREQUENCY 
  if (frequencyPosition === 0 && localStorage.radioSetting === "AM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
-  $('#AMsong90').trigger('play');
+  $('#weather').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 
 } else if (frequencyPosition === 60 && localStorage.radioSetting === "AM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
-    $('#AMsong90').trigger('play');
+    $('#hardCountry').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 
   } else if (frequencyPosition === 140 && localStorage.radioSetting === "AM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
-    $('#AMsong135').trigger('play');
+    $('#tractorNews').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
   
   } else if (frequencyPosition === 210 && localStorage.radioSetting === "AM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
-    $('#AMsong180').trigger('play');
+    $('#altCountry').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
   }
 
     else if (frequencyPosition === 290 && localStorage.radioSetting === "AM") {
       document.querySelectorAll('audio').forEach(el => el.pause());
-      $('#AMsong225').trigger('play');
+      $('#riddle').trigger('play');
       document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
   }
 
 
-  //FM SETTINGS AND FREQUENCY 
-  if (frequencyPosition === 60 && localStorage.radioSetting === "FM") {
+  //FM SETTINGS AND FREQUENCY
+  if (frequencyPosition === 0 && localStorage.radioSetting === "FM") {
+    document.querySelectorAll('audio').forEach(el => el.pause());
+    $('#jazz').trigger('play');
+    document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
+  
+  } else if (frequencyPosition === 60 && localStorage.radioSetting === "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
-  $('#FMsong45').trigger('play');
+  $('#country').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 
 } else if (frequencyPosition === 140 && localStorage.radioSetting == "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
-  $('#AMsong180').trigger('play');
+  $('#rock').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 
 } else if (frequencyPosition === 210 && localStorage.radioSetting == "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
-  $('#AMsong135').trigger('play');
+  $('#news').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 }
 
   else if (frequencyPosition === 290 && localStorage.radioSetting == "FM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
-    $('#FMsong270').trigger('play');
+    $('#sports').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 }  
 
