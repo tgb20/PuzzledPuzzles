@@ -19,44 +19,46 @@
 		  transition: background-color 0.25s ease-in-out
 		  transition: position 0.25s ease-in-out
 
-body{
+body {
 	font-family: 'Libre Baskerville', serif;
-	background-image: url(assets/cherrywood.jpeg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
 	width: auto;
 	height: auto;
-	border: dashed blue 0px;
+	border: dashed blue 2px;
+	padding: 0;
+	margin: 0 auto;
+	
 }
 
 
 .stylin {
 				position: absolute;
-				left: 0;
+				left: 0p;
 				top: 0;	
 				background-image: url(assets/radio-tight.png);
-				background-position: center;
+				background-position: left top;
 				background-repeat: no-repeat;
 				background-size: contain;
 				border: dashed red 0px;
-				width: calc(100vh * (16/9));
+				width: calc(100vh * (700/425));
 				height: 100vh;
 				opacity: 1;
+				margin: 0;
 		}
 
 		
-		  
+		  /*MOVE SWITCH*/
 		  .wrapper {
 			width: 24vh;
 			height: auto;
 			display: flex;
 			position: absolute;
-			top: 80vh;
-			left: 74vh;
+			top: 80.5vh;
+			left: 72vh;
 			justify-content: center;
 			padding: 0x 0; 
-		border: solid pink 0px;}
+		border: solid pink 0px;
+		
+	}
 		  
 		  #custom-toggle {
 			-webkit-appearance: none;
@@ -108,7 +110,6 @@ body{
 			  appearance: none;
 			  width: 4vh;
 			  height: 2vh;
-			  border: solid rgba(255, 0, 234, 0.382) 0vh;
 			}
 			#custom-toggle:focus {
 			  outline: none; }
@@ -121,18 +122,7 @@ body{
 
 
 
-.video-styling {
-				position: absolute;
-				background-image: url(assets/radio-switch.png);
-				background-position: center;
-				background-repeat: no-repeat;
-				background-size: contain;
-				width: calc(42vh * (16/9));
-				height: 42vh;
-				border: solid orange 0px;
-				top: 39vh;
-				left: 50vh;
-				}
+
 
 #AMFMswitch {
 				position: absolute;
@@ -188,7 +178,7 @@ td {border: solid 2px blue;}
 	top: 66vh;
 	align-items: center;
 	justify-content: center;
-	left: 128vh;
+	left: 122.5vh;
 	z-index: 1;
 	}
   
@@ -201,9 +191,12 @@ td {border: solid 2px blue;}
 	background: url(assets/clean-dial.png);
 	background-position: center;
 	background-size: 20vh 20vh;
-	border: solid 0.4vh rgba(255, 0, 234, 0.382);
+	
+	border: solid 0.8vh rgba(255, 0, 234, 0.382);
 	position: absolute;
 	opacity: 1;
+	cursor: pointer;
+	touch-action: manipulation;
 	animation-name: throbbingFreqDial;
   	animation-duration: 5s;
   	animation-iteration-count: infinite;
@@ -246,9 +239,10 @@ td {border: solid 2px blue;}
 
 		  #frequencyBar {
 			background-color: rgba(255, 230, 0, 0.534); 
-			height: 3vh; 
-			width: calc(1vh * (16/9)); 
+			height: 6vh; 
+			width: calc(1vh * (700/425)); 
 			position: absolute; 
-			left: calc(38vh * (16/9)); 
+			left: calc(38vh * (700/425)); 
 			top: 70vh;
+		
 		  }

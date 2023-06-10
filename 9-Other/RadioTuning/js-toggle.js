@@ -13,7 +13,8 @@ function filterme(value) {
       $('#custom-toggle').removeClass('tgl-off', 'tgl-def').addClass('tgl-on');
       $('#radio-info').text('AM Radio');
       localStorage.setItem("radioSetting", "AM");
-      //$('#featureAudioId').trigger('play');
+      $('#click').trigger('play');
+      stopTracking();
 
     } else if (value === 2) {
       $('#custom-toggle').removeClass('tgl-on, tgl-off').addClass('tgl-def');
@@ -25,9 +26,10 @@ function filterme(value) {
       $('#custom-toggle').removeClass('tgl-def', 'tgl-on').addClass('tgl-off');
       $('#radio-info').text('FM Radio');
       localStorage.setItem("radioSetting", "FM");
+      stopTracking();
     }
   }
 
 
   function featureAudio()
-		{var x = document.getElementById("featureAudioId"); x.play(); }
+		{var x = document.getElementById("click"); x.play(); }

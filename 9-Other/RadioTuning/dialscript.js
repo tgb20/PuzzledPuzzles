@@ -21,7 +21,7 @@ function startTracking(e) {
       const dialCenter = {
         x: dialPos.left + dialPos.width / 2,
         y: dialPos.top + dialPos.height / 2 };
-      var x = document.getElementById("click"); x.play();
+      //var x = document.getElementById("click"); x.play();
 
       const angleFromCenter = angle(dialCenter, v);
 
@@ -60,7 +60,12 @@ function stopTracking() {
 
 
  // AM SETTINGS AND FREQUENCY 
-  if (frequencyPosition === 60 && localStorage.radioSetting === "AM") {
+ if (frequencyPosition === 0 && localStorage.radioSetting === "AM") {
+  document.querySelectorAll('audio').forEach(el => el.pause());
+  $('#AMsong90').trigger('play');
+  document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
+
+} else if (frequencyPosition === 60 && localStorage.radioSetting === "AM") {
     document.querySelectorAll('audio').forEach(el => el.pause());
     $('#AMsong90').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
@@ -91,12 +96,12 @@ function stopTracking() {
 
 } else if (frequencyPosition === 140 && localStorage.radioSetting == "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
-  $('#FMsong90').trigger('play');
+  $('#AMsong180').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 
 } else if (frequencyPosition === 210 && localStorage.radioSetting == "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
-  $('#FMsong180').trigger('play');
+  $('#AMsong135').trigger('play');
   document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 }
 

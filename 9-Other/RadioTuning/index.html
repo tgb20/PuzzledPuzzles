@@ -11,7 +11,7 @@
     
   </head>
 
-<body>
+<body style="background-color: rgb(33, 9, 2);">
 
   <!-- DIAGNOSTIC BANNER-->
 <div hidden id="diagnosticID" style="height: auto; width: 25vw; background-color: black; position: absolute; top: 0px; right: 0px; z-index: 100;">
@@ -23,12 +23,9 @@
   <tr><td>Radio Setting</td><td><p id="radio-info">which</p></td></tr>
   <tr><td>Clear Storage:</td><td><button onclick="window.localStorage.clear(); printResults();" type="button">>Reset Puzzle</button></td></tr>
   
-  <button id="redbutton" class="key" onmousedown="redButtonClick(); clickCounter();">red</button>
-      
-  <button id="bluebutton" class="key" onmousedown="blueButtonClick(); clickCounter();"></button>
-  
+  <button id="redbutton" class="key" onmousedown="redButtonClick(); clickCounter();">red</button>  
+  <button id="bluebutton" class="key" onmousedown="blueButtonClick(); clickCounter();"></button>  
   <button id="greenbutton" class="key" onmousedown="addCount()"></button>
-      
 
 </table>>  
 </div>
@@ -44,7 +41,7 @@
 
 
 
-    <div class="stylin">
+    <div class="stylin" style="">
 
 
       <div class="dial">
@@ -54,13 +51,11 @@
       <script src='https://s3.amazonaws.com/popmotion.io/static/dist/popmotion.min.js'></script><script  src="dialscript.js"></script>
       
       <audio id="click" preload="none">
-        <source src="assets/audio/switch.ogg" type="audio/ogg">
+        <source src="assets/switch.ogg" type="audio/ogg"/>
         <source src="assets/audio/switchClick.wav" type="audio/wav" />  
       </audio>
 
 
-
-     
 
     </div> <!-- DIV STYLIN ENDS-->
 
@@ -70,6 +65,10 @@
 <!-- TOGGLE BUTTON BEGINS-->      
       <div class="wrapper">
         <input type="range" name="points" onchange="filterme(this.value);" min="1" step="1" id="custom-toggle" class="tgl-def" max="3" value="2">
+      
+      
+      
+      
       </div>
       <!--<span>All</span>-->
 
@@ -83,44 +82,44 @@
 
 <!-- AUDIO AM-->
 <audio id="AMsong90">
-  <source src="assets/weather.wav" type="audio/wav">
+  <source src="assets/audio/weather.ogg" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="AMsong135">
-  <source src="assets/texasradiofish_-_Rockin_Joe.mp3" type="audio/mpeg">
+  <source src="assets/audio/country.ogg" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="AMsong180">
-  <source src="assets/tractornews.mp3" type="audio/wav">
+  <source src="assets/audio/tractornews.ogg" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="AMsong225">
-  <source src="assets/riddle.mp3" type="audio/mpeg">
+  <source src="assets/audio/riddle.ogg" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
 
 
 <!-- AUDIO FM-->
 <audio id="FMsong45">
-  <source src="assets/SiobhanD_-_For_You_I_ll_Jazz_There_(feat_DJazzlang)_1.mp3" type="audio/mpeg">
+  <source src="assets/audio/jazz.ogg" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="FMsong90">
-  <source src="assets/PBS.mp3" type="audio/mpeg">
+  <source src="assets/audio/altCountry.ogg" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="FMsong180">
-  <source src="assets/Car3.mp3" type="audio/mpeg">
+  <source src="assets/audio/hardCountry.ogg" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
 
 <audio id="FMsong270">
-  <source src="assets/weather.wav" type="audio/wav">
+  <source src="assets/audio/weather.ogg" type="audio/ogg">
   Your browser does not support the audio element.
 </audio>
 
