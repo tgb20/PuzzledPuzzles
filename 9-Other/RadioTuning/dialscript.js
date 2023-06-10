@@ -82,8 +82,8 @@ function stopTracking() {
       document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
   }
 
-/*
-  FM SETTINGS AND FREQUENCY 
+
+  //FM SETTINGS AND FREQUENCY 
   if (frequencyPosition === 60 && localStorage.radioSetting === "FM") {
   document.querySelectorAll('audio').forEach(el => el.pause());
   $('#FMsong45').trigger('play');
@@ -105,7 +105,7 @@ function stopTracking() {
     $('#FMsong270').trigger('play');
     document.getElementById("radio-info").innerHTML = localStorage.getItem("radioSetting") + "-" + frequencyPosition;
 }  
-*/
+
   
   
 

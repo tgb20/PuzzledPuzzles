@@ -68,11 +68,13 @@ body{
 			padding: 0 0x;
 			margin: 0;
 			cursor: pointer; 
-			border: solid red 0px;
+			border: solid rgba(255, 0, 234, 0.382) 0vh;
+		
+	  }
 			
 			
 		
-		}
+		
 			#custom-toggle.tgl-def::-webkit-slider-thumb {
 				background-image: url(assets/radio-switch.png);
 				background-position: center;
@@ -80,7 +82,9 @@ body{
 				background-size: cover;
 				width: 14vh;
 				height: 6vh;
-				}
+	  }
+	
+	  
 			#custom-toggle.tgl-on::-webkit-slider-thumb {
 				background-image: url(assets/radio-switch.png);
 				background-position: center;
@@ -89,6 +93,8 @@ body{
 				width: 14vh;
 				height: 6vh;
 			  }
+
+
 			#custom-toggle.tgl-off::-webkit-slider-thumb {
 				background-image: url(assets/radio-switch.png);
 				background-position: center;
@@ -102,6 +108,7 @@ body{
 			  appearance: none;
 			  width: 4vh;
 			  height: 2vh;
+			  border: solid rgba(255, 0, 234, 0.382) 0vh;
 			}
 			#custom-toggle:focus {
 			  outline: none; }
@@ -110,7 +117,7 @@ body{
 			background-color: green; }
 
 		  
-
+		
 
 
 
@@ -131,10 +138,12 @@ body{
 				position: absolute;
 				width: calc(42vh * (16/9));
 				height: 42vh;
-				border: solid orange 0px;
+				border: solid orange 11vh;
 				top: 39vh;
 				left: 50vh;
 }
+		  
+
 
 .button1 {position: absolute;
 					width: 5.5vh;
@@ -192,11 +201,19 @@ td {border: solid 2px blue;}
 	background: url(assets/clean-dial.png);
 	background-position: center;
 	background-size: 20vh 20vh;
-  
+	border: solid 0.4vh rgba(255, 0, 234, 0.382);
 	position: absolute;
-	 opacity: 1;
-	}
+	opacity: 1;
+	animation-name: throbbingFreqDial;
+  	animation-duration: 5s;
+  	animation-iteration-count: infinite;
+}
 
+@keyframes throbbingFreqDial {
+  0% {border-color: rgba(255, 0, 234, 0.382);}
+  50% {border-color: rgba(255, 255, 0, 0.567);}
+  100% {border-color: rgba(255, 0, 234, 0.382);}
+}
 
 	
 	#redbutton {background-color: red;
@@ -224,4 +241,14 @@ td {border: solid 2px blue;}
 			padding: 2vh;
 			transition-duration: 30ms;
 			cursor: pointer;
+		  }
+
+
+		  #frequencyBar {
+			background-color: rgba(255, 230, 0, 0.534); 
+			height: 3vh; 
+			width: calc(1vh * (16/9)); 
+			position: absolute; 
+			left: calc(38vh * (16/9)); 
+			top: 70vh;
 		  }
