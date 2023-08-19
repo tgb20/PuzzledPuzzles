@@ -46,6 +46,24 @@ body {
   
 }
 
+#sendToHomePage {
+  position: absolute;
+  padding:3vw;
+  border: solid white 2px;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  vertical-align: center;
+  top: 50%;
+  left: 40%;
+  font-family: Arial;
+  font-size: 3vw;
+  border-radius: 5%;
+  text-decoration: none;
+
+          color:rgb(255, 255, 255);
+          background-color: rgba(0,0,0,0.21);
+}
 
 
 h6 {

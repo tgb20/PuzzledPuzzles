@@ -159,8 +159,16 @@ function playCongrats() {
           ||
           (puzzleOne == 'johnny') && 
           (puzzleTwo == 'seed')
-          
-        )  
+          ||
+          (puzzleOne == 'ron')
+          ||
+          (puzzleOne == 'ron') && 
+          (puzzleTwo == 'seed')      
+          ||    
+          (puzzleOne == 'ron') && 
+          (puzzleTwo == 'appleseed') 
+          )  
+        
      
      {document.getElementById('formForCode').style.display ='none';
       showSuccess();
@@ -180,8 +188,10 @@ function playCongrats() {
 
 
 function initiateContactInfo() {
-  document.getElementById('videoDivSuccess').style.display ='none';
-  document.getElementById('videoButtonSuccessId').style.display ='none';
-  document.getElementById('textAfterCongratsVideoId').style.display ='block';
-  document.getElementById('formDiv').style.display ='none';
+  //document.getElementById('videoDivSuccess').style.display ='none';
+  //document.getElementById('sendToHomePage').style.display ='block';
+ 
+  //document.getElementById('videoButtonSuccessId').style.display ='none';
+  //document.getElementById('textAfterCongratsVideoId').style.display ='block';
+  //document.getElementById('formDiv').style.display ='none';
   }
